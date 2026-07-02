@@ -28,14 +28,19 @@ Edit [`config.py`](config.py):
 | Setting | Description |
 | --- | --- |
 | `CATEGORIES` | arXiv categories to search (e.g. `cs.CV`, `cs.CL`) |
-| `KEYWORDS` | Keywords (used both for the query and a second relevance check) |
+| `ALLOWED_PRIMARY_CATEGORIES` | Only keep papers whose *primary* category is in this set (drops cross-listed papers from unrelated fields, e.g. astro-ph) |
+| `KEYWORDS` | Keywords for core VLM research (used both for the query and a second relevance check). Deliberately specific — bare terms like `"multimodal"` are excluded because they also match EEG/clinical/audio/astro papers that aren't vision-language models |
+| `EXCLUDE_KEYWORDS` | Drops a paper even if it matched `KEYWORDS`, e.g. robotics/autonomous-driving/embodied-action terms, to keep results to "pure" VLM research |
 | `MAX_PAPERS` | Max papers to show per day (default 20) |
-| `DAYS_WINDOW` | Keep only papers submitted within this many days (default 2) |
+| `DAYS_WINDOW` | Keep only papers submitted within this many days (default 4 — wider than 1 day because strict topic + school filtering is selective) |
 | `FETCH_BATCH` | Number of candidate results requested from arXiv per run |
 | `FILTER_BY_SCHOOL` | Keep only papers with a **US top-50 CS school** author (default `True`) |
-| `UNKNOWN_AFFILIATION_POLICY` | When affiliation is undeterminable: `"lenient"` (keep) or `"strict"` (drop) |
+| `UNKNOWN_AFFILIATION_POLICY` | When affiliation is undeterminable: `"strict"` (drop, default — only confirmed top-50 papers are shown) or `"lenient"` (keep) |
 | `TOP_SCHOOLS` | The US top-50 CS school list and match patterns — edit freely |
 | `SCHOOL_CHECK_CAP` | Max candidates fetched/checked per run (bounds runtime) |
+
+With strict topic and school filtering, expect roughly **5-15 papers/day**
+rather than a fixed 20 — quality/precision is prioritized over volume.
 
 ### How the school filter works
 
@@ -48,8 +53,9 @@ and matches it against the `TOP_SCHOOLS` list. Matched papers show a green
 school badge on their card.
 
 This is heuristic matching, not 100% accurate: papers without an HTML version
-or with unusual affiliation formatting may be missed (under the `lenient`
-policy such "undeterminable" papers are kept).
+or with unusual affiliation formatting may be missed. Under the default
+`strict` policy such "undeterminable" papers are dropped, so only papers with
+a clearly confirmed US top-50 affiliation are shown.
 
 To change the schedule, edit the `cron` expression (UTC) in
 [`.github/workflows/daily.yml`](.github/workflows/daily.yml).

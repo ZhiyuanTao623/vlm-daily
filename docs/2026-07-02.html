@@ -14,69 +14,9 @@
   <main>
     <div class="day-head">
       <h2 class="day-title">2026-07-02</h2>
-      <p class="count">18 papers</p>
+      <p class="count">11 papers</p>
       <p><a href="index.html">&larr; All days</a></p>
     </div>
-      <article class="card">
-        <h2><a href="https://arxiv.org/abs/2607.01212v1" target="_blank" rel="noopener">FurnitureVLA: Learning Long-Horizon Bimanual Furniture Assembly with Vision-Language-Action Model</a></h2>
-        <div class="meta">
-          <span class="date">2026-07-01</span>
-          <span class="cat">cs.RO</span>
-          <span class="school">UNC Chapel Hill</span>
-          <span class="arxiv-id">arXiv:2607.01212v1</span>
-        </div>
-        <p class="authors">Chenyang Ma, Yue Yang, Radu Corcodel, Siddarth Jain, Andrew Wu, Chiori Hori, Diego Romeres</p>
-        <p class="abstract">Current work on robot furniture assembly mostly focuses on toy-scale settings or single-arm manipulation. We introduce FurnitureVLA, the first systematic study of real-scale bimanual furniture assembly using Vision-Language-Action models (VLAs). We formalize the task, develop a scalable simulation pipeline for expert data generation and evaluation, and build a VR teleoperation system for single-operator bimanual control to collect high-quality real-world demonstrations. To address extreme long-horizon assembly with up to 7 subtasks and 1550 control steps, we propose a progress-enhanced VLA, finetuned on semantically grounded subtasks, that jointly predicts actions and a continuous progress signal, enabling automatic subtask transitions and reducing compounding errors during inference. We further study perception and control design factors that critically affect precision in real-scale assembly. FurnitureVLA improves average simulation success from 48% to 80% compared to baselines across three furniture types, with an additional 21% gain from our design factor study. We validate on a real Kinova Gen3 platform with only 16% drop on the hardest task.</p>
-        <div class="links">
-          <a href="https://arxiv.org/abs/2607.01212v1" target="_blank" rel="noopener">[abs]</a>
-          <a href="https://arxiv.org/pdf/2607.01212v1" target="_blank" rel="noopener">[pdf]</a>
-        </div>
-      </article>
-      <article class="card">
-        <h2><a href="https://arxiv.org/abs/2607.01131v1" target="_blank" rel="noopener">Autonomous Scientific Discovery via Iterative Meta-Reflection</a></h2>
-        <div class="meta">
-          <span class="date">2026-07-01</span>
-          <span class="cat">cs.CV</span>
-          <span class="school">MIT</span>
-          <span class="arxiv-id">arXiv:2607.01131v1</span>
-        </div>
-        <p class="authors">Bingchen Zhao, Sara Beery, Oisin Mac Aodha</p>
-        <p class="abstract">Autonomous scientific discovery systems offer the potential to accelerate research by automating the process of hypothesis generation and validation. However, current systems operate within constrained search spaces or require predefined research questions, limiting their capacity for true open-ended inquiry. Furthermore, while they generate hypotheses iteratively, they largely lack the ability to explicitly synthesize their own accumulated findings to uncover complex, interconnected phenomena. We introduce DiscoPER, an autonomous large language model-powered framework that conducts open-ended research by dynamically generating and executing code to explore datasets without pre-specified research objectives. To ensure rigorous scientific validity, every proposed discovery must pass statistical testing. To overcome the limitations of isolated search, our framework introduces a second-order reasoning mechanism that periodically analyzes its own accumulated discoveries. By treating prior discoveries as empirical data, DiscoPER identifies structural patterns, confounds, and epistemic gaps, actively redirecting hypothesis exploration toward uncharted regions of the search space. The search space is further expanded by incorporating tool use, enabling the system to explore hypotheses beyond structured metadata by seamlessly processing and extracting useful information from multimodal sources like images. Evaluated on iNatDisco, a new multimodal ecological knowledge benchmark with pattern-level ground truth obtained from peer-reviewed literature, DiscoPER recovers 8 of 9 known patterns with a 72.7% hypothesis support rate, outperforming both classical causal discovery and LLM-guided baselines. Ablations show that DiscoPER scales with more data, and confirms the benefits of second-order meta-reflection.</p>
-        <div class="links">
-          <a href="https://arxiv.org/abs/2607.01131v1" target="_blank" rel="noopener">[abs]</a>
-          <a href="https://arxiv.org/pdf/2607.01131v1" target="_blank" rel="noopener">[pdf]</a>
-        </div>
-      </article>
-      <article class="card">
-        <h2><a href="https://arxiv.org/abs/2607.01043v1" target="_blank" rel="noopener">DART-VLN: Test-Time Memory Decay and Anti-Loop Regularization for Discrete Vision-Language Navigation</a></h2>
-        <div class="meta">
-          <span class="date">2026-07-01</span>
-          <span class="cat">cs.RO</span>
-          
-          <span class="arxiv-id">arXiv:2607.01043v1</span>
-        </div>
-        <p class="authors">Shaoheng Zhang, Zhichen Li, Jie Mei</p>
-        <p class="abstract">Memory-based discrete vision-language navigation (VLN) agents must act under partial observability, yet even strong frozen backbones remain vulnerable at test time. Two common failure modes are stale historical evidence at memory readout and inefficient local backtracking during action selection. We present DART-VLN, a training-free test-time control framework for discrete VLN. DART-VLN combines Test-Time Memory Decay, a read-side memory reweighting rule that suppresses stale and redundant evidence without rewriting stored content, with Anti-Loop Regularization, a lightweight next-hop penalty that discourages immediate reversals during action selection. The framework introduces no new learnable parameters and leaves the learned backbone unchanged. Experiments on R2R and REVERIE show a consistent pattern: decay-only provides stable read-side gains, while decay+anti-loop achieves the best overall quality-efficiency trade-off, yielding shorter trajectories, lower runtime, and improved navigation performance in key settings. Behavioral analysis further confirms that anti-loop regularization reduces local backtracking and improves path efficiency under frozen backbones. Overall, the results show that modest test-time control can make memory-based discrete VLN more reliable and efficient without retraining.</p>
-        <div class="links">
-          <a href="https://arxiv.org/abs/2607.01043v1" target="_blank" rel="noopener">[abs]</a>
-          <a href="https://arxiv.org/pdf/2607.01043v1" target="_blank" rel="noopener">[pdf]</a>
-        </div>
-      </article>
-      <article class="card">
-        <h2><a href="https://arxiv.org/abs/2607.00917v1" target="_blank" rel="noopener">Valdi: Value Diffusion World Models</a></h2>
-        <div class="meta">
-          <span class="date">2026-07-01</span>
-          <span class="cat">cs.LG</span>
-          
-          <span class="arxiv-id">arXiv:2607.00917v1</span>
-        </div>
-        <p class="authors">Christopher Lindenberg, Kashyap Chitta</p>
-        <p class="abstract">World models can enable Model Predictive Control (MPC), but this requires dynamics prediction that is both fast enough for online use and expressive enough to represent uncertain futures. Diffusion models offer a natural mechanism for modeling uncertain dynamics, yet their iterative inference procedure makes them difficult to use for low-latency latent planning. We bridge this gap with Value Diffusion World Models (Valdi), combining end-to-end online training for MPC with a latent diffusion dynamics model. In preliminary experiments on the CarRacing environment, we show that Valdi, using a single diffusion step at both training and inference, matches a deterministic MLP baseline. Our experiments expose a trade-off between predictive multimodality and control performance in this setup. Code is available at https://github.com/Kit115/ValueDiffusionWorldModels.</p>
-        <div class="links">
-          <a href="https://arxiv.org/abs/2607.00917v1" target="_blank" rel="noopener">[abs]</a>
-          <a href="https://arxiv.org/pdf/2607.00917v1" target="_blank" rel="noopener">[pdf]</a>
-        </div>
-      </article>
       <article class="card">
         <h2><a href="https://arxiv.org/abs/2607.00858v1" target="_blank" rel="noopener">MoVA: Learning Asymmetric Dual Projections for Modular Long Video-Text Alignment</a></h2>
         <div class="meta">
@@ -90,21 +30,6 @@
         <div class="links">
           <a href="https://arxiv.org/abs/2607.00858v1" target="_blank" rel="noopener">[abs]</a>
           <a href="https://arxiv.org/pdf/2607.00858v1" target="_blank" rel="noopener">[pdf]</a>
-        </div>
-      </article>
-      <article class="card">
-        <h2><a href="https://arxiv.org/abs/2607.00798v1" target="_blank" rel="noopener">ClinRAG-GRAPH: Clinical-prior Retrieval-Augmented Graph Model with Domain Adversarial Learning for Breast pCR Prediction</a></h2>
-        <div class="meta">
-          <span class="date">2026-07-01</span>
-          <span class="cat">cs.CV</span>
-          <span class="school">Harvard</span>
-          <span class="arxiv-id">arXiv:2607.00798v1</span>
-        </div>
-        <p class="authors">Yaofei Duan, Yuhao Huang, Tianyu Zhang, Yuan Gao, Luyi Han, Xin Wang, Xinyu Xie, Xinglong Liang et al.</p>
-        <p class="abstract">Neoadjuvant chemotherapy (NAC) response prediction is clinically important for treatment stratification in breast cancer. However, robust pre-treatment pathological complete response (pCR) prediction remains challenging due to insufficient cross-modal modeling, multicenter imaging heterogeneity, and weak evidence-grounded interpretability. We propose ClinRAG-GRAPH, a Clinically informed Retrieval-Augmented Generation Graph framework, for pre-treatment pCR prediction from DCE-MRI, structured clinical variables, and biopsy-derived pathological biomarkers. ClinRAG-GRAPH constructs an intra-patient clinical-prior graph and applies a prior-guided relation-aware graph convolutional network for structured multimodal representation learning. To improve cross-center robustness, we introduce a dual-branch domain-adversarial learning strategy to suppress protocol-related MRI bias while preserving pCR-relevant features. To enhance interpretability, we further incorporate large language model (LLM)-driven subgraph RAG module that retrieves clinically analogous historical cases and integrates retrieved evidence for pCR inference. We assemble a large-scale multicenter NAC breast cancer cohort for extensive validation, drawing from two public sources and three in-house centers.Results show that ClinRAG-GRAPH achieves AUCs of 0.815 on the internal test set and 0.774/0.712 on two external test sets, demonstrating robust pre-treatment pCR prediction across centers. The code is available at the anonymized https://github.com/miccai26-1181/ClinRAG-GRAPH.</p>
-        <div class="links">
-          <a href="https://arxiv.org/abs/2607.00798v1" target="_blank" rel="noopener">[abs]</a>
-          <a href="https://arxiv.org/pdf/2607.00798v1" target="_blank" rel="noopener">[pdf]</a>
         </div>
       </article>
       <article class="card">
@@ -123,66 +48,6 @@
         </div>
       </article>
       <article class="card">
-        <h2><a href="https://arxiv.org/abs/2607.00746v1" target="_blank" rel="noopener">GaussianFusion: Unified 3D Gaussian Representation for Multi-Modal Fusion Perception</a></h2>
-        <div class="meta">
-          <span class="date">2026-07-01</span>
-          <span class="cat">cs.CV</span>
-          
-          <span class="arxiv-id">arXiv:2607.00746v1</span>
-        </div>
-        <p class="authors">Xiao Zhao, Chang Liu, Mingxu Zhu, Zheyuan Zhang, Linna Song, Qingliang Luo, Chufan Guo, Kuifeng Su</p>
-        <p class="abstract">The bird&#x27;s-eye view (BEV) representation enables multi-sensor features to be fused within a unified space, serving as the primary approach for achieving comprehensive 3D perception. However, the discrete grid representation of BEV leads to significant detail loss and limits feature alignment and cross-modal information interaction in multimodal fusion perception. In this work, we break from the conventional BEV paradigm and propose a new universal framework for multi-modal fusion based on 3D Gaussian representation. This approach naturally unifies multi-modal features within a shared and continuous 3D Gaussian space, effectively preserving edge and fine texture details. To achieve this, we design a novel forward-projection-based multi-modal Gaussian initialization module and a shared cross-modal Gaussian encoder that iteratively updates Gaussian properties based on an attention mechanism. GaussianFusion is inherently a task-agnostic model, with its unified Gaussian representation naturally supporting various 3D perception tasks. Extensive experiments demonstrate the generality and robustness of GaussianFusion. On the nuScenes dataset, it outperforms the 3D object detection baseline BEVFusion by 2.6 NDS. Its variant surpasses GaussFormer on 3D semantic occupancy with 1.55 mIoU improvement while using only 30% of the Gaussians and achieving a 450% speedup.</p>
-        <div class="links">
-          <a href="https://arxiv.org/abs/2607.00746v1" target="_blank" rel="noopener">[abs]</a>
-          <a href="https://arxiv.org/pdf/2607.00746v1" target="_blank" rel="noopener">[pdf]</a>
-        </div>
-      </article>
-      <article class="card">
-        <h2><a href="https://arxiv.org/abs/2607.00654v1" target="_blank" rel="noopener">Linguistic Relative Policy Optimization for Video Anomaly Reasoning</a></h2>
-        <div class="meta">
-          <span class="date">2026-07-01</span>
-          <span class="cat">cs.CV</span>
-          
-          <span class="arxiv-id">arXiv:2607.00654v1</span>
-        </div>
-        <p class="authors">Jiaxu Leng, Jiankang Zheng, Mengjingcheng Mo, Zhanjie Wu, Haosheng Chen, Ji Gan, Xinbo Gao</p>
-        <p class="abstract">Video anomaly detection (VAD) with multimodal large language models has shown strong potential, yet most existing methods still depend on large-scale annotations or expert-designed priors, limiting their ability to acquire anomaly knowledge with as little human intervention as possible. To address this, we propose Linguistic Relative Policy Optimization (LRPO), which distills group-relative semantic advantages from multiple reasoning trajectories into a linguistically expressed anomaly experience prior, and adapts the model by injecting this prior into the context to steer its output distribution without any parameter updates. LRPO builds two complementary experience representations: general experience captures transferable anomaly preferences across scenarios, while scenario experience models context-dependent anomaly rules for targeted refinement. To further improve the learned experience, we introduce an anomaly alignment reward that guides trajectory optimization to match human risk preferences and reinforce temporally grounded reasoning. Extensive experiments on XD-Violence, UCF-Crime, and UBnormal demonstrate that LRPO significantly outperforms existing state-of-the-art methods under tuning-free settings.</p>
-        <div class="links">
-          <a href="https://arxiv.org/abs/2607.00654v1" target="_blank" rel="noopener">[abs]</a>
-          <a href="https://arxiv.org/pdf/2607.00654v1" target="_blank" rel="noopener">[pdf]</a>
-        </div>
-      </article>
-      <article class="card">
-        <h2><a href="https://arxiv.org/abs/2607.00606v1" target="_blank" rel="noopener">Retrieved Images as Visual Thought: Training-Free Multimodal In-Context Learning for the Open-vs-Closed Gap</a></h2>
-        <div class="meta">
-          <span class="date">2026-07-01</span>
-          <span class="cat">cs.CV</span>
-          
-          <span class="arxiv-id">arXiv:2607.00606v1</span>
-        </div>
-        <p class="authors">Bingchen Huang, Zhiling Wang, Yifu Chen, Yuanchao Du</p>
-        <p class="abstract">Recent work on Thinking with Images makes vision a dynamic part of reasoning, but does so through generation: the model invokes external tools, synthesizes code, or imagines new imagery, each at the cost of a tool protocol, brittle code, or an expensive training pipeline. A fourth route makes vision dynamic without generating anything, by retrieving labeled exemplar images and reasoning over them, yet it remains underexplored despite being train-free. We present ReVisIT, a train-free framework that realizes this retrieval-based route by treating each retrieved image-label pair as a unit of visual thought. ReVisIT combines structured class definitions, per-query multimodal retrieval of exemplars, and alternating user/assistant injection of those exemplars before joint multi-attribute decoding, and degrades gracefully to whichever components a task admits. On VL-ICL Bench Fast Open MiniImageNet, Qwen3-VL-30B-A3B with ReVisIT reaches 98.5% at 4-shot, statistically indistinguishable from the 72B LLaVA-OneVision SOTA (98.7%) on this near-saturated task at about 1/2.4 the parameters, while the same backbone without the scaffold sits at chance. The turns layer alone adds 26.1 points to GPT-4.1 on free-form concept induction (Bongard-OpenWorld), and the full stack yields a 4-6 point macro gain across three backbones on MAAC-Bench, a new license-clean 27-class, 5-attribute benchmark, significant by paired bootstrap on the curator-derived attributes. Component analysis shows that retrieval-plus-turns is the universal lever while structured definitions are need-adaptive, and that 83% of the retrieval gain comes from retrieval quality rather than from the presence of exemplars. MAAC-Bench is released with a rubric-grounded LLM verification protocol that replaces author spot-check on subjective attributes.</p>
-        <div class="links">
-          <a href="https://arxiv.org/abs/2607.00606v1" target="_blank" rel="noopener">[abs]</a>
-          <a href="https://arxiv.org/pdf/2607.00606v1" target="_blank" rel="noopener">[pdf]</a>
-        </div>
-      </article>
-      <article class="card">
-        <h2><a href="https://arxiv.org/abs/2607.00527v1" target="_blank" rel="noopener">AI Native Games: A Survey and Roadmap</a></h2>
-        <div class="meta">
-          <span class="date">2026-07-01</span>
-          <span class="cat">cs.AI</span>
-          
-          <span class="arxiv-id">arXiv:2607.00527v1</span>
-        </div>
-        <p class="authors">Zhiyue Xu, Fandi Meng, Kaijie Xu, Clark Verbrugge, Simon Lucas, Jian Zhao</p>
-        <p class="abstract">Generative AI now enables games to produce dialogue, quests, characters, images, and worlds at runtime. Yet generation alone does not make a game AI-native, nor does it guarantee playability. This paper defines AI-native games by whether runtime generative AI is constitutive of the core loop: if the AI component were removed or trivially replaced, the central form of play would collapse or become fundamentally different. This counterfactual criterion separates AI-native games from AI-augmented games, boundary artifacts, chatbots, tavern-style role-play, procedural content generation, and AI-assisted production. Using this definition, we screen candidate artifacts and analyze 53 publicly available AI-native games and prototypes. We introduce a dual-axis G/N taxonomy: the G-axis captures player-facing game type, while the N-axis captures the dominant AI mechanic that makes generative AI indispensable to play. The corpus is concentrated around language-forward designs, especially narrative adventure, epistemic interaction, and generative narrative, while categories such as semantic adjudication, multi-agent simulation, generative construction, and relationship/companion play remain less represented. We argue that the central design problem is organizing semantic openness into stable gameplay. AI-native design depends on mechanical invariants: goals, rules, state, feedback, pacing, and player agency that make open-ended AI outputs interpretable and consequential. We conclude with a roadmap for controllable generation, AI-as-mechanic design, multimodal and multi-agent systems, inference economics, evaluation, safety, and regulation.</p>
-        <div class="links">
-          <a href="https://arxiv.org/abs/2607.00527v1" target="_blank" rel="noopener">[abs]</a>
-          <a href="https://arxiv.org/pdf/2607.00527v1" target="_blank" rel="noopener">[pdf]</a>
-        </div>
-      </article>
-      <article class="card">
         <h2><a href="https://arxiv.org/abs/2607.00465v1" target="_blank" rel="noopener">StochasT: Learning with Stochastic Turn Depth for Visual Instruction Tuning</a></h2>
         <div class="meta">
           <span class="date">2026-07-01</span>
@@ -198,98 +63,128 @@
         </div>
       </article>
       <article class="card">
-        <h2><a href="https://arxiv.org/abs/2607.00410v1" target="_blank" rel="noopener">MindAU: EEG-Conditioned Facial Action Unit Editing via Dual-Stream Manifold Alignment</a></h2>
-        <div class="meta">
-          <span class="date">2026-07-01</span>
-          <span class="cat">cs.CV</span>
-          <span class="school">Harvard</span>
-          <span class="arxiv-id">arXiv:2607.00410v1</span>
-        </div>
-        <p class="authors">Zhenhang Li, Xin Zhou, Hao Deng, Lijun Yin</p>
-        <p class="abstract">Recent brain decoding studies have made substantial progress in reconstructing externally perceived visual content from neural signals. However, using electroencephalography (EEG) recordings to guide facial expression editing remains largely unexplored and poses a distinct challenge: rather than recovering what a subject sees, it requires identifying facial-action related patterns from noisy EEG signals and grounding them in localized, identity-preserving expression edits. In this paper, we investigate EEG-conditioned facial image editing for fine-grained facial action unit (AU) control and propose MindAU, a unified framework for controlling facial AU edits from EEG signals. MindAU first learns noise-robust and AU-discriminative EEG representations through temporal masked reconstruction and AU classification supervision. It then bridges the modality gap via Dual-Stream Manifold Alignment, aligning EEG features with AU-level text semantics and identity-reduced visual displacement trajectories in the multimodal space of Qwen2.5-VL. Finally, MindAU incorporates EEG-aware Multimodal Rotary Positional Embeddings, landmark-guided reference masking, and AU-aware region supervision into a multimodal diffusion-based editor for high-fidelity identity-preserving editing. We also introduce E-CAFE, a curated benchmark for EEG-Conditioned Action-Unit Facial Editing with paired EEG-face editing samples and standardized evaluation protocols. Extensive experiments demonstrate the effectiveness of MindAU and suggest its potential as a step towards future assistive expression technologies for individuals with facial neuromuscular disorders.</p>
-        <div class="links">
-          <a href="https://arxiv.org/abs/2607.00410v1" target="_blank" rel="noopener">[abs]</a>
-          <a href="https://arxiv.org/pdf/2607.00410v1" target="_blank" rel="noopener">[pdf]</a>
-        </div>
-      </article>
-      <article class="card">
-        <h2><a href="https://arxiv.org/abs/2607.00293v1" target="_blank" rel="noopener">Rosetta: Composable Native Multimodal Pretraining</a></h2>
-        <div class="meta">
-          <span class="date">2026-07-01</span>
-          <span class="cat">cs.CV</span>
-          
-          <span class="arxiv-id">arXiv:2607.00293v1</span>
-        </div>
-        <p class="authors">Xiangyue Liu, Zijian Zhang, Miles Yang, Zhao Zhong, Liefeng Bo, Ping Tan</p>
-        <p class="abstract">Achieving true artificial general intelligence requires foundation models capable of integrating new modalities without forgetting prior knowledge. However, accommodating continuous generative objectives alongside discrete understanding tasks causes severe gradient conflicts. Existing architectures, including standard Mixture-of-Experts (MoE), are highly susceptible to representation overwriting. Even structurally partitioned paradigms like Mixture-of-Transformers (MoT) remain vulnerable to catastrophic forgetting, severely impeding multimodal scalability. In this work, we introduce Rosetta, a composable native multimodal pretraining framework designed for seamless and non-destructive modality expansion. Rosetta adopts a modular paradigm where core foundational knowledge is preserved within global shared experts, while modality-specific capabilities are distributed across plug-and-play experts. To guarantee non-destructive composition, we propose Momentum-Anchored Orthogonal Projection (MAOP). MAOP leverages the optimizer&#x27;s momentum state as an implicit semantic anchor, selectively neutralizing conflicting gradient components from new modalities while preserving synergistic updates. Extensive evaluations demonstrate that, while standard MoE and MoT architectures suffer catastrophic forgetting of previously acquired knowledge, Rosetta robustly preserves established language and visual understanding. Furthermore, it delivers superior image generation and unlocks cross-modal synergy, paving the way for truly composable and unified multimodal foundation models. To facilitate further multimodal research, we release our code and checkpoints to the community. Project page at https://rosetta-lmm.github.io/.</p>
-        <div class="links">
-          <a href="https://arxiv.org/abs/2607.00293v1" target="_blank" rel="noopener">[abs]</a>
-          <a href="https://arxiv.org/pdf/2607.00293v1" target="_blank" rel="noopener">[pdf]</a>
-        </div>
-      </article>
-      <article class="card">
-        <h2><a href="https://arxiv.org/abs/2607.00283v1" target="_blank" rel="noopener">What&#x27;s Hidden Matters: Identifying Planning-Critical Occluded Agents using Vision-Language Models</a></h2>
-        <div class="meta">
-          <span class="date">2026-07-01</span>
-          <span class="cat">cs.RO</span>
-          
-          <span class="arxiv-id">arXiv:2607.00283v1</span>
-        </div>
-        <p class="authors">Amirhosein Chahe, Tyler Naes, Jovin D&#x27;sa, Faizan M. Tariq, Sangjae Bae, Lifeng Zhou, David Isele</p>
-        <p class="abstract">Autonomous vehicles must safely navigate complex environments where planning-critical agents may be hidden from view. Current approaches often treat all occlusions with uniform conservatism, yielding needlessly defensive driving, or they infer hidden spaces without estimating the impact on the planner. This work bridges the critical gap between perception and planning by enabling Vision-Language Models (VLMs) to identify and reason about the specific hidden agents that are most critical to the ego-vehicle&#x27;s trajectory. We introduce a novel framework that uses Planning KL-divergence (PKL), an information-theoretic metric, to systematically identify and rank occluded agents based on their impact on the ego vehicle&#x27;s plan. Using this planning-aware ranking, we employ an expert VLM (GPT-5) to generate rich, structured annotations that capture the visual evidence and reasoning required for this task. We apply this framework to the nuScenes dataset to create a new benchmark focused on high-impact scenarios. We conduct comprehensive experiments on a wide range of general-purpose and domain-adapted VLMs, demonstrating that fine-tuning on our PKL-guided data yields dramatic performance improvements across all models. Notably, our results show that smaller, fine-tuned models significantly outperform their much larger zero-shot counterparts, and that our PKL-guided data selection strategy improves performance by approximately 30\% over random sampling. Our work presents the first systematic approach for training VLMs to focus on planning-critical occlusions, enabling more semantically grounded and efficient risk assessment in autonomous driving.</p>
-        <div class="links">
-          <a href="https://arxiv.org/abs/2607.00283v1" target="_blank" rel="noopener">[abs]</a>
-          <a href="https://arxiv.org/pdf/2607.00283v1" target="_blank" rel="noopener">[pdf]</a>
-        </div>
-      </article>
-      <article class="card">
-        <h2><a href="https://arxiv.org/abs/2607.00272v1" target="_blank" rel="noopener">ASPIRE: Agentic /Skills Discovery for Robotics</a></h2>
+        <h2><a href="https://arxiv.org/abs/2606.32012v1" target="_blank" rel="noopener">CoMet: Context and Multiplicity Decomposition for Multimodal Uncertainty Estimation</a></h2>
         <div class="meta">
           <span class="date">2026-06-30</span>
-          <span class="cat">cs.RO</span>
-          <span class="school">Carnegie Mellon</span><span class="school">UC Berkeley</span><span class="school">UIUC</span>
-          <span class="arxiv-id">arXiv:2607.00272v1</span>
+          <span class="cat">cs.LG</span>
+          <span class="school">Princeton</span>
+          <span class="arxiv-id">arXiv:2606.32012v1</span>
         </div>
-        <p class="authors">Runyu Lu, Yubo Wu, Ethan Kou, Letian Fu, Wenli Xiao, Ajay Mandlekar, Yinzhen Xu, Guanya Shi et al.</p>
-        <p class="abstract">Traditional robot programming is challenging: it requires orchestrating multimodal perception, managing physical contact dynamics, and handling diverse configurations and execution failures. We introduce ASPIRE (Agentic Skill Programming through Iterative Robot Exploration), a continual learning system that autonomously writes and refines robot control programs in a code-as-policy paradigm while compounding experience into a reusable skill library. ASPIRE discovers skills that persist across tasks, simulation and real-world settings, and embodiments. It operates in an open-ended loop with three components: (1) a closed-loop robot execution engine that exposes fine-grained multimodal traces, enabling autonomous failure diagnosis, repair synthesis, and validation; (2) a continually expanding skill library that distills validated fixes into reusable, transferable knowledge; and (3) evolutionary search that generates diverse task sequences and control programs to explore beyond single-trajectory refinement. ASPIRE surpasses prior methods by up to 77% on LIBERO-Pro manipulation under perturbation, 72% on Robosuite bimanual handover, and 32% on BEHAVIOR-1K long-horizon household tasks. Its accumulated library also enables zero-shot generalization to unseen long-horizon tasks: on LIBERO-Pro Long, ASPIRE achieves 31% success versus 4% for prior methods despite their use of test-time reasoning and retries. Finally, simulation-discovered skills provide initial evidence of sim-to-real transfer, substantially reducing real-robot programming effort across different embodiments and robot APIs.</p>
+        <p class="authors">Sanghyuk Chun, William Yang, Amaya Dharmasiri, Olga Russakovsky</p>
+        <p class="abstract">Uncertainty estimation has been a long-standing challenge in AI models; it amounts to &quot;knowing what you don&#x27;t know,&quot; and metacognition is notoriously difficult even for humans (cf. the Dunning-Kruger effect). Although it is still far from solved even in simpler classification systems, tackling it in multimodal large language models (MLLMs) is becoming increasingly important. Within MLLMs, uncertainty can stem from any of the diverse sources as well as from their relationships, and further can stem from the unbounded answers in the open-ended setting. To tackle the issues, we propose CoMet, an MLLM uncertainty estimation method by decomposing uncertainty into a context-specific term and a multiplicity-specific term. The former captures ambiguity induced by the given context (e.g., task or prompt), while the latter captures how many plausible answers determined by the context remain compatible with the given input. We train a lightweight post-hoc uncertainty module to estimate these quantities, which enables efficient uncertainty estimation without autoregressive answer generation or repeated sampling. Experiments on various open-ended multimodal benchmarks, hallucination detection, and multiple-choice visual question answering benchmarks show that CoMet consistently improves uncertainty estimation over existing baselines while remaining efficient in practice. Code is available at https://github.com/princetonvisualai/comet_uncertainty</p>
         <div class="links">
-          <a href="https://arxiv.org/abs/2607.00272v1" target="_blank" rel="noopener">[abs]</a>
-          <a href="https://arxiv.org/pdf/2607.00272v1" target="_blank" rel="noopener">[pdf]</a>
+          <a href="https://arxiv.org/abs/2606.32012v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2606.32012v1" target="_blank" rel="noopener">[pdf]</a>
         </div>
       </article>
       <article class="card">
-        <h2><a href="https://arxiv.org/abs/2607.00228v1" target="_blank" rel="noopener">Leveraging Multimodality for Real-Time Classification of Transients and Variables found by the Zwicky Transient Facility</a></h2>
+        <h2><a href="https://arxiv.org/abs/2606.31711v1" target="_blank" rel="noopener">Arena-T2I Hard: Benchmarking and Improving Faithfulness with Dependency-Aware Checklist</a></h2>
         <div class="meta">
           <span class="date">2026-06-30</span>
-          <span class="cat">astro-ph.IM</span>
-          <span class="school">UC Berkeley</span><span class="school">Caltech</span><span class="school">University of Minnesota</span><span class="school">Northwestern</span>
-          <span class="arxiv-id">arXiv:2607.00228v1</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">UCLA</span>
+          <span class="arxiv-id">arXiv:2606.31711v1</span>
         </div>
-        <p class="authors">Ved G. Shah, Nabeel Rehemtulla, Adam A. Miller, Sushant Sharma Chaudhary, Michael W. Coughlin, Antoine Le Calloch, Matthew J. Graham, Joahan Castaneda Jaimes et al.</p>
-        <p class="abstract">Modern time-domain surveys such as the Zwicky Transient Facility (ZTF) generate hundreds of thousands of alerts each night, making real-time decisions for follow-up observations a central challenge in time-domain astronomy. Robust early classification is crucial for making informed decisions, but is hindered by sparse light curves and degeneracies between classes. In this work, we leverage multimodality to substantially improve real-time classification and demonstrate the practicality of our approach by deploying our model on the ZTF alert stream. Building on the Online Ranked Astrophysical CLass Estimator (ORACLE), we introduce the ORACLE-2 models, which combine light curves, metadata, and images for real-time hierarchical classification. Using both real and simulated datasets, we show that incorporating additional modalities consistently improves classification performance. On observations from ZTF&#x27;s Bright Transient Survey, our best-performing model, ORACLE-2 Omni, achieves a macro F1 score of 0.73 -- an improvement of up to 11% over models using light curves and metadata alone, and up to 40% over light-curve-only models, with the strongest gains realized at early times. To demonstrate applicability to the Legacy Survey of Space and Time, which will increase alert volume by more than an order of magnitude, we train a light curve + metadata variant on the simulated ELAsTiCC dataset. This model achieves a macro F1 score of 0.88, an improvement of up to 13% over the light-curve-only variant, matching the performance of other state-of-the-art models. Finally, we quantify the trade-offs between performance and throughput, identifying regimes where multimodal approaches offer the greatest benefit. These results show that combining multiple modalities improves early-time classification, enabling more effective triage of high-volume alert streams for current and future time-domain surveys.</p>
+        <p class="authors">Yuanhao Ban, Tong Xie, Sohyun An, Yunqi Hong, Evan Frick, I-Hung Hsu, Wei-Lin Chiang, Ion Stoica et al.</p>
+        <p class="abstract">Faithfulness -- how precisely a generated image aligns with its prompt -- is increasingly central to the real-world utility of text-to-image (T2I) models. Existing faithfulness benchmarks, however, rely on simple atomic instructions, on which top-tier systems already achieve near-perfect scores. As T2I models enter creative workflows, users issue multi-faceted requests combining intricate spatial relationships, stylistic constraints, and complex text rendering. In this setting, a single binary VLM-judge score no longer captures which specific constraints the model fails to satisfy. We introduce Arena-T2I Hard, a 310-prompt stress benchmark drawn from real arena T2I logs, with approximately 30 decomposed yes/no constraints per prompt spanning six categories, including text rendering. The strongest closed-source system we evaluate reaches 0.855 with a 33~pp performance gap across 11 systems, demonstrating substantial discriminative power. Moreover, high public-arena rankings fail to predict faithfulness, confirming that holistic Bradley-Terry (BT) preference scores prioritize aesthetics over fine-grained prompt adherence. We propose a dependency-aware checklist reward that decomposes each prompt into a DAG of yes/no questions and zeroes descendants of failed parents, turning faithfulness into a per-constraint training signal. Combined with a BT aesthetic reward via group-decoupled normalization (GDPO), which standardizes each reward within its rollout group so neither collapses, the recipe attains a strictly better faithfulness-aesthetics trade-off on SD3.5-Medium and FLUX.1-dev under MMRB2 pairwise comparisons than every single-reward, naive weighted-sum, or 4-reward BT-ensemble baseline.</p>
         <div class="links">
-          <a href="https://arxiv.org/abs/2607.00228v1" target="_blank" rel="noopener">[abs]</a>
-          <a href="https://arxiv.org/pdf/2607.00228v1" target="_blank" rel="noopener">[pdf]</a>
+          <a href="https://arxiv.org/abs/2606.31711v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2606.31711v1" target="_blank" rel="noopener">[pdf]</a>
         </div>
       </article>
       <article class="card">
-        <h2><a href="https://arxiv.org/abs/2607.00174v1" target="_blank" rel="noopener">Steal the Patch Size: Adversarially Manipulate Vision-Language Models</a></h2>
+        <h2><a href="https://arxiv.org/abs/2606.31270v1" target="_blank" rel="noopener">Learning from Failure: Inference-Time Self-Improvement for Computer-Use Agents</a></h2>
         <div class="meta">
           <span class="date">2026-06-30</span>
           <span class="cat">cs.CV</span>
-          
-          <span class="arxiv-id">arXiv:2607.00174v1</span>
+          <span class="school">Stanford</span>
+          <span class="arxiv-id">arXiv:2606.31270v1</span>
         </div>
-        <p class="authors">Kai Hu, Akash Bharadwaj, Weichen Yu, Matt Fredrikson</p>
-        <p class="abstract">We present a black-box model-stealing attack that recovers private vision-tokenizer configurations of deployed vision-language models (VLMs), including the visual patch size and input preprocessing pipeline. The key idea is a task-level side channel induced by ViT-style patchification: when a synthetic grid image is aligned with the hidden patch grid, boundary cues are erased at tokenization, causing periodic accuracy drop. By sweeping the grid cell size and measuring these collapses, we infer the patch size; by introducing padding and a consistency-check test, we further identify whether preprocessing is dynamic- or fixed-resolution and recover the target resize resolution. Across open-source Qwen-VL variants and proprietary models including GPT and Claude, we reliably recover tokenizer-related parameters. Finally, we show that such leakage enables preprocessing-aware transfer attacks and model-targeted adversarial manipulation.</p>
+        <p class="authors">Xueqiao Sun, Xiaohan Wang, Ludwig Schmidt, Serena Yeung-Levy, Yuhui Zhang</p>
+        <p class="abstract">Computer-use agents, which leverage multimodal large language models (MLLMs) to operate computers and complete tasks, have attracted significant attention for their utility and versatility. A major challenge in developing these agents is collecting large-scale, high-quality trajectories. The standard approach generates synthetic data through a self-improving loop: an agent is placed in a verifiable environment and iteratively fine-tuned on its successful trajectories. Despite its effectiveness, this paradigm exploits only successful trajectories and discards the failed ones, even though failures carry rich information about a model&#x27;s weaknesses. In this work, we explore a complementary failure-driven self-improvement loop, a data-centric paradigm that turns failed trajectories into agent improvements. Specifically, we employ an LLM to diagnose failure modes, propose inference-time solutions, and generate code patches -- lightly verified by humans -- that upgrade the agent. We validate this approach with the state-of-the-art OpenCUA-72B model on the OSWorld benchmark, improving the success rate from 42.3% to 48.9%, a gain of 6.6 percentage points, without any additional training cost and with only modest inference overhead. Our results demonstrate that failure-driven self-improvement is a viable complement to success-based pipelines, enabling more efficient agent improvement.</p>
         <div class="links">
-          <a href="https://arxiv.org/abs/2607.00174v1" target="_blank" rel="noopener">[abs]</a>
-          <a href="https://arxiv.org/pdf/2607.00174v1" target="_blank" rel="noopener">[pdf]</a>
+          <a href="https://arxiv.org/abs/2606.31270v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2606.31270v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2606.30296v2" target="_blank" rel="noopener">ManimAgent: Self-Evolving Multimodal Agents for Visual Education</a></h2>
+        <div class="meta">
+          <span class="date">2026-06-29</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">Virginia Tech</span>
+          <span class="arxiv-id">arXiv:2606.30296v2</span>
+        </div>
+        <p class="authors">Wenjia Jiang, Zongyuan Cai, Yuanhang Shao, Chenru Wang, Boyan Han, Zhixue Song, Keyu Chen, Shengwei An et al.</p>
+        <p class="abstract">Multi-round reflection lets agents built on large language models recover from failures within a single task, but each task remains an isolated episode: lessons learned across many reflection rounds on one task are discarded before the next begins. We study this gap on a code-generation task: from a scientific paper section, the agent writes Python in the open-source Manim library to render a mathematical animation. We present ManimAgent, a self-evolving multimodal agent that carries reflection experience across tasks through a dual-channel Episodic Memory Bank grown entirely from its own task stream, with no weight updates and no human seeds. After each animation converges, a vision-language model scores the rendered keyframes; the resulting signals populate a positive channel M+ that stores success rationales as soft Reference Examples, and a negative channel M- that stores validated failure patterns as hard Known Pitfalls. On a fixed-probe evaluation against no-memory, matched-budget retrieval-augmented generation, and shuffled-memory baselines, blind human Pass@1 rises and reflection rounds fall as memory size grows. We will release the code, frozen memory snapshots, and the task stream.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2606.30296v2" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2606.30296v2" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2606.30026v1" target="_blank" rel="noopener">MuseBench: Benchmarking Intent-Level Audiovisual Arts Understanding in MLLMs</a></h2>
+        <div class="meta">
+          <span class="date">2026-06-29</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Johns Hopkins</span><span class="school">UNC Chapel Hill</span>
+          <span class="arxiv-id">arXiv:2606.30026v1</span>
+        </div>
+        <p class="authors">Yuxuan Fan, Gyusik Seo, Jing Hao, Jaemin Cho, Mohit Bansal, Jaehong Yoon</p>
+        <p class="abstract">Audiovisual arts encompass diverse creative disciplines, including cinema, visual arts, stage performance, and game design, where artistic meaning arises from deliberate combinations of visual, auditory, and narrative elements (e.g., fear amplified through claustrophobic framing, or grief conveyed through silence and lingering close-ups). True artistic understanding extends beyond recognizing what is depicted to reasoning about why it is expressed through particular creative choices. Despite the strong progress of multimodal large language models (MLLMs), this critical aspect of artistic understanding remains underexplored, as existing benchmarks largely measure perceptual recognition while overlooking reasoning about creative intent. To address this gap, we introduce Musebench, a comprehensive benchmark designed to evaluate MLLMs on nuanced artistic understanding. It comprises 4,016 questions spanning cinematic arts, static visual arts, stage performing arts, and game arts, distilled from over 10K candidate video essays that pair professional commentary with visual demonstration. To capture the open-ended nature of artistic analysis at scale, the benchmark combines single-select and variable-option multi-select questions. All questions are generated and refined through a four-phase iterative pipeline combining shortcut filtering, adversarial distractors, and expert validation. Comprehensive zero-shot evaluation of 28 state-of-the-art MLLMs reveals that even the best-performing model achieves only 48.29% accuracy, substantially below human expert performance of 87.18%, exposing a significant gap in current models&#x27; creative domain expertise.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2606.30026v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2606.30026v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2606.29788v1" target="_blank" rel="noopener">MemLeak: Diagnosing Information Leaks in Multimodal Agent Memory</a></h2>
+        <div class="meta">
+          <span class="date">2026-06-29</span>
+          <span class="cat">cs.LG</span>
+          <span class="school">Georgia Tech</span>
+          <span class="arxiv-id">arXiv:2606.29788v1</span>
+        </div>
+        <p class="authors">Kuan Wang, Chao Zhang</p>
+        <p class="abstract">When a multimodal AI agent is asked to forget a fact, current memory systems usually delete the text entry and report success. We find that the fact can remain recoverable from retained user images, including images tagged to entirely different facts, because VLMs use implicit visual cues at inference time. We introduce the Information Provenance Graph (IPG), a taxonomy that classifies memory representations by deletion affordance. The IPG reveals that deletion fails through multiple channels. Our benchmark, MemLeak, measures this across a deletion cascade: direct probing of deletion-capable systems yields &lt;1%, but retained correlated text enables 18.3% recovery, and retained images enable 12.0% recovery (0.0% blind baseline, 0.3% FPR) -- with 47% of image leaks not text-recoverable. Content-aware semantic deletion reduces the image residual to 2.0%. The residual appears across multiple VLMs, a production memory system, and real Unsplash-licensed photographs. Dual-annotator human validation (kappa = 0.88) confirms judge reliability.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2606.29788v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2606.29788v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2606.29689v1" target="_blank" rel="noopener">Can MLLMs Critique Like Humans? Evaluating Open-Ended Aesthetic Reasoning in Multimodal Large Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-06-29</span>
+          <span class="cat">cs.CL</span>
+          <span class="school">University of Washington</span><span class="school">UCLA</span><span class="school">UC Santa Barbara</span>
+          <span class="arxiv-id">arXiv:2606.29689v1</span>
+        </div>
+        <p class="authors">Sajjad Ghiasvand, Maryam Amirizaniani, Haniyeh Ehsani Oskouie, Mahnoosh Alizadeh, Ramtin Pedarsani</p>
+        <p class="abstract">Open-ended aesthetic critique is a challenge for multimodal large language models (MLLMs): unlike multiple-choice aesthetic benchmarks, it has no single correct answer, and most aesthetic evaluation has measured models against numeric scores rather than the written critiques people actually give. We evaluate MLLM critiques against ranked human references and ask whether they are close to human ones. Using the Reddit Photo Critique Dataset, we score five open-weight MLLMs against multiple ranked human critiques per photo with reference-based similarity metrics, under six prompt conditions that disentangle persona framing, aspect hinting, length control, and single- versus multi-pass generation, and add an image-grounding control that feeds each model the wrong photograph. We find that reference-based similarity gives a misleading picture. Stricter lexical and learned metrics show only weak alignment with human critiques, while a coarse embedding cosine reports broad topical overlap that the grounding control traces to a stable house style rather than image-specific observation. Behaviorally, the models diverge from humans in consistent ways the scores do not surface: even under a length cap they write two to three times as much, cover nearly every aesthetic aspect where humans are selective, engage each aspect more uniformly and at greater depth, and repeat themselves across critiques of the same photo where humans vary. We argue that reference-based similarity rewards a fluent, comprehensive critique style rather than the selectivity and specificity of human critique, and discuss implications for evaluating and training open-ended multimodal generation.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2606.29689v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2606.29689v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2606.29672v2" target="_blank" rel="noopener">How LLMs See Creativity: Zero-Shot Scoring of Visual Creativity with Interpretable Reasoning</a></h2>
+        <div class="meta">
+          <span class="date">2026-06-29</span>
+          <span class="cat">cs.CL</span>
+          <span class="school">Harvard</span><span class="school">Penn State</span>
+          <span class="arxiv-id">arXiv:2606.29672v2</span>
+        </div>
+        <p class="authors">William Orwig, Roger E. Beaty</p>
+        <p class="abstract">Evaluating the originality of visual images poses enduring challenges for creativity assessment. Automated scoring using AI models has proven effective in the verbal domain, yet key questions remain about evaluating visual creativity and understanding how models arrive at their ratings. The present research asks whether multimodal large language models (LLMs) can serve as judges of visual creativity zero-shot (without any fine-tuning or examples of human ratings) and whether their &quot;reasoning&quot; output offers an interpretable window into their evaluation process. We tested six multimodal LLMs (Gemini 3 Flash, Gemma 4 31B IT, GPT-5.4 Mini, GLM-5v Turbo, Kimi K2.5, and Qwen 3.6 Plus) on 992 AI-generated images (based on human-written prompts) and 1,500 hand-drawn sketches scored for creativity by human raters. In Study 1, all models showed substantial alignment with human creativity ratings on both datasets (r = .57-.68 on AI-generated images; r = .29-68 on sketches). In Study 2, we analyzed the step-by-step reasoning processes of three LLMs evaluating the same images and drawings. Although reasoning made model evaluations interpretable -- showing what they attend to, how they balance originality vs. quality, and how they justify their ratings -- reasoning did not improve alignment with human ratings. In sum, our findings indicate that multimodal LLMs can match human judgments of visual creativity without any additional training, and that their reasoning reveals how AI models evaluate creativity. An open scoring app implementing this pipeline is available at https://review-visual-eval-scoring.hf.space.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2606.29672v2" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2606.29672v2" target="_blank" rel="noopener">[pdf]</a>
         </div>
       </article>
   </main>
   <footer>
-    <p>Generated 2026-07-02 18:58 UTC ·
+    <p>Generated 2026-07-02 22:48 UTC ·
        Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
   </footer>
 </body>

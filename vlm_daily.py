@@ -141,6 +141,25 @@ def is_relevant(paper: dict) -> bool:
     return any(kw.lower() in haystack for kw in config.KEYWORDS)
 
 
+def is_excluded(paper: dict) -> bool:
+    """True if the paper matches an EXCLUDE_KEYWORDS term (e.g. robotics,
+    autonomous driving, embodied action) and should be dropped even though it
+    matched a VLM keyword."""
+    text = paper["title"] + " " + paper["summary"]
+    low = text.lower()
+    for term in config.EXCLUDE_KEYWORDS:
+        if term.isupper() and len(term) <= 5:  # abbreviation -> whole word
+            if re.search(r"\b" + re.escape(term) + r"\b", text):
+                return True
+        elif term.lower() in low:
+            return True
+    return False
+
+
+def is_allowed_category(paper: dict) -> bool:
+    return paper.get("category", "") in config.ALLOWED_PRIMARY_CATEGORIES
+
+
 # --------------------------------------------------------------------------- #
 # Affiliation (US top-50 CS school) filtering
 # --------------------------------------------------------------------------- #
@@ -360,7 +379,11 @@ def main() -> int:
             continue
         if not is_recent(p):
             continue
+        if not is_allowed_category(p):
+            continue
         if not is_relevant(p):
+            continue
+        if is_excluded(p):
             continue
 
         if config.FILTER_BY_SCHOOL:

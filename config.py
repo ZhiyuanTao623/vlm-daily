@@ -7,27 +7,63 @@ from pathlib import Path
 # arXiv categories to search within.
 CATEGORIES = ["cs.CV", "cs.CL", "cs.AI", "cs.LG", "cs.MM"]
 
+# Only keep papers whose PRIMARY category is in this set. This filters out
+# cross-listed papers whose real home field is something else entirely (e.g.
+# astro-ph papers that merely mention "multimodal" data fusion).
+ALLOWED_PRIMARY_CATEGORIES = ["cs.CV", "cs.CL", "cs.AI", "cs.LG", "cs.MM"]
+
 # Keywords used both in the arXiv query and for a second relevance check.
 # A paper is kept only if its title or abstract contains at least one of these.
+# Kept intentionally specific to core VLM research (not bare "multimodal",
+# which also matches EEG/clinical/audio/astro papers that merely fuse
+# different data modalities but aren't vision-language models).
 KEYWORDS = [
-    "vision-language",
-    "vision language",
+    "vision-language model",
+    "vision-language models",
+    "vision-language pretraining",
+    "vision-language pre-training",
+    "vision-language understanding",
+    "vision-language reasoning",
+    "large vision-language model",
+    "visual language model",
     "VLM",
-    "multimodal",
     "MLLM",
+    "multimodal large language model",
+    "multimodal LLM",
+    "visual instruction tuning",
     "visual question answering",
     "image-text",
-    "vision-language model",
+]
+
+# A paper is dropped if its title or abstract contains any of these, even if
+# it also matched a KEYWORDS term above. This excludes VLM-adjacent but
+# non-"pure" application domains: robotics, autonomous driving, embodied
+# action/navigation, etc.
+EXCLUDE_KEYWORDS = [
+    "autonomous driving",
+    "self-driving",
+    "vision-language-action",
+    "vision language action",
+    "VLA",
+    "robot",
+    "robotic",
+    "navigation",
+    "manipulation",
+    "embodied",
+    "world model",
 ]
 
 # Maximum number of papers to show per day.
 MAX_PAPERS = 20
 
 # Only keep papers submitted within this many days (tolerates weekends / gaps).
-DAYS_WINDOW = 2
+# Kept a bit wider than 1 day because strict topic + top-50-school filtering
+# is selective, so a short window can yield very few (or zero) papers.
+DAYS_WINDOW = 4
 
-# How many candidate results to request from the arXiv API per run.
-FETCH_BATCH = 150
+# How many candidate results to request from the arXiv API per run. Stricter
+# topic/school filtering drops more candidates, so this is set generously.
+FETCH_BATCH = 300
 
 # --- US top-50 CS school affiliation filter ---
 # When True, each candidate paper's arXiv HTML page is fetched and the author /
@@ -35,12 +71,15 @@ FETCH_BATCH = 150
 FILTER_BY_SCHOOL = True
 
 # Policy for papers whose affiliation cannot be determined (no HTML version, or
-# no recognizable institution text). "lenient" keeps them; "strict" drops them.
-UNKNOWN_AFFILIATION_POLICY = "lenient"
+# no recognizable institution text). "strict" drops them so that only papers
+# with a clearly confirmed US top-50 affiliation are shown. "lenient" keeps
+# them, which risks including non-US or non-top-50 papers whose affiliation
+# text just didn't match our heuristics.
+UNKNOWN_AFFILIATION_POLICY = "strict"
 
 # Safety cap: at most this many candidates get an HTML fetch per run (bounds
 # runtime). Iteration stops early once MAX_PAPERS keepers are collected.
-SCHOOL_CHECK_CAP = 120
+SCHOOL_CHECK_CAP = 250
 
 # Politeness delay (seconds) between arXiv HTML fetches.
 HTML_FETCH_DELAY = 0.5
