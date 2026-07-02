@@ -2,8 +2,7 @@
 
 每天自动从 [arXiv](https://arxiv.org/) 抓取 **VLM（Vision-Language Model）相关论文**，为每篇生成标题、作者、原始英文摘要和链接，并发布成一个公开网页。
 
-🌐 **在线网页**： `https://<你的用户名>.github.io/vlm-daily/`
-（部署后把 `<你的用户名>` 换成你的 GitHub 用户名。）
+🌐 **在线网页**： https://zhiyuantao623.github.io/vlm-daily/
 
 ## 工作方式
 
@@ -45,6 +44,10 @@ arXiv 的 API 元数据里几乎不含作者单位，外部数据库（OpenAlex/
 这是启发式匹配，并非 100% 准确：个别论文没有 HTML 版或单位写法特殊时可能漏判（`lenient` 策略下会保留这类"无法判断"的论文）。
 
 改定时时间：编辑 [`.github/workflows/daily.yml`](.github/workflows/daily.yml) 里的 `cron` 表达式（UTC 时间）。
+
+## 启用 GitHub Pages（一次性）
+
+在仓库 **Settings → Pages** 中，Source 选 **Deploy from a branch**，Branch 选 `main` / `/docs`，保存。约 1~2 分钟后即可访问上面的在线网页。
 
 ## 文件说明
 
