@@ -70,6 +70,13 @@ main {
   border-radius: 999px;
   font-weight: 600;
 }
+.meta .school {
+  background: #e8f7ee;
+  color: #1a7f43;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
 
 .authors { margin: 0.2rem 0 0.6rem; color: var(--muted); font-size: 0.9rem; }
 .abstract { margin: 0 0 0.7rem; font-size: 0.95rem; }

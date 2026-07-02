@@ -33,6 +33,16 @@ python vlm_daily.py
 | `MAX_PAPERS` | 每天最多展示的论文数（默认 20） |
 | `DAYS_WINDOW` | 只保留最近几天提交的论文（默认 2） |
 | `FETCH_BATCH` | 每次向 arXiv 请求的候选数量 |
+| `FILTER_BY_SCHOOL` | 是否只保留含**美国 top-50 CS 学校**作者的论文（默认 `True`） |
+| `UNKNOWN_AFFILIATION_POLICY` | 无法判断单位时 `"lenient"`（保留）或 `"strict"`（排除） |
+| `TOP_SCHOOLS` | 美国 top-50 CS 学校名单及匹配写法，可自行增删 |
+| `SCHOOL_CHECK_CAP` | 每次运行最多抓取 HTML 检查的候选数（限制耗时） |
+
+### 学校筛选是怎么工作的？
+
+arXiv 的 API 元数据里几乎不含作者单位，外部数据库（OpenAlex/Semantic Scholar）又赶不上最新论文。因此本工具对每篇候选论文抓取它的 **arXiv HTML 版**（`https://arxiv.org/html/<id>`，最新论文发布即有），截取「标题到 Abstract 之间」的作者/单位区域，与 `TOP_SCHOOLS` 名单做匹配。命中的论文会在卡片上显示绿色学校标签。
+
+这是启发式匹配，并非 100% 准确：个别论文没有 HTML 版或单位写法特殊时可能漏判（`lenient` 策略下会保留这类"无法判断"的论文）。
 
 改定时时间：编辑 [`.github/workflows/daily.yml`](.github/workflows/daily.yml) 里的 `cron` 表达式（UTC 时间）。
 

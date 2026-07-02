@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import html
 import json
+import re
 import sys
 import time
 import urllib.parse
@@ -140,6 +141,80 @@ def is_relevant(paper: dict) -> bool:
     return any(kw.lower() in haystack for kw in config.KEYWORDS)
 
 
+# --------------------------------------------------------------------------- #
+# Affiliation (US top-50 CS school) filtering
+# --------------------------------------------------------------------------- #
+# Marker like: "arXiv:2607.00726v1 [cs.CV] 01 Jul 2026"
+_ARXIV_MARKER = re.compile(
+    r"arXiv:\d{4}\.\d{4,5}(?:v\d+)?\s*\[[^\]]+\]\s*\d{1,2}\s+\w+\s+\d{4}"
+)
+
+
+def _extract_region(html_text: str) -> str:
+    """From an arXiv HTML page, return the author/affiliation text region
+    (between the arXiv identifier line and the Abstract heading)."""
+    html_text = re.sub(r"<script.*?</script>", " ", html_text, flags=re.S | re.I)
+    html_text = re.sub(r"<style.*?</style>", " ", html_text, flags=re.S | re.I)
+    text = re.sub("<[^>]+>", " ", html_text)
+    text = re.sub(r"\s+", " ", text).strip()
+
+    m = _ARXIV_MARKER.search(text)
+    rest = text[m.end():] if m else ""
+    if not rest:
+        return ""
+    ab = re.search(r"\bAbstract\b", rest)
+    region = rest[: ab.start()] if ab else rest[:1500]
+    return region.strip()
+
+
+def fetch_affiliation_region(arxiv_id: str) -> str | None:
+    """Fetch the arXiv HTML version and extract the affiliation region.
+    Returns None if no HTML version is available."""
+    candidates = [arxiv_id]
+    base = arxiv_id.split("v")[0]
+    if base != arxiv_id:
+        candidates.append(base)
+    for aid in candidates:
+        url = f"https://arxiv.org/html/{aid}"
+        req = urllib.request.Request(url, headers={"User-Agent": "VLM-Daily/1.0 (+github pages)"})
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                html_text = resp.read().decode("utf-8", "ignore")
+        except Exception:
+            continue
+        region = _extract_region(html_text)
+        if region:
+            return region
+    return None
+
+
+def match_schools(region: str) -> list[str]:
+    """Return the list of US top-50 CS schools detected in the region."""
+    if not region:
+        return []
+    low = region.lower()
+    matched: list[str] = []
+    for name, patterns in config.TOP_SCHOOLS:
+        for pat in patterns:
+            if pat.isupper() and len(pat) <= 5:  # abbreviation -> whole word
+                if re.search(r"\b" + re.escape(pat) + r"\b", region):
+                    matched.append(name)
+                    break
+            elif pat.lower() in low:  # full name -> substring
+                matched.append(name)
+                break
+    return matched
+
+
+def region_is_determinable(region: str | None) -> bool:
+    """True if the region plausibly contains real affiliation text (so a
+    no-match result means 'not a top-50 school' rather than 'unknown')."""
+    if not region or len(region) < 15:
+        return False
+    low = region.lower()
+    return any(kw in low for kw in config.ORG_KEYWORDS)
+
+
 def load_seen() -> set[str]:
     if config.SEEN_IDS_FILE.exists():
         try:
@@ -169,11 +244,16 @@ def render_paper_card(paper: dict) -> str:
         authors = ", ".join(paper["authors"][:8]) + " et al."
     date = (paper.get("published", "")[:10]) or ""
     cat = paper.get("category", "")
+    schools = paper.get("schools") or []
+    school_badges = "".join(
+        f'<span class="school">{_esc(s)}</span>' for s in schools
+    )
     return f"""      <article class="card">
         <h2><a href="{_esc(paper['abs_link'])}" target="_blank" rel="noopener">{_esc(paper['title'])}</a></h2>
         <div class="meta">
           <span class="date">{_esc(date)}</span>
           {f'<span class="cat">{_esc(cat)}</span>' if cat else ''}
+          {school_badges}
           <span class="arxiv-id">arXiv:{_esc(paper['arxiv_id'])}</span>
         </div>
         <p class="authors">{_esc(authors)}</p>
@@ -271,18 +351,45 @@ def main() -> int:
 
     seen = load_seen()
     selected: list[dict] = []
+    checked = 0
+    dropped_non_us = 0
     for p in papers:
+        if len(selected) >= config.MAX_PAPERS:
+            break
         if p["id"] in seen:
             continue
         if not is_recent(p):
             continue
         if not is_relevant(p):
             continue
-        selected.append(p)
-        if len(selected) >= config.MAX_PAPERS:
-            break
 
-    print(f"  {len(selected)} new relevant papers after filtering/dedupe")
+        if config.FILTER_BY_SCHOOL:
+            if checked >= config.SCHOOL_CHECK_CAP:
+                print("  reached SCHOOL_CHECK_CAP; stopping affiliation checks")
+                break
+            checked += 1
+            region = fetch_affiliation_region(p["arxiv_id"])
+            time.sleep(config.HTML_FETCH_DELAY)
+            schools = match_schools(region)
+            if schools:
+                p["schools"] = schools
+            elif region_is_determinable(region):
+                dropped_non_us += 1  # has affiliations, none top-50 -> drop
+                continue
+            elif config.UNKNOWN_AFFILIATION_POLICY == "strict":
+                continue
+            else:
+                p["schools"] = []  # unknown affiliation, kept (lenient)
+
+        selected.append(p)
+
+    if config.FILTER_BY_SCHOOL:
+        print(
+            f"  {len(selected)} papers kept "
+            f"(checked {checked}, dropped {dropped_non_us} clearly non-top-50)"
+        )
+    else:
+        print(f"  {len(selected)} new relevant papers after filtering/dedupe")
 
     date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     daily_path = config.DOCS_DIR / f"{date_str}.html"

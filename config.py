@@ -27,7 +27,87 @@ MAX_PAPERS = 20
 DAYS_WINDOW = 2
 
 # How many candidate results to request from the arXiv API per run.
-FETCH_BATCH = 100
+FETCH_BATCH = 150
+
+# --- US top-50 CS school affiliation filter ---
+# When True, each candidate paper's arXiv HTML page is fetched and the author /
+# affiliation region is scanned for a US top-50 CS school. See notes below.
+FILTER_BY_SCHOOL = True
+
+# Policy for papers whose affiliation cannot be determined (no HTML version, or
+# no recognizable institution text). "lenient" keeps them; "strict" drops them.
+UNKNOWN_AFFILIATION_POLICY = "lenient"
+
+# Safety cap: at most this many candidates get an HTML fetch per run (bounds
+# runtime). Iteration stops early once MAX_PAPERS keepers are collected.
+SCHOOL_CHECK_CAP = 120
+
+# Politeness delay (seconds) between arXiv HTML fetches.
+HTML_FETCH_DELAY = 0.5
+
+# Keywords that indicate the extracted region really contains affiliation info.
+# Used by the "lenient" policy to decide a paper is determinable (and therefore
+# droppable) rather than unknown.
+ORG_KEYWORDS = [
+    "university", "universit", "institute", "college", "laborator", "school of",
+    "academy", "corporation", "research", "department", ".edu", ".ac.", "inc.",
+]
+
+# US top-50 CS schools. Each entry: display name + match patterns.
+# Patterns that are UPPERCASE and short are matched as whole words (\bPAT\b);
+# others are matched as case-insensitive substrings. Edit freely to taste.
+TOP_SCHOOLS = [
+    ("MIT", ["massachusetts institute of technology", "MIT"]),
+    ("Stanford", ["stanford university", "stanford"]),
+    ("Carnegie Mellon", ["carnegie mellon", "CMU"]),
+    ("UC Berkeley", ["uc berkeley", "berkeley", "university of california, berkeley"]),
+    ("UIUC", ["urbana-champaign", "urbana champaign", "UIUC"]),
+    ("University of Washington", ["university of washington"]),
+    ("Cornell", ["cornell university", "cornell tech", "cornell"]),
+    ("Georgia Tech", ["georgia institute of technology", "georgia tech"]),
+    ("Princeton", ["princeton university", "princeton"]),
+    ("University of Michigan", ["university of michigan"]),
+    ("UT Austin", ["university of texas at austin", "ut austin"]),
+    ("Caltech", ["california institute of technology", "caltech"]),
+    ("UCLA", ["ucla", "university of california, los angeles"]),
+    ("UW-Madison", ["university of wisconsin"]),
+    ("Columbia", ["columbia university"]),
+    ("University of Maryland", ["university of maryland"]),
+    ("Harvard", ["harvard university", "harvard"]),
+    ("UC San Diego", ["uc san diego", "UCSD", "university of california, san diego"]),
+    ("Yale", ["yale university"]),
+    ("UPenn", ["university of pennsylvania", "upenn"]),
+    ("Purdue", ["purdue university"]),
+    ("Brown", ["brown university"]),
+    ("Rice", ["rice university"]),
+    ("UMass Amherst", ["university of massachusetts", "umass"]),
+    ("USC", ["university of southern california", "USC"]),
+    ("NYU", ["new york university", "NYU"]),
+    ("Duke", ["duke university"]),
+    ("Johns Hopkins", ["johns hopkins", "JHU"]),
+    ("University of Chicago", ["university of chicago"]),
+    ("Ohio State", ["ohio state university"]),
+    ("Penn State", ["pennsylvania state university", "penn state"]),
+    ("University of Minnesota", ["university of minnesota"]),
+    ("UC Santa Barbara", ["uc santa barbara", "UCSB", "university of california, santa barbara"]),
+    ("UNC Chapel Hill", ["university of north carolina", "chapel hill"]),
+    ("Rutgers", ["rutgers university"]),
+    ("UC Irvine", ["uc irvine", "UCI", "university of california, irvine"]),
+    ("UC Davis", ["uc davis", "university of california, davis"]),
+    ("Texas A&M", ["texas a&m"]),
+    ("Northwestern", ["northwestern university"]),
+    ("Virginia Tech", ["virginia tech", "virginia polytechnic"]),
+    ("University of Virginia", ["university of virginia"]),
+    ("Stony Brook", ["stony brook"]),
+    ("Boston University", ["boston university"]),
+    ("Arizona State", ["arizona state university"]),
+    ("CU Boulder", ["university of colorado"]),
+    ("NC State", ["north carolina state"]),
+    ("University of Utah", ["university of utah"]),
+    ("Dartmouth", ["dartmouth college"]),
+    ("Vanderbilt", ["vanderbilt university"]),
+    ("University of Rochester", ["university of rochester"]),
+]
 
 # Site title shown on the generated pages.
 SITE_TITLE = "VLM Daily"
