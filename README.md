@@ -1,58 +1,69 @@
 # VLM Daily
 
-每天自动从 [arXiv](https://arxiv.org/) 抓取 **VLM（Vision-Language Model）相关论文**，为每篇生成标题、作者、原始英文摘要和链接，并发布成一个公开网页。
+Automatically fetches recent **Vision-Language Model (VLM) papers** from [arXiv](https://arxiv.org/) every day, generating a title, authors, original abstract, and links for each, then publishes them as a public web page.
 
-🌐 **在线网页**： https://zhiyuantao623.github.io/vlm-daily/
+🌐 **Live site**: https://zhiyuantao623.github.io/vlm-daily/
 
-## 工作方式
+## How it works
 
-- **GitHub Actions** 每天 01:00 UTC（≈ 北京 09:00）在云端自动运行 `vlm_daily.py`，你的电脑无需开机。
-- 脚本查询 arXiv，筛选出最近的 VLM 相关论文，去重后渲染成 HTML，写入 `docs/`。
-- 变更被自动提交回仓库，**GitHub Pages** 从 `main` 分支的 `/docs` 目录发布网页。
-- 简介直接使用 arXiv 原始英文摘要，**不需要任何 API key，无费用**。
+- **GitHub Actions** runs `vlm_daily.py` in the cloud every day at 01:00 UTC — your computer does not need to be on.
+- The script queries arXiv, filters recent VLM-related papers, dedupes them, and renders HTML into `docs/`.
+- The changes are committed back to the repo, and **GitHub Pages** serves the site from the `/docs` folder on the `main` branch.
+- The blurb is simply the original arXiv abstract, so **no API key and no cost** are required.
 
-## 本地手动运行
+## Run locally
 
-无需安装任何依赖（纯 Python 标准库，Python 3.9+）：
+No dependencies to install (pure Python standard library, Python 3.9+):
 
 ```bash
 python vlm_daily.py
 ```
 
-然后用浏览器打开 `docs/index.html` 查看。
+Then open `docs/index.html` in your browser.
 
-## 自定义
+## Configuration
 
-编辑 [`config.py`](config.py)：
+Edit [`config.py`](config.py):
 
-| 参数 | 说明 |
+| Setting | Description |
 | --- | --- |
-| `CATEGORIES` | 搜索的 arXiv 分类（如 `cs.CV`、`cs.CL`） |
-| `KEYWORDS` | 关键词（同时用于查询和相关性二次筛选） |
-| `MAX_PAPERS` | 每天最多展示的论文数（默认 20） |
-| `DAYS_WINDOW` | 只保留最近几天提交的论文（默认 2） |
-| `FETCH_BATCH` | 每次向 arXiv 请求的候选数量 |
-| `FILTER_BY_SCHOOL` | 是否只保留含**美国 top-50 CS 学校**作者的论文（默认 `True`） |
-| `UNKNOWN_AFFILIATION_POLICY` | 无法判断单位时 `"lenient"`（保留）或 `"strict"`（排除） |
-| `TOP_SCHOOLS` | 美国 top-50 CS 学校名单及匹配写法，可自行增删 |
-| `SCHOOL_CHECK_CAP` | 每次运行最多抓取 HTML 检查的候选数（限制耗时） |
+| `CATEGORIES` | arXiv categories to search (e.g. `cs.CV`, `cs.CL`) |
+| `KEYWORDS` | Keywords (used both for the query and a second relevance check) |
+| `MAX_PAPERS` | Max papers to show per day (default 20) |
+| `DAYS_WINDOW` | Keep only papers submitted within this many days (default 2) |
+| `FETCH_BATCH` | Number of candidate results requested from arXiv per run |
+| `FILTER_BY_SCHOOL` | Keep only papers with a **US top-50 CS school** author (default `True`) |
+| `UNKNOWN_AFFILIATION_POLICY` | When affiliation is undeterminable: `"lenient"` (keep) or `"strict"` (drop) |
+| `TOP_SCHOOLS` | The US top-50 CS school list and match patterns — edit freely |
+| `SCHOOL_CHECK_CAP` | Max candidates fetched/checked per run (bounds runtime) |
 
-### 学校筛选是怎么工作的？
+### How the school filter works
 
-arXiv 的 API 元数据里几乎不含作者单位，外部数据库（OpenAlex/Semantic Scholar）又赶不上最新论文。因此本工具对每篇候选论文抓取它的 **arXiv HTML 版**（`https://arxiv.org/html/<id>`，最新论文发布即有），截取「标题到 Abstract 之间」的作者/单位区域，与 `TOP_SCHOOLS` 名单做匹配。命中的论文会在卡片上显示绿色学校标签。
+arXiv API metadata almost never includes author affiliations, and external
+databases (OpenAlex / Semantic Scholar) lag behind the newest papers. So for
+each candidate this tool fetches the paper's **arXiv HTML version**
+(`https://arxiv.org/html/<id>`, available as soon as a paper is posted),
+extracts the author/affiliation region (between the title and the Abstract),
+and matches it against the `TOP_SCHOOLS` list. Matched papers show a green
+school badge on their card.
 
-这是启发式匹配，并非 100% 准确：个别论文没有 HTML 版或单位写法特殊时可能漏判（`lenient` 策略下会保留这类"无法判断"的论文）。
+This is heuristic matching, not 100% accurate: papers without an HTML version
+or with unusual affiliation formatting may be missed (under the `lenient`
+policy such "undeterminable" papers are kept).
 
-改定时时间：编辑 [`.github/workflows/daily.yml`](.github/workflows/daily.yml) 里的 `cron` 表达式（UTC 时间）。
+To change the schedule, edit the `cron` expression (UTC) in
+[`.github/workflows/daily.yml`](.github/workflows/daily.yml).
 
-## 启用 GitHub Pages（一次性）
+## Enable GitHub Pages (one-time)
 
-在仓库 **Settings → Pages** 中，Source 选 **Deploy from a branch**，Branch 选 `main` / `/docs`，保存。约 1~2 分钟后即可访问上面的在线网页。
+In the repo's **Settings → Pages**, set Source to **Deploy from a branch**,
+choose the `main` branch and the `/docs` folder, and save. The live site is
+available a minute or two later.
 
-## 文件说明
+## Files
 
-- `vlm_daily.py` — 主脚本：抓取 → 去重 → 渲染 HTML。
-- `config.py` — 可调参数。
-- `docs/` — 生成的网页（GitHub Pages 根目录）。
-- `data/seen_ids.json` — 已展示论文的 ID，用于跨天去重（会被提交回仓库）。
-- `.github/workflows/daily.yml` — 每日定时的 GitHub Actions 工作流。
+- `vlm_daily.py` — main script: fetch → dedupe → render HTML.
+- `config.py` — tunable settings.
+- `docs/` — generated site (GitHub Pages root).
+- `data/seen_ids.json` — IDs of already-shown papers, used for cross-day dedupe (committed back to the repo).
+- `.github/workflows/daily.yml` — the daily GitHub Actions workflow.
