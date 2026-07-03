@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-07-03</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-07-03</h2>
+      <p class="count">7 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.02007v1" target="_blank" rel="noopener">EduArt: An educational-level benchmark for evaluating art history knowledge in large language models</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-02</span>
+          <span class="cat">cs.CL</span>
+          <span class="school">Harvard</span>
+          <span class="arxiv-id">arXiv:2607.02007v1</span>
+        </div>
+        <p class="authors">Gianmarco Spinaci, Lukas Klic, Giovanni Colavizza</p>
+        <p class="abstract">Large language models now score near ceiling on general benchmarks, but these aggregate measures reveal little about how models behave within single disciplines. Existing art-focused evaluations rely on synthetic questions and rarely report item-level properties. This paper introduces EduArt, an educational-level benchmark for art-historical knowledge and visual reasoning in multimodal LLMs. EduArt comprises 871 human-authored questions from Italian secondary-school exercises and US Advanced Placement Art History exams, spanning two languages and seven formats from multiple choice to in-text word placement and error identification. Twelve models from six provider families were evaluated under a default answer-only condition and a motivation condition requiring written justification, and characterized using Classical Test Theory and a logistic regression isolating the effects of format, language, image presence, and model. The benchmark showed strong psychometric properties (mean discrimination 0.514, 82.3 percent good discriminators), while multiple-choice accuracy saturated near ceiling for six models, showing recognition formats alone cannot distinguish frontier models. Format was a strong independent predictor of accuracy: models exceeding 94 percent on multiple choice fell to 23.9 percent on open completion (Claude Opus 4.6) and 6.2 percent on error identification (Claude Sonnet 4.6). The motivation condition changed accuracy in a predominantly negative, family-dependent direction. These dissociations indicate that art-historical knowledge and the ability to deploy it are distinct capabilities, and that single-format benchmarks overestimate what models can reliably do. Mapping this capability profile is a precondition for responsible use of multimodal LLMs in art-historical scholarship, where tasks demand producing and manipulating content rather than selecting from fixed options.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.02007v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.02007v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.01751v1" target="_blank" rel="noopener">MedStreamBench: A Time-Aware Benchmark for Streaming and Proactive Medical Video Understanding</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-02</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Carnegie Mellon</span>
+          <span class="arxiv-id">arXiv:2607.01751v1</span>
+        </div>
+        <p class="authors">Yuan Wang, Shujian Gao, Songtao Jiang, Zhengyu Hu, Zuozhu Liu</p>
+        <p class="abstract">Existing medical video benchmarks primarily evaluate whether a model produces the correct answer, but rarely assess whether it answers at the right time. In real clinical settings, AI systems must decide not only what to predict, but also when to answer, defer judgment, or proactively raise alerts. This creates a critical gap between benchmark evaluation and deployment requirements. We present MedStreamBench, a benchmark for time-aware medical video understanding. MedStreamBench integrates 22 medical datasets and 5,419 QA instances across four temporal settings: retrospective, present, future, and proactive. Unlike conventional benchmarks that assume full-video access, MedStreamBench restricts models to temporally bounded evidence windows and supports both single-turn and streaming evaluation. We further introduce a proactive monitoring setting that requires models to determine whether and when clinically relevant alerts should be triggered. Beyond answer correctness, MedStreamBench evaluates temporal behavior through responsiveness and post-evidence stability. Experiments on leading general-purpose and medical vision-language models reveal a substantial gap between offline recognition and temporally grounded decision-making, with performance dropping markedly in streaming and proactive settings. Our benchmark is available at https://huggingface.co/datasets/Venn2024/MedStreamBench.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.01751v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.01751v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.01709v1" target="_blank" rel="noopener">COMFYCLAW: Self-Evolving Skill Harnesses for Image Generation Workflows</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-02</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">University of Maryland</span><span class="school">UPenn</span>
+          <span class="arxiv-id">arXiv:2607.01709v1</span>
+        </div>
+        <p class="authors">Zongxia Li, Dawei Liu, Fuxiao Liu, Yuhang Zhou, Xiyang Wu, Jingxi Chen, Jing Xie, Xiaomin Wu et al.</p>
+        <p class="abstract">Agents are increasingly used to construct workflows and assist humans in completing recurring tasks more efficiently. As these workflows become repeated and domain-specific, agent memory and reusable skills become increasingly important: agents should be able to recall workflow patterns, execution constraints, and user preferences from previous runs. We study this problem in workflow-based image generation and introduce COMFYCLAW, an agentic skill evolution harness for controlling ComfyUI workflows. COMFYCLAW formulates workflow construction as typed graph editing, exposes tools organized by construction stage, automatically reverts invalid edits, and uses a region-level vision-language model (VLM) verifier to translate visual failures into actionable repair suggestions. The framework further evolves a progressively disclosed skill library, where trajectories, execution errors, and verifier feedback from previous runs are distilled into reusable Agent Skills. Across four benchmark splits, three agent models, and two image backbones, COMFYCLAW achieves the best average image-generation evaluation score across all six agent configurations, outperforming a verifier-only baseline without skill evolution. Human annotations further show that annotators prefer COMFYCLAW over variants without skill evolution. Our results suggest that skill evolution is an effective mechanism for improving agent reliability and performance in recurring visual workflow construction.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.01709v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.01709v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.01609v1" target="_blank" rel="noopener">SINA: A Fully Automated Circuit Schematic Image to Netlist Generator Using Artificial Intelligence</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-02</span>
+          <span class="cat">cs.LG</span>
+          <span class="school">CU Boulder</span><span class="school">University of Utah</span>
+          <span class="arxiv-id">arXiv:2607.01609v1</span>
+        </div>
+        <p class="authors">Saoud Aldowaish, Yashwanth Karumanchi, Kai-Chen Chiang, Mohammed Ayman Habib, Finn Murphy, Rishen Cao, Morteza Fayazi</p>
+        <p class="abstract">Recent advances in Artificial Intelligence (AI) have revolutionized Electronic Design Automation (EDA), particularly through Large Language Models (LLMs) for circuit design tasks. However, their application to analog and mixed-signal domains remains limited by the lack of machine-readable representations of existing circuit design knowledge. Circuit schematic images found in research manuscripts, textbooks, and websites constitute a vast repository of validated designs; however, these visual representations cannot be directly processed by EDA tools. Converting them into machine-readable netlists is essential for enabling simulation, verification, and building comprehensive databases for AI-based models. Current conversion methods lack generalization across both Integrated Circuit (IC) and Printed Circuit Board (PCB) level schematics. Moreover, they struggle with component recognition and connectivity inference, and fail to distinguish between connected junctions and crossing wires. In this paper, we propose SINA, an open-source circuit schematic image-to-netlist generator. SINA is a fully automated pipeline that integrates deep learning for robust component detection, connected-component labeling for accurate connectivity inference, Optical Character Recognition (OCR) for component reference designator extraction, and a Vision-Language Model (VLM) for reliable reference designator assignment. SINA handles both IC- and PCB-level schematics and incorporates dedicated crossing-wires detection to differentiate wire intersections from connections. We validate the correctness of the generated netlists using graph isomorphism techniques. Our experiments demonstrate an overall netlist generation accuracy of 96.67%, which is 2.72x higher compared to state-of-the-art approaches.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.01609v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.01609v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.01436v1" target="_blank" rel="noopener">Discrete Diffusion Language Models for Interactive Radiology Report Drafting</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-01</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">Stanford</span>
+          <span class="arxiv-id">arXiv:2607.01436v1</span>
+        </div>
+        <p class="authors">Max Van Puyvelde, Halil Ibrahim Gulluk, Wim Van Criekinge, Olivier Gevaert</p>
+        <p class="abstract">Diffusion language models, which generate text by denoising a token canvas bidirectionally instead of emitting tokens left to right, have become competitive with autoregressive (AR) generation. Medical foundation models, however, remain almost entirely autoregressive. We adapt a mixture-of-experts diffusion language model, DiffusionGemma-26B, and benchmark it against its same-size AR sibling Gemma-4-26B under an identical LoRA recipe on medical visual question answering datasets, scored by a verbosity-robust LLM judge. Diffusion matches or exceeds AR on all of them, and the finetuned model (3.8B active) is competitive with frontier vision-language models; its decoding is also 3.5-4.4x faster. Beyond this parity, the diffusion model offers a drafting capability AR lacks: any-order infill. Because the canvas is denoised bidirectionally, a radiologist can fix report fragments and have the model fill the text between them, an operation inherent to diffusion but not to autoregression, which is subpar at it. This suits real reports, which are often terse or inconsistent across clinicians and institutions.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.01436v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.01436v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.01383v1" target="_blank" rel="noopener">MIBE: Multi-subject Interaction Benchmark and Evaluator for Personalized Image Generation</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-01</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Carnegie Mellon</span><span class="school">UIUC</span><span class="school">UCLA</span><span class="school">USC</span>
+          <span class="arxiv-id">arXiv:2607.01383v1</span>
+        </div>
+        <p class="authors">Zhihan Chen, Yuhuan Zhao, Yijie Zhu, Xinyu Yao, Mengcong Ren, Suwen Wang, Qiuyang Yin, Yuchen Sun et al.</p>
+        <p class="abstract">Multi-subject personalized image generation requires the precise rendering of all requested reference identities and their specified interactions based on a guiding prompt. However, state-of-the-art models still struggle with this process, frequently omitting subjects, failing to preserve reference appearances, or misattributing interactions. Furthermore, existing metrics designed primarily for single-subject fidelity cannot reliably capture these errors, suffering severe degradation in ranking separability and failing to align with human preference as the subject count increases. To address this gap, we introduce Multi-subject Interaction Benchmark and Evaluator (MIBE), a unified framework comprising a Multi-subject Interaction Benchmark (MIB) and a Multi-subject Interaction Evaluator (MIE). MIB systematically covers diverse relation types and scene complexities through a decoupled data regime. This consists of a 60K-pair VLM-labeled Silver Set for scalable metric training and a 4K-pair double-blind Human Evaluation Gold Set covering a diverse range of state-of-the-art generators, with the Silver Set reaching 95.1% cross-VLM preference agreement. To demonstrate the utility of this benchmark, we present MIE, a lightweight, reference-conditioned evaluator trained exclusively on the Silver Set with a dual-head ranking and diagnosis objective. MIE exhibits strong cross-generator generalization on the Gold Set, achieving 0.922 overall pairwise accuracy against human preference, including 0.982 on seen generators and 0.884 on unseen generators. By outperforming a broad spectrum of baseline metrics, including CLIP and DINO variants, MIE demonstrates that diagnostic supervision can preserve ranking separability and human alignment where traditional evaluators collapse.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.01383v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.01383v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.02089v1" target="_blank" rel="noopener">ESC: Emotional Self-Correction for Reliable Vision-Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-01</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Carnegie Mellon</span><span class="school">Harvard</span><span class="school">Northwestern</span>
+          <span class="arxiv-id">arXiv:2607.02089v1</span>
+        </div>
+        <p class="authors">Tien-Huy Nguyen, Minh-Nhat Nguyen, Nguyen Nhat Huy, Hung Viet Nguyen, Huy Nguyen Minh Nhat, Thanh-Huy Nguyen, Cuong Tuan Nguyen, Hoang M. Le et al.</p>
+        <p class="abstract">Vision-language models (VLMs) have achieved strong performance across diverse multimodal tasks, yet they remain vulnerable to unreliable reasoning. Existing self-correction methods mitigate these issues but typically rely on post-training or carefully engineered feedback, incurring high computational cost. In this work, we revisit this challenge through the lens of emotional cues, asking whether they can activate latent self-correction behaviors in VLMs without additional training. \textbf{We find that emotional signals serve as an effective trigger for self-correction, encouraging more cautious and reflective reasoning}. Motivated by this finding, we propose \escabstract (\textbf{\underline{E}}motional \textbf{\underline{S}}elf-\textbf{\underline{C}}orrection), a training-free self-correction framework. ESC introduces an external verifier that detects potentially incorrect initial responses and injects emotional feedback to encourage model to reflect, and produce a better revised response without additional training. Extensive experiments across safety, hallucination, vision-centric perception, and multimodal reasoning benchmarks show that ESC consistently improves reliability while preserving overall model utility. These results suggest that emotion can function not only as an ability to be recognized, but also as a practical control signal for scalable self-correction in VLMs. \textbf{We therefore believe that ESC provides a strong foundation for a new reliable human-like, emotion-integrated research direction.} Our project is publicly available at \textcolor{red}{https://genai4e.github.io/ESC/}.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.02089v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.02089v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+  </main>
+  <footer>
+    <p>Generated 2026-07-03 04:45 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
