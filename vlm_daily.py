@@ -41,7 +41,7 @@ def build_query() -> str:
     return f"({cats}) AND ({kws})"
 
 
-def fetch_feed(retries: int = 3) -> str:
+def fetch_feed(retries: int = 5) -> str:
     """Query the arXiv API and return the raw Atom XML string."""
     params = {
         "search_query": build_query(),
@@ -55,13 +55,13 @@ def fetch_feed(retries: int = 3) -> str:
     last_err: Exception | None = None
     for attempt in range(1, retries + 1):
         try:
-            with urllib.request.urlopen(req, timeout=30) as resp:
+            with urllib.request.urlopen(req, timeout=45) as resp:
                 return resp.read().decode("utf-8")
         except Exception as err:  # network hiccups / rate limits
             last_err = err
             print(f"  fetch attempt {attempt} failed: {err}", file=sys.stderr)
             if attempt < retries:
-                time.sleep(3 * attempt)
+                time.sleep(5 * attempt)
     raise RuntimeError(f"Failed to fetch arXiv feed after {retries} attempts: {last_err}")
 
 

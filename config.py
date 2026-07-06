@@ -158,5 +158,6 @@ DOCS_DIR = ROOT / "docs"
 DATA_DIR = ROOT / "data"
 SEEN_IDS_FILE = DATA_DIR / "seen_ids.json"
 
-# arXiv API endpoint
-ARXIV_API = "http://export.arxiv.org/api/query"
+# arXiv API endpoint (https avoids plain-HTTP requests being intercepted/reset
+# on some cloud network paths, e.g. GitHub Actions runners)
+ARXIV_API = "https://export.arxiv.org/api/query"
