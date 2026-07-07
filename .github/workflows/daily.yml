@@ -26,7 +26,17 @@ jobs:
           python-version: "3.x"
 
       - name: Fetch papers and render pages
-        run: python vlm_daily.py
+        run: |
+          n=0
+          until python vlm_daily.py; do
+            n=$((n+1))
+            if [ "$n" -ge 4 ]; then
+              echo "Failed after $n attempts."
+              exit 1
+            fi
+            echo "Attempt $n failed (likely transient arXiv rate limiting on the runner's IP); waiting 3 minutes before retry..."
+            sleep 180
+          done
 
       - name: Commit and push if changed
         run: |
