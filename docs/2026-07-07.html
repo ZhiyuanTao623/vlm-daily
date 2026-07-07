@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-07-07</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-07-07</h2>
+      <p class="count">4 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.05310v1" target="_blank" rel="noopener">Evaluating and Understanding Model Editing for Medical Vision Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-06</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">University of Michigan</span>
+          <span class="arxiv-id">arXiv:2607.05310v1</span>
+        </div>
+        <p class="authors">Guli Zhu, Chenwei Wu, Liyue Shen</p>
+        <p class="abstract">Model editing promises a fast, targeted way to correct post-deployment mistakes in medical vision-language models (VLMs) without costly retraining. However, existing multimodal model editing benchmarks focus on general-purpose tasks and do not reflect realistic clinical domain requirements and variability. To address this, we introduce M3Bench, a clinically grounded benchmark for multimodal model editing that evaluates whether an edit remains reliable, precise, and generalizable under the challenges of image and text variation, modality and protocol shifts, clinical knowledge composition, and temporal progression. M3Bench contains 16,276 questions spanning diverse anatomy, modalities, and specialties, and supports both single and sequential edits. By evaluating 4 representative editors across 6 medical and general VLMs, we find that no method excels across all criteria. Gradient-based editors achieve strong transfer but suffer from catastrophic locality violations, whereas memory-based methods preserve locality but lack compositional generality and exhibit high backbone-dependent hyperparameter sensitivity. We further attribute these failures to the latent space geometry of VLMs and how different editing methods shift its landscape. Overall, M3Bench establishes a rigorous clinical stress test for multimodal model editing and offers actionable guidance for safer post-deployment adaptation. The benchmark is publicly available at https://github.com/BioMed-AI-Lab-U-Michgan/M3Bench .</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.05310v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.05310v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.04694v1" target="_blank" rel="noopener">Solve the Missing First Step: Can VLMs Standardize Raw Heterogeneous Medical Data?</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-06</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Stanford</span>
+          <span class="arxiv-id">arXiv:2607.04694v1</span>
+        </div>
+        <p class="authors">Xin Chen, Dongliang Xu, Cunhao Zhu, Xudong Luo, Haoyang Lyu, Xiaoxiao Sun, Serena Yeung-Levy, Yue Yao</p>
+        <p class="abstract">As vision-language models (VLMs) are increasingly applied to medical AI, existing benchmarks mainly focus on evaluating their diagnosis ability over given medical images and texts, implicitly assuming that standardized medical images, texts or question-answer pairs are already prepared. However, this assumption does not hold when we apply VLMs in real clinical practice, where medical data is often raw, heterogeneous, and fragmented across different sources. In this paper, we study this missing step, i.e., raw medical data standardization. Specifically, models are given raw dataset folders and evaluated on their ability to identify source formats, convert raw medical images into VLM-compatible visual inputs, extract relevant textual information, and organize the results into structured image-text pairs. To construct this Medical Data Standardization Benchmark (MDS-Bench), we manually annotate 1,939 raw medical data standardization tasks covering diverse clinical practice, radiology modalities, annotation formats, and directory layouts. Extensive experiments show that even the best performing VLMs, i.e., Gemini 3 Flash, achieve only 48.6% end-to-end success rate. Our research highlights raw medical data standardization as a critical bottleneck for medical AI diagnosis in real practice.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.04694v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.04694v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.03748v1" target="_blank" rel="noopener">Bridging Interleaved Multi-Modal Reasoning as a Unified Decision Process</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-04</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">University of Washington</span>
+          <span class="arxiv-id">arXiv:2607.03748v1</span>
+        </div>
+        <p class="authors">Zican Hu, Xuyang Hu, Yiming Liu, Zuwei Long, Wei Liu, Yunzhuo Hao, Jiawei Gu, Linjie Li et al.</p>
+        <p class="abstract">Unified multi-modal models (UMMs) have shown promising interleaved text-image reasoning capabilities, yet effectively optimizing such multi-turn generation via reinforcement learning (RL) remains an open challenge. Existing approaches apply RL exclusively to text steps, relegating image generation to supervised surrogates, preventing policy gradients from propagating through the full interleaved trajectory across heterogeneous modalities. This leaves the potential of RL for UMMs largely untapped. In the paper, we introduce \textbf{BRAID} (\textbf{B}ridging inte\textbf{R}le\textbf{A}ved mult\textbf{I}-modal reasoning as a unified \textbf{D}ecision process), a simple framework that casts multi-turn text-image-text reasoning as a unified Markov decision process (MDP), enabling joint optimization of textual and visual generation via a single, principled RL objective. BRAID computes a shared trajectory-level advantage and propagates it coherently into both text tokens and image denoising paths, each optimized through its modality-native policy gradient mechanism. To further address long-horizon credit assignment, BRAID employs a vision-language model (VLM) judge that scores each intermediate image on its reasoning utility, supplying dense turn-level feedback to sharpen learning at critical visual branches. Experiments on spatial reasoning and visual perception benchmarks show that BRAID consistently outperforms various baselines, confirming that a unified MDP formulation with vision-thinking guidance is essential for effective multi-modal reasoning.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.03748v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.03748v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.03614v1" target="_blank" rel="noopener">IDEAL-Bench: Indoor Dataset and Evaluation suite for Analyzing 3D Layout reasoning</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-03</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Dartmouth</span>
+          <span class="arxiv-id">arXiv:2607.03614v1</span>
+        </div>
+        <p class="authors">Yuening Cai, Junwei Zhou, Youran Qu, Yu-Wing Tai</p>
+        <p class="abstract">Spatial question answering is the dominant paradigm for evaluating spatial intelligence in Vision-Language Models (VLMs), but it leaves a complementary axis of spatial competence under-evaluated: holistic 3D layout inference, which predicts every visible object&#x27;s pose and extent from a single image in a structured form. To this end, we introduce IDEAL-Bench, an evaluation suite that requires VLMs to predict structured 3D layouts on photorealistic indoor scenes across 10 room types, scored along five numerical dimensions and a perceptual render-and-compare protocol. By operating on semantically realistic scenes with full asset substitution under controlled lighting and viewpoint, IDEAL-Bench moves beyond CLEVR-style simple geometric primitives so that any image-space discrepancy reflects spatial reasoning alone. The benchmark is built on IDEAL-Scenes, a procedurally generated dataset of 1,000 re-renderable Blender environments with ground-truth layouts. Evaluating 15 prominent VLMs reveals three findings: the task remains substantially unsolved, with the strongest model reaching only 62.1/100 overall; all models exhibit a sharp asymmetry between object recognition and geometric regression, indicating that current VLMs are trained to describe scenes rather than to measure them; model rankings partially diverge from those on QA-based and primitive-reconstruction benchmarks: top-tier consensus holds, but mid-tier rankings shift substantially. Collectively, these findings establish IDEAL-Bench as a diagnostic suite, targeting the geometric and structural competencies that QA-based evaluation cannot surface, and paving the way towards more rigorous evaluation of spatial intelligence in next-generation VLMs. Together, these findings position IDEAL-Bench as a principled diagnostic for whether future VLMs achieve genuine spatial understanding rather than linguistic approximations of it.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.03614v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.03614v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+  </main>
+  <footer>
+    <p>Generated 2026-07-07 11:47 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
