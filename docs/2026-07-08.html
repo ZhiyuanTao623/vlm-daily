@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-07-08</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-07-08</h2>
+      <p class="count">3 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.05910v1" target="_blank" rel="noopener">PolicyShiftGuard: Benchmarking and Improving Policy-Adaptive Image Guardrails</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-07</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UIUC</span><span class="school">University of Chicago</span>
+          <span class="arxiv-id">arXiv:2607.05910v1</span>
+        </div>
+        <p class="authors">Mingyang Song, Luxin Xu, Haoyu Sun, Minzhou Pan, Yu Cheng, Bo Li</p>
+        <p class="abstract">Image guardrails are typically trained and evaluated under a fixed safety policy, implicitly treating safety as an intrinsic property of an image. Real deployments are different: the same image may be allowed in one product, restricted in another, and newly disallowed when a policy boundary changes. We study policy-adaptive image guardrailing, where a model must decide whether an image violates the currently supplied policy and generalize to held-out policy definitions. We introduce PolicyShiftBench, a comprehensive benchmark with 2,000 policy-discriminative instances over 265 images, where each image is paired with 7.55 policy-conditioned prompts on average to test whether models adapt to the active policy rather than relying on image-level safety priors. We then propose PolicyShiftGuard, a compact policy-conditioned guardrail trained with a two-stage training recipe that combines Randomized Policy SFT (RP-SFT) with Boundary-Pair Policy Adaptation (BP-Adapt). BP-Adapt trains matched prompts for the same image and risk category using standard label supervision and a pairwise comparison loss that separates blocking policies from passing policies. Experiments show that existing VLMs and specialized guardrails remain brittle under policy shifts, while PolicyShiftGuard substantially improves policy-sensitive performance. The 7B model achieves SOTA performance of 76.9 Avg. F1 and 72.1 Avg. PSS on PolicyShiftBench, transfers well to UnSafeBench and SafeEditBench, and improves the latency-performance trade-off with a concise output format. Ablations confirm that matched pass/block boundary pairs are essential for stable policy adaptation.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.05910v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.05910v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.05859v1" target="_blank" rel="noopener">AVA-VLM: Adaptive Visual Attention-Vision Language Model for In-the-Wild Construction Site Monitoring</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-07</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UCLA</span>
+          <span class="arxiv-id">arXiv:2607.05859v1</span>
+        </div>
+        <p class="authors">Younggun Kim, Taeheon Kim, Youngseo Kim, Seunghee Park</p>
+        <p class="abstract">Vision-Language Models (VLMs) are promising for construction-site monitoring, and recent construction-tailored VLMs have primarily adapted pretrained VLMs through direct QA-style fine-tuning from a single global image. We argue that this direct paradigm remains limited for in-the-wild deployment in terms of operational range, reliability under reduced-resolution inputs, and inference efficiency. To address these challenges, we propose AVA-VLM, an Adaptive Visual Attention-Vision Language Model that follows a human-inspired coarse-to-fine reasoning strategy. AVA-VLM first reasons over a low-resolution global image and selectively requests a high-resolution local crop only when detailed inspection is needed, similar to how a human inspector zooms in on hard-to-see yet important areas. We further introduce a region-aware Chain-of-Thought dataset that teaches the model when to inspect, where to crop, and how to use local evidence. Experiments show that AVA-VLM improves reliability under long-distance and reduced-resolution conditions while substantially reducing visual-token usage.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.05859v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.05859v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.05625v1" target="_blank" rel="noopener">Cross-Contextual Vision-Language Adaptation with LoRA for Personalized Severe Adverse Event Detection in Clinical Wound Monitoring</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-06</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UCLA</span><span class="school">UC Davis</span>
+          <span class="arxiv-id">arXiv:2607.05625v1</span>
+        </div>
+        <p class="authors">Aditi Naiknaware, Jian Sun, Aminreza Khandan, Shengyang Huang, Sean Dow, Bijan Najafi, Salimeh Sekeh</p>
+        <p class="abstract">Wound monitoring is a critical yet underserved clinical challenge, where timely identification of severe adverse events (SAEs) such as infection, tissue deterioration, and delayed healing can significantly impact patient outcomes. While vision-language models (VLMs) show strong multimodal reasoning, they often lack domain-specific grounding to integrate wound imagery with heterogeneous clinical information, and provide limited mechanisms for detecting cases that diverge from the training distribution. We present a multimodal framework for automated wound monitoring and SAE detection. Our approach leverages paired clinical notes and wound descriptions capturing visual characteristics such as appearance, surrounding skin condition, color changes, and signs of inflammation or healing progression, encoded through a dual-stream Low-Rank Adaptation (LoRA) framework built on a frozen BiomedCLIP backbone. We introduce a cross-contextual LoRA fusion mechanism enabling information exchange between clinical semantics and visual wound descriptors, producing context-aware multimodal representations without full model fine-tuning. To identify personalized SAEs, we propose a wound-specific out-of-distribution (OOD) detection framework combining semantic matching, visual typicality, caption-text alignment, and caption-visual alignment into a unified SAE (OOD) score. To capture healing dynamics, we incorporate covariate consistency and temporal drift penalties that leverage changes in wound characteristics across visits. Experiments on a longitudinal wound dataset collected through clinical visits show promising performance on both wound healing assessment and SAE detection, highlighting the potential of semantically enriched, temporally aware vision-language systems for clinical wound monitoring and early risk identification.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.05625v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.05625v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+  </main>
+  <footer>
+    <p>Generated 2026-07-08 04:17 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
