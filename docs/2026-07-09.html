@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-07-09</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-07-09</h2>
+      <p class="count">3 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.07673v1" target="_blank" rel="noopener">MedPMC: A Systematic Framework for Scaling High-Fidelity Medical Multimodal Data for Foundation Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-08</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Washington</span><span class="school">Yale</span>
+          <span class="arxiv-id">arXiv:2607.07673v1</span>
+        </div>
+        <p class="authors">Hyunjae Kim, Dain Kim, Pan Xiao, Serina S. Applebaum, Younjoon Chung, Xuguang Ai, Yu Yin, Roy Jiang et al.</p>
+        <p class="abstract">Medicine is inherently multimodal, requiring clinicians to synthesize information across diverse data streams. Yet the development of multimodal foundation models is constrained by limited access to large-scale, high-quality clinical data. Although PubMed Central (PMC) offers a complementary source of expert-authored image-text data, existing PMC-derived resources remain limited in fidelity, reproducibility, and clinical validation. We introduce MedPMC, an automated, continuously updatable framework that transforms permissively licensed literature into high-fidelity infrastructure for medical multimodal models. Applied to 6.1 million PMC articles, MedPMC curated 11 million medical image-text pairs. Component evaluations showed strong performance for initial screening (F1 = 93.2), multi-panel figure detection (F1 = 96.5), figure separation (mAP = 89.8), caption separation and alignment (F1 = 81.4; ROUGE-L = 85.3), and medical figure classification (F1 = 96.5). Manual review by five annotators, three with medical training, found 95.3% of MedPMC images medically relevant, versus 19.7% in a prior PMC-derived dataset. Across 26 benchmarks spanning 11 specialties, a MedPMC-trained CLIP-style model improved average zero-shot AUC by 7.1 percentage points over the strongest architecture-matched biomedical CLIP baseline despite using fewer than half as many image-text pairs. As the vision encoder in a multimodal large language model, it improved medical visual question-answering by 1.9 and 16.9 percentage points across two benchmarks. In 10,524 Yale New Haven Health System dermatology photographs, it improved morphology-to-image retrieval Recall@5 by 11.7 percentage points. These findings show that high-fidelity literature curation strengthens medical multimodal foundation models across benchmark and clinical settings. We publicly release the framework, corpus, benchmarks, and pretrained models.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.07673v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.07673v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.07507v1" target="_blank" rel="noopener">HIVE: Understanding Post-Hallucination Reasoning in Vision Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-08</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Purdue</span><span class="school">Rutgers</span>
+          <span class="arxiv-id">arXiv:2607.07507v1</span>
+        </div>
+        <p class="authors">Feng He, Zhenting Wang, Qifan Wang, Qiang Guan, Dongfang Liu, Ruixiang Tang, Qiankun Li</p>
+        <p class="abstract">Hallucinations in vision language models (VLMs) are commonly treated as semantic errors, yet they often arise from partial or ambiguous visual evidence. Prior work mainly focuses on detecting or suppressing hallucinations at generation time, leaving the subsequent reasoning stage largely unexplored. In this work, we study Post Hallucination Reasoning (PHR), the stage in which hallucinated semantics enter the model&#x27;s inference context and influence downstream predictions. To systematically investigate PHR, we introduce HIVE, Hallucination Inference and Verification Engine, an evaluation infrastructure that enables controlled comparisons between faithful and hallucinated captions. Across nine tasks and nine models, we observe structured modality dependent patterns: hallucinated captions often improve accuracy on vision language tasks, while text only tasks exhibit limited or unstable effects. Further analyses show that hallucinated cues broaden semantic coverage and reshape reasoning dynamics while preserving stable inference. These findings highlight that hallucinated semantics may influence downstream reasoning once they enter the model&#x27;s inference context. Understanding this post hallucination stage is important for improving the reliability and interpretability of multimodal reasoning systems. Code is publicly available at https://github.com/hefengcs/HIVE.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.07507v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.07507v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.07320v1" target="_blank" rel="noopener">SoccerNet 2026 Challenges Results</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-08</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UC Berkeley</span><span class="school">Johns Hopkins</span><span class="school">UNC Chapel Hill</span>
+          <span class="arxiv-id">arXiv:2607.07320v1</span>
+        </div>
+        <p class="authors">Anthony Cioppa, Silvio Giancola, Håkan Ardö, Mohamad Dalal, Jan Held, Jérémie Ochin, Jiayuan Rao, Karen Sanchez et al.</p>
+        <p class="abstract">The SoccerNet 2026 Challenges constitute the sixth annual edition of the SoccerNet open benchmarking effort, dedicated to advancing computer vision research in sports video understanding. This year&#x27;s challenges span five vision-based tasks: (1) Ball Action Anticipation, predicting the timing and class of ball-related actions within a short future window from a preceding observation window; (2) Player-Centric Ball Action Spotting, temporally localizing and classifying ball-related actions while assigning each action to the acting player through team affiliation and jersey number; (3) Novel View Synthesis, rendering images from unobserved camera poses in multi-view football scenes; (4) Spiideo SoccerNet Synloc, localizing athletes in real-world pitch coordinates from a single calibrated static-camera image; and (5) Visual Question Answering, answering multiple-choice questions about football broadcasts across text, image, and video inputs. For each task, participants were provided with annotated data, a unified evaluation protocol, and a public baseline. This edition saw broad participation, with 427 teams submitting 1,129 entries across the five tasks and 28 teams contributing reviewed technical reports. This paper describes each task and its evaluation protocol, presents the challenge leaderboards, and summarizes the leading submissions, with the aim of documenting the current state of each task as measured on held-out challenge data.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.07320v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.07320v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+  </main>
+  <footer>
+    <p>Generated 2026-07-09 05:02 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
