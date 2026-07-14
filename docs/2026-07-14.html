@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-07-14</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-07-14</h2>
+      <p class="count">8 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.11798v1" target="_blank" rel="noopener">StoryTeller: Training-Free Narrative Grounding for Long-Form Audio Description</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-13</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Dartmouth</span>
+          <span class="arxiv-id">arXiv:2607.11798v1</span>
+        </div>
+        <p class="authors">Seung Hyun Hahm, Minh T. Dinh, SouYoung Jin</p>
+        <p class="abstract">Long-form audio description (AD) requires more than describing visible actions: it must preserve characters, events, relationships, and story context across scenes so that blind and low-vision (BLV) audiences can follow a film. Modern video-language models (VLMs) are effective on short clips, but they often treat each moment independently, producing descriptions that miss who characters are, why events matter, and how the current scene connects to earlier narrative context. We propose StoryTeller, a training-free framework for story-aware long-form AD. Instead of relying only on local visual cues, StoryTeller maintains a verified narrative memory that carries forward story-relevant information across scenes, enabling later descriptions to remain coherent, grounded, and contextually informative. Given only raw video and a movie title, StoryTeller can optionally retrieve public movie metadata to resolve names and story context, while accepting only facts that are supported by the video through semantic filtering and VLM verification. The method requires no subtitles, scripts, AD transcripts, aligned captions, character banks, precomputed face identities, or task-specific fine-tuning. To evaluate whether generated AD preserves narrative information, we introduce StoryAD-QA, a question-answering benchmark that tests whether a language model can answer story-context questions using only the generated descriptions. Experiments on standard AD benchmarks and diverse long-form videos show that StoryTeller consistently improves narrative coherence, factual grounding, and story comprehension over strong baselines in automatic, QA-based, and human evaluations.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.11798v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.11798v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.11598v1" target="_blank" rel="noopener">Interaction Scaling: Grounding the Third Axis of Test-Time Compute</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-13</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">University of Washington</span>
+          <span class="arxiv-id">arXiv:2607.11598v1</span>
+        </div>
+        <p class="authors">Bojie Li, Noah Shi</p>
+        <p class="abstract">There are two standard ways to spend more compute at test time: let a model reason longer, or sample more attempts and keep one. Both share a hidden limit: they are internal. Every extra token comes from the same frozen weights and the same prompt, so neither can tell the model anything it does not already know. We study a third way, interaction: the model proposes an artifact, an external instrument observes how it actually behaves, and the model revises. Each cycle imports a real observation, so interaction breaks through the ceiling the other two hit. We argue that a single variable governs this third axis, grounding, and that it must hold on both sides of the loop. The feedback that drives revision must come from an instrument that actually observes the flaw, and so must the metric that scores the result. On hard coding tasks at a fixed token budget, reasoning-only and best-of-N sampling both plateau (the latter even when an oracle picks the best sample), while every interaction strategy keeps improving; our proposer-reviewer harness reaches a perfect 100% pass rate with no run-to-run variance, and the gain holds across three model families. On rendered visual artifacts, the usual judge (a vision-language model, or VLM, reading a screenshot) rates 14 of 15 visibly broken figures &quot;perfect,&quot; because the screenshot hides the flaws before the judge can see them. A tool that measures the real layout instead shows the loop removing 40-74% of defects across four modalities; and that same VLM, used as the reviewer, makes slide layouts worse where the measuring tool repairs them. Interaction scaling is real and distinct from reasoning and sampling, but only visible when both the feedback and the metric are grounded.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.11598v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.11598v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.11560v1" target="_blank" rel="noopener">Technical Report on the CVPR 2026@AdvML Workshop Challenge</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-13</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UC Berkeley</span><span class="school">Johns Hopkins</span>
+          <span class="arxiv-id">arXiv:2607.11560v1</span>
+        </div>
+        <p class="authors">Tianyuan Zhang, Zonglei Jing, Jiangfan Liu, Ligong Zhang, Ke Ma, Chengzhi Sun, Xiaohai Xu, Zhirui Zhang et al.</p>
+        <p class="abstract">Vision-language agents (VLAs) are increasingly used to interpret complex driving scenes and support safety-critical reasoning. This report presents the CVPR 2026@AdvML Workshop Challenge on adversarial multimodal attacks against autonomous-driving VLAs. Built on DriveLM-style multi-view visual question answering, the challenge represents each scene with six synchronized camera images and a structured collection of driving-related question-answer pairs. Participants generate adversarial images and suffix-only textual perturbations that induce model responses to deviate from reference answers while preserving image fidelity and limiting textual cost. The competition comprises two phases, with Phase II adding a hidden black-box model to assess transferability. We describe the task design, submission rules, evaluation protocol, and leaderboard results, and then examine five leading submissions for which technical reports were available. Across these reports, several recurring patterns emerge: image-side attacks are favored by the suffix penalty; scene-level, multi-view optimization is more effective than treating views in isolation; QA types and graph structure provide useful priors for allocating attack budget; feature-space objectives can improve black-box transfer; and typographic content embedded in camera images exposes a persistent vulnerability in driving VLAs. These findings provide a practical reference for future robustness evaluation and defense design in multimodal autonomous-driving systems.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.11560v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.11560v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.11388v1" target="_blank" rel="noopener">StructAgent: Harness Long-horizon Digital Agents with Unified Causal Structure</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-13</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">UC San Diego</span>
+          <span class="arxiv-id">arXiv:2607.11388v1</span>
+        </div>
+        <p class="authors">Wenyi Wu, Sibo Zhu, Kun Zhou, Aayush Salvi, Zixuan Song, Biwei Huang</p>
+        <p class="abstract">Recent advances in large language models (LLMs) and vision-language models (VLMs) have enabled increasingly capable digital agents for computer use. However, real-world tasks are often long-horizon and involve evolving contexts containing accumulated observations, intermediate edits, failed attempts, and partially completed executions. Existing agents typically operate over raw interaction history, making task progress difficult to interpret, verify, and recover, which ultimately limits reliable long-horizon execution. In this paper, we argue that addressing this challenge requires explicitly structuring both the agent&#x27;s state and workflow around a unified causal representation of task progress. We present \textbf{StructAgent}, a state-centered framework that introduces a unified state for maintaining compact, verifiable task progress and a structured workflow that regulates progress through verifier-backed state transitions. Building on this design, StructAgent further enables explicit progress checkpointing, evidence-driven task completion, targeted failure recovery, and tool-supported execution, while ensuring that all progress updates remain grounded in verification. Extensive experiments demonstrate that StructAgent consistently improves a wide range of LLM and VLM backbones on long-horizon computer-use tasks. On OSWorld-Verified, it improves Qwen3.5-9B from 27.0\% to 46.9\% success rate and Qwen3.5-27B from 31.6\% to 62.2\%, while achieving a new open-source state of the art of 78.9\% with MiniMax-M3. Moreover, the same framework generalizes beyond desktop environments to Minecraft, demonstrating the generality of our design.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.11388v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.11388v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.10985v1" target="_blank" rel="noopener">MED-DSLC: Multi-Expert-Domain Classification via Domain Supervision and Logit Calibration</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-13</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UC San Diego</span>
+          <span class="arxiv-id">arXiv:2607.10985v1</span>
+        </div>
+        <p class="authors">Zheng Zeng, Deepak Sridhar, Nuno Vasconcelos</p>
+        <p class="abstract">Vision-language models (VLMs) such as CLIP enable zero-shot classification by comparing image features with text prompts in a shared embedding space. A fundamental property underlying this capability is the global comparability of logits across arbitrary candidate classes. However, VLMs are often adapted to fine-grained domains using techniques such as LoRA. While this improves in-domain accuracy, out-of-domain accuracy degrades. This leads to a highly fragmented model ecosystem, with thousands of specialized models. Multi-Expert-Domain classification seeks to address this problem, by merging LoRAs trained independently on specialized domains. However, due to the independent training, the various domain experts no longer produce globally calibrated logits. As a result, when evaluating over the union of multiple domain-specific class sets, heterogeneous logit scales induce cross-domain interference and artificially high confidence for out-of-domain classes, inducing prediction errors. In this work, we identify domain supervision and cross-domain logit miscalibration as the key issue to scalable multi-domain zero-shot recognition. We propose MED-DSLC, combining domain supervised training and domain-wise logit scaling, to explicitly restore global logit comparability. MED-DSLC is a lightweight solution for MED classification, which is shown to preserve within-domain discrimination while reducing cross-domain logit interference with minimal data. Extensive experiments across diverse fine-grained benchmarks demonstrate that it substantially improves mean accuracy (+15\%), cross-domain robustness, and scalability in the size of MED classification problem. Our results show that restoring output-level calibration is essential under highly data imbalanced settings for achieving a truly zero-shot VLM under multi-domain specialization.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.10985v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.10985v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.10966v1" target="_blank" rel="noopener">SVR-R1: Bootstrapping Multi-modal Reasoning with Self-verification in Reinforcement Learning</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-13</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">UIUC</span>
+          <span class="arxiv-id">arXiv:2607.10966v1</span>
+        </div>
+        <p class="authors">Mingyuan Wu, Jingcheng Yang, Shengyi Qian, Xudong Wang, Jize Jiang, Qifan Wang, Aashu Singh, Khoi Pham et al.</p>
+        <p class="abstract">We introduce Self-Verified Reasoner (SVR-R1), a multi-turn RL framework that turns a model&#x27;s own verification into a learning signal for multimodal reasoning. For each query, the model proposes an answer using the same weights, and issues a binary self-verdict (Yes/No). A &#x27;No&#x27; triggers a second-chance rethink; a &#x27;Yes,&#x27; or a turn cap, finalizes the output for computing the outcome-based reward. SVR-R1 is implemented with GRPO and an asynchronous multi-turn rollout framework and needs no external supervision or auxiliary critics. We evaluate SVR-R1 on vision-language reasoning benchmarks and show that it improves accuracy by a large margin over strong standard GRPO baselines. Training dynamics show decreasing reliance on verification-fewer verification turns, yet higher test accuracy-indicating that the gap between verification and generation narrows as the policy internalizes self-correction and chooses the most confident answer via our framework. SVR-R1 bridges the less explored intersection of inference-time self-refinement and RL training for VLMs, offering a simple yet effective recipe for bootstrapping multimodal reasoning. We will open-source \textbf{SVR-R1} to facilitate future research in VLMs.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.10966v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.10966v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.10826v1" target="_blank" rel="noopener">3D-DefectBench: A Controlled Factorial Study of Vision-Language Model Evaluation Pipelines for Fine-Grained 3D Generation Defects</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-12</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Stanford</span><span class="school">UC Berkeley</span>
+          <span class="arxiv-id">arXiv:2607.10826v1</span>
+        </div>
+        <p class="authors">Zhenyu Zhao, Nanshan Jia, Jihyeon Je, Yifu Tang, Alvin Chan, Michael Spedden, Michael V. Palleschi, Sui Huang et al.</p>
+        <p class="abstract">Automated evaluation is essential for scaling generative 3D systems, where exhaustive human review is costly and slow. However, the reliability of an automated judge depends on the entire evaluation pipeline, not only the underlying vision-language model (VLM), but also how assets are rendered, what visual evidence is provided, how the task is specified, and how human reference labels are constructed. We introduce 3D-DefectBench, a benchmark and framework for systematic analysis of VLM-based 3D defect detection pipelines. It complements holistic ratings and pairwise preferences with nine fine-grained binary defects spanning geometry, texture, and prompt adherence, providing actionable diagnostics for generator development and judge evaluation. Using a balanced factorial design, we vary four pipeline factors, VLM, camera protocol, visual input, and prompt schema, across 84 inference designs and approximately 3.2 million scored defect decisions, followed by staged validation on a broader set of frontier models. Model choice is the largest determinant of agreement with human labels, but the remaining factors also affect performance, interact with model selection, and can change the best configuration. Within the evaluated design space, a compact six-view RGB protocol performs comparably to denser multi-view settings and inputs augmented with depth or surface normals, making it a strong cost-effective default. Under this standardized pipeline, the best of 12 VLM judges still lag behind trained human labelers, while texture agreement drops sharply when expert-consensus labels are replaced by noisier silver labels. These findings show that automated judges should be evaluated as complete pipelines and calibrated across human reference regimes, rather than benchmarked only as standalone models. We release labels, prompts, predictions, and Croissant metadata on Hugging Face.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.10826v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.10826v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.10535v1" target="_blank" rel="noopener">Improving Sample Diversity in Autoregressive Text-to-Image Generation via Cluster Truncation</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-12</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UMass Amherst</span>
+          <span class="arxiv-id">arXiv:2607.10535v1</span>
+        </div>
+        <p class="authors">Trang Nguyen, Shuang Wu, Runyan Tan, Phillip Howard</p>
+        <p class="abstract">While diffusion models achieve state-of-the-art image quality for text-to-image (T2I) generation, recent work has demonstrated that they suffer from sample diversity collapse. In this work, we investigate whether autoregressive (AR) image generation models can push the Pareto frontier between image quality and sample diversity. With recent advances in quality and efficiency, AR models have emerged as a viable alternative to diffusion-based image generation. Beyond enabling new use cases such as interleaved image-text generation, their sequential generation process makes them compatible with a wide range of token-based decoding strategies originally developed to improve diversity in text generation. Motivated by the potential of a better diversity-quality tradeoff in the AR paradigm, we present the first systematic study of sample diversity in AR image generation models. We show that two key properties of AR image generation, persistently high token-level entropy and substantial redundancy in visual token spaces, limit the effectiveness of existing token-level decoding methods for diversity enhancement. We therefore propose $p$-less cluster, a new decoding strategy that performs entropy-based truncation sampling at cluster level rather than at token level. We evaluate our approach and baseline decoding methods across four autoregressive T2I models and two datasets using a comprehensive suite of metrics spanning image quality, prompt alignment, and diversity. Our results show that $p$-less cluster unlocks the greatest diversity across most evaluated autoregressive T2I models and datasets while maintaining image quality and prompt alignment.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.10535v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.10535v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+  </main>
+  <footer>
+    <p>Generated 2026-07-14 04:05 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
