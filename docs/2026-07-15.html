@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-07-15</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-07-15</h2>
+      <p class="count">2 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.12911v1" target="_blank" rel="noopener">Open-KNEAD: Knowledge-grounded Nutrition Estimation via Agentic Decomposition</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-14</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Purdue</span>
+          <span class="arxiv-id">arXiv:2607.12911v1</span>
+        </div>
+        <p class="authors">Bruce Coburn, Jingbo Yue, Jinge Ma, Siddeshwar Raghavan, Gautham Vinod, Fengqing Zhu</p>
+        <p class="abstract">Multimodal Large Language Models (MLLMs) are increasingly used for dietary assessment from meal images, where retrieval-augmented grounding was shown to sharpen nutrition estimates. However, we find this premise no longer holds for current MLLMs. A modern MLLM&#x27;s direct estimate now matches or surpasses the full retrieval pipeline. This raises a question: if retrieval no longer improves the overall estimate, can it still deliver the two things clinicians value, accurate portions and a traceable, item-by-item record? We pursue this while preserving what matters for clinical adoption: minimal user burden (a single, unannotated meal image), explainability (an auditable record), and privacy (locally hosted inference). We introduce Open-KNEAD, a knowledge-grounded agentic framework for meal nutrition estimation that is training-free and locally deployable. Each decomposed food item is grounded to a Food and Nutrient Database for Dietary Studies (FNDDS) code via selective, nutrient-aware retrieval, composing an auditable per-item record. Across two open MLLM families and three cuisines, Open-KNEAD improves portion estimates over both prior grounding methods and direct estimation in most backbone-dataset settings. An agent-internal recipe-prior step further recovers the invisible cooking-added energy that biases estimates on non-US cuisine. The advantage is largest on the dietitian-verified ACETADA dataset, where the local open agent surpasses the direct portion estimates of two frontier closed models by roughly $30\%$ and $53\%$, all while keeping every meal image on local hardware. We release the Open-KNEAD framework and its agent-ready FNDDS knowledge base.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.12911v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.12911v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.12278v1" target="_blank" rel="noopener">Auditing Data Leakage in Whole-Slide Image Multimodal Benchmarks</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-14</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Virginia</span>
+          <span class="arxiv-id">arXiv:2607.12278v1</span>
+        </div>
+        <p class="authors">Wenhao Zhang, Zhongliang Zhou, John Kang, Sheng Li</p>
+        <p class="abstract">Recent vision-language models (VLMs) for computational pathology report striking zero-shot performance on whole-slide image (WSI) visual question answering (VQA) benchmarks. We audit these claims and find them fundamentally compromised by data leakage at two hierarchical levels: patient-level leakage, where slides from the same case appear in both training and test folds, and institutional-level leakage, where different cases nonetheless share staining-batch and scanner signatures through a common Tissue Source Site (TSS). By tracing canonical slide, case, and TSS identifiers across major public resources, we document case level train test overlaps of 92.3~100% on TCGA-derived benchmarks, together with near-complete TSS overlap. We further demonstrate that both leakage levels are linearly decodable from foundation-model feature space, that they induce a measurable accuracy gap between leaked and audit-clean cases on a published checkpoint, and that across multiple published WSI VLMs, peak reported accuracies concentrate on the most heavily contaminated benchmarks. Therefore, the current WSI VQA evaluation cannot distinguish genuine multimodal reasoning from nearest-neighbor retrieval over memorized institutional and patient-specific artifacts. Finally, we outline concrete recommendations for contamination-free evaluation. By addressing benchmark construction, provenance disclosure, and automated overlap auditing, we aim to guide future research toward verifiable claims of progress.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.12278v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.12278v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+  </main>
+  <footer>
+    <p>Generated 2026-07-15 04:08 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
