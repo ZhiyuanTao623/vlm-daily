@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-07-23</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-07-23</h2>
+      <p class="count">3 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.20357v1" target="_blank" rel="noopener">Look Less, Think Faster: Joint Token-Compute Adaptation for Multimodal LLMs</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-22</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UW-Madison</span><span class="school">Purdue</span>
+          <span class="arxiv-id">arXiv:2607.20357v1</span>
+        </div>
+        <p class="authors">Pengcheng Wang, Zhiquan Wang, Jayoung Lee, Zhuoyan Xu, Ran Xu, Saurabh Bagchi, Yin Li, Somali Chaterji</p>
+        <p class="abstract">Multimodal Large Language Models (MLLMs) have recently demonstrated strong performance across vision-language tasks. However, their high inference cost, arising from both the large number of input visual tokens and the heavy computation of the large language model (LLM), remains a key barrier to practical deployment. Recent work attempts to reduce the cost by adaptively optimizing individual dimensions, e.g., pruning redundant visual tokens or skipping LLM layers and heads. Nonetheless, prior approaches typically treat these dimensions independently and overlook a fundamental coupling: the available compute resources must be dynamically allocated across all dimensions based on the input content. To bridge the gap, we propose SmartVL, a unified adaptive inference framework that jointly controls vision token number and model compute capability in response to varying input contents and compute budgets. SmartVL introduces a vision-side token controller that dynamically selects informative visual tokens and an LLM-side compute controller that adaptively adjusts LLM computation. Importantly, these controllers are trained to coordinate with each other so that the overall inference cost satisfies a target budget. To allow this joint scheduling, we connect the controllers using a shared budget encoding and leverage a differentiable latency estimator for end-to-end training. This design enables SmartVL to learn cross-stage allocation strategies that adapt to both input complexity and runtime compute constraints. Experiments across multiple MLLM benchmarks demonstrate that, with joint scheduling, SmartVL consistently outperforms prior adaptive methods and achieves superior accuracy-efficiency Pareto frontiers. Project page: https://www.schaterji.io/publications/2026/jointtokencompute.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.20357v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.20357v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.20351v1" target="_blank" rel="noopener">Test-Time Training for Modality Order Consistency in Vision-Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-22</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Chicago</span>
+          <span class="arxiv-id">arXiv:2607.20351v1</span>
+        </div>
+        <p class="authors">Aditi Gupta, Yossi Gandelsman</p>
+        <p class="abstract">We find that vision-language models are sensitive to a specific semantically irrelevant change: the order in which the image and question are presented. Across three models and three benchmarks, image first prompting consistently outperforms question-first prompting, revealing a repeatable modality order failure. We use this gap to design an order-consistent test-time training method. Our method substantially closes the modality-order gap across all evaluated settings. Surprisingly, it also yields consistent improvements in the stronger image-first branch over the baseline, hence bootstrapping both orderings toward mutual consistency. Activation patching localizes the ordering failure to a narrow mid-network region where representations diverge sharply between prompt orders. We find that the test-time training method repairs this misalignment across layers. Together, our results identify modality-order sensitivity as a circuit-level failure in VLMs and demonstrate that simple, asymmetric test-time adaptation can effectively mitigate it and even improve performance over the baseline.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.20351v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.20351v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.19624v1" target="_blank" rel="noopener">Pathologist Attention-Aligned Report Generation for Prostate Histopathology</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-21</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Stony Brook</span><span class="school">University of Utah</span>
+          <span class="arxiv-id">arXiv:2607.19624v1</span>
+        </div>
+        <p class="authors">Ruoyu Xue, Suryakant Singh, Souradeep Chakraborty, Pierre Marza, Oksana Yaskiv, Constantin Friedman, Natallia Sheuka, Paul Friedman et al.</p>
+        <p class="abstract">The allocation of visual attention by pathologists during cancer diagnosis is a highly selective process that critically shapes the information extracted from whole-slide images (WSIs). Human attention helps medical imaging tasks such as classification and segmentation, and becomes a strong semantic cue for identifying diagnostically informative regions for report generation. In this paper, we introduce human attention into the training of pathologist report generation models. To this end, we collected a multimodal human-attention dataset of 121 prostate WSIs annotated with pathologists&#x27; multi-scale viewport trajectories synchronized with the pathologists&#x27; verbal descriptions and cursor movements for five clinically relevant components (e.g., Gleason patterns). Using this dataset, we finetune two report generation models with an attention-alignment loss that regularizes the model attention over image patches to match the distribution of pathologist attention. We evaluate our approach on prostate cancer report generation and visual question answering using two models with different internal attention mechanisms (i.e., how image tokens are integrated into the language decoder). Experiments show average gains of 10.9% on NLP-based metrics and 19.3% in accuracy across five clinically relevant report components. Further, model attention maps extracted at inference time, with minimal computational overhead, align more closely with pathologist attention, providing stronger visual support for the generated reports by highlighting the regions that most influence the output.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.19624v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.19624v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+  </main>
+  <footer>
+    <p>Generated 2026-07-23 04:17 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
