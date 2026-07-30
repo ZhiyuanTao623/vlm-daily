@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-07-30</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-07-30</h2>
+      <p class="count">2 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.27154v1" target="_blank" rel="noopener">Anatomy Contextualized Adaption of CT Foundation Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-29</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Harvard</span>
+          <span class="arxiv-id">arXiv:2607.27154v1</span>
+        </div>
+        <p class="authors">Roshan Kenia, Stephanie L McNamara, William Lotter</p>
+        <p class="abstract">CT vision-language foundation models have demonstrated promising performance across downstream tasks, but are typically trained with whole-volume representations that dilute fine-grained anatomical signals. Fine-grained vision-language pre-training addresses this by aligning anatomy-level visual features with anatomy-specific text, but in doing so discards the global context that whole-volume models provide. Furthermore, existing fine-grained approaches train from scratch, making them computationally expensive. We introduce Anatomy Contextualized Adaptation (ACA), a lightweight framework that adapts frozen CT foundation model representations for anatomy-level vision-language alignment while enhancing global contextualization. ACA uses TotalSegmentator to decompose CT volumes into anatomy-level embeddings, which are refined via a transformer that captures cross-anatomy relationships, and aligned to both per-anatomy and scan-level text extracted from radiology reports. Evaluated on Merlin and CT-RATE, ACA consistently outperforms both the frozen foundation model baselines and existing fine-grained methods in zero-shot finding classification, while requiring less than one hour of training once embeddings are cached. The attention weights learned by ACA&#x27;s inter-anatomy transformer additionally indicate plausible cross-anatomy context routing. Altogether, these results support ACA as a lightweight approach for adapting CT foundation models to anatomically grounded vision-language alignment while preserving and enhancing global anatomical context.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.27154v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.27154v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.26886v1" target="_blank" rel="noopener">Hearsay: Vision-Language Medical Diagnoses Without an Image</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-29</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Carnegie Mellon</span>
+          <span class="arxiv-id">arXiv:2607.26886v1</span>
+        </div>
+        <p class="authors">Siddharth Vohra</p>
+        <p class="abstract">When asked to describe a medical image that was never attached, frontier vision-language models do not abstain: they confabulate a diagnosis. We show that this confabulation is not random. It is structured by who the patient is said to be. Across chest X-ray, brain MRI, and dermatology, Claude Opus-4.7, GPT-5.4, and Gemini-3.1-Pro are each queried with only a demographic descriptor and no image, and changing the descriptor systematically shifts the diagnosis returned. Claude concentrates sharply: a 65-year-old white man asking about a skin mole receives Melanoma in nearly every response, and a 32-year-old Black woman asking about her chest X-ray receives a Sarcoidosis diagnosis whose reasoning reads &quot;suspected, based on demographics and classic pattern.&#x27;&#x27; GPT-5.4&#x27;s effect is broader, fabricating across every demographic cell we test, most conspicuously naming Sarcoidosis for young Black patients on chest X-ray. Two structural findings sharpen the problem. A hedged regime appears in which the prose acknowledges the missing image while the structured diagnosis field nevertheless names a disease, a dissociation invisible to prose-only audits. And Claude&#x27;s dermatology effect collapses entirely when &#x27;skin mole&#x27; is swapped for &#x27;skin lesion&#x27; while GPT-5.4&#x27;s is preserved, indicating that mirage is a family of distinct failure modes rather than a single phenomenon. Trustworthy VLM deployment in clinical pipelines requires auditing the structured output channel directly, and probe-word sensitivity should be treated as a first-class evaluation dimension</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.26886v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.26886v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+  </main>
+  <footer>
+    <p>Generated 2026-07-30 04:09 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
