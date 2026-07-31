@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-07-31</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-07-31</h2>
+      <p class="count">3 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.28627v1" target="_blank" rel="noopener">ReToken: One Token to Improve Vision-Language Models for Visual Retrieval</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-30</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UIUC</span>
+          <span class="arxiv-id">arXiv:2607.28627v1</span>
+        </div>
+        <p class="authors">Yao Xiao, Reuben Tan, Zhen Zhu, Yuqun Wu, Jianfeng Gao, Derek Hoiem</p>
+        <p class="abstract">Long visual context poses a challenge for vision-language models: performance degrades as the number of distractors grows, and processing all tokens at once is computationally infeasible under GPU memory constraints. We present ReToken, a single learnable embedding trained as an explicit retrieval target that selects a sparse set of query-relevant visual tokens from a pre-filled visual KV cache. Trained on only a small image-QA dataset, ReToken yields consistent gains across image and video benchmarks: on Visual Haystacks it improves Qwen3VL-8B by 13.4 points and InternVL3.5 by 12.4 points (&gt;20% relative), and on LVBench it transfers zero-shot to long video for an 8.0-point gain with Qwen3VL-8B. Thanks to its lightweight design, both training and long-video inference fit on a single H100. Code is available at: https://github.com/avaxiao/ReToken</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.28627v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.28627v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.27670v1" target="_blank" rel="noopener">JigShape: Evaluating Visual-Geometric Reasoning in VLMs through Jigsaw Puzzles</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-30</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Rice</span><span class="school">USC</span><span class="school">UNC Chapel Hill</span>
+          <span class="arxiv-id">arXiv:2607.27670v1</span>
+        </div>
+        <p class="authors">Shawn Li, Wei Yang, Jike Zhong, Jiate Li, Jiawei Yang, You Qin, Ryan Rossi, Franck Dernoncourt et al.</p>
+        <p class="abstract">Jigsaw puzzle solving requires jointly reasoning about visual content and geometric constraints, yet existing benchmarks use rectangular cuts that create ambiguous ground truth in texture-repeated regions. We introduce \textit{\ours{}}, a benchmark with tab-and-blank interlocking pieces where geometric constraints provide strong local compatibility requirements that, combined with visual content, yield unambiguous ground truth. Across 95K instances at four grid densities (4$\times$4 to 16$\times$16), we find that \textbf{zero-shot VLMs largely lack geometric reasoning}: only one of five frontier models (GPT-5.5) exceeds random baseline on 4$\times$4 puzzles, while all others perform at chance level. While supervised fine-tuning achieves $&gt;$97\% on 4$\times$4, \textbf{all models collapse on larger grids}: GPT-5.5 drops from 70\% to near-random on 8$\times$8, and even fine-tuned models fall below 5\% on 12$\times$12. This ``scaling cliff&#x27;&#x27; suggests current architectures cannot maintain consistent constraint satisfaction as the number of pieces increases. \ours{} establishes scalable geometric reasoning as an open challenge for vision-language models.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.27670v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.27670v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2607.27393v1" target="_blank" rel="noopener">AHA-Memes: A Fine-Grained Multimodal Benchmark for Understanding Hate in Arabic Memes</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-29</span>
+          <span class="cat">cs.CL</span>
+          <span class="school">Northwestern</span>
+          <span class="arxiv-id">arXiv:2607.27393v1</span>
+        </div>
+        <p class="authors">Mohamed Bayan Kmainasi, Ali Ezzat Shahroor, Abul Hasnat, Md. Rafiul Biswas, Wajdi Zaghouani, Firoj Alam</p>
+        <p class="abstract">Hateful memes are a growing form of multimodal online harm, where hostile intent is often conveyed through the joint interpretation of images, text, cultural references, and implicit targets. While hateful meme detection has advanced in high-resource languages, Arabic remains underexplored, with existing meme resources focusing mainly on propaganda or coarse harmful-content labels. We introduce AHA-Memes (Arabic HAteful Memes), which is, to our knowledge, the first large-scale Arabic hateful meme benchmark with fine-grained, multi-label annotations. The dataset includes 5K manually annotated memes using a taxonomy that captures hate types, i.e., attack strategies. We further provide ~66K silver-labeled memes to support future studies. We benchmark text-only, image-only, and late-fusion multimodal models, as well as few-shot in-context learning (ICL) and open- and closed-weight Vision-Language Models (VLMs) under zero-shot and fine-tuning settings. Our results establish strong baselines and highlight key challenges in culturally grounded Arabic hateful meme detection. We release the dataset, annotation guidelines, and evaluation scripts to support future research. WARNING: This paper contains examples that may be disturbing to readers.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2607.27393v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2607.27393v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+  </main>
+  <footer>
+    <p>Generated 2026-07-31 04:25 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
