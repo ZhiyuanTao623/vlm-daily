@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-08-04</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-08-04</h2>
+      <p class="count">8 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.02300v1" target="_blank" rel="noopener">A General-Purpose VLM Can Teach an Astronomy Foundation Model to Better Recognize Galaxy Morphology</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-03</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Stony Brook</span>
+          <span class="arxiv-id">arXiv:2608.02300v1</span>
+        </div>
+        <p class="authors">Dichang Zhang, Jiaqi Deng, Yixuan Shao, Yuanpeng Liu, Jiali Cui, Zhiqiang Lao, Heather Yu, Liang Peng et al.</p>
+        <p class="abstract">Existing astronomy foundation models provide strong galaxy representations, but adapting them to new survey conditions and survey-specific morphology recognition tasks still requires substantial human supervision. We show that VLM-based VQA systems contain meaningful visual-semantic priors that can serve as weak supervision for downstream morphology classifiers and improve morphology classification under limited human-label budgets. We first introduce a survey-oriented VQA benchmark spanning two representative imaging regimes and evaluate state-of-the-art VLMs on galaxy morphology questions. The results show that these models capture useful morphology signals and informative uncertainty, but are not sufficiently reliable to replace human annotators. Motivated by this finding, we use a general-purpose VLM as a morphology teacher for Zoobot, an astronomy foundation model pretrained on large-scale Galaxy Zoo annotations. Across two survey domains and multiple annotation budgets, the VLM teacher consistently improves Zoobot&#x27;s downstream morphology classification. These results demonstrate that a general-purpose VLM provides knowledge complementary to an astronomy foundation model and can teach it to better recognize galaxy morphology under limited human supervision. The resulting pipeline is designed for label-efficient adaptation to forthcoming large-scale surveys, including the Vera C. Rubin Observatory&#x27;s Legacy Survey of Space and Time (LSST) and the Nancy Grace Roman Space Telescope. The benchmark and code are publicly available at https://github.com/fw-ic/VLM-morphology-teacher.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.02300v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.02300v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.01753v1" target="_blank" rel="noopener">Can Urban Blight Be Accessed with Vision-language Models: A Case Study in Detroit</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-03</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Michigan</span>
+          <span class="arxiv-id">arXiv:2608.01753v1</span>
+        </div>
+        <p class="authors">Xiaohao Yang, Aohua Tian, Derek Van Berkel, Xu Qiang, Mark Lindquist</p>
+        <p class="abstract">Addressing urban blight has seen increased focus in the past 15 years. Assessing urban blight is essential for guiding urban planning, targeting rehabilitation, and safeguarding public health, yet traditional residential blight surveys are difficult to maintain at scale due to the labor-intensive cost and long-term cycle. This study introduced a scalable framework for estimating residential blight using open-source large vision-language models on multiple views. Structured prompts guided models to evaluate housing attributes, including roof integrity, wall damage, and broken or boarded openings, producing both binary assessments and probabilistic estimates of disrepair. To evaluate the performance of these visual assessments, we compared professional human annotations of these features across several models, including an ensemble stacking approach based on XGBoost and a weighted scoring system. Results showed that (i) multiple street views can contribute to the improvement of accuracy, (ii) large vision-language models have different strengths of inference, (iii) the ensemble learner outperforms individual base models, enhancing robustness across all residential conditions and blight assessment. The practical application of the method allows low-cost tracking and management of housing stock conditions, providing a regularly updatable complement to traditional blight surveys.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.01753v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.01753v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.01730v1" target="_blank" rel="noopener">Learning Where to Look and How to Judge: Resolution-agnostic Image Quality Assessment with Quality-aware Saliency</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-03</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UT Austin</span><span class="school">CU Boulder</span>
+          <span class="arxiv-id">arXiv:2608.01730v1</span>
+        </div>
+        <p class="authors">Hakan Emre Gedik, Shashank Gupta, Alan Bovik</p>
+        <p class="abstract">No-reference image quality assessment (NR IQA) has recently benefited from deep and multimodal models, yet many SOTA systems still violate at least one basic requirement: they either discard critical quality cues via aggressive resizing, fail to generalize across resolutions, cannot be jointly trained on heterogeneous IQA datasets with mismatched MOS scales, or require prohibitive computation. We present \textbf{ReLIQS}, a model for \textbf{Re}solution-agnostic \textbf{L}earning for \textbf{I}mage \textbf{Q}uality with \textbf{S}aliency, which is resolution-agnostic, preserves original-resolution quality cues, learns from multiple subjective studies, and remains computationally efficient and budget-adaptive. ReLIQS is a CLIP-based multiscale patch-driven architecture that learns both \emph{where to look} and \emph{how to judge} quality. Fixed-size patches are sampled across multiple resolutions, including the original resolution, and encoded with a CLIP vision backbone. A lightweight Perceptual Importance Estimator then predicts IQA-specific importance maps to select a small set of informative patches, and a Latent Quality Axis Module aggregates their embeddings into a single image-level score. Across authentic, synthetic, and AIGC benchmarks spanning diverse resolutions and distortions, ReLIQS generalizes better than strong CNN-, CLIP-, and MLLM-based baselines with matching or reduced computational cost.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.01730v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.01730v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.00877v1" target="_blank" rel="noopener">GeoArbiter: Verifiability-Guided Grounding for Remote-Sensing Multimodal LLMs</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-01</span>
+          <span class="cat">cs.LG</span>
+          <span class="school">University of Minnesota</span>
+          <span class="arxiv-id">arXiv:2608.00877v1</span>
+        </div>
+        <p class="authors">Xuechen Li</p>
+        <p class="abstract">Remote-sensing multimodal large language models (MLLMs) often assert facts that imagery cannot establish, such as a facility&#x27;s identity or function. Coordinate-keyed geographic retrieval can supply this missing knowledge, improving fMoW land-use accuracy by 12.06--17.19 points across three open MLLMs. However, retrieved records can also contradict visible evidence, and we find that models frequently follow the records even when the image is decisive. We argue that source trust should therefore depend on \emph{cross-modal verifiability}: geographic records are most useful for attributes the image cannot verify and most dangerous when they dispute visually verifiable attributes. We introduce GeoArbiter, a training-free pipeline that operationalizes this principle by injecting only image-unverifiable geographic facts. Unlike arbitration prompts, which leak across attribute types and bias yes/no responses, content-level filtering preserves 84.69--87.15\% of the full-retrieval accuracy gain, reduces claim-level hallucination by 9.58--26.34\% under a source-blinded judge, and improves robustness to conflicting records across all three models. These results identify verifiability-guided content selection as a simple, effective mechanism for grounding remote-sensing MLLMs in fallible geographic knowledge.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.00877v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.00877v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.00371v1" target="_blank" rel="noopener">Decoding Children&#x27;s Gait Behavior</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-01</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UIUC</span>
+          <span class="arxiv-id">arXiv:2608.00371v1</span>
+        </div>
+        <p class="authors">Yifan Shen, Boyi Li, Meihuan Huang, Yuanzhe Liu, Xu Cao, Jinyang Jin, Zhengyuan Li, Anglin Liu et al.</p>
+        <p class="abstract">We introduce a new problem domain for human action recognition: the fine-grained analysis of children&#x27;s gait behaviors from standard RGB video. We specifically target the ambulatory patterns of children aged 3-17 years. Such behaviors arise naturally in the diagnosis and treatment of several critical developmental and neuromuscular disorders, such as cerebral palsy and hemiplegia. Despite their clinical value, current 3D sensor-based gait analysis systems are expensive, intrusive, and often impractical for young subjects. To address this, we introduce a new dataset comprising over 1,100 high-frame-rate (60 FPS) video sequences from 110 subjects, accompanied by synchronized, anonymized pose sequences. In each session, the child performs a 5-second &quot;walk-around&quot; task, capturing the gait cycle from multiple viewpoints. Crucially, we demonstrate that current state-of-the-art approaches, including gait foundation models and Multimodal Large Language Models (MLLMs), fail to effectively resolve these clinical nuances. We identify the key technical challenges in analyzing these erratic and subtle motor patterns and describe a unified end-to-end framework for decoding fundamental components of pediatric gait. Through comprehensive experimental results, we demonstrate the potential of this dataset to drive novel research questions and establish a rigorous baseline for automated child gait assessment.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.00371v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.00371v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.00261v1" target="_blank" rel="noopener">Cross-Task Dissociation in Frontier Vision-Language Model Theory of Mind</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-31</span>
+          <span class="cat">cs.CL</span>
+          <span class="school">University of Maryland</span>
+          <span class="arxiv-id">arXiv:2608.00261v1</span>
+        </div>
+        <p class="authors">Kejia Zhang, Youran Sun, Chugang Yi, Haizhao Yang</p>
+        <p class="abstract">Do frontier vision-language models present a coherent Theory-of-Mind (ToM) profile across tasks, matching the same human reference group, or does that profile fragment from one paradigm to the next? We evaluate a shared panel of nine frontier VLMs on two psychology-derived benchmarks: the Keysar Director Task (visual perspective-taking under egocentric interference) and the Frith-Happé animated triangles scored with the Castelli rubric (intention attribution from pure motion). On the Director Task, without chain-of-thought, the panel makes the egocentric error on 78\% of trials like children rather than adults; variation is substantial across models, and reasoning rescues several models. On the triangles, the panel under-attributes intention: its ToM profile sits more than three times closer to the high-functioning-autistic-adult (HF-ASD) mean than to the typical-development-adult (TD) mean, while Goal-Directed and Random stay near TD. No model is nearest TD on both tasks; the model that looks adult-like on the Director Task falls on the HF-ASD side on the triangles, and the most TD-like model on the triangles is child-like on the Director Task. We report group-level descriptions, not diagnostic labels for any model.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.00261v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.00261v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.00235v1" target="_blank" rel="noopener">Attention-Steered Vision-Language Models for Sign Language Translation</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-31</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Virginia</span>
+          <span class="arxiv-id">arXiv:2608.00235v1</span>
+        </div>
+        <p class="authors">Meibo Hu, Guohao Sun, Annemarie D. Ross, Sheng Li, Zhiqiang Tao</p>
+        <p class="abstract">Vision-language models (VLMs) have emerged as a powerful framework for multimodal video understanding. However, they remain limited in the sign language translation task, where we identify a key failure mode of existing VLMbased translators: poor spatial-temporal visual grounding. In particular, we find that standard next-token cross-entropy does not directly provide signal for where and when the model should attend, causing models to overlook sign-relevant regions and frames. To address this challenge, we propose AttnSign, a VLM-based spatial-temporal attention steering framework for sign language translation. AttnSign first introduces spatial attention supervision for sign-relevant regions, such as face and hands, in each frame; then develops an RL-based motion-cadence steering method that encourages the model to explore and focus on sign-level keyframes. Experimental results on How2Sign and OpenASL benchmarks show that our proposed AttnSign consistently outperforms existing methods.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.00235v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.00235v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.00232v1" target="_blank" rel="noopener">Real-Time Visual Obstruction Detection in Surgical Augmented Reality</a></h2>
+        <div class="meta">
+          <span class="date">2026-07-31</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Duke</span>
+          <span class="arxiv-id">arXiv:2608.00232v1</span>
+        </div>
+        <p class="authors">Shih-Chin Yang, Yanming Xiu, Hanting Ye, Qi Chen, Elias Rotondo, Maria Gorlatova</p>
+        <p class="abstract">Surgical augmented reality (AR) can provide contextual guidance by overlaying virtual annotations, tool cues, and procedural information onto the surgical workspace. However, the virtual content may obstruct task-relevant real-world information, such as surgical instruments, and interfere with users&#x27; perception during time-sensitive surgical tasks. In this paper, we investigate visual obstruction detection for surgical AR and present a latency-aware pipeline that combines vision-language model (VLM)-based surgical-object recognition with segmentation-based obstruction reasoning. To reduce inference overhead, the system adopts a cascaded small-to-large VLM architecture with segmentation-guided early exiting and attention-based visual token pruning. The small VLM handles easy frames when its key-object prediction is supported by segmentation consistency, while difficult frames are forwarded to a large VLM with pruned visual tokens. We construct a pseudo-AR surgical obstruction detection benchmark by overlaying virtual content onto surgical-tool images and labeling whether the virtual content obstructs task-relevant instruments. Evaluation results show that the proposed system achieves 87.43% obstruction detection accuracy with an average end-to-end latency of 479 ms, reducing latency by 62.90% compared with a cloud large-model baseline. These results demonstrate the feasibility of latency-aware obstruction detection for surgical AR and motivate future work on dynamic surgical videos, multi-object scenes, and clinically grounded AR guidance content.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.00232v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.00232v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+  </main>
+  <footer>
+    <p>Generated 2026-08-04 04:17 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
