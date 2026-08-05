@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-08-05</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-08-05</h2>
+      <p class="count">5 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.03711v1" target="_blank" rel="noopener">Attention is Case-Sensitive</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-04</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Michigan</span>
+          <span class="arxiv-id">arXiv:2608.03711v1</span>
+        </div>
+        <p class="authors">Maximilian Dillitzer, Tin Stribor Sohn, Jason J. Corso, Michael Auerbach</p>
+        <p class="abstract">In human visual perception, uppercase lettering serves as a natural salience cue that captures attention within lowercase text. In this paper, we present a systematic empirical characterization study revealing that Large Language Models (LLMs) exhibit an analogous property: letter casing modulates internal attention allocation. Through analysis across 13 models, nine LLMs and four Vision-Language Models (VLMs), with diverse tokenization schemes, we show that formatting target information in alternating or uppercase against a lowercase context concentrates attention on those textual spans. In text this effect is universal, holding across every evaluated non-reasoning model. We frame it as a previously under-explored latent property of pretrained transformers rather than a prescriptive method. Our investigation reveals a central attention-performance divergence: while this &quot;casing effect&quot; robustly shifts attention, its impact on downstream accuracy is non-trivial, increased concentration does not inherently improve task accuracy and, in high-entropy contexts like alternating case, can degrade it. We further identify a boundary condition: the deliberative &quot;thinking&quot; phase in reasoning models acts as a semantic buffer that mitigates typographic sensitivity in text. Extending the study to VLMs, we find the effect transfers partially: the same prompt-side casing reorganizes cross-modal attention along two coupled axes, predominantly a macroscopic disengagement from the image toward the text prompt, and secondarily a concentration of the residual visual attention on the target region. By isolating casing as a zero-shot mechanism for attention steering that requires no model access or fine-tuning, we provide a new foundational understanding of how pretraining internalizes typographic emphasis.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.03711v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.03711v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.02980v1" target="_blank" rel="noopener">Qwen-3D: A Generalist 3D Vision-Language Model for Spatial Understanding</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-04</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Carnegie Mellon</span>
+          <span class="arxiv-id">arXiv:2608.02980v1</span>
+        </div>
+        <p class="authors">Lucy Lin, Ayush Jain, Yifan Liu, Katerina Fragkiadaki</p>
+        <p class="abstract">Large Multimodal Models (LMMs) have achieved remarkable success on images and short videos, yet scaling them to long videos remains challenging due to frame-centric tokenization and limited context windows. 3D geometry provides a natural compression mechanism for visual streams: depth and camera pose enable observations from multiple views and time steps to be fused into a persistent, world-aligned representation. While recent 3D LMMs leverage geometry-aware representations to improve spatial reasoning, they continue to lag behind specialist 3D perception systems on grounding and segmentation tasks. We argue that a key limitation is geometry-aware decoding: existing methods communicate 3D predictions through language tokens, proposal selection, or lightweight grounding queries, creating a bottleneck between language reasoning and dense geometric prediction. Building on these insights, we introduce Qwen-3D, a geometry-aware LMM that compresses visual information within the Qwen backbone using multi-view geometric cues, enabling efficient long-horizon visual reasoning over static scenes. Qwen-3D augments visual tokens with 3D Rotary Positional Embeddings, allowing attention to operate directly in 3D scene space rather than across independent image frames and thereby facilitating scalable cross-view and temporal reasoning. To bridge language and geometry, Qwen-3D incorporates a query-based segmentation decoder that grounds language directly in the underlying 3D scene representation, unifying referential grounding, instance segmentation, and visual question answering across both images and videos. Across a diverse set of benchmarks, Qwen-3D surpasses existing 3D LMMs and outperforms several large proprietary 2D models. Notably, Qwen-3D achieves these improvements while maintaining strong performance on standard 2D vision-language benchmarks by jointly training on 2D and 3D data.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.02980v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.02980v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.02907v1" target="_blank" rel="noopener">Bayesian Data Reweighting Improves Multimodal Retrieval for Knowledge-Based Visual Question Answering</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-03</span>
+          <span class="cat">cs.LG</span>
+          <span class="school">NYU</span>
+          <span class="arxiv-id">arXiv:2608.02907v1</span>
+        </div>
+        <p class="authors">Jingchen Sun, Shaobo Han, Ruiyi Zhang, Naresh Kumar Devulapally, Ming Liu, Yitao Long, Vishnu Suresh Lokhande, Changyou Chen</p>
+        <p class="abstract">Multimodal retrievers are essential for knowledge-based visual question answering, where they retrieve external evidence for image-question pairs. However, existing contrastive training methods typically treat all unmatched query-document pairs as equally informative negatives, which is problematic because many unmatched documents may still be semantically relevant or partially useful. We propose Bayesian Data Reweighting, a probabilistic framework that models query-document importance as latent variables and adaptively infers posterior weights to downweight likely false negatives. With closed-form posterior updates under conjugate priors and stochastic EM optimization, our method consistently improves retrieval accuracy across three retrievers and seven knowledge-based VQA benchmarks.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.02907v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.02907v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.02830v1" target="_blank" rel="noopener">In-Context Collapse in Vision-Language Models and How to Mitigate it?</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-03</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UPenn</span>
+          <span class="arxiv-id">arXiv:2608.02830v1</span>
+        </div>
+        <p class="authors">Mohammad Rostami</p>
+        <p class="abstract">Many-shot in-context learning (ICL) lets vision-language models (VLMs) adapt from image--label demonstrations without weight updates, and is widely assumed to improve as more demonstrations are supplied. We show the opposite: as demonstrations accumulate, a subset of VLMs undergo an \emph{in-context collapse}, a sharp, sometimes catastrophic accuracy drop spanning synthetic classification, natural-image classification, and VQA benchmarks, in some models falling below chance while outputs remain well-formed. Across an open VLM panel ($0.5$B--$11$B) and a frontier model (Claude Sonnet 4.5), the collapse is graded. Two capabilities turn out to be dissociable: robustness to accumulating demonstrations and the ability to learn a novel rule in context, their combinations yield three reproducible regimes. A parameter-matched lesion-and-rescue causally localizes the collapse to the vision-language integration pathway: an adapter on the connector and early/mid layers restores genuine learning (remap accuracy $0.39!\rightarrow!0.91$ at 16 shots), while an equal-capacity adapter on the late readout does not. We propose \textsc{CircA}, whose core is a one-time integration vaccine: trained once on one synthetic task, it transfers collapse-resistance to unseen task families (chance$\rightarrow$$0.71$/$0.60$ on CIFAR/Fashion). The layers best for in-context integration are not the layers best for weight-based consolidation, the late readout achieves higher accuracy and less forgetting at fewer parameters. The collapse is an integration failure at the vision--language interface, correctable by a lightweight, transferable intervention.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.02830v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.02830v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.02790v1" target="_blank" rel="noopener">Confident but Unreliable: A Behavioral Safety Audit of Vision-Language Models on Brain MRI</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-03</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Georgia Tech</span>
+          <span class="arxiv-id">arXiv:2608.02790v1</span>
+        </div>
+        <p class="authors">Amir Sabbaghziarani, Mohammadsajad Abavisani, Sergey Plis</p>
+        <p class="abstract">Vision-language models (VLMs), including medical specialists, are increasingly proposed for medical imaging, yet their stated confidence is rarely evaluated separately from correctness. We use brain MRI as a controlled, high-stakes testbed for a broader failure mode in frontier multimodal systems: models can appear competent while lacking reliable self-knowledge. We present an automatically graded behavioral audit and pilot study of six instruction-tuned VLMs (five general-purpose and one medical specialist) on 4,102 images (4,032 axial/coronal/sagittal MRI slices from 250 subjects plus 70 non-brain/noise controls), with labels derived from public metadata and released expert segmentation masks rather than new human annotation. Across models, answer coverage is near-complete, but verbalized-confidence calibration is poor: ECE ranges from 0.27 to 0.40, mean confidence on incorrect answers ranges from 0.82 to 0.97, and 33-46% of answered items are high-confidence errors. The most accurate model is also the most confident on its errors, while a base/specialist family contrast suggests that medical adaptation improves tumor-presence detection without improving confidence reliability. Open-ended diagnostics further show that hallucination and abstention vary separately from multiple-choice accuracy. These findings argue that medical-image VLM evaluation should report verbalized-confidence reliability, confident error, hallucination, and abstention alongside accuracy.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.02790v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.02790v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+  </main>
+  <footer>
+    <p>Generated 2026-08-05 04:14 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
