@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-08-07</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-08-07</h2>
+      <p class="count">4 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.06075v1" target="_blank" rel="noopener">Domain-Grounded Candidate Selection for Agentic Image Editing: A Shadow Removal Case</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-06</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Stony Brook</span>
+          <span class="arxiv-id">arXiv:2608.06075v1</span>
+        </div>
+        <p class="authors">Shilin Hu, Jingyi Xu, Dimitris Samaras, Hieu Le</p>
+        <p class="abstract">Commercial vision-language models are reshaping computer vision, with visual priors broad enough to rival task-specific systems. This raises a natural question: do they reduce the need for classic, physics-informed low-level vision? We study this through shadow removal, a problem shaped by scene geometry, illumination, materials, and occluders, where paired shadow and shadow-free data are hard to collect at scale. We find that a commercial generative editor, used directly, can produce clean shadow-free edits that preserve surface texture and local appearance. However, this comes with a new failure mode: the same editor can regenerate scene content, hallucinate objects, or misread a shadow as material or geometry, producing plausible but physically wrong edits. We address this with an agentic candidate-selection pipeline: the editor generates a guided probe, an evaluator screens for major failures, retries when needed, samples multiple candidates, filters them, and selects a final result balancing shadow removal against scene preservation. Grounding this process in shadow-formation physics makes it more reliable: prompting the generator and evaluator to treat shadows as illumination effects caused by light occlusion, not material or object structure, measurably improves quality and consistency. On the ShadowRemovalRefine benchmark, our physics-oriented pipeline achieves a CDD of 0.0075, reducing CDD by at least 47% over the strongest prior method. These results suggest that commercial vision-language models do not replace classic low-level vision priors; instead, such priors remain useful for constraining and steering physically underconstrained generation.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.06075v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.06075v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.05729v1" target="_blank" rel="noopener">Unified Agent: Managing Interactions across Devices</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-06</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">UC San Diego</span>
+          <span class="arxiv-id">arXiv:2608.05729v1</span>
+        </div>
+        <p class="authors">Xinshuang Liu, Runfa Blark Li, Shaoxiu Wei, Xin Lin, Truong Nguyen</p>
+        <p class="abstract">As capabilities rapidly increase, AI agents can move from running inside one app to acting across a user&#x27;s devices over time. Yet existing agent systems still fall short in this scenario. This is because observations are scattered across devices and moments, but mainstream systems are not designed around this fact: a single agent that treats devices as tools lacks effective state management for all devices across time, and multi-agent systems coordinate across agents but do not maintain the compact carried state a cross-device, cross-time request needs. We argue that the agent should maintain an effectively designed state that organizes engagement evidence, stated facts, and the standing request in a compact, action-ready form for deciding its action given the current observation. To compare state designs, we construct a benchmark of user-agent interaction across devices and time. We instantiate this principle in Unified Agent, a stateful agent that carries interaction evidence across devices and moments and uses it with the current observation to act. In the default setting, it significantly outperforms our adaptations of four published designs. Across changes in multimodal large language model (MLLM) family, capability, and reasoning effort, it remains ahead of all compared systems, demonstrating that the state-design advantage is robust across MLLM settings. Our code and data will be publicly available on GitHub.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.05729v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.05729v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.05485v1" target="_blank" rel="noopener">VideoArgus: Agentic Rubric-Grounded Unified Evaluation for Video Generation and Editing</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-06</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Rochester</span>
+          <span class="arxiv-id">arXiv:2608.05485v1</span>
+        </div>
+        <p class="authors">Ziyun Zeng, Zixuan Wang, Yongsheng Yu, Hang Hua, Jiebo Luo</p>
+        <p class="abstract">Evaluating generated videos remains challenging because existing benchmarks rely on fixed evaluation content, cover only a subset of generation and editing settings, and provide limited evidence for their scores. We introduce VideoArgus, a unified rubric-grounded framework covering five video generation and editing settings. For each input instance, VideoArgus generates an output-blind, sample-specific rubric once and reuses it to evaluate all corresponding candidate videos. The rubric defines concrete criteria, scoring rules, failure modes, and evidence plans, which guide criterion-specific VLM QA and visual tools to produce evidence-grounded criterion scores, rationales, and a diagnostic report. We further construct VideoArgus-Bench, containing 1,026 curated input instances built from 653 high-quality images and 416 high-quality videos, with all benchmark rubrics pre-generated, frozen, and released. On a separate 1,260-video human-alignment set, VideoArgus achieves higher within-input Spearman and Kendall correlations with human judgments than the corresponding benchmark-specific evaluators across all five tasks. Model rankings also remain largely consistent across different rubric-generation and evaluation-VLM backbones. All code and data are released. Visit our project page: https://zzzmyyzeng.github.io/VideoArgus</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.05485v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.05485v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.05341v1" target="_blank" rel="noopener">Positive-Unlabeled Preference Optimization For Chest X-ray Report Generation</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-05</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Stanford</span><span class="school">Columbia</span>
+          <span class="arxiv-id">arXiv:2608.05341v1</span>
+        </div>
+        <p class="authors">Yuta Kobayashi, Pradyun Ramesh, Muhammad Ahmed Chaudhry, Vincent Jeanselme, Judy Wawira Gichoya, Sanmi Koyejo, Kathleen Capaccione, Shalmali Joshi</p>
+        <p class="abstract">Vision-Language Models (VLMs) for radiology report generation are typically trained on retrospective clinical reports, which suffer from omission noise: clinically present findings are left unreported due to the omission of subtle findings. For example, prior studies show that cardiomegaly may be omitted from ICU chest X-ray reports when the imaging request is focused on monitoring support device placement. As a result, models trained with standard approaches inherit these omissions, learning to under-report findings themselves. We propose PU-DPO, a preference optimization framework to prevent omission noise from corrupting the preference signal. We reformulate the objective under a positive-unlabeled (PU) learning framework, treating absent mentions as unlabeled rather than truly negative. Our framework provides preference supervision using constructed contrastive pairs, generated using edits to model responses, producing variants that explicitly mention or omit a specific finding. Generated responses that mention the finding are naturally preferred in the context of visual evidence. Across semi-synthetic experiments and analyses on real-world chest radiograph benchmarks where adjudicated labels are available, PU-DPO yields consistent gains in detection rates and recovery of hidden positives across multiple pathologies, and is more robust to omission noise than prior approaches.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.05341v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.05341v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+  </main>
+  <footer>
+    <p>Generated 2026-08-07 03:52 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
