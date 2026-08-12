@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-08-12</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-08-12</h2>
+      <p class="count">3 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.10964v1" target="_blank" rel="noopener">CARE: Confidence-Aware Reasoning for Reliable Medical VQA</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-11</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Michigan</span>
+          <span class="arxiv-id">arXiv:2608.10964v1</span>
+        </div>
+        <p class="authors">Yuetian Du, Yucheng Wang, Zhenyuan Chen, Luyuan Chen, Rongyu Zhang, Jinjian Zhang, Wei Zhou, Zhijie Xu et al.</p>
+        <p class="abstract">Reinforcement Fine-Tuning (RFT) has enabled medical Multimodal Large Language Models (MLLMs) to produce Chain-of-Thought (CoT) reasoning for visual question answering, yet these models suffer from $\textit{confidence miscalibration}$---a systematic gap between expressed certainty and actual diagnostic accuracy that undermines clinical trust. We propose $\textbf{CARE}$, a $\textbf{C}$onfidence-$\textbf{A}$ware medical $\textbf{RE}$asoning framework that jointly optimizes accuracy and calibration through a dual-stage pipeline. First, a scalable Medical-CoT synthesis provides structured cold-start data for Supervised Fine-Tuning. Second, Group Relative Policy Optimization (GRPO) with a novel $\textbf{Confidence-Aware Reward (CAR)}$ mechanism ties the model&#x27;s confidence to diagnostic correctness within the reward signal. Across three Medical VQA benchmarks, $\textbf{CARE}$ achieves the highest diagnostic accuracy while obtaining the lowest Expected Calibration Error and Hallucination Rate, establishing a foundation for trustworthy clinical decision support. Our code is available at https://github.com/anotherbricki/CARE.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.10964v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.10964v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.10289v1" target="_blank" rel="noopener">SeFaR: Semantic Feature-aware Robustness Testing of Deep Neural Networks</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-10</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Carnegie Mellon</span><span class="school">University of Virginia</span>
+          <span class="arxiv-id">arXiv:2608.10289v1</span>
+        </div>
+        <p class="authors">Nusrat Jahan Mozumder, Divya Gopinath, Corina Pasareanu, Matthew Dwyer</p>
+        <p class="abstract">Deep neural networks are increasingly deployed in safety-critical domains as perception modules, where failures are often caused due to rare and under-represented scenarios. This necessitates the need to evaluate the semantic robustness of perception models; conformance of behavior to high-level requirements over real-world perceptual variability. To address this, we propose SeFaR, a framework for systematic semantic-feature-centric testing of vision models. Given a natural-language requirement and a set of satisfying inputs, SeFaR evaluates robustness with respect to diverse realistic semantic variations that preserve requirement satisfaction. The approach employs a novel hierarchical concept model enabling structured exploration of the feature space and incorporation of domain knowledge via user-defined concepts. State-of-the-art diffusion and vision-language models are leveraged to generate photorealistic semantics-preserving perturbations and identification of previously unknown features impacting behavior. A feedback-driven adaptive process is adopted to generate interpretable failure-inducing semantic concepts along with corresponding test inputs. Evaluation on case studies demonstrates that the proposed framework effectively satisfies requirement preconditions while identifying requirement-independent features that influence model decisions, enabling it to both uncover faults and relate them to such features.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.10289v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.10289v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.10195v1" target="_blank" rel="noopener">More Accurate, Less Human: Gestalt Grouping in Vision Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-10</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Utah</span>
+          <span class="arxiv-id">arXiv:2608.10195v1</span>
+        </div>
+        <p class="authors">Sudhanva Manjunath Athreya, Sai Phani Kumar Malladi</p>
+        <p class="abstract">Human vision organizes what it sees into wholes: same-colored points group into series, similar marks cohere into categories, and shapes complete into recognizable objects. These are the Gestalt operations that visualization design builds on. Whether vision models organize visual content this way has not been systematically tested. We introduce a behavioral battery that scores models against human data from prior perception studies on four grouping tasks: mark-color odd-one-out, color-series counting, silhouette recognition, and object odd-one-out. We apply it to 45 models across five training families: supervised, self-supervised, and contrastive vision-language encoders, open-weight VLMs, and closed foundation models. The battery reveals that agreement with human responses captures aspects of perceptual organization that conventional performance metrics fail to distinguish, with several closed models exhibiting substantially lower alignment than their benchmark accuracy would suggest. Scoring against published perception data therefore gives visualization research a reusable yardstick, requiring no new user study, for auditing whether the models now entering visualization pipelines organize what they see the way their human audience does.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.10195v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.10195v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+  </main>
+  <footer>
+    <p>Generated 2026-08-12 03:24 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
