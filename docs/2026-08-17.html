@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-08-17</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-08-17</h2>
+      <p class="count">4 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.14226v1" target="_blank" rel="noopener">RankT2I: A Submodular Framework for Discovering Interpretable and Diverse Semantics in Text-to-Image Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-14</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Virginia Tech</span>
+          <span class="arxiv-id">arXiv:2608.14226v1</span>
+        </div>
+        <p class="authors">Ritika Allada, Pinar Yanardag</p>
+        <p class="abstract">Recent advances in text-to-image (T2I) models have revolutionized the field of image generation and editing. However, identifying semantics that a T2I model can successfully edit in an image continues to be a challenging task. Most existing approaches require users to manually specify semantics to modify a particular image, a time-consuming process that often involves extensive trial and error. In this paper, we present RankT2I, a novel, training-free, and model-agnostic framework that automates the discovery of editable semantics in diffusion and FLUX-based models. Given a visual domain, we first utilize a multimodal vision-language model to gather a broad set of candidate semantics. We then frame semantic discovery as a set selection problem and use a submodular objective to identify semantics that are relevant, editable, and diverse. Our method helps users efficiently identify a wide range of semantics for text-to-image editing models across several domains while outperforming existing methods.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.14226v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.14226v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.14016v1" target="_blank" rel="noopener">Content Based Video Narration of Gameplay with Vision Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-14</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Washington</span>
+          <span class="arxiv-id">arXiv:2608.14016v1</span>
+        </div>
+        <p class="authors">Mathew Varghese</p>
+        <p class="abstract">Live game commentary is scarce: it exists for professional esports broadcasts and almost nowhere else. We present a content-based video narration system that produces spoken, esports-style commentary for arbitrary gameplay recordings using a general-purpose vision-language model (VLM) and a text-to-speech back end, with no game-specific instrumentation, no engine telemetry, and no task-specific training. Three mechanisms carry the system. Temporal mosaic packing arranges nine uniformly sampled frames into a single 3x3 image, letting an image-native VLM reason about motion while consuming one image payload per segment instead of nine. Context-conditioned prompting replays the K most recent narrations as assistant-role history, suppressing the repetition that dominates per-segment captioning of static scenes. Duration-conditioned generation and elastic alignment constrain narration length in the prompt, then time-scale or symmetrically pad the synthesized audio so each utterance fills its segment slot exactly, giving frame-accurate muxing without a forced aligner. The implementation supports either cloud TTS or a 6-bit quantized 4B-parameter on-device TTS model on Apple silicon, making the speech stage fully local. We report a qualitative case study on real-time strategy footage, a cost model showing the mosaic reduces per-minute image payloads by 9x, and a candid account of observed failure modes - hallucinated game state, resolution loss from mosaicking, and prosody artifacts from time-scaling. We release the system as a reproducible baseline, with an evaluation protocol for the quantitative study a full version will report.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.14016v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.14016v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.14015v1" target="_blank" rel="noopener">MedClaw: Heuristic Agent Harness for Long-Horizon Surgical Video Reasoning</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-14</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Maryland</span>
+          <span class="arxiv-id">arXiv:2608.14015v1</span>
+        </div>
+        <p class="authors">Yingying Fan, Penghui Du, Leyan Zhu, Runze He, Zimeng Wu, Yuxuan Zhang, Liang Chen, Jiahao Xie et al.</p>
+        <p class="abstract">Understanding tens-of-minutes surgical videos requires long-horizon temporal reasoning, answering what happens before, after, or across stages of a procedure by grounding the question in visual evidence spread across time. Existing approaches handle this poorly: a one-shot vision-language model (VLM) compresses the whole procedure to fit its context window and loses the detail a &quot;before&quot; or &quot;after&quot; question depends on, while video agents that train the model where to look are data-hungry and transfer poorly to out-of-domain surgery. We build an agent harness that separates reasoning from perception and improves by evolving context rather than optimizing weights. A text-only orchestrator plans which evidence to gather and issues an auditable sequence of tool calls, while frozen vision-language sub-agents execute each call over the pixels, viewing, cropping, inspecting frames, and retrieving external knowledge. We further propose a gradient-free, reward-gated Heuristic Skill Distillation loop that mines the agent&#x27;s own low-scoring traces and keeps a candidate skill only when it raises a validation reward, yielding reusable retrieval skills, notably directed re-look. Growing an external skill library rather than tuning weights, the loop adapts from only about 100 labeled examples, far fewer than supervised or reinforcement fine-tuning requires. To evaluate this agent, we introduce MedClawBench, a de-leaked, doctor-grounded benchmark of 1,123 questions over self-built long neurosurgery recordings and a held-out public lecture-video test split. Across both datasets and all four evaluation dimensions, our agent consistently outperforms one-shot VLMs and general video-agent frameworks, with the largest gains on the long, out-of-domain neurosurgery videos. Project page: https://fyycs.github.io/medclaw/.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.14015v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.14015v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.13760v1" target="_blank" rel="noopener">Amplified Does Not Mean Predictive: Reasoning Behaviors in Thinking Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-13</span>
+          <span class="cat">cs.CL</span>
+          <span class="school">Stanford</span><span class="school">Carnegie Mellon</span>
+          <span class="arxiv-id">arXiv:2608.13760v1</span>
+        </div>
+        <p class="authors">Jean de Dieu Nyandwi, Leena Mathur, Yonatan Bisk, Robert Hawkins, Graham Neubig</p>
+        <p class="abstract">Which reasoning behaviors are associated with correct answers in reasoning models, and does reasoning-oriented training amplify those behaviors? This distinction is important because reasoning-oriented training can make traces look more deliberative without amplifying the behaviors most tied to model correctness. We quantify this mismatch with Behavioral Lift, a metric that measures how much correctness changes when a behavior is present versus absent in a model&#x27;s reasoning trace. Across 15 models and 6 benchmarks spanning text-only and vision-language reasoning, we annotate 15,282 traces with a taxonomy whose core behaviors are defined for both LLM and VLM traces. We find evidence for an Amplification-Lift Gap, in which thinking models strongly amplify self-correction, hypothesis testing, and uncertainty acknowledgment, while the highest-lift behaviors are confidence calibration, knowledge alignment, and self-awareness. Confidence calibration is among the strongest positive signals of correctness in both modalities, yet is barely amplified; uncertainty acknowledgment is amplified by 3--7$\times$, yet is weakly or negatively associated with correctness. We find that reasoning-oriented training does not preferentially amplify the highest-Lift behaviors, motivating process-level objectives that reward calibrated and grounded reasoning rather than surface form alone.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.13760v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.13760v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+  </main>
+  <footer>
+    <p>Generated 2026-08-17 02:20 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
