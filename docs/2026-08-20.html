@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-08-20</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-08-20</h2>
+      <p class="count">4 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.18602v1" target="_blank" rel="noopener">Teach a Molmo2Fish: Towards interactive fish tracking with natural language guidance</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-19</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">MIT</span>
+          <span class="arxiv-id">arXiv:2608.18602v1</span>
+        </div>
+        <p class="authors">Kai Van Brunt, Justin Kay, Sara Beery</p>
+        <p class="abstract">Computer vision is increasingly used to automate recognition tasks in large ecological datasets, but more complex tasks such as multi-object tracking continue to pose challenges. As researchers seek to incorporate vision models in ecology workflows, various lines of research have explored how to make imperfect predictions useful through human-in-the-loop processes. We propose a new approach to working with imperfect tracking predictions through an interactive prediction correction workflow taking place as a conversation with a multimodal large language model, which we tailor to a sonar fish tracking dataset as an initial proof of concept. We investigate the performance of the tool, Molmo2Fish, across guided and unguided tasks, correcting its own predicted tracks and external tracks. We find that Molmo2Fish achieves high performance on fish tracking and track correction tasks, but there is still much room to improve on incorporating natural language guidance. The code and data are publicly available at https://github.com/tidalove/molmo2fish.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.18602v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.18602v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.18532v1" target="_blank" rel="noopener">StateTrace: An Object-Centric Framework for Hidden-State Spatiotemporal Reasoning in Long Videos</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-19</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UC San Diego</span>
+          <span class="arxiv-id">arXiv:2608.18532v1</span>
+        </div>
+        <p class="authors">Yu Han, Wenhao Li, Yichao Cao, Hongyan Xu, Shuo Yang, Shan You, Xiu Su</p>
+        <p class="abstract">Existing VLMs have achieved strong performance in video understanding, yet they struggle with long-video spatiotemporal reasoning when target objects become invisible, often mistaking &quot;invisible&quot; for &quot;unknown&quot;. We define this challenge as hidden-state spatiotemporal reasoning: inferring object states during prolonged invisible intervals from context interactions. To address this, we propose StateTrace, a novel object-centric framework that endows VideoLLMs with an explicit mechanism for hidden state reasoning in long videos. StateTrace builds a reusable spatiotemporal state memory that organizes object trajectories, inter-object relations, and state-transition events into a structured reasoning substrate. At inference time, it retrieves question-relevant state-evolution trajectories and converts them into compact reasoning cues, enabling the model to explicitly reason about why an object disappears, how its state evolves while invisible, and whether that state should persist at query time. We further build HSR-Bench, a diagnostic benchmark for hidden-state reasoning, containing 1,427 video-QA samples from 1,384 unique videos. Extensive experiments across multiple VideoLLMs show that StateTrace consistently improves performance on both public benchmarks and HSR-Bench (e.g., improving VideoLLaMA3 from 39.6 to 64.2 on HSR-Bench).</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.18532v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.18532v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.18339v1" target="_blank" rel="noopener">From Inference to Adaptation: A Unified Optimal Transport View of Vision Language Model</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-18</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UIUC</span>
+          <span class="arxiv-id">arXiv:2608.18339v1</span>
+        </div>
+        <p class="authors">Qi Yu, Zhichen Zeng, Katherine Tieu, Xiyuan Yang, Ruizhong Qiu, Yuchen Yan, Lihui Liu, Yanjun Zhao et al.</p>
+        <p class="abstract">Vision-language models (VLMs) have demonstrated remarkable zero-shot capabilities yet remain sensitive to real-world distribution shifts during inference. Although significant efforts are devoted to adapting VLMs at test time, they rely heavily on noisy pseudo-labels predicted directly from raw embedding similarities during inference, which are unreliable under distribution shift and mislead the adaptation. To avoid noise amplification, existing works craft coarse-grained surrogate objectives during adaptation, which fail to explicitly model sample-level relationships across different modalities, creating objective mismatch with inference, thus leading to marginal performance improvement. In this work, we aim to bridge the detached objectives of inference and adaptation for VLMs, and propose a principled VLM TTA method called \algname. For VLM inference, we formulate the zero-shot image classification task as a cross-modal alignment problem encoded via a Wasserstein OT formulation, providing robust pseudo-labels at the sample-level to effectively adapt VLMs. For VLM adaptation, we adopt a soft-label InfoNCE loss to adapt VLMs based on the OT-induced pseudo-labels, leveraging fine-grained supervisions to explicitly model relationships of individual image-text pairs via contrastive learning, which empowers accurate inference at the same granularity. Moreover, we theoretically reveal that the InfoNCE loss can be neatly reformulated as a Wasserstein OT formulation, thereby unifying the objectives of the inference and adaptation of VLMs to achieve their mutual benefits. Extensive experiments demonstrate the effectiveness and efficiency of our methods, outperforming the best-performing methods by up to 7% with state-of-the-art efficiency.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.18339v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.18339v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.18309v1" target="_blank" rel="noopener">XRF-to-Optical Field-of-View Localization with Vision Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-18</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Chicago</span><span class="school">Northwestern</span>
+          <span class="arxiv-id">arXiv:2608.18309v1</span>
+        </div>
+        <p class="authors">Xiangyu Yin, Tatjana Paunesku, Letonia Copeland-Hardin, Martina Ralle, Zichao Wendy Di, Si Chen, Gayle E. Woloschak, Barry Lai et al.</p>
+        <p class="abstract">Registering images acquired with different microscopy modalities is essential for relating complementary measurements of the same specimen. In correlative X-ray fluorescence (XRF) and optical microscopy, the XRF map often covers only a small region of an optical image acquired from the same or an adjacent tissue section. Field-of-view (FOV) localization is necessary but can be difficult when appearance and structure differ across modalities. Here we evaluate training-free vision language model (VLM) localization on two datasets representing same-section high-correspondence and adjacent-section low-correspondence imaging. We test unconstrained and metadata-constrained search and compare VLMs with geometric controls, classical template matching, and two alternative training-free approaches (DINOv2 and multiGradICON). Direct VLM prompting produced content-dependent spatial signals but was not reliable alone. Classical matching was most accurate when cross-modal structure was preserved but failed in the low-correspondence collection. A proposal-and-verify workflow used repeated VLM predictions as candidates and image-based similarity to select the final location. This workflow recovered useful localization in the low-correspondence regime.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.18309v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.18309v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+  </main>
+  <footer>
+    <p>Generated 2026-08-20 02:18 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
