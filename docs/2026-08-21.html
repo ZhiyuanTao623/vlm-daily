@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-08-21</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-08-21</h2>
+      <p class="count">3 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.19726v1" target="_blank" rel="noopener">Projector Is All You Train</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-20</span>
+          <span class="cat">cs.CL</span>
+          <span class="school">UC Berkeley</span>
+          <span class="arxiv-id">arXiv:2608.19726v1</span>
+        </div>
+        <p class="authors">Nyx Iskandar, Saathvik Selvan, Slater Victoroff</p>
+        <p class="abstract">The typical training process of a multimodal large language model (MLLM) involves adapting both the language model backbone and the projector between the backbone and a modality-specific encoder. We ask whether fine-tuning the backbone of an MLLM is necessary to adapt it to a new modality. Through experiments on 3D MLLMs, we find that training only the projector is sufficient to achieve strong multimodal performance relative to existing baseline models and our jointly trained MLLMs with the same encoder and backbone. We also show that joint training leads to undesirable drift in existing capabilities of the language model, which projector-only training avoids by definition. Furthermore, projector-only training has approximately twice the training sample throughput of joint training. We validate our findings across different language model backbones via 3D classification and captioning benchmarks as well as standard benchmarks evaluating language, vision, and spatial reasoning capabilities.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.19726v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.19726v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.19376v1" target="_blank" rel="noopener">Does Marginal Coverage Guarantee Class-Conditional Safety for Zero-Shot VLMs Under Shift?</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-19</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Virginia Tech</span>
+          <span class="arxiv-id">arXiv:2608.19376v1</span>
+        </div>
+        <p class="authors">Jai Kumar Sharma, Amartya Dutta</p>
+        <p class="abstract">Split-conformal prediction provides marginal coverage under exchangeability and is increasingly used as an abstention layer for zero-shot vision-language models (VLMs). We audit this practice under deployment shift for CLIP, OpenCLIP, and SigLIP across ImageNet and non-ImageNet settings. Marginal coverage can remain relatively high while class-conditional tail coverage collapses: on ImageNet-Sketch, worst-class coverage falls to $\approx 0$ and 10-12% of classes lie below a finite-sample null floor, despite marginal coverage of about 0.86. The failure is aligned with target-domain class accuracy but is not predicted by the source-domain diagnostics we test. Source-side Mondrian calibration improves the in-distribution tail but does not transfer, while clustered conformal and Conf-OT improve marginal or average metrics without recovering the worst-class tail. Target-side class calibration substantially lifts the tail, but requires labels for every class and remains set-size-intensive. We further identify a 2-3$\times$ cross-family efficiency gap and show that native SigLIP sigmoid scores remove APS&#x27;s probability-mass interpretation. The findings persist across the tested model scale, pretraining corpus, prompt, miscoverage level $α$, and shifted non-ImageNet settings. Marginal conformal coverage should therefore be treated as an average reliability statistic, not as a safety guarantee for the class tail.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.19376v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.19376v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.19355v1" target="_blank" rel="noopener">GRACE: Grounded Reasoning via Adapter Composition and Evidence-Aware Calibration for Educational Visual Question Answering</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-19</span>
+          <span class="cat">cs.MM</span>
+          <span class="school">Carnegie Mellon</span><span class="school">UC Berkeley</span><span class="school">Columbia</span>
+          <span class="arxiv-id">arXiv:2608.19355v1</span>
+        </div>
+        <p class="authors">Xinjin Li, Yudi Xia, Xi Zhao, Yiliu Xu, Yining Liu, Cheng Lu, Yujian Long, Yu Ma et al.</p>
+        <p class="abstract">Educational visual question answering, or VQA, requires models to solve curriculum-oriented multiple-choice questions using both language and visual evidence. Compared with conventional open-ended VQA, educational examples often include structured assessment metadata, diagrams or image contexts, and semantically close answer options, creating strong opportunities for question-option shortcuts. We develop and evaluate a parameter-efficient adaptation framework for a frozen multimodal large language model in this setting. We introduce GRACE, Grounded Reasoning via Adapter Composition and Evidence-Aware Calibration, a framework that uses the pedagogical state of each question to specialize lightweight language and vision adaptation. The state combines inference-visible subject, grouped skill, grade, visual-context, question-intent, and option-structure cues. GRACE uses factor-specific prompts and lightweight visual adapters, then applies evidence-aware option calibration to score all candidates under a shared multimodal context. On ScienceQA, GRACE improves a shared-adapter baseline from 90.5 percent to 93.1 percent overall accuracy and from 88.7 percent to 91.2 percent on image-context questions. Removing pedagogical composition, option calibration, or the visual adapter reduces overall accuracy by 1.4, 1.0, and 1.5 points, respectively. These controlled results show that structured educational state is an effective routing signal for parameter-efficient multimodal adaptation.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.19355v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.19355v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+  </main>
+  <footer>
+    <p>Generated 2026-08-21 02:24 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
