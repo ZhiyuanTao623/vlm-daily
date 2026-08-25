@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-08-25</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-08-25</h2>
+      <p class="count">5 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.22863v1" target="_blank" rel="noopener">Adaptive Hierarchical Representation Alliance for Multimodal Learning</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-24</span>
+          <span class="cat">cs.MM</span>
+          <span class="school">USC</span>
+          <span class="arxiv-id">arXiv:2608.22863v1</span>
+        </div>
+        <p class="authors">Chunlei Meng, Pengbin Feng, Jacqueline J. Pang, Chih-Ting Liao, Rong Fu, Zhaolu Kang, Zhongxue Gan, Chun Ouyang</p>
+        <p class="abstract">Multimodal models often align language, vision, and audio in a single final-layer latent space, implicitly assuming that task-relevant evidence emerges at the same semantic depth across modalities. Using layer-wise CKA analysis, we observe that this assumption leads to semantic granularity mismatch: textual cues usually require deeper contextual abstraction, whereas visual and acoustic cues often provide discriminative perceptual evidence in shallow or middle layers. This mismatch can flatten fine-grained modality-private cues and reduce reliability under noisy, imbalanced, or missing inputs. To address this, we proposed Adaptive Hierarchical Representation Alliance (AHRA), a hierarchical shared--private expert framework. AHRA factorizes each modality into shared and private streams across semantic levels, regularizes them with shared alignment and private decorrelation, routes shared information through a cross-modal expert, and enhances task-relevant private tokens with modality-specific experts guided by a sparsity-controlled soft-gating mechanism (foreground exam). A hierarchical co-fusion module then performs intra-level expert coordination and inter-level semantic selection. Experiments on six benchmarks across image-text classification, multimodal intent recognition, and trimodal sentiment analysis show that AHRA consistently improves over strong baselines and remains robust under noisy and missing-modality settings.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.22863v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.22863v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.22713v1" target="_blank" rel="noopener">A Source-Grounded Framework for Constructing and Evaluating Progressive Multimodal Diagnostic Dialogues from Clinical Case Reports</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-24</span>
+          <span class="cat">cs.CL</span>
+          <span class="school">Cornell</span>
+          <span class="arxiv-id">arXiv:2608.22713v1</span>
+        </div>
+        <p class="authors">Yufan Wang, Rui Yang, Yi Liu, Yi Lin, Yifan Peng</p>
+        <p class="abstract">Clinical diagnosis requires progressive integration of patient history, physical examination, laboratory findings, medical images, and diagnostic-informative tests. However, most multimodal medical benchmarks evaluate fixed inputs or endpoint answers, while fully interactive diagnostic agents conflate evidence selection with evidence interpretation. We present a source-grounded framework to construct progressive multimodal diagnostic dialogues from case reports and an evaluation strategy for assessing MLLMs on final diagnosis, diagnostic reasoning, and image-finding interpretation. Evaluation on 24 internal medicine case reports showed that our framework can accurately convert case reports into reference dialogues, achieving a diagnosis F1 of 0.99 and a reasoning-quality score of 4.79 out of 5. Evaluation on two frontier MLLMs (o4-mini and Claude Haiku 4.5) achieved reasoning-quality scores of 2.75 and 2.50, respectively, with substantially lower diagnosis, reasoning, and image-finding F1 scores. The results demonstrate that fluent responses do not necessarily reflect evidence-grounded clinical reasoning and highlight the utility of the proposed framework for evaluating multimodal diagnostic reasoning.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.22713v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.22713v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.22366v1" target="_blank" rel="noopener">When Do VLMs Help Arabic Manuscript OCR? A Cross-Dataset Study</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-23</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Northwestern</span>
+          <span class="arxiv-id">arXiv:2608.22366v1</span>
+        </div>
+        <p class="authors">Moshiur Farazi, Firoj Alam, Abderrahmane Maaradji, Zakaria Maamar, Hamdy Mubarak, Wajdi Zaghouani</p>
+        <p class="abstract">Vision-language models (VLMs) are increasingly being used for document understanding, yet their role in Arabic and Islamic manuscript recognition remains underexplored. To address such a gap in this paper, we evaluate traditional OCR, general-purpose VLMs, Arabic-specialized VLMs, and OCR-conditioned VLM correction across eight Arabic text datasets spanning historical manuscripts, aged printed books, clean print, multi-domain documents, and handwriting. The results show that no single approach dominates across setups. On line-level historical manuscripts, VLMs are close to Tesseract; on page-level manuscript images, they perform better; and in several settings, an OCR-conditioned corrector improves over both standalone OCR and standalone VLMs. The central finding is an OCR-prior recoverability principle: OCR conditioning helps when the OCR output remains visually and textually recoverable, providing anchors that the VLM can refine against the image. It improves recognition on aged print, clean print, mixed-domain Arabic, and some Naskh manuscripts, but degrades performance when the prior is script-mismatched or systematically misleading, as in Maghribi manuscripts and realistic student handwriting. Additional diagnostics show that Arabic VLM-OCR is sensitive to diacritics, preprocessing, generation budget, and repetition loops. These findings support an adaptive OCR-VLM workflow that routes pages according to script, OCR-prior recoverability, length diagnostics, and failure-mode indicators.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.22366v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.22366v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.21832v1" target="_blank" rel="noopener">GUI-Primitives: Diagnosing Spatial Reasoning Failures in Vision-Language GUI Grounding</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-22</span>
+          <span class="cat">cs.CL</span>
+          <span class="school">USC</span>
+          <span class="arxiv-id">arXiv:2608.21832v1</span>
+        </div>
+        <p class="authors">Md Abrar Jahin, Md Rizwan Parvez</p>
+        <p class="abstract">Computer-use agents ground natural-language instructions in screenshots to locate interface elements, yet existing benchmarks do not isolate whether models bind relational language to the correct element. We introduce GUI-Primitives, a 994-item benchmark of contrastive instruction pairs over seven spatial relations in graphical user interfaces (left/right, above/below, containment, alignment, proximity, list ordinal, occlusion). Each pair holds the screenshot and anchor fixed while changing the relation expression, so the correct target moves between two designated candidates. Five annotators validate a 196-item subset ($κ= 0.94$ well-formedness; $κ= 0.79$ target selection). Nineteen vision-language models reach at most $32\%$ strict point-in-box accuracy. Because models emit unconstrained coordinates, we classify each prediction by the candidate region it falls within. Predictions fall outside both candidates on $60-92\%$ of items. Conditional on falling within a candidate region, target selection reaches 0.82-0.90 for horizontal position, vertical position, proximity, and list ordinal, but does not differ significantly from 0.50 for containment and occlusion: most failures reflect candidate localization rather than relation understanding. Across ten models, benchmark accuracy correlates with ScreenSpot-Pro accuracy (Spearman $ρ= +0.74$), an exploratory association at this sample size. Marking the two designated candidates raises selection accuracy by 35--57 percentage points, an oracle diagnostic that supplies the candidate set rather than a deployable method. We release the benchmark, predictions, and code.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.21832v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.21832v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.21529v1" target="_blank" rel="noopener">DamageScope: Vision-Language Retrieval at Scale for Disaster Damage Assessment from Satellite Imagery</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-21</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Princeton</span>
+          <span class="arxiv-id">arXiv:2608.21529v1</span>
+        </div>
+        <p class="authors">Ravi K. Rajendran, Biplob Debnath, Murugan Sankaradas, Srimat T. Chakradhar</p>
+        <p class="abstract">Timely and accurate assessment of property damage is critical following natural disasters. Traditional on-site inspections are labor-intensive, costly, and often pose safety risks. Advances in satellite imagery and vision-language models (VLMs) enable scalable remote damage assessment; however, integrating VLMs into large-scale Earth observation pipelines presents challenges in computational efficiency, data organization, and information retrieval. To address these challenges, we present DamageScope, a retrieval-augmented framework that combines satellite imagery with Vision-Language Models (VLMs) and Large Language Models (LLMs) to automate property damage analysis. Built on a Retrieval-Augmented Generation (RAG) framework, DamageScope extracts structured visual representations from satellite imagery to support interactive natural language queries for damage assessment. To address scalability, we introduce a novel multi-vector embedding-based clustering algorithm that outperforms traditional single-vector embedding approaches while reducing indexing time by up to 14x. Furthermore, a dual-store data architecture minimizes LLM API calls, reducing both operational cost and response latency by up to approximately 3x. By effectively balancing scalability and operational efficiency, DamageScope provides a robust and practical solution for real-world damage assessment tasks.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.21529v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.21529v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+  </main>
+  <footer>
+    <p>Generated 2026-08-25 02:19 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
