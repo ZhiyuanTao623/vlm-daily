@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-08-27</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-08-27</h2>
+      <p class="count">7 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.26105v1" target="_blank" rel="noopener">VBVR-Pro: A Scalable and Verifiable Suite for Native Visual Reasoning</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-26</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Stanford</span><span class="school">Carnegie Mellon</span><span class="school">UC Berkeley</span><span class="school">University of Michigan</span><span class="school">UCLA</span><span class="school">Columbia</span><span class="school">UC San Diego</span><span class="school">Johns Hopkins</span><span class="school">UC Davis</span>
+          <span class="arxiv-id">arXiv:2608.26105v1</span>
+        </div>
+        <p class="authors">Junxiang Xu, Ruisi Wang, Fanyi Pu, Maijunxian Wang, Ran Ji, Tongxi Zhou, Chenyang Gu, Jing Zuo et al.</p>
+        <p class="abstract">Native visual reasoning treats visual generation as the medium of reasoning itself: visual states (i.e. images and videos) are not merely inputs to be understood or outputs to be rendered, but first-class substrates for problem solving beyond language. Yet progress remains bottlenecked by the lack of scalable training tasks, reliable feedback, and controlled comparisons across generative substrates. In this work, we introduce VBVR-Pro, a closed-loop testbed that makes native visual reasoning through generation trainable, verifiable, optimizable, and experimentally controllable. 1) Task scaling. VBVR-Pro turns visual reasoning into a controlled task space of 300 procedurally generated tasks. Models trained on VBVR-Pro show strong transfer beyond the proposed suite across seven external visual reasoning benchmarks such as RISE-Video, MME-CoF-Pro, and BabyVision. 2) Verifiable rewards. VBVR-Pro provides verifiable reward scorers for task-grounded evaluation. Through a systematic study of leading MLLMs as judges, we identify recurring failure modes of the prevalent VLM-as-a-judge paradigm. In contrast, the proposed scorers are grounded in deterministic, task-specific rules, achieve fine-grained alignment with human judgments. Importantly, they serve as reliable reward signals for large-scale multi-task reinforcement learning and demonstrate stronger post-RL performance across visual reasoning tasks. 3) Mechanism study. VBVR-Pro enables controlled modality studies across more than 30 image, video, and interleaved generators. Our analysis shows that video generation remains strongest for tasks requiring persistent spatiotemporal state tracking, while interleaved generation provides a compute-efficient alternative. Critically, ablations and probing suggest the presence of vision-native trajectories that are crucial to visual reasoning. We release all data, models, scorers, and code.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.26105v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.26105v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.25986v1" target="_blank" rel="noopener">Multi-Granularity Context-Enhanced RAG over Multimodal Knowledge Graphs</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-26</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">Penn State</span><span class="school">University of Utah</span>
+          <span class="arxiv-id">arXiv:2608.25986v1</span>
+        </div>
+        <p class="authors">Zongyu Wu, Yilong Wang, Xiaochen Wang, Minhua Lin, Zhichao Xu, Fenglong Ma, Xiang Zhang, Suhang Wang</p>
+        <p class="abstract">Retrieval-augmented generation (RAG) is widely used to mitigate hallucination issues in large language models (LLMs) and multimodal large language models (MLLMs). In particular, knowledge graph (KG)-based RAG leverages structured knowledge to provide (M)LLMs with high-quality external information. Building on these works, recent studies have explored multimodal knowledge graphs (MMKGs) as knowledge bases for GraphRAG. This enables Graph RAG to integrate knowledge across multiple modalities, thereby further enhancing its performance. However, existing MMKG-based RAG methods generally follow a common pipeline in which different modalities are largely processed independently before being fusion. As a result, textual context is only used to a limited extent during visual information extraction and subsequent multimodal knowledge fusion. This brings a semantic gap between images and text which limits the multimodal GraphRAG performance. To address this issue, we propose a novel framework for constructing a Context-Enhanced MMKG (CEMMKG) to better support multimodal GraphRAG. The proposed CEMMKG enriches each image with complementary textual context at both local and global scopes. Local context goes beyond the surrounding text by incorporating sentences that are semantically related to the image, while global context provides a summary of the entire passage. We further introduce a multi-granularity design for the local context, allowing it to capture semantically relevant information at different levels of detail. Extensive experiments on the selected vision-centric dataset validate that CEMMKG is effective in leveraging contextual information to improve MMKG-based RAG performance. Moreover, its effectiveness across different MMKG-based RAG methods demonstrates its broad applicability.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.25986v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.25986v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.25935v1" target="_blank" rel="noopener">TAU-Agent: An Agentic Retrieval-Augmented Framework for Traffic Anomaly Understanding</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-26</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Washington</span>
+          <span class="arxiv-id">arXiv:2608.25935v1</span>
+        </div>
+        <p class="authors">Yuqiang Lin, Yan Shi, Sam Lockyer, Harish Tayyar Madabushi, Adrian Evans, Wenbin Li, Yinhai Wang, Nic Zhang</p>
+        <p class="abstract">Traffic Anomaly Understanding (TAU) requires models and systems to detect, reason about, and explain anomalous events in transportation videos. To address this challenge, we propose TAU-Agent, an agentic retrieval-augmented framework for traffic anomaly understanding. Given a task query, a central retrieval agent orchestrates two visual perception tools, namely a Video Captioning Tool and an Open-Vocabulary Tracking Tool, to retrieve and select query-relevant evidence, including captions, temporal intervals, and object trajectories. The selected evidence, together with sampled video frames and the input query, is provided to a supervised fine-tuned vision-language model for final reasoning and answer generation. We evaluate TAU-Agent on both the in-domain and the out-of-domain benchmarks from the AI City Challenge 2026. TAU-Agent achieves scores of 0.6779 on Track 3, 0.3998 on Track 7, and 67.9275 on Track 8, ranking second, twelfth, and fifth, respectively. Code is available at: https://github.com/siri-rouser/TAU-Agent.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.25935v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.25935v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.25653v1" target="_blank" rel="noopener">Towards Purified Multi-Label Test-Time Adaptation of Vision-Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-26</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Washington</span>
+          <span class="arxiv-id">arXiv:2608.25653v1</span>
+        </div>
+        <p class="authors">Yiwen Liang, Hui Chen, Yizhe Xiong, Mengyao Lyu, Yuhan Cao, Zijia Lin, Shuaicheng Niu, Sicheng Zhao et al.</p>
+        <p class="abstract">Test-time adaptation (TTA) has been widely explored in single-label recognition, effectively mitigating distribution shifts, especially when combined with vision-language models. However, real-world images often contain multiple objects, while the more practical multi-label test-time adaptation (MLTTA) has received little attention so far. Recent cache-based TTA methods have shown promising efficiency and effectiveness, yet directly extending them to multi-label scenarios suffers from a one-to-many mapping problem: a shared global representation entangling co-occurring objects is stored as class-wise cache prototypes, inducing dominant-label bias and compromised cache calibration. While introducing region-level cues helps isolate class-specific evidence, such regional evidence can also be unreliable under distribution shifts, making its identification and utilization non-trivial. To address these issues, we introduce PuRF, a novel PuRiFication-driven cache-based method for multi-label test-time adaptation of vision-language models. Specifically, PuRF first performs region purification to identify reliable regions, providing comprehensive regional cues for multi-label recognition and enabling fine-grained alignment. Based on these purified regions, PuRF conducts cache purification to enhance cache representation and adaptability, where episodic purification builds a discriminative region-based cache, and temporal refreshing further promotes long-term cache adaptability. Experiments demonstrate that PuRF consistently outperforms state-of-the-art methods, achieving a notable 4.05% mAP improvement on ViT-B/32 across five datasets.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.25653v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.25653v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.25580v1" target="_blank" rel="noopener">V-Rubrics: Visual Faithfulness via Rubric-Based Reinforcement Learning</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-26</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UIUC</span>
+          <span class="arxiv-id">arXiv:2608.25580v1</span>
+        </div>
+        <p class="authors">Shulin Tian, Minglun Li, Yuhao Dong, Hao Ding, Jiarui Yao, Haiwen Diao, Jingkang Yang, Hongyuan Zhu et al.</p>
+        <p class="abstract">Vision-language models can produce fluent answers that are insufficiently grounded in the visual evidence: a single unsupported object, chart value, or intermediate inference can undermine an otherwise plausible response. We argue that this is a credit-assignment failure in multimodal post-training. Scalar outcome rewards indicate whether an answer is acceptable, but do not identify which visual facts are grounded, which reasoning steps are valid, or which instruction constraints are missed. We introduce Visual Rubrics-Based Reinforcement Learning, which decomposes reference responses into atomic propositions and scores generated answers along Visual Faithfulness (VF), Reasoning Consistency (RC), and Instruction Following (IF). The resulting rubric items provide structured partial credit and localize rubric credit when supporting evidence spans are available. We first obtain an SFT checkpoint by fine-tuning Qwen3-VL-8B-Instruct on the public OpenMMReasoner-SFT-874K corpus, adapting OpenMMReasoner&#x27;s cold-start data recipe. We construct V-Rubrics 50K, a 50,248-example training set from 17 visually grounded sources, by applying rule-based filters before deriving example difficulty from rejection-sampling scores and then annotating every example with Gemini-3-Pro under the same structured prompt and protocol. We train our model based on the same SFT checkpoint using component-wise, prefix-localized rubric credit. Experiments show that our rubricbased GRPO improves over both the shared SFT baseline and answer-only GRPO, with the largest gains on knowledge-oriented and visually grounded reasoning benchmarks. The results show rubrics as a useful reward abstraction for visual post-training.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.25580v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.25580v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.25356v1" target="_blank" rel="noopener">Where to Look Matters: On-Policy Self-Distillation for Long-Video Understanding</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-26</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Maryland</span><span class="school">Johns Hopkins</span>
+          <span class="arxiv-id">arXiv:2608.25356v1</span>
+        </div>
+        <p class="authors">Kaishen Wang, Dongdi Zhao, Yijun Liang, Dingqiang Ye, Ruibo Chen, Heng Huang, Di Fu</p>
+        <p class="abstract">Vision-language models (VLMs) have made substantial progress in long-video understanding, with standard backbone models typically answering questions from frames sampled across the full video. However, as videos become longer, the full-video context inevitably contains more question-irrelevant temporal content, which can distract the model from the evidence needed to answer a specific question. We empirically find that focusing the visual input on short annotated clue intervals containing question-relevant evidence consistently improves prediction accuracy across model scales compared with using the corresponding full videos, while requiring fewer input frames. Based on this finding, we introduce Clue-OPSD, a clue-privileged on-policy self-distillation framework for long-video understanding. During training, a full-video student learns from a self-teacher conditioned on the corresponding clue interval by aligning their next-token distributions along student-generated trajectories. Clue-OPSD thus uses clue intervals as privileged supervision without relying on ground-truth answer labels, while requiring no clue annotations or additional modules at inference time. Extensive experiments across multiple long-video understanding benchmarks and Qwen3.5 model scales demonstrate consistent improvements over the corresponding backbone models and strong performance against supervised post-training baselines.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.25356v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.25356v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.24966v1" target="_blank" rel="noopener">Targeting the Attention Heads Behind Object Hallucination in LLaVA</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-25</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UMass Amherst</span>
+          <span class="arxiv-id">arXiv:2608.24966v1</span>
+        </div>
+        <p class="authors">Armaan Sandhu, Abhilasha Senapati, Hima Kammachi</p>
+        <p class="abstract">Vision-language models such as LLaVA-1.5-7B often hallucinate objects absent from the image when generating captions. We ask whether an interpretability diagnosis of this failure can guide a targeted fix, and we measure what that fix actually changes. We rank attention heads by how much their image attention drops around hallucinated object words, then screen the shortlist by ablating candidate heads and measuring the change in hallucination-token log probability, yielding a 32-head set. We restrict two interventions to these heads: a head-sliced LoRA adapter and an inference-time grounding controller. On 400 held-out COCO images, the combined method lowers CHAIRs (the fraction of captions with a hallucinated object) from 0.370 to 0.230 and CHAIRi (the fraction of hallucinated object mentions) from 0.156 to 0.096 (p &lt; 0.001, paired sign-flip tests). Two controls sharpen attribution. A random-head LoRA control, matched layer-for-layer and trained identically, performs no better than the matched baseline on a separate 200-image control split, supporting the role of head selection rather than LoRA capacity. Under fixed decoding budgets, the CHAIR reduction persists and grows with budget (23% at 64 tokens to 58% at 128), arguing against a pure max-token or truncation artifact, although the method remains shorter and more conservative. The resulting behavior reduces unsupported object mentions while also lowering object recall (0.78 to 0.70). We present a diagnosis-to-intervention pipeline for object hallucination, and, more importantly, a controlled account of what acting on the diagnostic signal actually does: it localizes intervention sites with real, non-random leverage, reported as a behavioral profile rather than a single score.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.24966v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.24966v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+  </main>
+  <footer>
+    <p>Generated 2026-08-27 11:01 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
