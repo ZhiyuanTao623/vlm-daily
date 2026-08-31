@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-08-31</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-08-31</h2>
+      <p class="count">5 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.28218v1" target="_blank" rel="noopener">Focus Where It Counts: A Salience-Driven Vision-Language Model for Low Vision Assistance</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-28</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Harvard</span><span class="school">NYU</span>
+          <span class="arxiv-id">arXiv:2608.28218v1</span>
+        </div>
+        <p class="authors">Jiazhao Liang, Hao Huang, Shuaihang Yuan, Congcong Wen, Geeta Chandra Raju Bethala, Giles Hamilton-Fletcher, Yu Hao, John-Ross Rizzo et al.</p>
+        <p class="abstract">Vision-language models (VLMs) are rapidly progressing and offer promising capabilities for assistive technologies supporting persons with blindness or low vision. However, existing VLMs are primarily designed for general-purpose captioning and do not explicitly model human perceptual priorities, thereby limiting their ability to emphasize the most relevant information in a scene. To address this gap, we propose a salience-driven captioning framework that prioritizes scene elements according to their importance for human-centered assistance. We curate three salience-aware datasets, namely, Salience COCO, Salience Flickr, and Salience VizWiz, with object-level salience annotations designed to reflect the visual information most relevant to low vision users across different environments. Building on these datasets, we introduce Salience-LLaVA, a salience-aware VLM that incorporates salience cues to generate captions in which important elements are mentioned in the order of importance. Our work makes four main contributions. We build salience-aware datasets verified by low vision participants, propose Salience-LLaVA to describe objects in the order of importance, introduce SCMI to evaluate ordering accuracy, and deploy the system on assistive glasses to demonstrate real-world practicality. Code and datasets are available at: https://github.com/topo-focus/Topofocus</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.28218v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.28218v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.27929v1" target="_blank" rel="noopener">Training-Free Temporal Abstraction for General Video Understanding</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-28</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Caltech</span>
+          <span class="arxiv-id">arXiv:2608.27929v1</span>
+        </div>
+        <p class="authors">Etienne Casanova, Sevan Brodjian, Pietro Perona</p>
+        <p class="abstract">Videos are expensive to analyze frame by frame, yet many video understanding tasks depend on knowing where relevant moments occur. A system may need to find when an action changes, locate the segment described by a sentence, or choose a few frames for a vision-language model. Existing methods often solve these problems separately, using task-specific training data or specialized architectures. We study whether a pretrained video-text model can provide enough temporal structure to support several of these tasks at once. We present STITCH, a training-free method that divides a video into semantically meaningful temporal chunks. STITCH embeds short video windows with a frozen video-text backbone and detects changes in the resulting embedding sequence. These chunks are computed once per video and reused across tasks. We evaluate STITCH on generic event boundary detection, language-based moment retrieval, and frame selection for long-video VLM reasoning. Across all three settings, STITCH remains competitive with more specialized methods while requiring no task-specific training, with especially clear gains when only a small number of frames or tokens can be processed. These results suggest that reusable temporal abstraction is a promising direction for general video understanding, allowing dense video streams to be converted once into semantic units that can be localized, retrieved, sampled, or reasoned over by downstream systems.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.27929v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.27929v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.27885v1" target="_blank" rel="noopener">There and Back Again: Bidirectional Diffusion Bridges for Multimodality Translation</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-28</span>
+          <span class="cat">cs.LG</span>
+          <span class="school">Stanford</span>
+          <span class="arxiv-id">arXiv:2608.27885v1</span>
+        </div>
+        <p class="authors">Gabe Guo, Elon Litman, Thanawat Sornwanee, Jose Blanchet, Stefano Ermon</p>
+        <p class="abstract">Multimodality translation (e.g., text-to-image) is a core generative AI task. However, existing approaches (1) follow generative paths that do not directly represent the source modality, limiting the flexibility of some sampling algorithms; and (2) are unidirectional, preventing inversion (e.g., image-to-text). We propose BIT: Bidirectional Image-Text Diffusion Bridges. In contrast to previous approaches, BIT starts directly from text and interpolates into images, providing (1) a source-aware generative path that enables diverse and flexible sampling algorithms; and (2) an endpoint-conditioned process that can be traversed from image to text, providing a unified, bidirectional generative framework. BIT is derived through stochastic calculus, yielding SDE forms amenable to simulation and tractable loss functions that scale to high dimensions. Our experiments show that BIT is competitive with denoising-diffusion and deterministic-flow baselines, and outperforms them on several vision--language and natural-science evaluations.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.27885v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.27885v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.27727v1" target="_blank" rel="noopener">Probing Perceptual Priors of MLLMs via Gibbs Sampling with Interpretable Generative Controls</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-27</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">MIT</span><span class="school">Dartmouth</span>
+          <span class="arxiv-id">arXiv:2608.27727v1</span>
+        </div>
+        <p class="authors">Manuel Cherep, Pattie Maes, Nikhil Singh</p>
+        <p class="abstract">A model&#x27;s behavior on a task is jointly determined by the input it receives and the prior it brings in, i.e. the distribution over stimuli it implicitly expects. Interpretability research has traditionally studied models by holding inputs fixed and examining model responses either mechanistically, probing how internal structure represents inputs, or behaviorally, measuring how variation in inputs leads to variation in outputs. Neither reconstructs the prior distribution itself, since internal structure shows what a model can represent, not what it expects, and any fixed stimulus set leaves most of the possible input space unseen. In particular, such an input space in real-world settings, such as images seen by VLMs, is extremely high-dimensional and diverse. These priors thus remain a poorly understood component of models that nonetheless influence real-world behavior. We propose a method to sample from models&#x27; perceptual prior distributions directly, by steering a generative model to produce stimuli along controllable axes and running Gibbs sampling over that space with the model under study as the judge. We apply this to a variety of categories and target variables (such as trustworthiness in faces and cheapness in art images) and recover both canonical biases and surprising novel priors invisible to direct prompting, warranting further investigation of their downstream effects.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.27727v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.27727v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.27668v1" target="_blank" rel="noopener">Report Supervision</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-27</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Stanford</span><span class="school">Johns Hopkins</span>
+          <span class="arxiv-id">arXiv:2608.27668v1</span>
+        </div>
+        <p class="authors">Pedro R. A. S. Bassia, Wenxuan Li, Jakob Wasserthal, Jieneng Chen, Xinze Zhou, Zheren Zhu, Chuntung Zhuanga, Sergio Decherchi et al.</p>
+        <p class="abstract">Segmentation models can surpass radiologists, classification models, and vision-language models in tumor detection. Importantly, segmentation models outline tumors, allowing radiologists to better verify and trust the AI output. Their main limitation is the scarcity of tumor masks: creating one 3D tumor mask takes up to 30 minutes, so most public CT datasets contain only a few hundred masks, and even the largest private datasets contain only a couple of thousand. Tumor masks are not produced in clinical routine, but radiology reports are. Public datasets contain tens of thousands of CT-Report pairs, and hospitals contain hundreds of thousands. These reports describe tumors in detail, providing large-scale, informative training data. Here, we introduce Report Supervision (R-Super), a training framework that uses reports to directly supervise and improve tumor segmentation. R-Super introduces new loss functions that teach segmentation models to segment tumors that match report descriptions of tumor count, sizes, and locations. Reports are only used for training. We evaluated R-Super on kidney and pancreatic tumor segmentation, exploring diverse training data sizes, up to 41,418 CT-Report plus 3,488 pancreatic tumor CT-Mask pairs. On external validation, R-Super increased tumor detection F1-Score and segmentation DSC by up to +15% with respect to mask-only training. It also surpassed alternative methods such as CLIP and multi-task learning. Leveraging numerous readily available reports to supplement scarce masks, R-Super strongly improves AI performance when very few training masks are available (e.g., 50), and when many masks are available (e.g., 3,488), unlocking scale in tumor segmentation.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.27668v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.27668v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+  </main>
+  <footer>
+    <p>Generated 2026-08-31 06:48 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
