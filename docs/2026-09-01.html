@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-09-01</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-09-01</h2>
+      <p class="count">8 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.30369v1" target="_blank" rel="noopener">Augmenting Human Performance with an XR Agent Learning from Online Behavior and BCI Evidence</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-31</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">Columbia</span>
+          <span class="arxiv-id">arXiv:2608.30369v1</span>
+        </div>
+        <p class="authors">Ziheng Li, Xichen He, Haoyan Chen, Charlie Zou, Sheng Bai, Benjamin Yang, Mengyuan Wu, Jake Ledner et al.</p>
+        <p class="abstract">We present OLIVE, a framework for adapting a foundation model to provide real-time assistance in temporally demanding, high-stakes, and dynamic tasks. We show that passive EEG, fused online with behavioral evidence, can meaningfully extend the number of targets users detect and engage beyond their unaided action bandwidth. OLIVE learns from both explicit behavioral signals (the targets the user shoots down in an XR first-person shooter game) and implicit physiological signals (fixation-locked EEG) to provide timely guidance, continuously adapting a frozen vision-language model&#x27;s inference on which items are task-relevant by jointly estimating per-source reliability without manual labels or offline training. Through three user studies, including two live deployments of an assistive agent driven by OLIVE in XR, we show that OLIVE Pareto-dominates prior test-time adaptation frameworks, achieving the highest convergence rate at comparable convergence speed. Combining implicit physiological and explicit behavioral signals, the OLIVE agent produces the largest and most reliable within-session improvement to a user&#x27;s ability to detect and engage targets, largely independent of the individual&#x27;s skill. When the target switches silently, the agent that uses both behavioral and physiological signals reconverges significantly faster than the behavior-only agent (1.27 times faster on average, p = .008), restoring trustworthy guidance at the moment the task changes, precisely when reliable assistance matters most.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.30369v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.30369v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.30352v1" target="_blank" rel="noopener">Co-Annotator: Expert-Distilled ViT and VLM for Visual and Documentation Guidance in Age-Related Macular Degeneration</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-31</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">Columbia</span>
+          <span class="arxiv-id">arXiv:2608.30352v1</span>
+        </div>
+        <p class="authors">Ziheng &quot;Leo&quot; Li, Benjamin Freeman, Akshay Raman, Kavin Aravindhan Rajkumar, Xinxin Fang, Rishabh Srivastava, Steven Feiner, Kaveri A. Thakoor</p>
+        <p class="abstract">Clinical AI often optimizes predictive performance without engaging how clinicians decide where to look and what to write. We present Co-Annotator, which distills expert gaze and dictation into two guidance components: a gaze-aligned Vision Transformer producing fixation-aligned areas of interest (AOIs), and an ontology-bounded vision-language model (VLM) that pre-fills editable biomarker summaries for retinal optical coherence tomography (OCT). We first collect expert gaze and dictations (US1) to train the models, significantly improving diagnostic accuracy and biomarker generation. We then deploy the system with ophthalmology residents: a controlled resident study (US2) confirmed each modality is safe and independently beneficial, with AOI guidance producing lasting perceptual efficiency gains through post-guidance carryover and VLM guidance more than doubling biomarker documentation breadth. In a combined deployment across two academic institutions (US3), providing both modalities simultaneously produced efficiency gains that substantially exceeded either modality alone: correct diagnoses per minute increased by 40% and comment editing time fell by 67%, without compromising diagnostic accuracy. Notably, neither modality improved efficiency during guidance in US2, which makes the in-guidance efficiency gain under combined guidance in US3 the more striking result. Expert-distilled multimodal guidance can remove two distinct clinical workflow bottlenecks at once (visual search overhead and documentation burden) without compromising the diagnostic accuracy clinicians already achieve.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.30352v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.30352v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.30294v1" target="_blank" rel="noopener">Dynamic Hub-and-Spoke Memory for Streaming Video Understanding</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-31</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Virginia</span>
+          <span class="arxiv-id">arXiv:2608.30294v1</span>
+        </div>
+        <p class="authors">Xinru Jiang, Lin Zhao, Xi Xiao, Yunbei Zhang, Janet Wang, Chenrui Ma, Haolin Li, Yanzhi Wang et al.</p>
+        <p class="abstract">Streaming video understanding requires answering questions at arbitrary times over a continuously growing visual stream. The central challenge is to compactly remember long-range history while effectively retrieving question-relevant evidence. We propose Dynamic Hub-and-Spoke Memory (D-HSM), a training-free framework that represents distant history as structured textual memory while preserving the recent frames as visual tokens for fine-grained perception. Specifically, D-HSM turns selected historical video chunks into typed textual observations and stores them in an entity-centered hub-and-spoke memory, with entities as hubs and related evidence as spokes. When answering a question, D-HSM dynamically retrieves a compact question-aware memory subset, expands it through hub-and-spoke links, and combines it with the recent visual window for frozen-VLM answer prediction. Extensive experiments on both streaming and long video benchmarks show that D-HSM consistently and substantially improves VLM backbones and outperforms other state-of-the-art online and offline video understanding baselines.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.30294v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.30294v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.30068v1" target="_blank" rel="noopener">TAKE 85: Testing Audiovisual filmmaKer&#x27;s intEnt across 85 Hours of Film</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-30</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">NYU</span><span class="school">Stony Brook</span>
+          <span class="arxiv-id">arXiv:2608.30068v1</span>
+        </div>
+        <p class="authors">Kaishuu Shinozaki-Conefrey, Olivier Pascaud, Robin Courant, Xi Wang, Dimitris Samaras, Vicky Kalogeiton</p>
+        <p class="abstract">Films communicate through deliberate creative choices, including lighting, color, composition, editing, dialogue, music, and sound. Humans naturally interpret these signals as directorial intent, yet current multimodal large language models (MLLMs) are evaluated almost exclusively on understanding what happens rather than why it is presented that way. We introduce TAKE 85, the first benchmark for directorial-intent understanding, comprising 398 short films (85 hours) with expert-verified question-answer pairs spanning global and fine-grained visual and audio intent. Through controlled modality ablations, TAKE 85 enables systematic evaluation of multimodal reasoning. Experiments on state-of-the-art MLLMs reveal a substantial gap between perceptual recognition and intentional understanding: while models accurately describe events and narratives, they consistently fail to infer the communicative role of filmmaking decisions. Our results establish directorial intent as a previously overlooked dimension of multimodal understanding: even the strongest model reaches only 58 out of 100, and our ablations show that no input modality is sufficient on its own. All code, Q&amp;As, and models are publicly available from https://github.com/KaiShinozakiConefrey/Take-85</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.30068v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.30068v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.29571v1" target="_blank" rel="noopener">Which one is banana man? Evaluating vision-language models in multi-turn pragmatic interpretation</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-30</span>
+          <span class="cat">cs.CL</span>
+          <span class="school">MIT</span><span class="school">Stanford</span>
+          <span class="arxiv-id">arXiv:2608.29571v1</span>
+        </div>
+        <p class="authors">Alvin Wei Ming Tan, Ben Prystawski, Veronica Boyce</p>
+        <p class="abstract">Flexible adaptation to context and shared pragmatic intuitions contribute to smooth human conversation. Iterated reference games---in which players repeatedly pick out novel referents using language---present a test case for agents&#x27; ability to perform context-sensitive pragmatic reasoning in multi-turn linguistic environments. We tested humans and vision--language models on their ability to identify the intended meaning of descriptions produced in iterated reference games, varying the provided context in terms of amount, order, and relevance. While humans performed well consistently, the models we evaluated could make use of prior context to interpret humans&#x27; referring expressions, but they struggled to build up the relevant context to interpret those expressions effectively. Our results suggest that the models we evaluated lack core skills needed for efficient linguistic collaboration.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.29571v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.29571v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.29209v1" target="_blank" rel="noopener">Toward Cultural Alignment: Human-Centered Evaluation of Multimodal AI Stories Across Five African Communities</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-29</span>
+          <span class="cat">cs.CL</span>
+          <span class="school">Cornell</span>
+          <span class="arxiv-id">arXiv:2608.29209v1</span>
+        </div>
+        <p class="authors">Millicent Ochieng, Felermino D. M. A. Ali, Elizabeth A. Ankrah, Najeeb Gambo Abdulhamid, Migisha Boyd, Stephanie Nyairo, Mercy Muchai, Samuel Chege Maina et al.</p>
+        <p class="abstract">In this paper, we examine how well AI-generated multimodal stories align with the lived practices, relationships, language, values, and visual expectations of the communities they represent. We conduct a community-grounded mixed-methods evaluation with 19 culture representatives across five African communities, combining quantitative annotations with qualitative focus group discussions. We find that cultural alignment depends not simply on recognizable cultural markers, but on how those markers fit social, linguistic, procedural, and visual context. From these evaluations, we develop a taxonomy of cultural alignment comprising five broader cultural marker categories and eight recurring mechanisms of misalignment. We additionally evaluate five multimodal LLM judges to examine whether automated evaluation can approximate community-grounded judgments at scale. Judge reliability and score calibration vary substantially across communities, with no single judge performing consistently across all five settings. These findings motivate community-calibrated evaluation pipelines in which automated judges are validated against community judgments to determine where they can be trusted and where human review remains necessary.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.29209v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.29209v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.28784v1" target="_blank" rel="noopener">ClearText-Video: A Large-Scale Text-Centric Video Dataset Bridging Video Restoration and Scene-Text Enhancement</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-28</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UW-Madison</span>
+          <span class="arxiv-id">arXiv:2608.28784v1</span>
+        </div>
+        <p class="authors">Jinlong Li, Jiaming Ding, Dingfu Lu, Malcolm Hsiu, Chuang Ke, Kangning Yang, Bochen Guan, Lan Fu et al.</p>
+        <p class="abstract">Multimodal Large Language Models (MLLMs) have recently made strong progress in visual--linguistic understanding. However, their performance on text-centric video reasoning remains highly sensitive to input quality. Real-world user-provided videos often contain motion blur, compression artifacts, noise, and low-resolution text, which impair reliable text reading and downstream reasoning. Whether MLLMs can robustly read and reason about real-world scene text under diverse quality conditions remains a fundamental open question. We introduce ClearText-Video (CTVid), a large-scale, scene-text-aware benchmark for studying text-centric video understanding under controlled quality variation. CTVid contains 4,639 real-world text-rich egocentric videos, 550K+ frames, 1.6M human-verified scene-text annotations, and 220K+ spatial/temporal question--answer pairs in Chinese and English. For each high-quality video, CTVid provides content-matched Degraded-Quality and Restored-Quality variants, supporting two task families: Text-Centric Video Restoration and Multi-Quality VideoQA. We evaluate 18 representative restoration methods and 16 state-of-the-art MLLMs on CTVid. The results show that visual enhancement does not guarantee textual fidelity or downstream reasoning gains: blur is more damaging than low resolution, restored videos can alter the textual evidence used by MLLMs, and OCR-only pipelines remain far below direct multimodal reasoning. CTVid exposes the gap between video restoration and text-grounded understanding, providing a rigorous foundation for restoration-aware, quality-robust text-centric video systems.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.28784v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.28784v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2608.28762v1" target="_blank" rel="noopener">Inter-3D VQA: A Roadside Multimodal Benchmark for 3D Spatiotemporally Grounded Visual Question Answering</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-28</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Arizona State</span>
+          <span class="arxiv-id">arXiv:2608.28762v1</span>
+        </div>
+        <p class="authors">Shaozu Ding, Linan Song, Dajiang Suo</p>
+        <p class="abstract">Recent advances in visual question answering (VQA) and multimodal large language models (MLLMs) have enabled natural-language reasoning over traffic scenes. However, existing benchmarks are largely built from ego-vehicle views or 2D roadside videos, limiting their ability to evaluate 3D-grounded reasoning over real-world distances, trajectories, infrastructure topology, and safety-critical interactions. We introduce Inter-3D VQA, a large-scale roadside multimodal benchmark for 3D spatiotemporally grounded VQA at intersections. Built from synchronized point clouds and multi-view images, Inter-3D VQA contains 407K QA pairs covering lane-level positions, object relationships, motion patterns, and near-miss-oriented interaction reasoning. We further propose Inter-Geo, an MLLM baseline that integrates object- and scene-level aligned LiDAR representations, and Inter-Metrics, a unified evaluation framework for textual consistency, numerical accuracy, and semantic correctness. Experiments show that Inter-Geo outperforms image-based VLMs, especially on grounded spatial and temporal reasoning tasks. Our benchmark and codes are available at https://github.com/ASU-Suo-Lab/Inter-3D-VQA .</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2608.28762v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2608.28762v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+  </main>
+  <footer>
+    <p>Generated 2026-09-01 06:08 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
