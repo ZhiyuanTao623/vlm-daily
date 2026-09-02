@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-09-02</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-09-02</h2>
+      <p class="count">13 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.01375v1" target="_blank" rel="noopener">IntroConformal: Conformal Factuality Guarantees for Large Vision-Language Models via Introspective Signals</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-01</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Virginia Tech</span>
+          <span class="arxiv-id">arXiv:2609.01375v1</span>
+        </div>
+        <p class="authors">Md. Atabuzzaman, Christian Alexander, Chris Thomas</p>
+        <p class="abstract">Large Vision-Language Models (LVLMs) have achieved strong multimodal performance, yet ensuring the factual correctness of generated content remains challenging. Existing methods that provide statistical guarantees on factuality typically rely on external verifiers or generation-time confidence signals, which introduce auxiliary dependencies or often fail for confident but incorrect outputs. We argue that reliable factuality control can instead be achieved through introspective signals derived from the model itself. We introduce IntroConformal, a training-free Conformal Risk Control (CRC) framework that provides finite-sample, distribution-free factuality guarantees. We first instantiate it with layer-wise semantic stability, a conformity score derived from hidden-state representations, and then propose verification probability, a stronger score capturing the model&#x27;s self-administered judgment on claim factuality. Across multiple LVLM architectures, IntroConformal satisfies the conformal risk guarantee while substantially reducing abstention and achieving competitive or superior claim-level discrimination relative to external verifier-based baselines.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.01375v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.01375v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.01318v1" target="_blank" rel="noopener">Reliability Challenges in Diffusion Vision-Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-01</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Virginia Tech</span>
+          <span class="arxiv-id">arXiv:2609.01318v1</span>
+        </div>
+        <p class="authors">Md. Atabuzzaman, Chris Thomas</p>
+        <p class="abstract">Diffusion-based Large Vision-Language Models (dLVLMs) have recently emerged as a compelling alternative to autoregressive (AR) LVLMs, offering advantages in parallel decoding, bidirectional context, and controllable generation. Despite rapid progress, their reliability properties remain largely uncharacterized. We present the first systematic reliability evaluation of hallucination and bias in dLVLMs, benchmarking six diffusion models against competitive AR baselines across four dimensions. Our key findings are: (1) dLVLMs reverse the yes-bias of AR models in binary visual queries; (2) they achieve competitive hallucination rates yet exhibit degraded linguistic quality; (3) they collapse to near-zero accuracy on underrepresented racial groups with opposite-polarity gender bias; and (4) they exhibit accuracy collapse in multiple-choice settings when the correct option is shorter than its distractors, associated with a length prior that emerges at the first denoising step. Tokens committed at late denoising steps with low confidence further correlate with hallucinated content, pointing to a mechanistic signal unique to diffusion generation. These patterns vary across model families, suggesting reliability is shaped by the generative paradigm together with training data.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.01318v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.01318v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.00866v1" target="_blank" rel="noopener">Benchmarking Vision-Language Models for Automated Pathology Diagnosis and Report Generation</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-01</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Stony Brook</span>
+          <span class="arxiv-id">arXiv:2609.00866v1</span>
+        </div>
+        <p class="authors">Yumi Lee, Harim Oh, Hyoryung Kim, Minji Kim, Eunsu Kim, Hyeseong Lee, Junya Fukuoka, Andrey Bychkov et al.</p>
+        <p class="abstract">The rapid advancement of vision-language models (VLMs) has accelerated progress in computational pathology; however, whole-slide image (WSI)-based pathology report generation remains limited by the scarcity of large-scale WSI--report datasets and the complexity of mapping spatially distributed visual patterns to structured clinical text. To address this, we introduce a clinically curated Pan-Asia WSI--report dataset of approximately 10,500 pairs from five institutions and establish the REG 2025 benchmark through a MICCAI challenge for systematic evaluation of multimodal models. We analyze submitted methods spanning pretrained VLMs, multiple-instance learning frameworks, hierarchical expert models, retrieval-augmented generation, and cross-modal Transformers. Rather than indicating that VLM use alone was sufficient for superior performance, the results suggest that top-performing methods benefited from structured report representations, hierarchical diagnostic decomposition, and effective multimodal grounding. We identify key limitations, including instability in quantitative attribute estimation (e.g., numeric hallucination) and a tendency toward diagnostic overspecification, with some errors resembling known diagnostic pitfalls in routine pathology. These findings establish REG 2025 as a benchmark for evaluating WSI-based structured report generation and vision-language understanding in computational pathology, providing insights for the design of clinically grounded multimodal pathology models.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.00866v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.00866v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.00658v1" target="_blank" rel="noopener">Teaching Vision-Language Models to Use the Scale They Are Given: Label-Free Equivariance Training for Metric Physical Reasoning</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-01</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Carnegie Mellon</span><span class="school">Columbia</span><span class="school">NYU</span>
+          <span class="arxiv-id">arXiv:2609.00658v1</span>
+        </div>
+        <p class="authors">Kaizhen Tan, Yang Feng, Heqing Du, Siru Tao, Xin Xu, Hanzhe Hong</p>
+        <p class="abstract">Metric questions about video require vision-language models to use supplied real-world references to convert visual measurements into physical units. Yet we find that current models use this scale information only partially. When every world-space quantity in a prompt is rescaled by a common factor, the video remains equally valid and the correct answer changes by exactly that factor, but model predictions move only part of the way and accuracy remains concentrated near the familiar scale of the depicted objects. Across eight vision-language models, this under-response persists over four orders of magnitude. The same models recover the correct closed-form scaling laws when the identical physics is asked in a scale-free form, indicating that the main deficit lies in metric grounding rather than physical mechanism knowledge. We use this exact scaling relation as supervision without requiring metric annotations. Under a common rescaling of the supplied world-space quantities, the correct metric answer must change by the same factor. EquiSD exploits this constraint by projecting a model&#x27;s own prediction onto the scale-equivariant family and fine-tuning the model on the resulting targets. It requires no ground-truth answers and only one model query per training video. On held-out simulated videos, EquiSD increases a 3B model&#x27;s median response slope from 0.66 to 0.94 and improves mean relative accuracy by 9.2 points across scales. The learned relation generalizes to unseen world scales and transfers without adaptation to real QuantiPhy videos, where accuracy increases by 6.4 points. These results show that an exact physical symmetry can provide label-free supervision for improving metric grounding in vision-language models.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.00658v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.00658v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.00649v1" target="_blank" rel="noopener">You Cannot Photograph the Same Street Twice: Reliability Limits in Vision-Language Measurement of Urban Change</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-01</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">NYU</span>
+          <span class="arxiv-id">arXiv:2609.00649v1</span>
+        </div>
+        <p class="authors">Kaizhen Tan</p>
+        <p class="abstract">Vision-language models are increasingly used to measure urban change from repeated street-level imagery, but their longitudinal reliability is not well understood. We test how much a perception score can change when the street itself does not undergo substantial redevelopment. Using 4,648 consecutive-epoch image pairs from 435 Google Street View standpoints across five US cities, we find that re-photographing the same street changes a perception score by 0.80 points on average, equivalent to 66.5% of the difference between two different streets in the same city. Repeated model calls contribute almost no variation, while image re-encoding and prompt-order changes each account for about one fifth of the between-street difference. Six image statistics describing scattering, contrast, colour, exposure, sharpness and specularity explain almost none of the remaining epoch-to-epoch variation. A small systematic drift of about 0.1 points remains and increases with the interval between captures, consistent with minor physical changes not recorded by redevelopment labels. Controlled experiments further show that acquisition conditions can shift scores when camera and image properties are allowed to vary, and that the direction of these shifts depends on the model. In crowdsourced imagery, camera geometry alone causes a model to report physical change in 45% of identical-scene pairs; normalising both images to a common virtual camera reduces this rate to 7.5%. Despite poor reliability at the individual-location level, aggregation recovers a coherent redevelopment signal: changed streets are judged wealthier, better maintained, more enclosed and less green. These results show that vision-language measurement of urban change is reliable at the scale of hundreds of paired observations, but not at the scale of individual sample points.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.00649v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.00649v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.00505v1" target="_blank" rel="noopener">ViTAL-X: Video-Text Alignment with Cross-Modal Temporal Edits</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-01</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UIUC</span>
+          <span class="arxiv-id">arXiv:2609.00505v1</span>
+        </div>
+        <p class="authors">Sethuraman T, Savya Khosla, Onkar Kishor Susladkar, Aditi Tiwari, Seoung Wug Oh, Kushal Kafle, Joon-Young Lee, Derek Hoiem et al.</p>
+        <p class="abstract">Video-text models adapted from image-text architectures (e.g., CLIP) frequently exhibit temporal blindness, the inability to perceive fundamental cues like order, direction, and motion dynamics. Standard datasets mask this limitation by enabling models to exploit static spatial shortcuts. To systematically evaluate this, we introduce XTE-Bench, a diagnostic probe revealing that even large-scale video-language models struggle with basic temporal reasoning, indicating that parameter scaling alone is insufficient to resolve this flaw. To address this, we propose Cross-Modal Temporal Edits (XTE), a self-supervised framework that injects precise temporal supervision. By performing synchronized video-text transformations, XTE generates hard temporal negatives without manual annotation. We instantiate this with ViTAL-X, a lightweight model that equips frozen image-text backbones with temporal awareness while preserving their foundational spatial knowledge. Across six temporal benchmarks, ViTAL-X achieves state-of-the-art performance. Utilizing only 0.4B parameters and 1M training clips, ViTAL-X outperforms 7B-parameter models and surpasses baselines trained on 600x more data. These results demonstrate that targeted, high-quality temporal alignment provides a highly efficient alternative to pure scaling.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.00505v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.00505v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.00476v1" target="_blank" rel="noopener">Less Is More: Balancing Positive and Negative Space in Visual Concept Blending</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-31</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Georgia Tech</span><span class="school">Brown</span>
+          <span class="arxiv-id">arXiv:2609.00476v1</span>
+        </div>
+        <p class="authors">Shishi Xiao, Adam J. Coscia, David H. Laidlaw</p>
+        <p class="abstract">Graphic designers often blend visual concepts to communicate multiple ideas within a single image, leveraging positive and negative space to create balance, emphasis, and aesthetic appeal. While computational methods have begun to support automatic concept blending, they largely overlook the role of spatial composition in the design. To address this gap, we present an automatic pipeline that explicitly applies positive and negative space throughout the blending process. Our approach first identifies plausible regions for concept integration by combining semantic reasoning from vision-language models with geometric constraints derived from real-world examples. Conditioned on these regions, the system generates blended compositions using a hybrid pixel-vector pipeline: diffusion-based inpainting produces a fast, coarse initialization, which is then refined through vector-based optimization at the point level to ensure structural coherence and balanced semantic expression. A multimodal agent orchestrates this process as a planner and evaluator, enabling iterative improvement and interpretable control. Through an evaluation using both baseline comparisons and a user study, we demonstrate greater expressiveness, creativity, and concept recognizability by effectively leveraging positive and negative space. We further demonstrate the generalizability of our approach across diverse applications, including controllable image and infographic generation.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.00476v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.00476v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.00443v1" target="_blank" rel="noopener">(V)LMs generalize beyond surface co-occurrence: Evidence from cross-modal number agreement</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-31</span>
+          <span class="cat">cs.CL</span>
+          <span class="school">UT Austin</span><span class="school">UW-Madison</span>
+          <span class="arxiv-id">arXiv:2609.00443v1</span>
+        </div>
+        <p class="authors">Zach Studdiford, Kanishka Misra</p>
+        <p class="abstract">Language models learn about grammatical number primarily from co-occurrence, and show frequency effects as a result---sometimes taken to indicate that they do not learn abstract ``rules&#x27;&#x27;, and are instead dependent on specific lexical items. Testing generalization with text stimuli alone cannot settle this debate, since distributional cues (is/are, this/these) easily give number away. We instead use cross-modal generalization as a tool to investigate abstractions in LMs that can also accept visual inputs (VLMs), restricting the evidence that diagnoses number to an extra-linguistic modality. We teach VLMs pairs of new nouns by adding new embeddings and only updating them during learning, comparing conditions where number is diagnosed by visual cues alone against ones where it is disambiguated by text. Across behavior, representational dynamics, and causal mechanisms, we find non-trivial evidence for cross-modal generalization across both exposure conditions, and that linguistic vs. extra-linguistic cue conditions are treated in similar ways in the internal mechanisms of the model. This suggests that statistical learners like VLMs can generalize beyond surface-level co-occurrence and show genuine abstraction-compatible behavior.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.00443v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.00443v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.00396v1" target="_blank" rel="noopener">SlideMix: Enhancing Whole Slide Image Analysis via Multimodal Shuffling</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-31</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UC Irvine</span>
+          <span class="arxiv-id">arXiv:2609.00396v1</span>
+        </div>
+        <p class="authors">Chad Wong, Sicheng Chen, Tianyi Zhang, Enhui Chai, Yueming Jin, Zeyu Liu, Fei Xia</p>
+        <p class="abstract">Histopathological whole slide images (WSIs) are central to cancer diagnosis, but their gigapixel scale, tissue heterogeneity, weak slide-level supervision, sparse diagnostic regions, and multi-scale evidence make robust automated analysis challenging. Multiple instance learning (MIL) is widely used to aggregate tile-level features into slide-level predictions, yet existing augmentation strategies often perturb tissue regions without preserving diagnostic relevance, slide context, or cross-scale structure. We propose SlideMix, a model-agnostic multimodal augmentation framework for MIL-based WSI analysis. SlideMix uses a retrieval-augmented vision-language model (VLM)-based Visual-Language Adaptive Region selector to identify diagnostically relevant regions and reduce weak-label noise. It then performs In-place Tile Shuffling within meaningful tissue regions to mix feature embeddings while preserving slide-level context. A VLM-based soft-labeling module supervises mixed samples, while a multi-factor, loss-driven online Curriculum-Learning Feedback scheme adaptively controls shuffle granularity, feature similarity, and shuffle ratio to promote cross-scale representation learning. Across 11 WSI datasets comprising 20,523 slides, 8 diagnostic tasks, and 10 WSI backbones, SlideMix improves accuracy and generalization in most settings and compares favorably with established augmentation baselines, providing a simple plug-and-play approach for more robust and scalable digital pathology models. Source code: https://github.com/Xia-Research-Lab/SlideMix</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.00396v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.00396v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.00377v1" target="_blank" rel="noopener">FoldingAgent: Inferring Parametric Origami Procedures from Demonstration Videos</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-31</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">MIT</span>
+          <span class="arxiv-id">arXiv:2609.00377v1</span>
+        </div>
+        <p class="authors">Maya Moriya, Sigal Raab, Yael Vinker, Tali Dekel</p>
+        <p class="abstract">We present FoldingAgent, an agentic framework for inferring explicit parametric folding programs directly from origami demonstration videos. Our framework leverages the reasoning power of a pre-trained Vision-Language Model (VLM) equipped with a suite of specialized tools that enable the agent to simulate geometric transitions, verify physical plausibility, retrieve and compare visual content, and evaluate its own predictions. To translate visual content into folding programs, we define a parametric space that consists of the paper&#x27;s geometry and a set of parametric folding actions. Unlike models that predict static crease patterns, our agent operates sequentially and possesses the ability to re-plan its actions, effectively mitigating the compounding errors inherent in multi-step folding. Our approach takes a step toward closing the gap between human origami knowledge, which is primarily shared through unstructured visual demonstrations, and computational methods, which typically rely on structured, parametric representations such as a crease pattern or an executable parametric plan. We evaluate our approach on PurelandFold, a newly curated benchmark of diverse Pureland origami videos with ground-truth geometry and action labels. Our results demonstrate that by combining VLM reasoning with a set of specialized tools and physical simulation, we can successfully transform unstructured visual demonstrations into executable, physically plausible folding procedures.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.00377v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.00377v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.00342v1" target="_blank" rel="noopener">SlideBank: A Persistent Hierarchical Evidence Bank for Consistent Whole-Slide Reasoning</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-31</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">Harvard</span><span class="school">Rice</span><span class="school">University of Chicago</span>
+          <span class="arxiv-id">arXiv:2609.00342v1</span>
+        </div>
+        <p class="authors">Beidi Zhao, Gexin Huang, Ciro Zhang, Anqi Li, Yusheng Tan, Chen Zhou, Gang Wang, Zu-hua Gao et al.</p>
+        <p class="abstract">Whole-slide images (WSIs) are challenging for vision-language reasoning because diagnostically relevant morphology is sparse, heterogeneous, and distributed across gigapixel-scale images and multiple spatial resolutions. Existing WSI models and pathology agents can aggregate slide features or actively acquire evidence, but the information retained after exploration is often difficult to access semantically while preserving its connection to the original visual evidence. We introduce SlideBank, a training-free framework that represents each WSI as a persistent, concept-indexed, and spatially grounded evidence bank. SlideBank performs question-independent coarse-to-fine exploration to identify informative regions and multi-scale views, converts them into explicit morphological observations, and grounds pathology signals to their supporting patches and WSI coordinates. At inference time, questions are routed to relevant signals and evidence scales, and the linked global, regional, and patch evidence is integrated through confidence-based cross-level consensus. Experiments on WSI-VQA and SlideBench-BCNB show that with Patho-R1, SlideBank reaches 52.77% on WSI-VQA and with Quilt-LLaVA, it reaches 50.92% average accuracy on SlideBench-BCNB, while structured signal-guided retrieval consistently outperforms random evidence sampling. Reusing the same bank across repeated queries further achieves over 99% rephrasing consistency and substantially reduces amortized inference cost through persistent evidence reuse.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.00342v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.00342v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.00293v1" target="_blank" rel="noopener">Slow to See, Slow to Suppress: Understanding the Effects of Modality in Context-Memory Conflicts</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-31</span>
+          <span class="cat">cs.CL</span>
+          <span class="school">Brown</span>
+          <span class="arxiv-id">arXiv:2609.00293v1</span>
+        </div>
+        <p class="authors">Athulith Paraselli, Etha Tianze Hua, Ellie Pavlick</p>
+        <p class="abstract">We investigate how vision-language models (VLMs) handle context-memory conflicts; that is, situations in which the model is given information in context that differs from what was stored parametrically during training. We document asymmetric biases: models tend to prefer in-context information about entities which appear in text, but prefer parametric information about entities which appear in images. We relate this asymmetry to the late representational alignment across modalities, showing that the longer processing time associated with resolving visual entities prevents the suppression of the model&#x27;s usual factual recall mechanism, thus resulting in more parametric answers. Chain-of-thought reasoning does not appear to resolve the gap, but increasing the amount of visual information in the context does show an effect. These results illustrate the complexity of ensuring consistent behavior as models become increasingly multimodal and retrieval-augmented.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.00293v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.00293v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.00103v1" target="_blank" rel="noopener">Good Memory Has ECC: Evaluating the Memory of Vision-Language Models Beyond Accuracy</a></h2>
+        <div class="meta">
+          <span class="date">2026-08-31</span>
+          <span class="cat">cs.LG</span>
+          <span class="school">Princeton</span>
+          <span class="arxiv-id">arXiv:2609.00103v1</span>
+        </div>
+        <p class="authors">Shmuel Berman, Jia Deng</p>
+        <p class="abstract">Memory is widely viewed as an important unsolved problem for LLMs and VLMs, and current benchmarks typically evaluate it by testing accuracy over long text or video. However, accuracy alone misses properties that matter for real long-horizon tasks. We introduce ECCBench, a benchmark and evaluation protocol that measures memory beyond a system&#x27;s capacity--its raw accuracy at a specific budget--via three axes we call ECC: efficiency--the computation, in FLOPs, needed to answer from memory; compression--whether compressible inputs are remembered more accurately or efficiently; and calibration--whether the system abstains in response to its own uncertainty and the cost of an error. We find that pretrained VLMs compress their memory over text but not video and are poorly calibrated on both. Among a broader set of memory backbones, several non-Transformer architectures achieve better compression-calibration tradeoffs than RoPE Transformers, suggesting they may be useful components for agents operating over long horizons.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.00103v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.00103v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+  </main>
+  <footer>
+    <p>Generated 2026-09-02 05:33 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
