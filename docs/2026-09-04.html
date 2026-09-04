@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-09-04</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-09-04</h2>
+      <p class="count">2 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.04200v1" target="_blank" rel="noopener">Principia: Relational Physics Tests for Video Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-03</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Johns Hopkins</span>
+          <span class="arxiv-id">arXiv:2609.04200v1</span>
+        </div>
+        <p class="authors">Varun Varma Thozhiyoor, Shivam Tripathi, Venkatesh Babu Radhakrishnan, Anand Bhattad</p>
+        <p class="abstract">Evaluating physical reasoning in video models is difficult because absolute motion measurements depend on frame rate, object scale, and camera calibration, all of which are often ambiguous or unavailable in generated video. We propose a different approach. When two objects in the same scene obey the same physical law, their motions must satisfy predictable relationships, and these relationships hold independent of calibration. We introduce Principia, a benchmark that evaluates Newtonian physics through relational consistency between paired objects. Principia spans eight phenomena - gravity, restitution, friction, rotational inertia, projectile motion, momentum, pendulum, and mass-spring oscillation - across translational, rotational, collisional, and oscillatory dynamics, using real-world scenes recorded under controlled protocols. We also introduce a calibration-independent consistency score that quantifies physical violation directly in image space. Across thousands of generations from six state-of-the-art video generators, no model exceeds 0.42 on Principia despite all scoring around 0.8 on VBench. Vision-language models are evaluated on their ability to detect relational physics violations, with the best model achieving only 67% accuracy and most performing near chance level.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.04200v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.04200v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.04083v1" target="_blank" rel="noopener">CORE: Improving Compositional Reasoning in MLLM Embedding via Reranker Distillation</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-03</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Yale</span>
+          <span class="arxiv-id">arXiv:2609.04083v1</span>
+        </div>
+        <p class="authors">Tingyu Song, Mingxin Li, Yanzhao Zhang, Dingkun Long, Chu Liu, Pengjun Xie, Yilun Zhao, Shu Wu</p>
+        <p class="abstract">MLLM-based embedding models remain limited in compositional retrieval, often failing to distinguish scenes containing the same concepts but different attribute-object bindings. Yet the same backbone can resolve such distinctions when used as a cross-attentive reranker, motivating us to distill its compositional judgments into the embedding model. We propose CORE, which synthesizes candidate lists spanning five compositional matching levels and introduces a Rank-KL objective that trains the embedding model to reproduce the reranker&#x27;s fine-grained ranking. We further introduce a graded evaluation protocol and compare contrastive learning, pairwise CoSENT, and listwise Rank-KL under the same data and tuning budget. Our comparison shows that both CoSENT and Rank-KL use the multi-level supervision more effectively than contrastive learning, with Rank-KL achieving the strongest overall performance. Across three compositional reasoning benchmarks (COLA, SUGARCREPE++, NEGBENCH), CORE-RERANKER-8B achieves an 82.7% total average, outperforming Jina-Reranker by 10.7 points, while CORE-EMBED-8B achieves the best total average (0.666) among all evaluated embedding models. The improvements transfer to the MCMR benchmark without sacrificing retrieval performance on COCO and Flickr30K.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.04083v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.04083v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+  </main>
+  <footer>
+    <p>Generated 2026-09-04 05:39 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
