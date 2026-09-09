@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-09-09</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-09-09</h2>
+      <p class="count">9 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.08345v1" target="_blank" rel="noopener">CoVeR: Coverage-Based Token Pruning for Multi-View 3D Reasoning in VLMs</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-08</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Carnegie Mellon</span>
+          <span class="arxiv-id">arXiv:2609.08345v1</span>
+        </div>
+        <p class="authors">Nhat-Tan Bui, Varshini Elangovan, Arun Reddy Anugu, Sreyas Mohan, Wei Ye, Dilin Wang, JQ Huang, Rakesh Ranjan et al.</p>
+        <p class="abstract">Representing a 3D scene as multi-view images allows 2D VLMs to reason in 3D by reusing priors from pre-training, sidestepping the scarcity of annotated 3D data. However, it produces thousands of redundant visual tokens whose cost grows with every view. Existing visual token pruners fall into two families, each limited in the 3D multi-view setting. Learned importance methods rank tokens by attention or encoder features; because redundancy here is fundamentally spatial, they keep near-duplicate tokens from a few prominent regions and leave most of the scene unrepresented. Voxelization methods improve spatial coverage but cannot enforce an exact token budget and saturate as multi-view observations overlap in 3D, capping retention well below the target. We show that spatial coverage is associated with 3D reasoning performance and introduce CoVeR, a deterministic, training-free selector that uses only token coordinates, with no learned signals. CoVeR selects tokens that collectively cover every region of the scene, and solves the limitations of both families: it enforces an exact per-scene budget, breaks the voxelization saturation plateau, and avoids the near-duplicate selections of learned importance. Extensive experiments show CoVeR outperforms prior SOTAs on all three 3D reasoning benchmarks and generalizes as a plug-and-play module tested across four VLMs. Notably, with only $\approx$8% of visual tokens, it preserves 93.5% of full-token performance, surpassing SOTA by 3.9 percentage points on average across benchmarks.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.08345v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.08345v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.08188v1" target="_blank" rel="noopener">Bridging the Semantic-Utility Gap in Multimodal RAG via Generator-in-the-Loop Alignment</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-08</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">Purdue</span>
+          <span class="arxiv-id">arXiv:2609.08188v1</span>
+        </div>
+        <p class="authors">Zhan-Lun Chang, Dong-Jun Han, Seyyedali Hosseinalipour, Mung Chiang, Christopher G. Brinton</p>
+        <p class="abstract">Vision-language models (VLMs) augmented with retrieval-augmented generation (RAG) benefit from access to external evidence. However, standard retrievers and rerankers optimize for semantic similarity rather than answer utility, creating a preference gap: documents that appear relevant may not help the generator produce a correct answer. Motivated by this, we propose a two-stage generator-in-the-loop alignment framework that closes this gap without human document-level relevance annotations. Our framework consists of two stages: in Stage 1, a VLM generates a hypothetical text passage from the image-query pair, which is used as the retrieval query for dense text search, bridging the image-to-text modality gap. In Stage 2, a cross-encoder reranker adapted with low-rank adaptation (LoRA) is fine-tuned using answer-supervised preference pairs mined from the frozen VLM: given the dataset answer label, a candidate document is labeled positive if the VLM produces the correct answer when given that document as context, and negative otherwise. This generator-guided signal is compatible with multiple alignment loss functions, including contrastive (triplet) loss, pairwise direct preference optimization (DPO), and supervised fine-tuning (SFT), and supports periodic re-mining to refresh preference pairs as the reranker improves. Experiments on VQA-X and A-OKVQA with Qwen3.5-2B and Qwen3-VL-4B-Instruct show that our proposed framework consistently outperforms rank-order, random, and REPLUG-style likelihood baselines under various alignment losses and pool size settings, suggesting that answer-level generator feedback is an effective supervision signal for preference alignment.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.08188v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.08188v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.08079v1" target="_blank" rel="noopener">VI-Bench: Benchmarking Prompt Inversion from AIGC Videos</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-08</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Michigan</span><span class="school">University of Virginia</span>
+          <span class="arxiv-id">arXiv:2609.08079v1</span>
+        </div>
+        <p class="authors">Wulin Xie, Rui Zhao, Kecen Li, Xiujin Liu, Bokang Zhang, Zheng Liu, Xinwen Hou, Chen Gong</p>
+        <p class="abstract">Recent advances in video generation have made prompt-based control increasingly central to AIGC video generation. Prompts specify what a video should depict and how it should be represented, controlling factors such as visual style or camera behavior. Understanding this recoverability is important both for creative reuse and editing, and for assessing prompt leakage risks. However, existing video understanding benchmarks do not measure this capability: a caption may describe what is visible, but a replayable prompt must recover the generation-relevant controls needed to reproduce the video. To address this gap, we introduce VI-Bench, a benchmark built from 16.1 million real-user prompts and 900 human-verified AIGC videos. VI-Bench spans three progressively harder settings, namely single-shot semantic grounding, control over style and camera behavior, and multi-shot compositional inversion, and evaluates five generation-critical dimensions: subject, action, scene, style, and camera. We evaluate 18 representative VLMs, including 2 proprietary and 16 open-source models on VI-Bench, using an Inversion Score that measures prompt-level alignment with the original prompt and video-level fidelity of the regenerated video. The results reveal substantial limitations: even the strongest model achieves only 0.632 on Inversion Score, performance degrades sharply as samples require richer control and multi-shot reasoning, and models often produce plausible prompts whose regenerated videos deviate from the reference. These findings show that video prompt inversion is a distinct and under-evaluated capability requiring models to transform visual understanding into replay-stable generative control.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.08079v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.08079v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.08025v1" target="_blank" rel="noopener">Eliciting Self-Verification in Multimodal Reasoning Agents with Reinforcement Learning</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-07</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">University of Washington</span>
+          <span class="arxiv-id">arXiv:2609.08025v1</span>
+        </div>
+        <p class="authors">Vishwas Sathish, Viresh Ranjan, Xinliang Zhu, Arnab Dhua, Douglas Gray</p>
+        <p class="abstract">Reasoning agents increasingly rely on external tools such as web search to answer complex queries. Reinforcement learning (RL) finetuning algorithms such as GRPO have improved long-form reasoning in text-only language models, particularly for coding and mathematics. Reliable tool use in multimodal agents, however, remains challenging because models must interpret text and images while integrating noisy retrieved evidence, often under sparse outcome-level supervision without explicit verification signals. We present Self-Verification via Reinforcement Learning (SVRL), an RL-only finetuning framework that trains multimodal agents to verify and filter retrieved evidence within their own reasoning traces, reducing reliance on external verifiers at inference time. SVRL also introduces a search-aware penalty that discourages unnecessary tool calls and a query-diversity reward that encourages diverse, well-formed search queries, providing fine-grained feedback on when and what to search. Finetuning Qwen-2.5-VL-7B with SVRL on only 5{,}000 visual question answering examples yields consistent gains in multi-hop VQA generalization and tool efficiency across benchmarks. Overall, SVRL narrows the gap between compact agents and much larger proprietary models while requiring substantially lower training and inference cost.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.08025v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.08025v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.06922v1" target="_blank" rel="noopener">BEFORE THE FLIP: Measuring Hidden Score Shifts In Quantized Vision Language Models Before The Answer Changes for Visual Question Answering</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-07</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Maryland</span>
+          <span class="arxiv-id">arXiv:2609.06922v1</span>
+        </div>
+        <p class="authors">Sourajit Saha, Shubhashis Roy Dipta, Shaswati Saha, Nobin Sarwar, Yuxuan Jiang</p>
+        <p class="abstract">Quantization makes vision language models (VLMs) cheaper to store and run by using fewer bits to represent their weights. While unchanged answers on visual question answering (VQA) after compression are an expected behavior, they can still hide changes in the underlying scores (log probabilities). For example, a model may still answer yes after compression, even as the score gap between yes and no shrinks. We introduce BEFORE THE FLIP to measure these hidden changes. Our method compares the score change caused by compression with the change caused by replacing the image&#x27;s internal representations, or image tokens, with one fixed average token. We then increase the precision of one weight group at a time to identify where extra bits help, and test whether choosing different groups for each question offers benefits beyond shuffled controls. Among 8,277 LLaVA questions where image token replacement measurably affects the scores, 4-bit compression shifts the yes or no score gap farther toward the replacement output than 8-bit compression. Qwen shows the same pattern, but with a smaller difference. Yet only 265 of 9,000 LLaVA answers change at 4 bits. In a separate study of 1,024 calibration questions, choosing weight groups separately for each question does not outperform both shuffled controls at any tested storage budget. These findings show that compression can alter the scores behind unchanged answers, but do not establish a reliable benefit from adjusting precision for each question.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.06922v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.06922v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.06831v1" target="_blank" rel="noopener">NormViz: A Benchmark and Framework for Grounding Multimodal Reasoning in Global Cultures</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-06</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">Carnegie Mellon</span>
+          <span class="arxiv-id">arXiv:2609.06831v1</span>
+        </div>
+        <p class="authors">Akhila Yerukola, Fabrice Y Harel-Canada, Simran Khanuja, Abhinav Sukumar Rao, Ashima Suvarna, Nanyun Peng, Saadia Gabriel, Maarten Sap</p>
+        <p class="abstract">AI systems are used worldwide, but they struggle to serve the needs of culturally diverse populations. Prior work on cultural understanding evaluates AI systems on text-only settings or on visual artifact recognition (e.g. foods, clothing). The ability to reason about visually observable behaviors through local social norms, which we call visual norm understanding, remains unexamined. We introduce NormViz-Bench, a high quality, human-validated benchmark of 3,268 contrastive image pairs (6,536 images) spanning 16 countries. Each pair varies only in the culturally relevant behavior (e.g., objects, attributes, spatial relations, and actions) that alters how each image is interpreted. Each image is labeled as conforming to, violating, or irrelevant to local social norms, and pair-level evaluation requires both images to be correctly classified, thereby preventing reliance on superficial visual shortcuts. Even the strongest VLMs, Gemini 3.0 Flash and Qwen2.5 VL 7B, succeed on only 26.6% and 21.6% of pairs, struggling most with identifying violating and culturally benign visual behaviors. Towards bridging this, we introduce NormViz-Train, a training dataset of 64k images paired with explanations. Though absolute performance remains low (&lt;30%), finetuning on NormViz-Train improves pair accuracy relatively by up to 125% and 36% Qwen3-VL 4B and 8B respectively, showing a path forward to teach models to connect visual perception to cultural significance. Together, NormViz-Bench and NormViz-Train establish visual norm understanding as a challenging and consequential frontier for multimodal AI.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.06831v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.06831v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.06410v1" target="_blank" rel="noopener">Visual Search Augmented Chain-of-Thought Reasoning for Attribute Value Extraction from Product Videos</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-06</span>
+          <span class="cat">cs.CL</span>
+          <span class="school">Virginia Tech</span>
+          <span class="arxiv-id">arXiv:2609.06410v1</span>
+        </div>
+        <p class="authors">Tong Wu, Ming Cheng, Jiazhen Hu, Jiaying Gong, Hoda Eldardiry</p>
+        <p class="abstract">Existing approaches to visual attribute value extraction (AVE) primarily rely on static product images, failing to capture temporal cues, multi-angle views and fine-grained visual details. Directly applying video vision-language models (VLMs) to product AVE results in limited performance due to the lack of domain knowledge, and fine-tuning them requires extensive high-quality data and substantial computational resources. Thus, we propose visual search augmented chain-of-thought reasoning (ViS-CoT), a training-free, plug-and-play pipeline that can be easily applied to any open-source video VLM for video-to-text AVE in e-Commerce. Specifically, ViS-CoT employs visual clustering to identify representative frames, followed by visual search to retrieve semantically similar product knowledge that can enrich attribute cues. Next, an interleaved CoT reasoning module iteratively refines reasoning through visually-aligned auxiliary texts derived from captioning and automatic speech recognition. Finally, the integrated information guides the model toward accurate and fine-grained attribute predictions. Extensive experiments across 14 product categories on the VideoAVE dataset show that ViS-CoT consistently enhances multiple state-of-the-art video VLMs, achieving an average improvement of 17.91 percentage points in micro-F1.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.06410v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.06410v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.06245v1" target="_blank" rel="noopener">VDiff-Bench: A Challenging Benchmark for Fine-Grained Image Difference Identification</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-05</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UCLA</span>
+          <span class="arxiv-id">arXiv:2609.06245v1</span>
+        </div>
+        <p class="authors">Yixin Wan, Tianle Zheng, Kai-Wei Chang</p>
+        <p class="abstract">Multimodal Large Language Models (MLLMs) perform strongly on general visual understanding tasks such as visual question answering, yet they often struggle with a basic comparative skill: identifying what has changed between two similar images. We introduce VDiff-Bench, a challenging multiple-choice benchmark for fine-grained Image Difference Identification. VDiff-Bench contains 1,756 four-way questions over image pairs and covers 10 change categories: position, motion, regional image color, overall image color, appearance/disappearance, noise/resolution, texture, substitution/size, OCR/text, and illumination. Each question corresponds to two image inputs with 4 choices: the true difference, two hard negative descriptions, and a &quot;no difference&quot; distractor. To make the task challenging, we specifically curate ground-truth-conditioned negatives that require models to distinguish the actual change from nearby semantic alternatives. Experiments with 11 state-of-the-art open- and closed-source MLLMs show that fine-grained visual comparison remains brittle: models exhibit uneven performance across sources and change categories, with persistent failures on subtle low-level changes like noises and textures. For instance, three 7-8B-scale open-source MLLMs score 52.5-70.6% on semantic changes but only 8.7-33.3% on low-level changes like noise and texture, falsely assuming no changes between two image inputs. Surprisingly, despite strong performance of other closed-source commercial models, Grok 4.3 demonstrate remarkable performance drop on identifying noise and texture differences between images, falling significantly behind large open-source models like Kimi K2.5 and K3. Overall, VDiff-Bench provides a targeted diagnostic for evaluating comparative visual understanding in MLLMs, exposing failures that are not captured by standard single-image vision-language tasks.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.06245v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.06245v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.06058v1" target="_blank" rel="noopener">GradeTrap: Authority Cues in Images Shift VLM Judgments Despite Explicit Instructions to Ignore Them</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-05</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UT Austin</span>
+          <span class="arxiv-id">arXiv:2609.06058v1</span>
+        </div>
+        <p class="authors">Deep Dessai</p>
+        <p class="abstract">As vision-language models (VLMs) become increasingly capable and are deployed in consequential real-world settings, they must evaluate evidence independently rather than defer uncritically to human authority. We introduce GradeTrap, a controlled evaluation that places two social cues in direct conflict: a student answer, which should attract sycophantic agreement, and a conflicting answer attributed to a peer, teacher, or official answer key, which should attract authority-based deference. Models produce free-form answers while being explicitly instructed to solve independently and ignore all student answers, feedback, and grading marks. We test the models on 60 synthetic real-world trade-off scenarios. Five neutral trials establish a stable model-relative preference, followed by three repetitions of six experimental cues including controls. On the 45-item common intersection across Gemini 3.5 Flash-Lite, GPT-5.6 Luna, and Claude Haiku 4.5, a generic second-answer control yields 5.4% conflicting-answer selection. Relative to that control, pooled within-item changes show no reliable peer-review effect, a 6.9-point teacher-review effect, and a 19.5-point official-key effect. In contrast, a displayed conflicting student answer alone compared to a displayed student reference answer alone only raises selection from 2.2% to 5.2%. Official-key provenance therefore redirects judgements more than a student answer or the generic second-answer control, despite an explicit ignore instruction and an opposing student answer given along with the official key. Effects vary in magnitude across the three models.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.06058v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.06058v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+  </main>
+  <footer>
+    <p>Generated 2026-09-09 05:49 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
