@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-09-15</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-09-15</h2>
+      <p class="count">6 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.15706v1" target="_blank" rel="noopener">Beyond Accuracy: Robustness, Cost, and Governance Trade-offs for Vision-Language Models in Templated Document Extraction</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-14</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">UC Berkeley</span>
+          <span class="arxiv-id">arXiv:2609.15706v1</span>
+        </div>
+        <p class="authors">Kushal Patel, Pushkal Shrivastava, Mackenzie Lees, Qirui Lu, Bhargobjyoti Saikia, Liying Li, Junlin Jiang</p>
+        <p class="abstract">Vision-language models (VLMs) are increasingly used to extract structured fields from business documents, yet most evaluations report accuracy on clean benchmarks and offer little guidance to practitioners choosing an approach for a given task complexity. We address this gap with a measurement-grounded study and an open-source release. Across eleven systems (three commercial, two reasoning, five open-source VLMs in pretrained and fine-tuned form, and a non-LLM OCR-&gt;regex floor) scored on a 750-document held-out pool of synthetic checks, fine-tuning on 3K samples lifts the best open-source VLMs above F1 0.98-above every zero-shot commercial system on this task-while GPT-5 leads the commercial pool on F1 and Claude Sonnet 4.5 collapses on Date. To turn these measurements into actionable choices, we introduce a practitioner-oriented selection framework that maps a task profile (quality, latency, governance, volume) to a recommended approach via filtering and total-cost minimization, illustrated on a hypothetical mid-volume document-extraction scenario.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.15706v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.15706v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.15635v1" target="_blank" rel="noopener">ModaLens: Measuring Image Sensitivity in Report-Conditioned Medical VLMs</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-14</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">MIT</span><span class="school">UNC Chapel Hill</span>
+          <span class="arxiv-id">arXiv:2609.15635v1</span>
+        </div>
+        <p class="authors">Sebastián Andrés Cajas Ordóñez, Maximin Lange, Quang Bui, Anqi Peter Li, Felipe Ocampo Osorio, Rafi Al Attrach, Kushul Reddy Palakala, Sahil Kapadia et al.</p>
+        <p class="abstract">A radiology report can already answer a clinical question, so it is hard to tell whether a vision-language model also uses the image. ModaLens, a paired image-swap audit, measures how report availability changes image sensitivity: MedGemma-27B on 3,199 paired MIMIC-CXR cases from 293 patients, all 14 questions per case (13 finding-specific and one composite), each image replaced by one from another study, usually of the same patient, with question and report fixed. Under an explicit answer instruction, the model&#x27;s generated answer changes on 4.26 percent of trials with the report and 20.94 percent without it, a paired increase of 16.7 points (patient-clustered 95 percent CI 15.6 to 17.7), so report availability reduces image-swap sensitivity under this protocol; the original prompt with a lowercase first-token readout gives 4.70 percent against 17.07 percent, and substitutions also move continuous answer scores where the binary prediction does not change. The labels are derived from reports, which limits conclusions about visual correctness; the direction replicates in two further model lineages. Code, the exact prompts and a run record for every number are at https://github.com/criticaldata/MODALENS.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.15635v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.15635v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.15603v1" target="_blank" rel="noopener">A Unified Vision-Language Model for PSMA PET/CT Report Generation, Visual Question Answering, and Lesion Segmentation</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-14</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Stony Brook</span>
+          <span class="arxiv-id">arXiv:2609.15603v1</span>
+        </div>
+        <p class="authors">Yang Xing, Jiong Wu, Savas Ozdemir, Yang Zhou, Boxiao Yu, Ying Zhang, Zheren Zhu, Chenyu You et al.</p>
+        <p class="abstract">Accurate PSMA PET/CT interpretation is central to prostate cancer management, yet existing PET/CT AI models typically address isolated tasks. We propose a unified PSMA PET/CT vision-language model for report generation, visual question answering, and lesion segmentation. The framework adopts an LLaVA-style architecture, comprising a PET/CT vision encoder, an MLP-Mixer projection module, a LoRA-tuned large language model, and a 3D segmentation branch. Training followed a four-stage strategy: vision encoder pretraining, projection-layer alignment, VLM fine-tuning, and final multitask tuning. Language tasks used 5,747 PSMA PET/CT datasets with paired reports, while segmentation used the PSMA subset of AutoPET. The model outperformed PET2REP and a CT-based baseline across standard report-generation metrics, improved performance across VQA question types, and achieved higher Dice and lesion-level overlap F1 than SegAnyPET and nnUNet. These results support the feasibility of a unified framework for structured, interactive, interpretable PSMA PET/CT analysis with voxel-level grounding within a single multitask model architecture.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.15603v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.15603v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.15137v1" target="_blank" rel="noopener">SparseTalk - Sparsifying 3D Gaussian Language Fields for Efficient 3D Visual Question Answering</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-14</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Maryland</span>
+          <span class="arxiv-id">arXiv:2609.15137v1</span>
+        </div>
+        <p class="authors">Davit Soselia, Joseph JaJa, Amitabh Varshney</p>
+        <p class="abstract">3D Gaussian language fields provide an explicit, spatially grounded representation for 3D visual question answering (VQA), but their dense semantic features can require tens of thousands of embeddings per scene, resulting in substantial storage, memory, and inference costs. We investigate how much of this representation is actually necessary for downstream reasoning. Starting from a full embedding representation, we systematically sparsify its semantic embeddings, including the previously underexplored regime below a single image-equivalent block down to 8 visual tokens. We compare random, geometric, semantic, and joint spatial-semantic selection strategies and introduce an object-based sparsification method that distributes the token budget across detected object instances while retaining background context. Experiments on ScanQA and MV-ScanQA reveal substantial redundancy in dense Gaussian language fields. Strong VQA performance is retained with only a few hundred semantic embeddings, corresponding to less than 1% of the original representation. Object-based selection performs well relative to others, with only modest observed changes down to 256 tokens. At this budget, SparseTalk retains 0.80% of SplatTalk&#x27;s 32,076-token inference input and 0.332% of the mean 77,207-Gaussian dense field, increasing inference throughput while reducing decoded-feature memory 125-fold.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.15137v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.15137v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.14207v1" target="_blank" rel="noopener">Learning to Refer from Estimated Listener Gaze</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-13</span>
+          <span class="cat">cs.CL</span>
+          <span class="school">UC Berkeley</span>
+          <span class="arxiv-id">arXiv:2609.14207v1</span>
+        </div>
+        <p class="authors">Téa Wright, Alane Suhr</p>
+        <p class="abstract">We propose to finetune vision-language models to generate more pragmatically optimal referring expressions by transforming observations of incremental listener comprehension, in the form of gaze scanpaths, into learning signals. During training, referring expressions are sampled from the speaker policy being optimized, conditioned on images and target referents; then, a neural listener estimating human gaze behavior maps from images and sampled referring expressions to scanpaths, each represented by a sequence of fixations, with each fixation corresponding to a word in the referring expression. We experiment with several approaches to convert fixation sequences and target referents into token- and sequence-level rewards, which are used to optimize policy parameters. Through evaluation with human listeners, we find that speaker policies trained with gaze-estimating listeners result in significantly more pragmatically-optimal references than base models, reducing sequence length from 15.4 down to 4.0 words while increasing referential success from 75.2 up to 80.0%. Our work demonstrates a promising opportunity for learning to generate utterances through language-based interaction, not only from the explicit signal of communicative success, but also from implicitly-available observations of a listener&#x27;s process of comprehension.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.14207v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.14207v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.13457v1" target="_blank" rel="noopener">TimeThink: Eliciting Compositional Reasoning in Timeseries Large Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-11</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">Dartmouth</span>
+          <span class="arxiv-id">arXiv:2609.13457v1</span>
+        </div>
+        <p class="authors">Sudarshan Regmi, Arvind Pillai, Yu Yvonne Wu, Yuliang Chen, Bibek Panthi, Tess Z. Griffin, Michael V. Heinz, Lisa Marsch et al.</p>
+        <p class="abstract">Timeseries multimodal large language models (TS-MLLMs) have recently begun leveraging the reasoning capabilities of large language models (LLMs) for question-answering tasks. However, these models often fail to capture dynamic temporal patterns, providing only implicit reasoning that lacks the underlying explanations critical for high-stakes applications like healthcare. While reinforcement learning (RL)-based timeseries language models aim to address this, they often fall short because they are trained on narrow, in-distribution data and struggle with out-of-distribution compositional questions. To address these challenges, we present TimeThink, a synthetic framework for eliciting compositional timeseries reasoning. Core timeseries primitives (e.g., trend, seasonality) are domain-independent and can be deterministically generated. Guided by this premise, TimeThink first designs a synthetic data generator that produces atomic and composite question-answer pairs, providing objective ground truth with reasoning traces. Building on this framework, TimeThink employs a reinforcement learning with verifiable rewards (RLVR) training strategy that encourages explicit reasoning. Unlike template-reliant methods, this approach enables the model to learn the underlying logic of composition rather than simply imitating traces. Extensive experiments show that TimeThink, trained only on synthetic data, significantly outperforms strong baselines on both synthetic and real-world benchmarks.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.13457v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.13457v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+  </main>
+  <footer>
+    <p>Generated 2026-09-15 06:07 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
