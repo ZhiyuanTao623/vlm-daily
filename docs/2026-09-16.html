@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-09-16</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-09-16</h2>
+      <p class="count">4 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.17112v1" target="_blank" rel="noopener">Not Another Text Benchmark: Putting the &quot;Visual&quot; Back in Visual Question Answering for Large Video Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-15</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Carnegie Mellon</span><span class="school">UW-Madison</span><span class="school">Johns Hopkins</span>
+          <span class="arxiv-id">arXiv:2609.17112v1</span>
+        </div>
+        <p class="authors">Rwiddhi Chakraborty, Yinong, Wang, Cheng Zhang, Fan Bai, Zhuoran You, Michael Kampffmeyer, Yong Jae Lee et al.</p>
+        <p class="abstract">Large video models have exhibited impressive performance on a wide range of visual question answering tasks, owing to the rise of powerful, pretrained text and vision encoders. The usefulness of such models have also been demonstrated on a wide range of benchmarks, with an important caveat - the dominant approach in these benchmarks evaluates multiple choice reasoning via text options. This is a natural way to test text-based reasoning in these models, and has led to significant insights regarding model behavior in the community. In this work, we ask a different question - what happens when the evaluation modality is visual, rather than text? We introduce three new vision-centric evaluation benchmarks in temporal frame retrieval, video future prediction, and causal memory distortion, all designed around evaluating visual understanding capabilities in large video models. Our approach complements the existing approaches to evaluate video understanding in frontier models. We show that current frontier models exhibit significant weakness when attempting to reason through visual queries, rather than text. We conclude with an extended analysis section that provides pointers for future improvements in visual understanding for large video models.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.17112v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.17112v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.16486v1" target="_blank" rel="noopener">VPRef: A Cross-Domain Benchmark for Referring Remote Sensing Image Segmentation</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-15</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UW-Madison</span>
+          <span class="arxiv-id">arXiv:2609.16486v1</span>
+        </div>
+        <p class="authors">Quanwei Liu, Tao Huang, Jiaqi Yang, Wei Xiang</p>
+        <p class="abstract">Rapid advancements in vision-language models have propelled Referring Remote Sensing Image Segmentation (RRSIS) to the forefront of Earth observation. However, practical deployments suffer severe performance degradation under a coupled dual-drift paradigm: visual domain drift from cross-spatial-resolution mismatches and spectral variations, alongside textual logic drift from unconstrained, variable user-input granularities. To mitigate these bottlenecks, this paper establishes the first cross-domain RRSIS benchmark, designated as the Vaihingen-Potsdam Referring (VPRef) dataset, comprising 46,972 language-image-annotation triplets organized into a three-tier linguistic hierarchy. Building upon this benchmark, we develop a tailored parameter-efficient domain adaptation baseline anchored on the Segment Anything Model (SAM3) via Low-Rank Adaptation (LoRA). Our framework counteracts visual distribution discrepancies through pseudo-label-driven self-training and addresses textual logic drift via random multi-granularity text prompt mixing. Crucially, the distribution of empirical metrics across ablative variants suggests a potential decoupling between cross-modal semantic robustification and visual domain alignment, demonstrating that linguistic variance drives fine-grained semantic invariance while pseudo-label propagation governs macro-scale spatial grid alignment. Extensive benchmarks demonstrate the proposed framework achieves superior cross-domain segmentation boundaries while modifying merely 1.08\% of the foundational parameter footprint, establishing a robust baseline for future multi-modal remote sensing domain adaptation research. The dataset and code will be available at https://github.com/quanweiliu/VPRef.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.16486v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.16486v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.16255v1" target="_blank" rel="noopener">Efficient Reasoning Distillation: Small Video-Language Models via Synthetic CoT and Difficulty-Aware Fine-Tuning</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-14</span>
+          <span class="cat">cs.LG</span>
+          <span class="school">Carnegie Mellon</span>
+          <span class="arxiv-id">arXiv:2609.16255v1</span>
+        </div>
+        <p class="authors">Mantek Singh, Jeshwanth Challagundla, Siddharth Raina, Jasmin Jarsania</p>
+        <p class="abstract">We present an efficient method to distill reasoning capabilities into compact video-language models (VLMs) for video question answering (VideoQA). Our approach fine-tunes a 2B-parameter model using only $\sim$900 uncertainty-selected examples, each augmented with synthetic chain-of-thought (CoT) rationales generated by a 4B teacher. Despite its minimal compute cost - under two hours on a single A100 GPU - our method enables the 2B model to outperform VLMs up to 4$\times$ larger, and generalize across CinePile, ActivityNet-QA, and MLVU, approaching the performance of its own 4B teacher. A key finding is that placing CoT rationales after the answer - contrary to standard prompting - substantially improves reasoning in compact models. This insight challenges prevailing CoT conventions and reveals new alignment strategies under limited model capacity. Our findings offer a practical blueprint for training deployable, reasoning-rich VLMs suited for mobile and edge applications.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.16255v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.16255v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.16233v1" target="_blank" rel="noopener">SceneBench: A Hierarchical Benchmark for Vision-Language Understanding of 3D Scenes</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-14</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Stony Brook</span>
+          <span class="arxiv-id">arXiv:2609.16233v1</span>
+        </div>
+        <p class="authors">Anubhav Khanal, Prabigya Acharya, Roshni Poudel, Sujan Kapali, Bigyan Bhatta, Pramish Paudel, Francois Rameau, Danda Pani Paudel</p>
+        <p class="abstract">Vision-language models excel at 2D image understanding but remain limited in 3D spatial reasoning. Progress is hindered by limitations in current benchmarks. First, 3D datasets often rely on point clouds that capture geometry but discard rich visual features like texture, text, and materials. Second, annotations treat objects in isolation while ignoring real-world hierarchical organization (scenes, rooms, functional areas, object groups). Third, evaluation tasks focus narrowly on basic recognition rather than multi-step spatial reasoning. In this context, we introduce SceneBench, a benchmark of 966 photorealistic 3D scenes reconstructed with Gaussian Splatting and densely annotated with hierarchical semantics spanning scenes, rooms, functional areas, object groups, and individual objects. These annotations are produced through a human-in-the-loop pipeline combining vision-language models with roughly 1,500 human-hours of iterative refinement and verification, producing over 183K annotated nodes with textual descriptions and 3D bounding boxes. Building on this representation, we define three evaluation tasks: Existence-Based Questions probing object attributes, Spatial Intelligence Questions covering counting, size comparison, distance, and directional relations, and Grounded Question-Reasoning-Answer (QRA) triplets requiring multi-step reasoning across semantic levels. Experiments with state-of-the-art vision-language models show that while models perform well on basic recognition tasks (e.g., up to 85% accuracy for detection), performance drops substantially on hierarchical and compositional reasoning (e.g., down to 60% for counting), revealing limitations not captured by existing benchmarks. SceneBench provides a realistic testbed for developing and evaluating models capable of fine-grained spatial reasoning in photorealistic 3D environments.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.16233v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.16233v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+  </main>
+  <footer>
+    <p>Generated 2026-09-16 05:47 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
