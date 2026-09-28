@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-09-25</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-09-25</h2>
+      <p class="count">5 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.30234" target="_blank" rel="noopener">OmniFabric: Coherent UV Space Texture Synthesis for 3D Garment Reconstruction</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-24</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Carnegie Mellon</span><span class="school">University of Washington</span>
+          <span class="arxiv-id">arXiv:2609.30234v1</span>
+        </div>
+        <p class="authors">Ding-Jiun Huang, Yuanhao Wang, Cheng Zhang, Hugo Bertiche, Alexandru-Eugen Ichim, Thabo Beeler, Fernando De la Torre</p>
+        <p class="abstract">Automated generation of production-ready 3D garment assets from a single image is a central challenge in digital content creation. While recent generative models have significantly advanced 3D geometry reconstruction, synthesizing high-quality textures remains a bottleneck. Existing methods often bake environmental illumination and shadows directly into the texture map, or they fail to maintain global structural coherence, making the resulting assets unusable for physical simulation and relighting. In this work, we introduce OmniFabric, a novel approach that synthesizes globally coherent texture maps directly within the 2D sewing pattern space. Given a single reference image, our pipeline utilizes an estimated 3D mesh and generative priors of powerful Vision-Language Models (VLM) to establish a complete but coarse texture initialization across the unwrapped sewing patterns. We then leverage a specialized diffusion transformer, trained via an automated synthetic data engine and conditioned on 3D positional features, to refine this initialization directly in the canonical UV domain. This effectively removes distortion and baked-in artifacts to extract a clean and normalized texture map that preserves the original garment design. Extensive experiments demonstrate that OmniFabric significantly outperforms state-of-the-art baselines, yielding photorealistic 3D garments with high-quality textures.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.30234" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.30234v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.30130" target="_blank" rel="noopener">Multimodal Thinking with Renderable Programs</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-24</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UIUC</span><span class="school">University of Michigan</span><span class="school">UMass Amherst</span>
+          <span class="arxiv-id">arXiv:2609.30130v1</span>
+        </div>
+        <p class="authors">Sunli Chen, Ding Zhong, Ziqiao Ma, Jiaxin Liu, Zeyuan Yang, Hao Zhang, Lie Lu, Joyce Chai et al.</p>
+        <p class="abstract">Current vision-language models (VLMs) excel at visual content understanding and text-based reasoning, yet their structure limits the advancement of incorporating images into the reasoning chain. Though Omnimodal models have made efforts in unifying text and image generation, they focus on visual tasks in the open-domain, lacking tractability due to rasterized or latent representations of images. We introduce SVGLM, a framework that uses scalable vector graphics (SVG) primitives to connect text and image in reasoning tasks. We exploit the duality of SVG as both image description and text instructions, yielding a more compact, interpretable solution to equip general VLMs with the capability of generating images within the reasoning process. We provide a large curated dataset of SVG-based image editing dataset, as well as the paradigm to tune open-source VLMs. Experiments on a mathematical reasoning benchmark demonstrate that SVGLM achieves strong SVG generation power as well as think-with-image intelligence. Our results highlight SVG as a suitable medium for building more robust digital domain agents, bridging the gap between text-based thinking and pixel-based images.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.30130" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.30130v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.30080" target="_blank" rel="noopener">Can Frozen Hyperspherical Features Guide the Selection of Pseudo Masks?</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-24</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Carnegie Mellon</span><span class="school">Duke</span>
+          <span class="arxiv-id">arXiv:2609.30080v1</span>
+        </div>
+        <p class="authors">Xinge Guo, Fengyang Xiao, Dingming Zhang, Yuhan Chen, Rihan Zhang, Xingjian Li, Tianyang Wang, Chunming He et al.</p>
+        <p class="abstract">Foundation segmenters such as SAM return several plausible masks for an unlabeled image, and a student trained on the wrong one inherits its errors. Choosing among them means querying a second large model or fitting a quality head to annotated masks. We show that a candidate can be judged by what it does to a frozen self-supervised backbone&#x27;s features. Normalized DINOv2 patch features lie on a hypersphere, and a candidate mask splits that sphere in two. Based on this reading, we introduce SphereTrust, which scores each candidate by three properties of the split, the angular contrast between the two sides, the coverage of the foreground&#x27;s appearance modes, and contact with the image frame, one for each of three common ways a mask fails, and ranks a pool in 0.55 s per image from the frozen features alone. On eight SAM and SAM3 candidate pools spanning camouflaged, salient, and dichotomous segmentation and camouflage under low light, SphereTrust exceeds the strongest evaluated external baseline on six pools by 1.7 to 9.3 percentage points in mean selected Dice. These comparisons include published selection rules and explicitly labeled adaptations of DSS and UCOD-MKD. On the two prompted camouflage pools, its mean selected Dice is within 0.1 percentage points of the candidate-derived DSS adaptation, with a lower catastrophic-error rate. Which cue carries the signal depends on the candidate pool. The same sphere also supports training. The leading candidates enter as a candidate set with their scores as priors, prototypes reorder them, and a cross-fitted second round completes the labels, raising weighted F by 4.5, 2.3, and 5.5 points over fixed-label training on the three MLLM anchor pools, with students competitive with published unsupervised methods on nineteen test sets.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.30080" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.30080v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.29048" target="_blank" rel="noopener">Where Hallucinations Live: A Cross-Architecture Circuit in VQ-Tokenized Vision-Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-24</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Arizona State</span>
+          <span class="arxiv-id">arXiv:2609.29048v1</span>
+        </div>
+        <p class="authors">Shamanthak Hegde, Xiangrui Liu, Maitreya Patel, Yezhou Yang</p>
+        <p class="abstract">Unified vision-language models (VLMs) that tokenize images through a vector-quantized (VQ) codebook routinely hallucinate objects on grounded yes/no benchmarks, yet existing decoding-time fixes treat this as generic miscalibration without an architectural account. Using activation patching across twenty-five models spanning eight LLM families, we identify an early-layer ($L_0$) attention routing circuit shared across VQ-tokenized VLMs and propose a three-gate diagnostic that distinguishes the models carrying it from those that do not. The diagnostic isolates ten positive models (five natural unified-VQ VLMs across three LLM families and five induced variants) and rejects the remaining fifteen. A single-variable architectural swap (LLaVA-1.6 CLIP+MLP $\rightarrow$ VQ+Linear) installs the circuit, while a matched-compute MLP control on identical data does not, isolating vector quantization as the source of the pathological signal; the routing pathway that carries it is one that the backbone already provides. Against tuned VCD and DoLA baselines, tuned DoLA wins on binary calibration, but \textbf{only $L_0$ ablation reduces object hallucination in open-ended generation} (CHAIR$_i$ reduces by $31\,\%$ relatively, whereas tuned DoLA and VCD leave it unchanged or worsen it). These results recast object hallucination in unified VQ VLMs as a property of architecture and pretraining, and yield a targeted intervention that mechanism-agnostic decoding cannot replicate.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.29048" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.29048v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.29029" target="_blank" rel="noopener">Exploiting answer-invariant redundancies in satellite imagery for efficient VLM inference on edge</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-24</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UIUC</span>
+          <span class="arxiv-id">arXiv:2609.29029v1</span>
+        </div>
+        <p class="authors">Ishani Janveja, Davis Zhang, Seoyul Oh, Deepak Vasisht</p>
+        <p class="abstract">Onboard vision-language models could enable satellites to answer queries directly, but exhaustive tiled inference over high-resolution imagery is slow and energy-intensive. We identify answer-invariant token redundancy (AITR): image tiles and vision tokens that can be removed without changing the final answer. We present Rift, a two-stage system that performs query-conditioned tile pruning followed by elastic prefill to reduce token budget. We evaluate it on LLaVA-1.5 7B running on Jetson AGX Orin. Compared with exhaustive tiled inference, Rift reduces energy by 78% and latency by 69%, while increasing accuracy from 45% to 73%.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.29029" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.29029v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+  </main>
+  <footer>
+    <p>Generated 2026-09-28 16:27 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>

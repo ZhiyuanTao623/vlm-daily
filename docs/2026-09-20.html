@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-09-20</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-09-20</h2>
+      <p class="count">3 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.23139" target="_blank" rel="noopener">QwenVLConnector: A Fast, Unified Medical VLM Chatbot for Fine-Grained Clinical Perception and Text Generation</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-19</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Carnegie Mellon</span><span class="school">UW-Madison</span><span class="school">UNC Chapel Hill</span><span class="school">Northwestern</span>
+          <span class="arxiv-id">arXiv:2609.23139v1</span>
+        </div>
+        <p class="authors">Le Thien Phuc Nguyen, Thien Nguyen, Thanh-Huy Nguyen, Gia Minh Hoang, Anh Mai Vu, Ulas Bagci</p>
+        <p class="abstract">Most medical vision-language models (VLMs) excel at open-ended report generation and VQA but provide limited support for structured, fine-grained clinical perception within a unified interface. We present QwenVLConnector, a Qwen2.5-VL-based medical chatbot that unifies classification, multi-label classification, textualized detection, counting, regression, and free-form report generation under a single next-token objective. Our key component is a lightweight dense multi-layer Connector that aggregates low- and high-level visual features, aligns them through the pretrained vision Merger, and fuses them with the final visual representation without increasing sequence length. This design enriches visual tokens with complementary spatial and semantic cues while preserving efficiency. On FLARE-2D, QwenVLConnector improves detection F1 from 0.55 to 0.85, raises single-label classification from 0.37 to 0.51, and boosts report-generation GREEN by up to 18.3 points over the Qwen2.5-VL baseline. We further explore multimodal in-context learning for report generation, showing additional improvements without updating model parameters. Overall, QwenVLConnector offers a unified and efficient framework for combining structured medical perception with open-ended clinical text generation. Our code can be found at https://github.com/plnguyen2908/QwenConnector.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.23139" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.23139v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.22897" target="_blank" rel="noopener">Scout: Open-World Species Recognition on the Edge</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-19</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UMass Amherst</span>
+          <span class="arxiv-id">arXiv:2609.22897v1</span>
+        </div>
+        <p class="authors">Mohammad Mehdi Rastikerdar, Hui Guan, Deepak Ganesan</p>
+        <p class="abstract">Large vision-language models (VLMs) enable recognition beyond a fixed class set, but their computational demands prevent them from running on many edge devices. Cloud offload makes this capability accessible, but sending every image consumes scarce bandwidth and communication energy. We ask how to bring the open-world recognition capability of VLMs to the edge while operating within tight compute, energy, and bandwidth budgets. Wildlife monitoring provides a natural setting for exploring this question because camera traps encounter species not known at deployment. We present Scout, an autonomous open-world recognition system that invokes a cloud VLM intermittently to teach new classes to a compact edge model. Given only the deployment location and empty site frames, Scout autonomously turns each species identified by the VLM into persistent, site-conditioned recognition capability in a resource-efficient edge model, without a predefined species list, human labeling, or manual tuning. Across 30 camera-trap deployments in three regions on an NVIDIA Jetson Orin Nano, the accuracy of Scout remains within 0.1-2.5% of a model given a predefined species list. On species outside its initial class set, Scout achieves 53.7-59.1% accuracy, compared with 56.5-65.1% for full cloud offload, while using 59-71% less deployment energy.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.22897" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.22897v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.22778" target="_blank" rel="noopener">MIS-Bench: Benchmarking Multimodal LLMs for Psychotherapeutic Interpersonal Skills Assessment</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-19</span>
+          <span class="cat">cs.CL</span>
+          <span class="school">NYU</span>
+          <span class="arxiv-id">arXiv:2609.22778v1</span>
+        </div>
+        <p class="authors">Yuhan Lu, Yi Yao, Hua Shen, Katie Aafjes-van Doorn, Zhaonan Wang</p>
+        <p class="abstract">Multimodal large language models (MLLMs) are increasingly used as evaluators, yet their reliability in professional assessment tasks that require expert judgment remains unclear. We investigate this challenge in the context of assessing psychotherapeutic interpersonal skills and introduce MIS-Bench, a Multimodal Interpersonal Skills (MIS) benchmark comprising 996 psychotherapy response videos annotated across 8 dimensions of Facilitative Interpersonal Skills. Across 9 MLLMs with multiple modality and prompting settings, we find that current models show only modest agreement with human experts, inconsistent gains from multimodal input, and limited benefits from reasoning-based prompting. To mitigate this gap, we propose MIS-RAFT, a regression-aware fine-tuning method inspired by RAFT and tailored to fine-grained interpersonal skill scoring at one-decimal precision. MIS-RAFT addresses the mismatch between autoregressive token prediction and scalar-valued expert assessment, significantly improving agreement with human ratings. Overall, MIS-Bench reveals a clear gap between general multimodal capability and expert-level interpersonal judgment, while MIS-RAFT offers a promising path toward more reliable model-based assessment.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.22778" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.22778v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+  </main>
+  <footer>
+    <p>Generated 2026-09-28 16:26 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>

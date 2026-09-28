@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-09-23</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-09-23</h2>
+      <p class="count">5 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.27110" target="_blank" rel="noopener">Feed the Panel Dimensions, Not Verdicts: Rubric-Decomposed Fusion of Vision-Language Aesthetic Judges</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-22</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Purdue</span>
+          <span class="arxiv-id">arXiv:2609.27110v1</span>
+        </div>
+        <p class="authors">Amit Jadhav, Shaurya Beriwala, Beomjin Kim</p>
+        <p class="abstract">Vision-language models (VLMs) are deployed as zero-shot judges of image aesthetics, and panels of several models are recommended, on thin evidence, as the way to make such judges reliable. On two human-rated datasets, EVA and PARA, we find that a panel of holistic judges never significantly beats its best member, whether the verdicts are averaged or fused by a learned combiner. What a panel is worth depends on what it is fed. We therefore have each model score each image on the five dimensions of a frozen, human-written rubric and fuse those scores, alongside each model&#x27;s verdict, across model families with an out-of-fold combiner. The dimension scores measure what their labels claim: with the overall human score partialled out, a dimension prompt carries more attribute-specific information than the holistic prompt in 28 of 30 model-attribute cells. Fused, they beat the best single VLM in all ten three-family panels on EVA (against that best single model, +0.07 Spearman rho for the strongest trio and +0.10 for the pre-declared one, and +0.06 and +0.07 when averaged over twenty fold partitions; against the panel mean, the primary test gives +0.118 on its EVA design set), and on PARA they reach parity under Spearman rho and a small, non-significant loss under Kendall tau-b, where one model already captures 85% of the human noise ceiling. It is not a feature-count artefact: giving the same combiner an equal number of pure holistic columns, split from the same repetitions, does not reproduce it. The gain costs a few hundred labels, which do not transfer between datasets, and 4.8x the API calls on EVA; we report it with paired bootstraps and Kendall tau-b, alongside a failed pre-registration and the configurations that lost.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.27110" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.27110v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.26793" target="_blank" rel="noopener">HARMONY: Hierarchical Agentic Reasoning for MONocular Image-to-Scene Synthesis</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-22</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UPenn</span>
+          <span class="arxiv-id">arXiv:2609.26793v1</span>
+        </div>
+        <p class="authors">Shufan Sun, Chen Wang, Enxin Song, Jiatao Gu, Lingjie Liu</p>
+        <p class="abstract">Compositional 3D scene reconstruction has recently been explored from two directions: agentic reasoning that provides semantic understanding of spatial relationships but lacks precise alignment with input images; and visual geometry foundation models that predict dense point maps from input images but the reconstruction quality is limited. Therefore, recovering a complete 3D scene from a single monocular image with accurate inter-object relationships and high-fidelity reconstruction quality remains challenging. In this paper, we present HARMONY, a hierarchical chain-of-thought framework that leverages both agentic reasoning and visual geometry foundation. Given an image of an indoor scene, starting from an empty 3D floorplan, HARMONY first calibrates the camera against the reference image to establish a semantically-grounded spatial frame, then uses agentic VLM reasoning to recover the 3D room layout and an initial placement order. It then places the objects in a hierarchical order, from wall-mounted elements, free-standing furniture, to dependent decorations on top of furniture. We also use depth-first traversal for furniture so each placement conditions on previously resolved structure and a reflective feedback loop to avoid error accumulation. After each object placement by VLM, we use the point cloud estimations to perform geometry-based refinement so that the rendered image aligns better with the input. HARMONY can produce 3D scenes that are semantically consistent and perceptually aligned with the reference image, extending single-image compositional reconstruction to complex indoor scene images. Experiments on synthetic and real-world images demonstrate that HARMONY outperforms the evaluated reconstruction baselines, while qualitative comparisons with GPT-6 Astra suggest more faithful object arrangements and better preservation of scene details.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.26793" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.26793v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.25891" target="_blank" rel="noopener">BAS-OPD: Budget-Aware Selective On-Policy Self-Distillation for Fine-Grained Multimodal Perception</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-22</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UCLA</span>
+          <span class="arxiv-id">arXiv:2609.25891v1</span>
+        </div>
+        <p class="authors">Zihan Chen, Hengguang Zhou, Yuan Kang, Yiming Zhang, Wenhui Fang, Zenghui Ding, Yining Sun, Cho-Jui Hsieh</p>
+        <p class="abstract">Multimodal large language models (MLLMs) often struggle with fine-grained visual perception when processing complete images, as critical evidence may only appear in local regions. On-policy self-distillation (OPD) enables transferring privileged visual knowledge from informative views to full-image policies, but querying the teacher for every rollout introduces substantial supervision costs. In this work, we propose BAS-OPD, a budget-aware selective OPD framework that allocates teacher supervision under limited query budgets. Instead of querying all rollouts, BAS-OPD selects informative samples while maintaining full-batch student generation. We explore random, uncertainty-based, and learned utility-based selection strategies, where the learned selector estimates query value from detached rollout statistics and online utility signals derived from student--teacher agreement and teacher confidence without additional student forward passes. BAS-OPD only changes training-time supervision allocation and preserves single-pass full-image inference. Experiments on fine-grained multimodal perception benchmarks demonstrate that BAS-OPD achieves strong performance while substantially reducing teacher supervision costs, highlighting the effectiveness of selective OPD under constrained budgets.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.25891" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.25891v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.25773" target="_blank" rel="noopener">Video-HopChain: Multi-Hop Questions and Confidence-Gated Exploration for Video Reasoning Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-22</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Johns Hopkins</span>
+          <span class="arxiv-id">arXiv:2609.25773v1</span>
+        </div>
+        <p class="authors">Trung Nguyen Quang, Yuhao Dong, Shuo Sun, Shuai Liu, Shulin Tian, Kim-Hui Yap, Ziwei Liu</p>
+        <p class="abstract">HopChain has shown on still images that multi-hop data synthesis improves vision-language reasoning, because long chain-of-thought reasoning exposes errors that compound across steps, while most data used for reinforcement learning with verifiable rewards (RLVR) rarely demands a chain of visual evidence, so these weaknesses are likely to stay unexposed. We observe the same problem in video, where this framework has not yet been explored. We therefore build Video-HopChain, a dataset of 22,550 multi-hop video questions over 13,378 videos, together with a held-out benchmark of 1,000 questions. Each question chains three to six yes/no questions about moments in one video, and each yields one of two integers depending on its answer. The final answer is the sum of these integers, so an exact match on that sum gives the verifiable reward that RLVR needs. We first train Qwen3-VL-8B with GRPO on a standard video dataset, and a second stage on Video-HopChain then raises the mean over eight video understanding and reasoning benchmarks from 55.4 to 57.9 and improves every one of them. Training on such a dataset, however, exposes a known limitation of GRPO: its learning signal comes from the reward variance within a group, so hard questions whose rollouts are all incorrect and easy questions whose rollouts are all correct both leave the group with no gradient. To recover these groups at the same compute budget, we introduce Confidence-Gated Exploration (CGE). With 8 rollouts per question, CGE samples the first 4 as usual. If these 4 are either all correct or all incorrect, it samples the last 4 with the policy&#x27;s most confident token masked inside the reasoning span, and removes the masked positions from the loss while all 8 rollouts enter the advantage. With CGE, the mean rises further to 59.3. We release the dataset, the checkpoint, and the data generation and training code.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.25773" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.25773v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.20850" target="_blank" rel="noopener">MME-Safety: A Fine-grained Benchmark for Safety Evaluation of MLLMs</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-22</span>
+          <span class="cat">cs.CL</span>
+          <span class="school">Yale</span>
+          <span class="arxiv-id">arXiv:2609.20850v1</span>
+        </div>
+        <p class="authors">Yilian Shi, Yueming Lyu, Haoxiang Tan, Linzhuang Zou, Qihao Wang, Guihua Yu, Chenyang Si, Caifeng Shan</p>
+        <p class="abstract">While Multimodal Large Language Models (MLLMs) show remarkable advancements, their cross-modal capabilities introduce complex vulnerabilities that easily bypass unimodal filters. Existing benchmarks lack fine-grained intent-related annotations and rely on unidimensional metrics, hindering comprehensive robustness evaluation. To address this, we propose MME-Safety, a rigorously verified benchmark featuring a unique four-dimensional annotation schema that categorizes risk scenarios, harm severity, and modality-specific stealth levels. Furthermore, we introduce a hierarchical evaluation framework to assess fundamental response reliability, actual risk exposure, and the structural integrity of defensive behaviors. Extensive zero-shot evaluations across 17 state-of-the-art MLLMs provide a comprehensive safety profile of current multimodal systems. Our analysis systematically investigates cross-modal input configurations and uncovers safety implications associated with Chain-of-Thought (CoT) reasoning. These multifaceted findings underscore the urgent need for robust, reasoning-aware safety alignment in the multimodal landscape.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.20850" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.20850v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+  </main>
+  <footer>
+    <p>Generated 2026-09-28 16:26 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
