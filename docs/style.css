@@ -42,9 +42,9 @@ main {
 
 .day-nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  gap: 0.5rem;
+  gap: 2.5rem;
   margin-top: 1.5rem;
   padding-top: 1rem;
   border-top: 1px solid var(--border);
@@ -53,8 +53,6 @@ main {
 }
 .day-nav a { color: var(--accent); text-decoration: none; }
 .day-nav a:hover { text-decoration: underline; }
-.day-nav .prev, .day-nav .next { flex: 1; }
-.day-nav .next { text-align: right; }
 
 .latest { font-size: 1.1rem; font-weight: 600; margin: 0 0 1.5rem; }
 

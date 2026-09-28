@@ -376,22 +376,16 @@ def render_daily_page(date_str: str, papers: list[dict]) -> str:
 
 
 def render_day_nav(date_str: str, day_files: list[str]) -> str:
-    """Prev / All days / Next links. day_files: sorted (desc) 'YYYY-MM-DD.html'."""
+    """Prev / Next day links. day_files: sorted (desc) 'YYYY-MM-DD.html'."""
     dates = [f[:-5] for f in day_files]
     older = [d for d in dates if d < date_str]
     newer = [d for d in dates if d > date_str]
-    prev_link = (
-        f'<a class="prev" href="{_esc(older[0])}.html">&larr; {_esc(older[0])}</a>'
-        if older else '<span class="prev"></span>'
-    )
-    next_link = (
-        f'<a class="next" href="{_esc(newer[-1])}.html">{_esc(newer[-1])} &rarr;</a>'
-        if newer else '<span class="next"></span>'
-    )
-    return (
-        f'<nav class="day-nav">{prev_link}'
-        f'<a class="all" href="index.html">All days</a>{next_link}</nav>'
-    )
+    links = ""
+    if older:
+        links += f'<a class="prev" href="{_esc(older[0])}.html">&larr; {_esc(older[0])}</a>'
+    if newer:
+        links += f'<a class="next" href="{_esc(newer[-1])}.html">{_esc(newer[-1])} &rarr;</a>'
+    return f'<nav class="day-nav">{links}</nav>'
 
 
 _DAY_NAV_RE = re.compile(r'<nav class="day-nav">.*?</nav>')
