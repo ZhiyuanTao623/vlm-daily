@@ -22,6 +22,7 @@ import config
 
 ATOM = "{http://www.w3.org/2005/Atom}"
 ARXIV_NS = "{http://arxiv.org/schemas/atom}"
+DC = "{http://purl.org/dc/elements/1.1/}"
 
 
 # --------------------------------------------------------------------------- #
@@ -41,7 +42,28 @@ def build_query() -> str:
     return f"({cats}) AND ({kws})"
 
 
-def fetch_feed(retries: int = 5) -> str:
+def _get_xml(url: str, retries: int) -> str:
+    req = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": "VLM-Daily/1.0 (+https://github.com/ZhiyuanTao623/vlm-daily)",
+            "Accept": "application/atom+xml",
+        },
+    )
+    last_err: Exception | None = None
+    for attempt in range(1, retries + 1):
+        try:
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                return resp.read().decode("utf-8")
+        except Exception as err:  # network hiccups / rate limits
+            last_err = err
+            print(f"  fetch attempt {attempt} failed: {err}", file=sys.stderr)
+            if attempt < retries:
+                time.sleep(5 * attempt)
+    raise RuntimeError(f"Failed to fetch {url} after {retries} attempts: {last_err}")
+
+
+def fetch_feed(retries: int = 3) -> str:
     """Query the arXiv API and return the raw Atom XML string."""
     params = {
         "search_query": build_query(),
@@ -49,20 +71,55 @@ def fetch_feed(retries: int = 5) -> str:
         "sortOrder": "descending",
         "max_results": str(config.FETCH_BATCH),
     }
-    url = f"{config.ARXIV_API}?{urllib.parse.urlencode(params)}"
-    req = urllib.request.Request(url, headers={"User-Agent": "VLM-Daily/1.0 (+github pages)"})
+    return _get_xml(f"{config.ARXIV_API}?{urllib.parse.urlencode(params)}", retries)
 
-    last_err: Exception | None = None
-    for attempt in range(1, retries + 1):
-        try:
-            with urllib.request.urlopen(req, timeout=45) as resp:
-                return resp.read().decode("utf-8")
-        except Exception as err:  # network hiccups / rate limits
-            last_err = err
-            print(f"  fetch attempt {attempt} failed: {err}", file=sys.stderr)
-            if attempt < retries:
-                time.sleep(5 * attempt)
-    raise RuntimeError(f"Failed to fetch arXiv feed after {retries} attempts: {last_err}")
+
+def fetch_rss(retries: int = 3) -> str:
+    """Fetch the arXiv RSS (Atom) feed of the latest announcement for CATEGORIES."""
+    return _get_xml(config.ARXIV_RSS + "+".join(config.CATEGORIES), retries)
+
+
+def parse_rss_entries(xml_text: str) -> list[dict]:
+    """Parse the rss.arxiv.org Atom feed into the same paper dicts as parse_entries."""
+    root = ET.fromstring(xml_text)
+    papers: list[dict] = []
+    for entry in root.findall(f"{ATOM}entry"):
+        # "new" = primary category is in CATEGORIES; "cross" = primary is elsewhere;
+        # "replace*" = revised old papers. Only brand-new submissions are wanted.
+        if _text(entry.find(f"{ARXIV_NS}announce_type")) != "new":
+            continue
+
+        raw_id = _text(entry.find(f"{ATOM}id"))  # e.g. oai:arXiv.org:2609.30270v1
+        arxiv_id = raw_id.rsplit(":", 1)[-1]
+        base_id = arxiv_id.split("v")[0]
+
+        title = " ".join(_text(entry.find(f"{ATOM}title")).split())
+        summary = " ".join(_text(entry.find(f"{ATOM}summary")).split())
+        summary = summary.split("Abstract: ", 1)[-1]  # drop "arXiv:... Announce Type: new"
+        published = _text(entry.find(f"{ATOM}published"))
+
+        creators = ", ".join(_text(c) for c in entry.findall(f"{DC}creator"))
+        authors = [a.strip() for a in creators.split(",") if a.strip()]
+
+        # The first category listed is the primary one.
+        first_cat = entry.find(f"{ATOM}category")
+        category = first_cat.get("term", "") if first_cat is not None else ""
+
+        papers.append(
+            {
+                "id": base_id,
+                "arxiv_id": arxiv_id,
+                "title": title,
+                "summary": summary,
+                "authors": authors,
+                "published": published,
+                "updated": _text(entry.find(f"{ATOM}updated")),
+                "category": category,
+                "abs_link": f"https://arxiv.org/abs/{base_id}",
+                "pdf_link": f"https://arxiv.org/pdf/{arxiv_id}",
+            }
+        )
+    return papers
 
 
 def parse_entries(xml_text: str) -> list[dict]:
@@ -364,8 +421,11 @@ def main() -> int:
     config.DATA_DIR.mkdir(parents=True, exist_ok=True)
 
     print("Fetching arXiv feed ...")
-    xml_text = fetch_feed()
-    papers = parse_entries(xml_text)
+    try:
+        papers = parse_entries(fetch_feed())
+    except Exception as err:
+        print(f"  arXiv API unavailable ({err}); falling back to RSS feed ...")
+        papers = parse_rss_entries(fetch_rss())
     print(f"  parsed {len(papers)} candidate entries")
 
     seen = load_seen()

@@ -161,3 +161,8 @@ SEEN_IDS_FILE = DATA_DIR / "seen_ids.json"
 # arXiv API endpoint (https avoids plain-HTTP requests being intercepted/reset
 # on some cloud network paths, e.g. GitHub Actions runners)
 ARXIV_API = "https://export.arxiv.org/api/query"
+
+# Fallback when the API keeps failing (since Sept 2026 export.arxiv.org often
+# answers HTTP 406 to cloud IPs). The RSS feed only covers the latest daily
+# announcement, but it is served from a different host and stays reachable.
+ARXIV_RSS = "https://rss.arxiv.org/atom/"
