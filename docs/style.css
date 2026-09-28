@@ -40,6 +40,20 @@ main {
 .day-head a, .latest a { color: var(--accent); text-decoration: none; }
 .day-head a:hover, .latest a:hover { text-decoration: underline; }
 
+.day-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--border);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.day-nav .prev, .day-nav .next { flex: 1; }
+.day-nav .next { text-align: right; }
+
 .latest { font-size: 1.1rem; font-weight: 600; margin: 0 0 1.5rem; }
 
 .card {

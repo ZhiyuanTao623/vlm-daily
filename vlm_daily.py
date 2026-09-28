@@ -361,7 +361,7 @@ def render_daily_page(date_str: str, papers: list[dict]) -> str:
     <div class="day-head">
       <h2 class="day-title">{_esc(date_str)}</h2>
       <p class="count">{count} paper{'s' if count != 1 else ''}</p>
-      <p><a href="index.html">&larr; All days</a></p>
+      {render_day_nav(date_str, [])}
     </div>
 {cards if cards else '    <p class="empty">No new papers found for this day.</p>'}
   </main>
@@ -372,6 +372,43 @@ def render_daily_page(date_str: str, papers: list[dict]) -> str:
 </body>
 </html>
 """
+
+
+def render_day_nav(date_str: str, day_files: list[str]) -> str:
+    """Prev / All days / Next links. day_files: sorted (desc) 'YYYY-MM-DD.html'."""
+    dates = [f[:-5] for f in day_files]
+    older = [d for d in dates if d < date_str]
+    newer = [d for d in dates if d > date_str]
+    prev_link = (
+        f'<a class="prev" href="{_esc(older[0])}.html">&larr; {_esc(older[0])}</a>'
+        if older else '<span class="prev"></span>'
+    )
+    next_link = (
+        f'<a class="next" href="{_esc(newer[-1])}.html">{_esc(newer[-1])} &rarr;</a>'
+        if newer else '<span class="next"></span>'
+    )
+    return (
+        f'<nav class="day-nav">{prev_link}'
+        f'<a class="all" href="index.html">All days</a>{next_link}</nav>'
+    )
+
+
+# Matches the nav block, or the plain back link used by pages rendered before it.
+_DAY_NAV_RE = re.compile(
+    r'<nav class="day-nav">.*?</nav>|<p><a href="index.html">&larr; All days</a></p>'
+)
+
+
+def update_day_navs(day_files: list[str]) -> None:
+    """Rewrite the prev/next nav in every day page, since adding a day changes
+    its neighbours' links."""
+    for fname in day_files:
+        path = config.DOCS_DIR / fname
+        text = path.read_text(encoding="utf-8")
+        nav = render_day_nav(fname[:-5], day_files)
+        new_text = _DAY_NAV_RE.sub(lambda _: nav, text, count=1)
+        if new_text != text:
+            path.write_text(new_text, encoding="utf-8")
 
 
 def render_index(day_files: list[str]) -> str:
@@ -494,6 +531,7 @@ def main() -> int:
         reverse=True,
     )
     (config.DOCS_DIR / "index.html").write_text(render_index(day_files), encoding="utf-8")
+    update_day_navs(day_files)
     print(f"  updated index with {len(day_files)} day page(s)")
 
     print("Done.")
