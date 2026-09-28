@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-09-28</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-09-28</h2>
+      <p class="count">3 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.30722" target="_blank" rel="noopener">TrafficImag: A Benchmark for Counterfactual Roadside Traffic Video Generation</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-28</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UT Austin</span><span class="school">Duke</span>
+          <span class="arxiv-id">arXiv:2609.30722v1</span>
+        </div>
+        <p class="authors">Xiangyu Li, Tianyi Wang, Zhihao Dou, Christian Claudel, Zhaomiao Guo</p>
+        <p class="abstract">Existing roadside traffic datasets support perception, forecasting, and visual question answering, but they do not evaluate counterfactual video generation, in which a selected actor is modified and the generated future should remain consistent with road topology and unrelated traffic. We introduce TrafficImag, the first benchmark for counterfactual roadside traffic video generation. TrafficImag combines a large-scale roadside dataset (9,022 annotated images, 7,043 deduplicated video clips, and 31,145 actor-centered history-future samples) with an executable protocol that supports behavior reasoning, intervention-aware image editing, and conditional video generation. Each intervention is represented as an actor-level program describing the target actor, intended behavior, legal route, interaction order, and temporal constraints, enabling a unified evaluation interface across heterogeneous foundation models. TrafficImag evaluates four complementary validity dimensions: initial-state correctness, route and behavior validity, interaction consistency, and non-target preservation, and considers an end-to-end counterfactual successful only when all four are satisfied. Across state-of-the-art foundation models, the strongest reasoner reaches 80.4% macro F1, the complete condition interface raises end-to-end success from 23.3% to 55.0% for the best generator. Oracle studies further show that conditional video execution is the primary remaining bottleneck. TrafficImag provides a reproducible benchmark for evaluating and diagnosing counterfactual traffic video generation beyond perceptual video quality.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.30722" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.30722v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.31140" target="_blank" rel="noopener">Can Linguistic Reasoning Vectors Enhance Multimodal Reasoning Ability?</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-28</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">UCLA</span>
+          <span class="arxiv-id">arXiv:2609.31140v1</span>
+        </div>
+        <p class="authors">Ziyi Wang, Li Li, Aolin Zhou, Yankun Shen, Chonghan Liu, Shuxia Lin, Xu Yang</p>
+        <p class="abstract">Most Vision-Language Models (VLMs) are built by extending pretrained Large Language Models (LLMs) with visual modules and multimodal alignment. However, this multimodal scaling often degrades the language-side reasoning ability originally encoded in the base LLM. While the base LLM retains usable reasoning after scaling, the aligned VLM itself cannot reliably access this ability. Therefore, recovering the degraded reasoning capability in VLMs would benefit more from seeking help from the base LLM than from the VLM alone. Motivated by this, we propose LIFT (Language-side reasonIng Facilitation and Transfer), a lightweight vector-intervention method that transfers reasoning capability from the base LLM to the VLM without retraining the backbone. LIFT defines Reasoning Vectors as answer-token hidden-state differences between a Reasoner path with an explicit reasoning trace and a Solver path without it, and injects these vectors into language-side activations of the target VLM. LIFT further supports learnable vector adaptation while keeping the VLM backbone frozen. We evaluate LIFT on two VLMs across six reasoning benchmarks, comparing Reasoning Vectors extracted from the base LLM and from the aligned VLM under matched protocols. Results show that LLM-derived vectors consistently outperform VLM-derived vectors, confirming that the base LLM is a more effective source for recovering reasoning. LIFT partially recovers degraded reasoning through lightweight language-side interventions. Further analyses show that Reasoning Vectors influence intermediate reasoning behavior rather than merely altering final answers. The source code will be released soon.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.31140" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.31140v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.31456" target="_blank" rel="noopener">Diagnosing the Sources of Compositional Failure in Vision-Language Models: A Controlled Analysis</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-28</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Ohio State</span>
+          <span class="arxiv-id">arXiv:2609.31456v1</span>
+        </div>
+        <p class="authors">Mona Gandhi, Cenk Merih Olcay, Kuan-Chieh Lo, Santiago Castro, Christopher W. Myers, Srinivasan Parthasarathy</p>
+        <p class="abstract">Vision-language models (VLMs) often struggle with compositional reasoning tasks, but the reasons for this underperformance remain unclear. A common hypothesis is that models struggle to integrate multiple components, leading to training interventions to improve compositional binding. However, this assumption has never been directly quantified. Existing benchmarks evaluate captions only in their composed form, making it impossible to separate the cost of joint reasoning from the cost of recognizing individual components under increasing load. We introduce COMPASS (COMPositional Analysis of SkillS), a controlled evaluation framework designed to isolate and measure the distinct factors underlying compositional failure. By comparing performance on composed captions with their decomposed counterparts , we directly quantify the cost of compositional integration across 87K image-caption pairs. Across multiple VLMs, this gap is real but partial, accounting for only part of the observed degradation. This motivates a finer-grained investigation into what additional factors govern model behavior. We analyze performance at the level of individual skills: object detection, attribute binding, and relation reasoning, using skill-targeted perturbations across 274K image-caption pairs. We find a consistent skill-specific pattern: each skill degrades primarily with the count of its own primitive type (self-load), while cross-load effects are predominantly positive, suggesting that primitives of different types provide useful grounding context. This pattern holds across standard contrastive encoders, explicitly trained compositional reasoning models, and non-contrastive architectures. These findings show that compositional degradation reflects multiple separable factors that cannot be reduced to joint reasoning alone.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.31456" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.31456v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+  </main>
+  <footer>
+    <p>Generated 2026-09-28 16:21 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
