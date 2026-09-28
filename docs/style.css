@@ -45,12 +45,14 @@ main {
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 0.6rem;
-  padding-top: 0.6rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
   border-top: 1px solid var(--border);
   font-weight: 600;
   font-size: 0.95rem;
 }
+.day-nav a { color: var(--accent); text-decoration: none; }
+.day-nav a:hover { text-decoration: underline; }
 .day-nav .prev, .day-nav .next { flex: 1; }
 .day-nav .next { text-align: right; }
 

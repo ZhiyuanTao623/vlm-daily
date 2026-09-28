@@ -361,9 +361,10 @@ def render_daily_page(date_str: str, papers: list[dict]) -> str:
     <div class="day-head">
       <h2 class="day-title">{_esc(date_str)}</h2>
       <p class="count">{count} paper{'s' if count != 1 else ''}</p>
-      {render_day_nav(date_str, [])}
+      <p><a href="index.html">&larr; All days</a></p>
     </div>
 {cards if cards else '    <p class="empty">No new papers found for this day.</p>'}
+    {render_day_nav(date_str, [])}
   </main>
   <footer>
     <p>Generated {_esc(datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC'))} ·
@@ -393,20 +394,20 @@ def render_day_nav(date_str: str, day_files: list[str]) -> str:
     )
 
 
-# Matches the nav block, or the plain back link used by pages rendered before it.
-_DAY_NAV_RE = re.compile(
-    r'<nav class="day-nav">.*?</nav>|<p><a href="index.html">&larr; All days</a></p>'
-)
+_DAY_NAV_RE = re.compile(r'<nav class="day-nav">.*?</nav>')
 
 
 def update_day_navs(day_files: list[str]) -> None:
-    """Rewrite the prev/next nav in every day page, since adding a day changes
-    its neighbours' links."""
+    """Rewrite the prev/next nav at the bottom of every day page, since adding
+    a day changes its neighbours' links. Pages without a nav get one added."""
     for fname in day_files:
         path = config.DOCS_DIR / fname
         text = path.read_text(encoding="utf-8")
         nav = render_day_nav(fname[:-5], day_files)
-        new_text = _DAY_NAV_RE.sub(lambda _: nav, text, count=1)
+        if _DAY_NAV_RE.search(text):
+            new_text = _DAY_NAV_RE.sub(lambda _: nav, text, count=1)
+        else:
+            new_text = text.replace("  </main>", f"    {nav}\n  </main>", 1)
         if new_text != text:
             path.write_text(new_text, encoding="utf-8")
 
