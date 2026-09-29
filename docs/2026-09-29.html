@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-09-29</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-09-29</h2>
+      <p class="count">19 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.35641v1" target="_blank" rel="noopener">Verifiable Visual Rewards Transfer from Synthetic Scenes to Natural Prompts</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-28</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">University of Washington</span>
+          <span class="arxiv-id">arXiv:2609.35641v1</span>
+        </div>
+        <p class="authors">Shuyue Stella Li, Xiaochuang Han, Yulia Tsvetkov, Luke Zettlemoyer</p>
+        <p class="abstract">Precise instruction following in image generation, such as satisfying object counts and spatial relations, remains an open challenge at least in part because it is learned using unreliable reward models such as object detectors and vision-language models. We introduce Verifiable Visual Rewards (VVR), the first framework for programmatically verifiable image rewards, and show that training on it generalizes to natural prompts. Each VVR task is a scene of geometric objects and relations among them, from which we derive both the prompt and a deterministic verifier, so tasks can be generated in any number and at any chosen complexity. We release VVRBench, with 10,000 tasks over 32 constraint types, and VVRBench-Challenge, with 720 more complex tasks; the strongest model we evaluate---GPT-Image-2.5---solves 21.4% of VVRBench-Challenge. Using VVR scores as rewards for reinforcement learning (RLVVR) raises the accuracy of Stable Diffusion 3.5 Medium on VVRBench from 2.8% to 28.3% and demonstrates consistent easy-to-hard generalization. These gains extend to out-of-domain benchmarks, and mixing VVR into existing objectives further improves overall performance and human preference, motivating the adoption of VVR into standard image generation post-training recipes.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.35641v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.35641v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.35507v1" target="_blank" rel="noopener">ReVA: A Scene-Centric Dataset Beyond Repetition for Remote Sensing Video Question Answering</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-28</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">USC</span>
+          <span class="arxiv-id">arXiv:2609.35507v1</span>
+        </div>
+        <p class="authors">Zhen Yao, Likai Wang, Yuming Yang, Zhihao Zheng, Bo Lang, Qiuyu Tang, Jialu Sheng, Jingqi Xu et al.</p>
+        <p class="abstract">Multimodal Large Language Models (MLLMs) have demonstrated remarkable advances in remote sensing. However, existing remote sensing multimodal reasoning benchmarks exhibit two critical limitations: they rely on (i) template-driven questions, which causes repetitive questions; and (ii) static images that fail to capture the inherent temporal nature of drone/UAV videos. This leaves systematic evaluation of remote sensing video reasoning largely unexplored. To address this gap, we introduce ReVA, a new dataset for remote sensing video question answering, designed to assess spatiotemporal, scene-centric, and reasoning-oriented capabilities of MLLMs. ReVA comprises 2,438 drone videos spanning 18 cities worldwide (580K frames) and 22K high-quality question-answer pairs across 11 challenging QA tasks. We develop a semi-automatic annotation pipeline that leverages Text LLMs and MLLMs for question-answer generation with human verification. We evaluate 23 proprietary and open-source Video LLMs on ReVA, exposing fundamental limitations of current models. These findings position ReVA as a critical benchmark toward better remote sensing video understanding and temporal reasoning capabilities for real-world deployments. Our code and dataset are available at: https://github.com/zyaocoder/ReVA</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.35507v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.35507v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.35272v1" target="_blank" rel="noopener">When Words Speak Louder than Images: Towards Understanding Language Bias in Vision-Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-28</span>
+          <span class="cat">cs.CL</span>
+          <span class="school">Johns Hopkins</span><span class="school">UC Santa Barbara</span>
+          <span class="arxiv-id">arXiv:2609.35272v1</span>
+        </div>
+        <p class="authors">Yizhou Fang, Siyue Chen, Zimo Qi, Zhiyu Xue, Xi Chen, Guangliang Liu</p>
+        <p class="abstract">Despite substantial progress across downstream applications, vision-language models (VLMs) remain susceptible to language bias, often prioritizing linguistic cues over visual evidence and consequently producing incorrect predictions. Prior studies have proposed various approaches to understanding and mitigating language bias in VLMs, yet their findings often conflict due to the difficulty of tracing how language bias propagates within black-box VLMs. Building on the word completion task, we trace how language bias propagates through VLM inference by (1) proposing a diagnostic framework that decomposes the inference process into four distinct yet interdependent stages to trace the propagation of language bias; and (2) examining how two key factors underlying language bias, i.e., linguistic priors and cross-modal coverage, evolve across these stages and ultimately give rise to incorrect predictions. The linguistic prior captures the strength of statistical bias induced by the language model component of a VLM and represents the origin of language bias, whereas cross-modal coverage measures the extent to which linguistic cues cover the visual content. By decomposing inference into four stages and characterizing the interplay between linguistic priors and cross-modal coverage across these stages, we propose a systematic framework for tracing the propagation of language bias throughout the inference process; and uncover the underlying mechanism of language bias by revealing the interplay between linguistic priors and cross-modal coverage.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.35272v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.35272v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.34949v1" target="_blank" rel="noopener">VD-DeepStack: Bridging Visual Comparison and Language Reasoning for Few-Shot Anomaly Detection</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-28</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">USC</span>
+          <span class="arxiv-id">arXiv:2609.34949v1</span>
+        </div>
+        <p class="authors">Mengyang Zhao, Zhuolin He, Haiyang Yu, Yuxuan Liang, Yifang Xu, Yuchuan Wu, Xiaolei Chen, Zhengtao Yao et al.</p>
+        <p class="abstract">Few-shot visual anomaly detection is fundamentally a visual comparison task, requiring fine-grained inspection of a query against normal references. Many recent methods based on large vision-language models (LVLMs) emphasize comparative reasoning through language chain-of-thought. Yet discrete, abstract descriptions may underrepresent dense, fine-grained visual differences, leaving a gap between visual comparison and its expression in language. To address this gap, we propose Visual Difference DeepStack (VD-DeepStack), which explicitly conditions language reasoning on query-reference visual differences. Specifically, we fuse DINO features with the LVLM visual hierarchy to strengthen fine-grained representations, then construct dense difference evidence from residuals between query features and softly matched reference features. The difference-evidence path injects spatially weighted difference vectors into query-image states at multiple decoder depths, while an auxiliary visual-context path provides fine-grained appearance information to support their interpretation. Experiments on 4 industrial and 2 medical anomaly benchmarks demonstrate substantial improvements in few-shot anomaly detection over baselines relying on textual comparative reasoning. These results support mitigating the visual comparison-reasoning gap through the joint design of comparison representations and their integration into the decoder. Code will be released upon acceptance.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.34949v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.34949v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.34408v1" target="_blank" rel="noopener">Distilling Visual Reasoning into Text Space</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-28</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UCLA</span>
+          <span class="arxiv-id">arXiv:2609.34408v1</span>
+        </div>
+        <p class="authors">Wenhan Yang, Nilay Naharas, Ali Payani, Baharan Mirzasoleiman</p>
+        <p class="abstract">Large Vision-Language Models (LVLMs) have shown strong promise for multimodal reasoning, yet often struggle with tasks requiring concepts beyond what is directly observable in the input image. Existing methods generate intermediate images or latent visual tokens to guide reasoning, but these representations can introduce errors and increasingly interfere with textual reasoning as reasoning progresses. We propose Visual-to-Text Chain-of-Thought Distillation (V2T), a framework that enables LVLMs to internalize visual reasoning without generating intermediate visual representations at inference time. V2T first trains a teacher LVLM using interleaved visual and textual chains of thought, and then uses knowledge distillation to train a student LVLM using the teacher&#x27;s logits and cross-entropy supervision from ground-truth textual reasoning. When reasoning images can be mapped to the original image, V2T can additionally distill the teacher&#x27;s attention to corresponding regions, while ground-truth bounding boxes can further guide a subsequent reinforcement learning stage. Experiments across multiple multimodal reasoning benchmarks show that V2T consistently outperforms the teacher and existing baselines, improving average accuracy by 14.3% on a held-out set and 2.7% on the broader visual evaluation suite. Moreover, lightweight SFT and substantially reduced RL make V2T up to 42x faster to train than state-of-the-art baselines.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.34408v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.34408v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.34363v1" target="_blank" rel="noopener">SyncRA: Learning Temporal Correspondence in Omni-Modal Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-28</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UW-Madison</span><span class="school">Arizona State</span>
+          <span class="arxiv-id">arXiv:2609.34363v1</span>
+        </div>
+        <p class="authors">Zelong Xu, Yan Li, Wenhe Hu, Xiyang Hu</p>
+        <p class="abstract">Recent omni-modal models demonstrate strong perception of audio and visual inputs, yet often struggle to connect what they hear with what they see at the same moment. This weakness in temporal correspondence can cause models to associate spoken cues with the wrong visual scenes, producing plausible answers grounded in incorrect audio-visual pairings. We diagnose this problem through controlled temporal swaps, revealing that model answers do not reliably follow changes in these pairings. To address it, we propose Synchrony-Guided Representation Alignment (SyncRA), a lightweight method for strengthening temporal correspondence between audio and vision. Specifically, SyncRA contrasts intermediate audio-visual representations within each video, aligning matching moments while separating mismatched ones to capture local temporal correspondence within a shared global context. The objective derives supervision directly from existing input timing, requiring no additional annotations and leaving inference unchanged. We evaluate SyncRA across four open omni-modal models spanning different sizes and architectures on five public video benchmarks. SyncRA consistently outperforms answer-only fine-tuning across all model-benchmark combinations, while substantially improving the ability to track changing audio-visual pairings in controlled evaluations. These results demonstrate that lightweight, targeted supervision can effectively strengthen temporal correspondence and translate into broad improvements in audio-visual question answering.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.34363v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.34363v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.34330v1" target="_blank" rel="noopener">MiCo: Mutual Information Coverage Optimization through Semantic Erasure Modeling for Efficient MLLM Inference</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-28</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">NYU</span>
+          <span class="arxiv-id">arXiv:2609.34330v1</span>
+        </div>
+        <p class="authors">Tinghao Wang, Yichen Guo, Qizhe Zhang, Yuan Zhang, Weimin Ouyang, Rui Huang, Jiajun Cao, Sixiang Chen et al.</p>
+        <p class="abstract">Multimodal large language models (MLLMs) have demonstrated impressive performance in multimodal understanding, but processing large numbers of visual tokens results in high computational costs. While many methods have been proposed to reduce the number of visual tokens, most of them rely on heuristics and are prone to discarding substantial visual information during pruning, leading to degradation in model performance. In this work, by using a semantic erasure model, we derive a general mutual information coverage objective from task log-loss and propose MiCo, a training-free two-stage pruning method. MiCo first uses visual signals to select a representative candidate pool before visual tokens enter the language model, then performs task-aware subset selection within it. At each stage, suitable observable proxies instantiate the derived objective as a monotone submodular coverage function, which MiCo greedily optimizes under the token budget. MiCo is evaluated on diverse MLLMs ranging from 7B to 13B parameters across a broad range of image and video benchmarks spanning general visual reasoning, fine-grained OCR and grounding, hallucination detection, and long-video understanding. MiCo consistently achieves the best performance across nearly all evaluated models under all pruning ratios. On LLaVA-NEXT-13B, MiCo uses only 5.6% visual tokens, retains 97.5% of baseline performance, and achieves a 3.8-fold inference speedup. Our experiments demonstrate the effectiveness of MiCo and our mutual information coverage objective for visual token pruning.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.34330v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.34330v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.34196v1" target="_blank" rel="noopener">ConvCue: Complementary Visual Inductive Biases for Vision-Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-28</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Chicago</span>
+          <span class="arxiv-id">arXiv:2609.34196v1</span>
+        </div>
+        <p class="authors">Zixuan Lan, Shichu Sun</p>
+        <p class="abstract">Modern vision-language models (VLMs) achieve strong performance across a broad range of multimodal tasks, yet still struggle with visual questions that require fine-grained discrimination and spatial understanding. These limitations motivate investigating whether supplementary visual representations can improve existing VLMs without replacing their native visual encoders. Pretrained convolutional networks offer a candidate feature source, motivated by their local connectivity and spatial weight sharing. We introduce CONVCUE, which augments the native visual representations of a pretrained VLM with final-stage features from a parallel, frozen pretrained CNN. A learnable adapter maps convolutional features to the native visual feature dimension, while gated cross-attention allows the original visual tokens to retrieve information from the CNN features. The enhanced tokens are passed through the original visual-to-language projector, and the model is adapted through a two-stage training procedure. We evaluate CONVCUE on Qwen3-VL-2B, Qwen3-VL-4B, and LLaVA-OneVision-7B across 13 multimodal benchmarks covering visual question answering, document and chart understanding, and multimodal reasoning. CONVCUE improves average benchmark performance over both the original models and matched two-stage fine-tuning controls on all three backbones. On Qwen3-VL-4B, it improves over the original model on all 13 benchmarks and raises the average score from 75.00 to 78.82 relative to the matched fine-tuning control. These results show that pretrained convolutional representations, when integrated through learned adaptation and fusion, can improve the visual understanding of existing VLMs without replacing their original visual encoders.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.34196v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.34196v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.34148v1" target="_blank" rel="noopener">Geometric Encoding for Spatial Reasoning in Vision-Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-28</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">NYU</span>
+          <span class="arxiv-id">arXiv:2609.34148v1</span>
+        </div>
+        <p class="authors">Antonio Jun, Haoshui Yu, Zhengyi Lu, Huirong Fu, Yao Qiang</p>
+        <p class="abstract">Vision-Language Models (VLMs) are far more reliable at recognizing what appears in a video than at reasoning about its spatial and temporal properties, such as metric distances, object dimensions, and consistent object identities across frames. We present Geometric Code, a perception-to-geometry pipeline that computes explicit spatial structure from video and supplies it to VLMs as context to augment reasoning. A perception layer segments and classifies objects and recovers depth, camera pose, and intrinsics from monocular RGB video. A deterministic geometric engine then back-projects, merges, and cleans these outputs into a spatial code, including per-object positions, dimensions, counts, inter-object distances, appearance order, and room geometry. The code is serialized into VLMs&#x27; prompts, either alongside the video or replacing it entirely. Specifically, there is no component trained or fine-tuned in our approach. On VSI-Bench, augmenting 2B and 4B open models with the spatial code improves average accuracy by +4.1 points over the frames-only baseline, with the largest gains on numeric estimation tasks such as absolute distance (+24.1 points). The results suggest that explicitly computed geometry, delivered through the language channel, recovers spatial competence that small VLMs cannot extract from pixels alone.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.34148v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.34148v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.34139v1" target="_blank" rel="noopener">Same Tasks, Different Apps: Why Mobile GUI Agents Fail to Generalize?</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-28</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">Carnegie Mellon</span>
+          <span class="arxiv-id">arXiv:2609.34139v1</span>
+        </div>
+        <p class="authors">Tien Tran, Namho Koh, Daiki E. Matsunaga, Ayush Jain, Kee Eung Kim</p>
+        <p class="abstract">Mobile GUI agents deployed in real settings must work across different applications that support the same functionality. Most existing benchmarks test each task in only one app, so a high score can mean the agent understands the task, or only that it knows that particular app. We introduce AnyAppBench, a category-controlled live Android benchmark that evaluates cross-application generalization while keeping the user goal fixed. It spans 10 functional categories, 100 task templates, and 520 task--application pairs over 52 applications. Agents run from raw instructions and with app-independent sub-goals, and a VLM judge labels every failed run under a fixed failure taxonomy whose reliability is measured by human annotation. We find that, across 13 agents, success on the original application does not transfer reliably to new applications with the same goal. Furthermore, providing high-level sub-goal decomposition produces only small, category-dependent changes that do not close the gap, and the mix of failure types changes with the target interface. Based on those insights, we believe the AnyAppBench benchmark provides an important stepping stone toward robust real-world deployment of mobile GUI agents. Our code, data and the leaderboard can be found at the project website https://anyappbench.github.io/.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.34139v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.34139v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.34044v1" target="_blank" rel="noopener">SCOPD: Sparse-Context On-Policy Self-Distillation for Efficient Vision-Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-28</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Stanford</span>
+          <span class="arxiv-id">arXiv:2609.34044v1</span>
+        </div>
+        <p class="authors">Ahmadreza Jeddi, Enming Zhang, Jasper Gerigk, Hakki Karaimer, Mozhgan Nasr Azadani, Jiayun Luo, Minh Ngoc Le, Gholamali Aminian et al.</p>
+        <p class="abstract">Reasoning vision-language models (VLMs) process images and videos as long sequences of visual tokens, making inference expensive. Training-free token pruning reduces this cost, but aggressive compression can sharply degrade performance, often attributed to irreversible loss of task-relevant visual information. We show that this explanation is incomplete. In a fixed-context Pass@K analysis, repeated sampling from the same pruned visual representation recovers many examples missed by greedy decoding, indicating that useful visual evidence can remain accessible but be used unreliably. We call this the representation-utilization gap. Motivated by this observation, we introduce SCOPD, a sparse-context on-policy self-distillation framework in which a student generates reasoning trajectories from pruned visual tokens while a privileged full-context teacher supervises the same on-policy prefixes. SCOPD requires no ground-truth responses, architectural changes, or additional inference-time computation. We further introduce SCOPD+, which uses a small visual-budget intervention to identify visually sensitive response positions and selectively distill them. At 10% visual-token retention, the Vanilla model retains 86.37% of its unpruned performance across 13 benchmarks. SCOPD raises this to 90.49%, while SCOPD+ further improves it to 92.43%. Across token budgets, benchmarks, and pruning operators, our results show that efficient reasoning depends not only on which visual information survives pruning, but also on how reliably the model learns to use it.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.34044v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.34044v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.33431v1" target="_blank" rel="noopener">MoGround: Measuring and Mitigating Modality Distraction in Vision-Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-27</span>
+          <span class="cat">cs.LG</span>
+          <span class="school">Harvard</span><span class="school">UC San Diego</span>
+          <span class="arxiv-id">arXiv:2609.33431v1</span>
+        </div>
+        <p class="authors">Luca Zhou, Bo Zhao, Rose Yu, Emanuele Rodolà, Roberto Dessì</p>
+        <p class="abstract">We release MoGround, a vision-language dataset spanning four visual domains in which the answer to every question is guaranteed to be available from exactly one modality. This guarantee enables us to measure modality distraction, the failure in which a model answers a question correctly from one modality alone and then flips to a wrong answer once irrelevant content from the other modality is added. Existing probes rarely establish single-modality answerability this way, making it hard to isolate distraction in the first place. Across seven open-source VLMs, we find that modality distraction is not universal but model-dependent. The weaker-grounded modality is the more distracted one (r = +0.86), and distraction scales inversely with grounding strength (r = -0.90). The single-modality guarantee also enables a mitigation method that needs to distinguish between relevant and irrelevant context. Trained on one split of MoGround alone, a weight-space robustness vector reduces distraction on all seven models by 9% to 51%, at a cost of only 0.1 average points of accuracy on standard multimodal tasks.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.33431v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.33431v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.33158v1" target="_blank" rel="noopener">FOCUS: Benchmarking Retinal Model Generalization from Foundation Vision Encoders to Multimodal LLMs</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-27</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Michigan</span>
+          <span class="arxiv-id">arXiv:2609.33158v1</span>
+        </div>
+        <p class="authors">David Restrepo, Chenwei Wu, Luis Filipe Nakayama, Miguel L. Martins, Stergios Christodoulidis, Maria Vakalopoulou, Enzo Ferrante</p>
+        <p class="abstract">Progress in AI-based retinal image analysis has advanced with foundation models, yet evaluating their reliability remains challenging. Performance reported on a single dataset does not capture how models behave under dataset shift, across clinical definitions, or for different patient subgroups. This limitation is particularly critical in medical imaging analysis, where robustness, calibration, and fairness are essential for safe deployment. We introduce FOCUS (Foundation Ophthalmic Cross-Dataset Understanding under Shift), a cross-dataset benchmark for evaluating retinal fundus models that considers vision-only encoder models (VM), vision-language dual-encoder models (VLM), and multimodal large language models (MLLM). FOCUS harmonizes binary diabetic retinopathy, referable diabetic retinopathy, and glaucomatous optic neuropathy tasks across ten public datasets spanning diverse geographies, acquisition conditions, and label protocols. The benchmark evaluates models through a unified analysis layer that measures ranking performance, calibration, subgroup disparities, and image-quality robustness. We present a large-scale evaluation covering 532 base configurations and 228 MLLM configurations adapted through supervised fine-tuning with low-rank adaptation (LoRA). Results show that no model family consistently dominates across tasks and datasets: general VM encoders achieve the strongest average ranking performance, medical MLLMs are competitive but variable, and dual encoder VLMs benefit substantially from lightweight adaptation. Fine-tuning improves in-domain performance but exhibits heterogeneous transfer to external datasets, particularly in calibration. These findings demonstrate that retinal model evaluation is inherently multidimensional. FOCUS provides a practical framework and public benchmark to assess generalization, reliability, and robustness beyond single-dataset leaderboards</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.33158v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.33158v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.32876v1" target="_blank" rel="noopener">Multimodal LLMs Outperform Pathology Foundation Models in Cross-Domain Histological Similarity</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-26</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UNC Chapel Hill</span>
+          <span class="arxiv-id">arXiv:2609.32876v1</span>
+        </div>
+        <p class="authors">Yishu Zhang, Yun Li, Daiwei Zhang</p>
+        <p class="abstract">State-of-the-art pathology foundation models, trained on millions of histology tiles, can fail to preserve tissue similarity when comparisons cross slide or institution boundaries. We show that general-purpose multimodal LLMs, without being trained as pathology foundation models, consistently outperform these specialized models in cross-domain histological similarity judgments. Using a relative similarity framework that we release as the MOSAIC (Model Similarity Assessment across Institutions and Cohorts) benchmark, we evaluate 17 models across 6 datasets and find that pathology encoders often rank same-institution, different-disease tiles as more similar than same-disease, different-institution tiles, a clinically dangerous failure mode invisible to standard within-domain evaluations. LLMs appear less susceptible to this failure, likely because they perform semantic visual comparison of morphology and tissue architecture rather than relying on shortcut features tied to acquisition context. Scaling training data does not resolve the problem for pathology encoders, implicating the learning objective rather than data coverage. Our results expose a fundamental robustness gap in current pathology foundation models and establish multimodal LLMs as a viable alternative for cross-institutional retrieval, dataset harmonization, and multi-site quality control. Code and data will be released upon acceptance.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.32876v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.32876v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.32808v1" target="_blank" rel="noopener">Mind the Spike: Mechanisms and Brittleness of Visual Massive Activations in Large Vision-Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-26</span>
+          <span class="cat">cs.LG</span>
+          <span class="school">Stanford</span>
+          <span class="arxiv-id">arXiv:2609.32808v1</span>
+        </div>
+        <p class="authors">Jonas Ngnawé, Yann Pequignot, Sabyasachi Sahoo, Christian Gagné, Frédéric Precioso, Sanmi Koyejo</p>
+        <p class="abstract">Large vision-language models (LVLMs) inherit massive activations from their text-only bases: spikes where a few fixed hidden channels receive values thousands of times above the typical magnitude. The text spike systematically appears in early layers at a fixed initial position, independently of input content. Visual spikes vary across images, but whether their formation follows a consistent pattern across LVLMs and how they respond to image perturbations remain open questions. We find that some LVLMs do not form visual spikes, while others spike at different rates, typically in deeper layers. We identify the trigger direction from model weights and an interpretable location rule: before the language model decoder runs, eventual spike tokens are largely restricted to those sharing least with the rest of the image. Crucially, visual spikes are strikingly brittle. Common corruptions frequently create and relocate spikes, and less often remove them, raising overall incidence. Our trigger-guided spike attack deliberately creates or removes spikes under a small $\ell_\infty$ budget, with 1/255 enough in nine of the ten models that spike. Finally, our preventive intervention removes only the trigger component before spikes erupt, eliminating or substantially reducing spikes on clean and perturbed images while leaving the other image tokens nearly unchanged. Our study spans 25 adapter-based LVLMs built on 18 released text-only bases from 10 families, ranging from 2B to 72B parameters.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.32808v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.32808v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.32203v1" target="_blank" rel="noopener">Kernel-Based Steering of CLIP with Vision-Language Model Preferences</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-26</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UCLA</span><span class="school">UC Santa Barbara</span>
+          <span class="arxiv-id">arXiv:2609.32203v1</span>
+        </div>
+        <p class="authors">Sajjad Ghiasvand, Haniyeh Ehsani Oskouie, Sina Mansouri, Mahnoosh Alizadeh, Farzan Farnia, Ramtin Pedarsani</p>
+        <p class="abstract">Large vision-language models (VLMs) can judge visual similarity, but their judgments are not directly available as compact image embeddings for efficient comparison. We study how to transfer these preferences into CLIP while retaining its image--text capabilities. We introduce ASK, a kernel-based steering method that learns from elicited pairwise judgments without accessing teacher embeddings or collecting new human similarity annotations. ASK constructs positive semidefinite target kernels within small image groups and combines visual kernel matching with an image--text distributional anchor. Low-rank adapters jointly update the visual and text encoders while regularizing predictions toward frozen CLIP. After adaptation, retrieval uses CLIP image embeddings and cosine similarity, with no VLM calls. Experiments across five image domains, four CLIP backbones, and six judges evaluate teacher agreement, retrieval, and recognition retention. For ViT-B/16, mean retrieval mAP on classes excluded from adaptation increases from 53.8 to 75.0, compared with 71.7 for DINOv2 targets with KL anchoring. Mean zero-shot accuracy with jointly adapted encoders increases from 61.8\% to 62.4\%, averaged over 12 benchmarks and the five adaptation domains. Prompting provides an additional capability: selecting which visual distinctions the student learns. Human-annotated evaluations across four datasets support this criterion-specific control.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.32203v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.32203v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.32185v1" target="_blank" rel="noopener">Contamination, Prior, or Evidence? Decomposing and Training Evidence Use in Whole-Slide Vision-Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-26</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Virginia</span>
+          <span class="arxiv-id">arXiv:2609.32185v1</span>
+        </div>
+        <p class="authors">Wenhao Zhang, Zhongliang Zhou, Shiyuan Zhang, Yiqing Yang, Pinqiao Wang, Lehan Yang, Hanyin Wang, John Kang et al.</p>
+        <p class="abstract">Pathology vision-language models (VLMs) are conventionally evaluated by accuracy, but accuracy alone does not measure evidence use: it may conflate dataset contamination, prior knowledge, and image evidence. In a motivating study of lymph-node metastasis prediction, we found that most public pathology VLMs showed minimal differences when changing from feeding the models with whole-slide images, an annotated lesion, or no image at all. To better understand the specific features leveraged by these models, this paper presents two contributions aimed at disentangling these factors. First, we present CleanSlide, a TCGA-based VQA benchmark designed to eliminate image- and question-side contamination. It contains 149K audited multiple-choice questions over 9,985 slides, with patient- and tissue-source-disjoint splits. Every question is audited for option shortcuts, stem leakage, cross-split duplication, and blind solvability. Second, we propose Pair-DPO, a preference loss over counterfactual slide pairs from the same question and source. By controlling for shared confounding factors, Pair-DPO cancels out the question-attributable signal and leaves image evidence as the source of preference. Specifically, each pair consists of two real slides with opposite, verified findings, introducing neither editing artifacts nor unverified labels for diffuse or graded features such as invasion, necrosis, and tumor grade. Experiments show that our method gains 15.29% from image evidence on the CleanSlide, compared with 2.81% for the best published model. On the external CPTAC and BCNB cohorts, our method achieves accuracies of 57.6% and 59.0%, outperforming all other evaluated models by 9.7% and 3.4%, respectively. We will release the benchmark and code.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.32185v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.32185v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.32182v1" target="_blank" rel="noopener">KeyRec: Bounded Visual Memory for Streaming and Long-Video Understanding</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-26</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Virginia</span>
+          <span class="arxiv-id">arXiv:2609.32182v1</span>
+        </div>
+        <p class="authors">Zihan Chen, Xuejian Rong, Xiaojuan Wang, Boqing Gong, Adi Zicher, Yael Pritch, Nikhil Karnad</p>
+        <p class="abstract">Vision-language models are increasingly used to understand long videos and continuous streams. However, dense visual tokens accumulate with video duration, making long-context inference prohibitively expensive. Existing training-free visual-token selection methods reduce this cost by retaining informative tokens, but may lose coherent event evidence and fail to distinguish detailed recent observations from long-range history. We propose \textbf{KeyRec}, a training-free framework for constructing bounded visual memory. During query-agnostic writing, KeyRec preserves fine-grained recent observations in a visual cache and organizes historical evidence into a structured event bank. Candidate events are proposed according to their novelty relative to previously stored events and maintained through an online add--merge--evict update. When a question arrives, a text-only router adaptively allocates a fixed readout budget between recent and event memory, without reprocessing historical frames. KeyRec operates on model-facing visual embeddings and supports both modular encoder--projector VLMs and the encoder- and projector-free NEO-ov architecture. Across four streaming and long-video benchmarks and three VLM backbones, KeyRec achieves the best compressed performance in 13 of 15 settings using only 10\% of the dense decoder-facing visual-token budget. It outperforms the strongest compressed baseline by 2.21--18.37 points on real-time questions, achieves the best compressed result in five of six long-video settings, and performs best in every NEO-ov 2B setting.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.32182v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.32182v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.31970v1" target="_blank" rel="noopener">Double-Edged Sword of Mediated Visibility: How Visual Framing Undermines Congresswomen&#x27;s Perceived Competence</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-25</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Purdue</span><span class="school">Ohio State</span>
+          <span class="arxiv-id">arXiv:2609.31970v1</span>
+        </div>
+        <p class="authors">Bryce J. Dietrich, Hyein Ko, Myriam Shiran</p>
+        <p class="abstract">Women&#x27;s presence in Congress has stalled below 30%. That institutional underrepresentation is mirrored by their limited visibility on televised news, where visual presentation can shape perceived competence and authority. Yet research tells us more about whether congresswomen appear than how they are visually framed. Facial recognition analysis of 695,464 image-text segments from CNN and Fox News (2011-2021) reveals that congresswomen appear disproportionately in split-screen rather than solo shots. Two pre-registered experiments with 6,220 participants show that, in static frames, split-screen framing reduces congresswomen&#x27;s perceived political competence, but not congressmen&#x27;s. In dynamic videos, the competence penalty disappears; instead, outraged language reduces a congresswoman&#x27;s perceived warmth roughly three times as much as a congressman&#x27;s. Suggestive evidence (p = .057) indicates that women viewers report greater external political efficacy after watching a congresswoman appear alone. We conclude that visual framing shapes both congresswomen&#x27;s mediated visibility and their perceived capabilities.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.31970v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.31970v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+    <nav class="day-nav"><a class="prev" href="2026-09-28.html">&larr; 2026-09-28</a></nav>
+  </main>
+  <footer>
+    <p>Generated 2026-09-29 06:41 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
