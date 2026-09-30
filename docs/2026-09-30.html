@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-09-30</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-09-30</h2>
+      <p class="count">8 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.38111v1" target="_blank" rel="noopener">From Routing Signals to Selective Review: Visual regrounding in MoE VLMs</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-29</span>
+          <span class="cat">cs.CL</span>
+          <span class="school">UCLA</span>
+          <span class="arxiv-id">arXiv:2609.38111v1</span>
+        </div>
+        <p class="authors">Hongzhu Guo, Mohsen Fayyaz, Nanyun Peng</p>
+        <p class="abstract">Vision-language models (VLMs) may accept false visual premises, answering questions about a target object&#x27;s color, count, location, or state even when it is absent. We call this reliability-critical behavior a target-absence grounding failure. Existing visual-grounding detectors primarily rely on generated responses, hidden states, or uncertainty measures. We present the first framework to leverage internal routing decisions in Mixture-of-Experts (MoE) VLMs to detect target absence before generation and guide selective correction. We extract target-token routing probabilities from Qwen3-VL-30B-A3B-Instruct and Gemma-4-26B-A4B-it, train a separate L2-regularized linear detector for each model, and use its predictions to selectively invoke a target-aware review prompt. Using routing alone, the Qwen and Gemma detectors achieve ROC-AUCs of 0.9988 and 0.9956 on GQA-Inpaint and retain 0.8095 and 0.7781 on the external OBER dataset, respectively. The resulting routing-gated policy improves end-to-end accuracy on GQA-Inpaint and OBER by +22.25% and +12.17% for Qwen, and by +13.42% and +1.39% for Gemma, without modifying model weights. Further analysis shows that the signal is localized to the target-object token, emerges in early MoE layers, and is distributed across partially substitutable experts. Although cross-dataset threshold shifts require recalibration, false-positive review causes limited harm overall, suggesting that intervention risk can be controlled through joint selection of the detector threshold and review prompt. Overall, we show that routing probabilities alone preserve actionable information about visual perception, allowing computation already produced by an MoE VLM to support low-cost detection and selective visual regrounding.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.38111v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.38111v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.38098v1" target="_blank" rel="noopener">NeuronEye: Query-Guided Visual Concept Activation for Vision-Language Reasoning</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-29</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">NYU</span>
+          <span class="arxiv-id">arXiv:2609.38098v1</span>
+        </div>
+        <p class="authors">Ruiyu Yan, Bowen Chen, Shaowen Wan, Lin Zhao</p>
+        <p class="abstract">Current vision-language models (VLMs) encode visual information in dense hidden states where object identity, spatial layout, and local attributes are implicitly entangled rather than explicitly disentangled, limiting their ability to isolate and modulate the specific visual evidence required by a given language query. Inspired by sparse population coding and top-down modulation in biological vision, we introduce NeuronEye, a plug-in framework that constructs a sparse, concept-level neuron vocabulary from intermediate VLM representations and selectively activates query-relevant visual concepts during inference. NeuronEye decomposes vision-token states into an overcomplete sparse basis organized by concept-level clusters, uses the language query to activate relevant clusters and localize the patches where selected concepts are expressed, and injects the focused evidence back into vision tokens. A complementary suppression mechanism attenuates dominant perceptual directions to preserve weaker but relevant cues. All operations run in a single forward pass over a frozen VLM backbone. On Qwen2.5-VL-7B, NeuronEye raises CV-Bench overall accuracy by +3.1 with gains of +9.5 on Distance, and improves BLINK Multi-view by +8.3, with similar trends on LLaVA-1.6-7B. These results suggest that sparse neuron vocabularies can serve not only as post-hoc interpretability tools but also as active interfaces for concept-level visual reasoning.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.38098v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.38098v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.37918v1" target="_blank" rel="noopener">SYNCR: Diagnosing and Learning Cross-Video Reasoning from Simulation</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-29</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">NYU</span>
+          <span class="arxiv-id">arXiv:2609.37918v1</span>
+        </div>
+        <p class="authors">Sara Ghazanfari, Siddharth Garg, Prashanth Krishnamurthy, Farshad Khorrami</p>
+        <p class="abstract">Reasoning across videos requires aligning events, matching identities, comparing motion, and integrating partial observations. Evaluating these capabilities and testing how to improve them requires both reliable labels and targeted supervision. We introduce SYNCR, a simulator-grounded framework that connects these two needs through shared task generators. Built on Habitat, Kubric, and CLEVRER, SYNCR derives answers from environment state and provides 4,000 evaluation questions and 15,960 training questions over disjoint videos, spanning eight cross-video reasoning tasks. Visual ablations and human evaluation assess dependence on the supplied evidence and answer recoverability. Evaluation of 22 multimodal large language models reveals persistent difficulties in physical comparison and scene integration that increasing model size does not consistently resolve. Supervised fine-tuning raises Qwen3-VL-8B&#x27;s average SYNCR accuracy from 32.6% to 61.6%, with gains extending to task configurations and video sources absent from training for those tasks. Transfer to real footage is most consistent for temporal ordering: accuracy improves by 9.0-20.5 percentage points on constructed Assembly101 and Panoptic ordering sets across three checkpoints spanning two model families and two model sizes, with additional gains on existing temporal reasoning benchmarks. These results establish SYNCR as a controlled setting for diagnosing cross-video reasoning failures, testing their learnability, and identifying where synthetic supervision transfers.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.37918v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.37918v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.37096v1" target="_blank" rel="noopener">Why MLLMs Struggle to Count: Overcoming Individuation and Aggregation Bottlenecks with ConvStack</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-29</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Washington</span><span class="school">Rutgers</span>
+          <span class="arxiv-id">arXiv:2609.37096v1</span>
+        </div>
+        <p class="authors">Liwei Che, Yihao Quan, Sen Fang, Hongyi Wang, Ranjay Krishna, Ruixiang Tang, Vladimir Pavlovic</p>
+        <p class="abstract">Multimodal Large Language Models (MLLMs) consistently struggle with fine-grained visual counting, yet the underlying causes remain poorly understood. In this work, we present a mechanistic analysis of this failure mode, identifying two critical bottlenecks inherent to the global attention pipeline of MLLMs. First, we reveal an individuation bottleneck stemming from image patchification: because Vision Transformers process patches independently, they struggle to group fragmented geometric features across boundaries into distinct object representations. Second, we identify a collapse in the subsequent counting aggregation process, where representation separation rapidly diminishes as numerosity increases due to attention compression. Identifying and formalizing these twin bottlenecks constitutes our first major contribution. To overcome them, we propose ConvStack, a lightweight architecture that operates directly in the visual token space to explicitly aggregate and inject local spatial structures via zero-initialized residual connections. By explicitly addressing the individuation bottleneck, ConvStack provides unambiguous geometric evidence for downstream aggregation. Remarkably, by fine-tuning exclusively on counting tasks, the model achieves substantial improvements in dense object counting and broader spatial understanding benchmarks, without compromising on general visual capabilities.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.37096v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.37096v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.36492v1" target="_blank" rel="noopener">Benchmarking Vision-Language Models on Synapse Detection and Proofreading in Connectomics</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-29</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Harvard</span>
+          <span class="arxiv-id">arXiv:2609.36492v1</span>
+        </div>
+        <p class="authors">Yicong Li, Junjie Wang, Leander Lauenburg, Ella Hugie, Alexandra Irger, Wanhua Li, Donglai Wei, Hanspeter Pfister</p>
+        <p class="abstract">We benchmarked vision-language models (VLMs) on the decisions annotators take when inspecting electron microscopy images in connectomics: synapse detection (presence and polarity) and proofreading (split errors and merge errors). For synapse detection, we evaluated 19 open and 2 closed models across various architectures and sizes under zero-shot, four-shot in-context learning and LoRA settings, against specialist models, on datasets constructed by us using public resources. For proofreading, we evaluated 3 open and 2 closed models on the ConnectomeBench2 dataset, with cross-species transfer from fly and mouse to human and zebrafish. Most models were at chance zero-shot; a few examples helped mainly the closed and largest open ones. LoRA on a few thousand labels brought open models level with specialist models. When evaluated on unseen species, the best adapted VLMs outperformed specialist models trained on the same data in identifying merge errors. The project will be publicly available upon acceptance.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.36492v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.36492v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.36224v1" target="_blank" rel="noopener">Mutually Adversarial Self-Training with Evolving Data for Unified Multimodal Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-28</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Georgia Tech</span>
+          <span class="arxiv-id">arXiv:2609.36224v1</span>
+        </div>
+        <p class="authors">Wentao Zhou, Weijie Gan, Jiayun Wang</p>
+        <p class="abstract">Unified multimodal models (UMMs) combine image generation and visual understanding in a shared backbone. Since generation and understanding are inverse tasks, recent studies self-train UMMs by letting the two branches cooperatively supervise each other. We introduce MATE (Mutually Adversarial self-Training with Evolving data), a reinforcement-learning-based post-training framework in which the two branches instead challenge each other, and the challenges evolve as the model trains. MATE lets generation and understanding take turns to be challenger and solver. Given an image, the understanding branch proposes several candidate descriptions that the generation branch must turn back into similar images, and vice versa. The candidates are screened for consistency with the image or prompt they were proposed from, and the solver is trained on the candidate it handles worst. The adversary thus comes from the model&#x27;s own outputs, and no separate adversary is trained. Moreover, the candidates that defeat one branch become the sources of the next challenges to the other in the next epoch, which keeps the challenges evolving with the model and turns the training into self-play in data space. On Janus-Pro-1B, MATE improves GenEval by 2.4 points, DPG-Bench by 1.7 points, and the average over nine understanding benchmarks by 0.7 points, while strengthening consistency across repeated image-text cycles.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.36224v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.36224v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.36219v1" target="_blank" rel="noopener">LeRF: Learning Reference Coordinate Frames for Perspective Taking Reasoning</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-28</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UIUC</span>
+          <span class="arxiv-id">arXiv:2609.36219v1</span>
+        </div>
+        <p class="authors">Bang Xiao, Wenqi Jia, Ozgur Kara, Tiancheng Shen, Yibo Yang, Bolin Lai, Junho Kim, James Matthew Rehg</p>
+        <p class="abstract">Perspective taking is a fundamental component of spatial intelligence, requiring models interpret spatial relations from a specified viewpoint, such as that of another entity or an imagined observer. Despite the increasing spatial reasoning capabilities of Vision-Language Models (VLMs), they still struggle with perspective taking, often defaulting to the camera viewpoint when a query requires reasoning from a different perspective. We introduce Learning Reference Coordinate Frames for Perspective Taking (LeRF), a framework that trains VLMs to construct and use explicit reference frames for viewpoint-dependent reasoning. Given an image and a query, LeRF decides whether a coordinate frame is necessary. If so, it grounds the reference entity and predicts the frame&#x27;s origin and entity-centered reference frame. A lightweight renderer overlays the frame onto the image, enabling subsequent reasoning over these visual cues without external perception models or explicit 3D reconstruction. To learn this process, we first perform supervised fine-tuning to teach selective tool invocation and reference coordinate frame prediction, followed by reinforcement learning on spatial VQA pairs to improve frame-guided reasoning. Across diverse perspective-taking benchmarks, LeRF consistently improves over its backbone and achieves strong performance against existing open-source methods. Further evaluations also show improved reference-frame grounding and orientation estimation, supporting the effectiveness of learned reference frames for viewpoint-dependent reasoning.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.36219v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.36219v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.36190v1" target="_blank" rel="noopener">FigAct: Turning Scientific Figures into Active Canvases for Explanation</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-28</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">Brown</span>
+          <span class="arxiv-id">arXiv:2609.36190v1</span>
+        </div>
+        <p class="authors">Shishi Xiao, Zichao Wang, Alexa Siu, David H. Laidlaw, Jennifer Healey</p>
+        <p class="abstract">Scientific figures are designed to communicate information visually, yet MLLMs typically explain them by translating their visual content back into text. This requires readers to manually map the resulting explanations back to the figure. Inspired by how people present visual information, we introduce FigAct, a framework that transforms static scientific figures into question-conditioned visual presentations by acting directly on their existing graphical elements. Like a human presenter, FigAct generates a sequence of short narrations, grounds each narration in the corresponding visual evidence, and applies visual actions to guide the viewer&#x27;s attention. We develop a hierarchical search strategy for efficient element localization, reducing token usage by approximately 40$\times$. We further train FigAct-8B using three task-specific rewards for grounding accuracy, search efficiency, and rendering quality. We further build a human-verified benchmark from figures in real-world scientific papers to evaluate the ability of MLLMs to generate grounded visual explanations. Our results demonstrate the effectiveness of FigAct and show that treating scientific figures as presentation canvases makes explanations clearer and easier to follow.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.36190v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.36190v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+    <nav class="day-nav"><a class="prev" href="2026-09-29.html">&larr; 2026-09-29</a></nav>
+  </main>
+  <footer>
+    <p>Generated 2026-09-30 06:27 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
