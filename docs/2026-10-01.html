@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-10-01</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-10-01</h2>
+      <p class="count">18 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.40361v1" target="_blank" rel="noopener">Ranking-Aware Prompt Optimization for Multimodal Clinical Diagnosis</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-30</span>
+          <span class="cat">cs.LG</span>
+          <span class="school">Georgia Tech</span><span class="school">Harvard</span><span class="school">Brown</span><span class="school">Johns Hopkins</span>
+          <span class="arxiv-id">arXiv:2609.40361v1</span>
+        </div>
+        <p class="authors">Tian Xia, Minghao Liu, Yiqing Liang, Laixi Shi, Jiayun Wang</p>
+        <p class="abstract">Multimodal large language models (MLLMs) are rapidly advancing clinical diagnosis, yet their adaptation pipelines remain anchored to accuracy-based objectives. Clinical data are heavily class-imbalanced: a constant-majority predictor can score above 90% accuracy while being clinically useless. We therefore evaluate and optimize for AUROC, a threshold-free score that ranks positives above negatives and is invariant to class balance. We focus on prompt optimization in MLLMs. Reflective methods such as GEPA use a binary scores matrix with one row per evaluation instance and one column per candidate prompt; cells record per-instance correctness, so the column average is accuracy and drives candidate selection. We introduce pair-level Pareto prompt evolution (Ranking-PE), which replaces each correctness row with a pairwise-ordering row over (positive, negative) instance pairs: the cell is 1 if the candidate scores the positive higher than the paired negative. The column average then equals empirical AUROC (by the Wilcoxon-Mann-Whitney identity). We apply this swap at all three layers the prompt evolution search reads from - the scores matrix that decides Pareto dominance, the per-example feedback to the reflection LM, and final candidate selection - at no extra model calls and with no surrogate loss. Across three diseases on MIMIC, accuracy-based prompt evolution can degrade ranking; Ranking-PE reverses this, beating the accuracy-based recipe by +5.8 AUROC pp on fine-tuned Qwen3-VL-8B and +16.2 pp on MedGemma-4B. Ablations examine each design component and show that a medical-grade visual backbone - via vision-encoder-tuned SFT or medical pretraining - is a prerequisite that prompt search cannot replace - our recipe extends reflective prompt evolution from text-only data to multimodal clinical decision-making.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.40361v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.40361v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.40055v1" target="_blank" rel="noopener">Less Data, Better Timing: Student-Curriculum Coupling for VLM On-Policy Distillation in Temporal Video Grounding</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-30</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Stony Brook</span>
+          <span class="arxiv-id">arXiv:2609.40055v1</span>
+        </div>
+        <p class="authors">Jiacheng Qiu, Yunsoo Kim, Ruichen Xu, Jian Luo, Petar M. Djurić, Sima Mofakham</p>
+        <p class="abstract">On-policy distillation (OPD) provides dense supervision directly on student-generated trajectories, making it an effective post-training strategy for vision-language models in temporal video grounding (TVG). However, existing pipelines typically construct the training curriculum from a fixed teacher and the initial student state, implicitly assuming that selected examples retain positive supervision value throughout optimization. We show that supervision trustworthiness and supervision necessity are distinct yet coupled: the former concerns target credibility, while the latter varies with the student&#x27;s current task competence; together, they shape supervision value. Building on this coupled view, we introduce Student-Curriculum Coupling (SCC), a closed-loop framework in which a compact Anchor-Frontier curriculum defines the candidate supervision space and the evolving student dynamically determines its active subset. Supervision can therefore be activated, suspended, or reactivated as competence changes, concentrating teacher computation and optimization on current task-level deficits. Across three TVG benchmarks, SCC achieves a 5.1% relative improvement in mean recall over Video-OPD on its original curriculum, while using 60.0% fewer training examples and reducing training time by 50.4%. Ablations support the complementary roles of capability-structured curriculum design and student-dependent supervision in achieving these gains. Together, these results establish SCC as a data- and compute-efficient framework for TVG post-training, delivering stronger temporal grounding by aligning trustworthy supervision with the student&#x27;s evolving learning needs.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.40055v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.40055v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.39920v1" target="_blank" rel="noopener">MCD: Causal Distillation of Multimodal In-Context Learning in Large Vision-Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-30</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Brown</span>
+          <span class="arxiv-id">arXiv:2609.39920v1</span>
+        </div>
+        <p class="authors">Yanshu Li, Jiaqian Li, Canran Xiao, Xi Xiao, Tianyang Wang, Yongtai Liu</p>
+        <p class="abstract">Large vision-language models (LVLMs) exhibit strong multimodal in-context learning (ICL) capabilities, yet this ability degrades substantially as model size decreases. Knowledge distillation offers a natural way to bridge this gap, but existing methods primarily align output distributions or hidden representations directly. Such alignment teaches the student what the teacher predicts without revealing which evidence in the complex context causally supports that prediction. Consequently, a student can imitate the teacher&#x27;s answer while continuing to rely on language priors, prompt structure, or other spurious cues. To address this limitation, we introduce Multimodal Causal Distillation (MCD), a distillation framework that transfers how a strong teacher uses multimodal evidence during ICL. MCD uses structure-preserving token interventions to identify and verify causal evidence, then transfers how the teacher responds when that evidence is retained or removed. This design connects distillation to the causal patterns by which the model uses contextual evidence during multimodal ICL. Experiments across three LVLM families and seven benchmarks show that MCD improves student performance by 7.23 points on average and outperforms vanilla distillation by 4.68 points, while further analyses confirm the generalizability of these gains.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.39920v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.39920v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.39903v1" target="_blank" rel="noopener">OSWorld-Science: A Benchmark of Computer Use Agents for Learning and Using Scientific Software</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-30</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">Stanford</span><span class="school">Carnegie Mellon</span><span class="school">UC Berkeley</span><span class="school">UCLA</span><span class="school">Yale</span><span class="school">NYU</span><span class="school">Northwestern</span><span class="school">Boston University</span>
+          <span class="arxiv-id">arXiv:2609.39903v1</span>
+        </div>
+        <p class="authors">Dingyuan Dai, Heli Qi, Lei Liu, Yinxi Li, Baiding Chen, Zijun Dou, Qingcheng Zeng, Qi Kang et al.</p>
+        <p class="abstract">Scientific software presents a demanding test for computer-using agents based on visual language models (VLMs): completing a research workflow requires interpreting specialized interfaces, manipulating scientific objects, and producing verifiable results. We thus introduce OSWorld-Science, a benchmark and evaluation environment that combines scientifically meaningful tasks, artifact-based evaluation, and an efficient agent harness for studying computer use in the scientific domain. The benchmark contains 12 VLMs and 146 high-quality tasks across several scientific domains and software configurations, covering workflows such as molecular drawing and retrosynthesis, pathology image analysis, statistical computing, and physical simulation. Tasks are developed through expert proposals and iterative human--AI co-design, with selection guided by scientific value and difficulty. Task-specific execution-based evaluators inspect application states and generated artifacts, including molecular structures, segmentation masks, plots, and numerical results, and award partial credit for incomplete outcomes. Our special harness integrates model adapters, interaction-loop control, and trajectory logging to support comparisons of models and interaction strategies. Our results show that current state-of-the-art VLMs with a strong harness still face challenges in addressing key questions in the scientific domains. We also analyze the benchmarking results across multi-linguistics, reasoning efforts, context length and other factors and derive several important conclusions and directions to assist future development. Overall, we provide an integrated framework connecting expert-defined scientific goals to verifiable software outcomes, enabling systematic evaluation of both agent capabilities and harness design in scientific workflows.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.39903v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.39903v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.39899v1" target="_blank" rel="noopener">Learning Where to Look: Anatomical Grounding and Guided Attention for Cardiac MRI Vision-Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-30</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Duke</span><span class="school">Rutgers</span>
+          <span class="arxiv-id">arXiv:2609.39899v1</span>
+        </div>
+        <p class="authors">Bangwei Guo, Xiao Chen, Boris Mailhe, Jia Yao, Yiqing Wang, Ankush Mukherjee, Yikang Liu, Zheyuan Zhang et al.</p>
+        <p class="abstract">Cardiac magnetic resonance imaging (CMR) enables assessment of cardiac anatomy, ventricular function, and myocardial tissue characteristics. Clinicians interpret these images by identifying cardiac structures and focusing on the regions relevant to each clinical question, motivating anatomically guided vision-language models (VLMs). Yet CMR-specific supervision for anatomical localisation and clinical question answering remains limited. To address this gap, we investigate fine-grained CMR visual question answering through anatomical grounding and guided attention. We construct 128,915 anatomical-grounding and 42,799 clinical QA pairs across short-axis cine, late gadolinium enhancement, and long-axis cine. These datasets support anatomical recognition, localisation, and clinical assessment without requiring paired reports for individual training images. To help the model learn where to look, we introduce Cardiac Anatomy-Routed Attention (CARA), which selects predicted anatomical priors according to the question and guides decoder attention with learned task-specific strengths. Combining anatomical grounding pretraining with CARA yields our model, CARA-VL. Experiments demonstrate CARA-VL&#x27;s strengths in clinical assessment and regional localisation across CMR imaging settings, with promising generalization to an external clinical cohort. Together, our data and method provide a practical framework for studying and advancing cardiac visual understanding in VLMs. We will release the QA data derived from public datasets upon publication.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.39899v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.39899v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.39625v1" target="_blank" rel="noopener">D-Scope: Decomposing and Steering Diffusion Transformers with Sparse Autoencoders</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-30</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Stanford</span><span class="school">UIUC</span>
+          <span class="arxiv-id">arXiv:2609.39625v1</span>
+        </div>
+        <p class="authors">Xinyue Xu, Jiahao Zhang, Lijie Hu, Peter Hase, Hao Wang</p>
+        <p class="abstract">Sparse autoencoders (SAEs) reveal visual structure in diffusion transformers (DiTs), but interpreting a feature does not establish whether it can be used to control generation. We introduce D-Scope (Diffusion Scope), a framework that connects feature interpretation to generation control through shared visual evidence. D-Scope aggregates SigLIP~2 embeddings of highly activating image patches into visual centroids. Matching target text descriptions against these visual centroids in the shared image-text embedding space then enables retrieval of individual features without per-feature text annotations. The underlying patches provide evidence for inspecting each selection, while spatially masked interventions test the corresponding decoder direction at varying strengths under fixed generation conditions. We characterize 150 SAEs across two model families and five layers, and introduce a benchmark of 100 target concepts with ten contexts each spanning under-specified and explicit-conflict conditions. Our empirical results show that high reconstruction fidelity can coexist with low dictionary utilization and limited visual-evidence coverage. Under per-case best-of-sweep strength selection, contrastive retrieval yields larger mean regional SigLIP~2 gains than direct retrieval across the tested steering configurations, without consistently improving outside-region preservation. D-Scope provides an inspectable framework for evaluating sparse DiT features through their visual evidence and the effects of their decoder directions on generation. The demo is available at https://jiahaozhang-public.github.io/d-scope/.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.39625v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.39625v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.39600v1" target="_blank" rel="noopener">GroundAnything: Reconciling Parallel Decoding with Precise Visual Grounding at Flash Speed</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-30</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UC Berkeley</span><span class="school">Princeton</span>
+          <span class="arxiv-id">arXiv:2609.39600v1</span>
+        </div>
+        <p class="authors">Qize Yu, Lianrui Fan, Bowen Ping, Xini Ding, Zetian Song, Junbo Niu, Kaixuan Wang, Tianxing Chen et al.</p>
+        <p class="abstract">Autoregressive (AR) grounding models serialize spatial predictions, introducing sequential latency and imposing a causal order on output tokens. We view grounding as visual evidence extraction: objects, locations, and spatial relations are jointly constrained by the image and query, yet their dependencies do not imply an intrinsic left-to-right generation order. This distinction makes bidirectional diffusion a natural fit, allowing spatial hypotheses to emerge in parallel and be jointly refined through iterative denoising. We introduce GroundAnything, a 4B-parameter grounding foundation model that reconciles fast parallel decoding with precise localization through blockwise denoising. Training combines grounding pretraining from public datasets and dedicated data engines, direct AR-to-diffusion conversion with joint AR and diffusion objectives, supervised fine-tuning, and GRPO-based reinforcement post-training. Across 30 grounding benchmarks, our autoregressive variant, GroundAnything-VLM, establishes a new overall state of the art among similarly sized models at 72.42%, remaining competitive with GPT-6 Astra (71.35%). With entropy-guided decoding, GroundAnything also surpasses the prior state of the art at this scale, averaging 61.75% versus 53.32% for the fast MTP-based LocateAnything model. We further explore decoding strategies, showing that an optional self-speculative mode achieves a $4.51\times$ speedup over the AR counterpart with a 0.74 percentage-point drop in COCO F1mIoU. Infrastructure experiments show that progressive inference optimizations translate parallel decoding into practical speedups. These support efficient visual grounding in latency-sensitive real-world systems.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.39600v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.39600v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.39588v1" target="_blank" rel="noopener">KilometerVision: A New Frontier for Large-Scale Spatial Intelligence in VLMs</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-30</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Princeton</span>
+          <span class="arxiv-id">arXiv:2609.39588v1</span>
+        </div>
+        <p class="authors">Aravindh Mahendran, Michael King, Matthew Koichi Grimes, Antoine Yang, Tyler Zhu, Joseph Heyward, Tengda Han, Shiry Ginosar et al.</p>
+        <p class="abstract">We push the frontier of large-scale spatial intelligence in Vision-Language Models (VLMs) and introduce the first benchmark that probes geographical layout understanding from real-world videos, spanning up to 1km distances. Inspired by the cognitive science literature, we evaluate models against the hierarchical stages of human spatial awareness: anchoring via landmarks, connecting them through routes, and integrating these into global mental maps. Extensive experiments reveal a fundamental divergence in how current AI models process spatial information. Instead of utilising true path integration or forming geometric survey knowledge, we find that VLMs rely almost entirely on 2D visual recognition and text-matching to bypass complex spatial reasoning. The benchmark is publicly available at https://perception-test-challenge.github.io/kilometervision.html.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.39588v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.39588v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.39518v1" target="_blank" rel="noopener">Referential Uncertainty in Human--AI Collaboration</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-30</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">Harvard</span>
+          <span class="arxiv-id">arXiv:2609.39518v1</span>
+        </div>
+        <p class="authors">Christian Poelitz, Finale Doshi-Velez, Siân Lindley</p>
+        <p class="abstract">Effective human-AI collaboration requires partners to establish references through interaction, which becomes fragile when descriptions are ambiguous, similar referents compete, or partners see different things. We study referential uncertainty - uncertainty over which candidate object a description refers to - in a collaborative puzzle task where a human Helper instructs an AI Worker to place pieces. The Worker must identify and communicate its uncertainty, and the Helper must recognize and act on it. We show that a separately elicited belief distribution over candidate pieces is better calibrated (ECE 0.15) and better discriminates correct from incorrect placements (AUROC 0.65) than raw action-token probabilities, which are severely overconfident (0.97 mean confidence, ECE 0.44). Across three frontier vision-language models (GPT-4.1, GPT-5, GPT-5.5), this elicited uncertainty rises predictably with instruction vagueness, but not with competing referents in context, even when those increase errors. The models seldom externalize it, asking for clarification on only 3.5-16.7% of turns. In a controlled human study (N=210), participants given only the Worker&#x27;s default message accept 78% of wrong placements and cannot tell right from wrong (AUC 0.50). Precise descriptions and, especially, well-targeted hedges cut wrong-move acceptance to 36% while largely preserving correct-move acceptance, compensating for missing shared awareness such as not seeing the Worker&#x27;s action. But this benefit depends on targeting: a deployable hedge derived from the model&#x27;s own belief entropy inherits that signal&#x27;s weakness and can do more harm than good. Externalized uncertainty helps a human partner only when it is accurately targeted.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.39518v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.39518v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.39142v1" target="_blank" rel="noopener">When Can Text Replace Vision? Structural Bottlenecks in Diagram Reasoning</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-30</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Virginia Tech</span>
+          <span class="arxiv-id">arXiv:2609.39142v1</span>
+        </div>
+        <p class="authors">Yunbei Zhang, Janet Wang, Jihun Hamm, Chandan K Reddy</p>
+        <p class="abstract">Can structured text replace vision for diagram reasoning? A wrong answer after textualization can arise because the representation omits information the question needs, or because the solver fails to use information that is present. We introduce a diagnostic protocol to distinguish these explanations. Using the same solver model and generation settings, we compare three input conditions: the original image, question-blind structure extracted by a vision-language model, or gold structure derived from the diagram source. Validity-triggered recovery tests truncation and schema failure, question-relevant fidelity measures preservation of answer-critical structure, and matched edge interventions test the effect of error location. On a reserved holdout of 240 public FlowGen diagrams, evaluated under a frozen protocol, gold structure reaches 87% accuracy while direct vision and learned text both remain below 30%. The aggregate comparison includes source-derived relation labels that may not be printed in the image and uses different learned and gold graph encodings, so it does not isolate extraction error alone. Retrying only invalid extractions makes nearly every public representation schema-valid yet leaves accuracy essentially unchanged. The public learned-text deficit relative to gold more than doubles with structural difficulty. Question-relevant topology predicts correctness better than whole-graph topology. In an exposed intervention study, a single answer-relevant edge edit reduces the primary solver&#x27;s original-answer accuracy to near zero, while matched irrelevant edits largely preserve it. Supplied structure requires fewer solving tokens than vision, but learned acquisition removes this advantage at single use. These comparisons motivate evaluating acquired text by the answer-relevant evidence it preserves and by the solver&#x27;s ability to use that representation.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.39142v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.39142v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.38924v1" target="_blank" rel="noopener">From Image Interpretation to Clinical Reasoning: Upstream Physician-Context-Aware Multimodal Learning with Causal Reinforcement Learning</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-30</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Arizona State</span>
+          <span class="arxiv-id">arXiv:2609.38924v1</span>
+        </div>
+        <p class="authors">Jialu Pi, Yanan Ma, Weijie Chen, Owen Crystal, Shubham Trivedi, Stephen Xie, Anna Silverman, Matthew Stib et al.</p>
+        <p class="abstract">Major adverse cardiovascular events (MACE) remain the leading cause of mortality worldwide. Opportunistic screening using routinely acquired clinical data offers a scalable approach for identifying high-risk individuals before acute events occur. Although chest X-rays (CXRs) capture latent cardiovascular biomarkers and clinical histories provide complementary patient context, existing medical vision-language models are primarily optimized for radiology interpretation rather than prognostic reasoning. We propose a causal reinforcement learning framework for multimodal clinical reasoning that integrates CXRs and physician-authored clinical histories for opportunistic MACE prediction. The framework introduces (1) a role-decoupled dual-LLM architecture that separates reasoning from risk prediction, (2) a dual-action causal reinforcement learning policy for evidence selection and reasoning optimization, and (3) causal token pruning to learn compact multimodal representations. Evaluated on an internal cohort, an emergency department cohort, and the external MIMIC dataset, the proposed framework consistently outperformed unimodal baselines and state-of-the-art medical vision-language models, achieving AUROCs of 0.720, 0.760, and 0.845, respectively. It also substantially improved reasoning quality, achieving higher GREEN scores and higher expert preference while maintaining robust predictive performance across diverse patient populations.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.38924v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.38924v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.38851v1" target="_blank" rel="noopener">Where MLLMs Fail and Why: Causal Task Decomposition for Capability Failure Diagnosis</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-30</span>
+          <span class="cat">cs.CL</span>
+          <span class="school">Stanford</span>
+          <span class="arxiv-id">arXiv:2609.38851v1</span>
+        </div>
+        <p class="authors">Xia Hu, Brian Potetz, Chun-Ta Lu, Huanfen Yao, Leonidas Guibas, Zhicheng Wang, Howard Zhou, Pengfei Xing et al.</p>
+        <p class="abstract">End-to-end accuracy on compositional tasks records how often MLLMs fail, but cannot distinguish whether a failure reflects an intrinsic deficit in the targeted capability or a cascading error from an upstream prerequisite. We propose a causal decomposition framework that isolates these two failure modes through controlled interventions on the prerequisite dependencies of each task. Our capability metrics (NC, IC, RC) score each task under unassisted, correct, or incorrect prerequisites to diagnose where failures arise; contribution metrics (N-Score, S-Score), adapted from probabilities of causation, quantify each prerequisite&#x27;s necessity and sufficiency to determine why. We instantiate the framework in CADET, a diagnostic benchmark of 10 composite tasks decomposed into 46 unit tasks with over 33,000 human-annotated questions spanning perception, spatial, temporal, and cognitive categories. Diagnosing frontier MLLMs with our framework uncovers systematic patterns that end-to-end accuracy obscures. Capability-wise, supplying correct prerequisites eliminates 54\% of errors on cognitive tasks, lifting them from weakest to above spatial and temporal. Prerequisite-wise, causal contributions are concentrated in a few critical prerequisites, and supplying the single most important one alone captures 84\% of the gain from supplying all prerequisites.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.38851v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.38851v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.38755v1" target="_blank" rel="noopener">Agentic Relative Camera Pose Estimation via Learned Ranking and Verification</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-30</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Arizona State</span>
+          <span class="arxiv-id">arXiv:2609.38755v1</span>
+        </div>
+        <p class="authors">Zhining Gu, Shangjie Du, Weimin Qiu, Carl Olsson, Ping Liu, Meng Tang</p>
+        <p class="abstract">A wide range of approaches have been developed for camera pose estimation, including correspondence-based methods, end-to-end pose regression, and recent 3D geometric foundation models. Our key observation is that no single estimator is optimal for diverse challenges, such as wide baselines, lack of texture, appearance changes, and occlusions. Further analysis reveals substantial performance variation across both benchmarks and individual image pairs, with different estimators exhibiting complementary strengths. We introduce PoseAgent, an agentic framework for relative camera pose estimation that dynamically orchestrates pose estimators through learnable ranking and verification. Given an image pair, a profiling agent first extracts appearance, semantic, and geometric features relevant to pose estimation, e.g., scene type. A learned ranking agent then predicts the relative competence of multiple pose estimators given the image-pair profile. The top-ranked estimator is executed, and its predicted pose is assessed by a learned verification agent that estimates the corresponding pose error. When verification fails, PoseAgent adaptively invokes lower-ranked estimators until a candidate is accepted or the execution budget is reached. For pose verification, our verification network predicts pose errors more accurately than prior models. For pose estimation, PoseAgent improves AUC@5 degree up to 4.2% over the strongest standalone estimator on each of ARKitScenes, MegaDepth, ScanNet++, and RealEstate10K. On ARKitScenes, PoseAgent also outperforms VLM-based agents, which include a VLM ranker with the same verifier and fallback policy. These results demonstrate the effectiveness of our learned ranking and verification.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.38755v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.38755v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.38717v1" target="_blank" rel="noopener">Soft Spatial Reasoning</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-30</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Ohio State</span>
+          <span class="arxiv-id">arXiv:2609.38717v1</span>
+        </div>
+        <p class="authors">Rafi Ibn Sultan, Md. Sajid Alam Chowdhury, Saleh Zare Zade, Chengyin Li, Prashant Khanduri, Marco Brocanelli, Dongxiao Zhu</p>
+        <p class="abstract">Large Vision-Language Models (LVLMs) commonly perform spatial reasoning through chain-of-thought (CoT), encoding intermediate reasoning as autoregressive sequences of discrete language tokens. Such hard thinking requires committing to a single token at each step, even when the correct spatial interpretation remains uncertain. This early commitment constitutes premature discretization: an incorrect token selection can propagate errors through subsequent reasoning. We propose Soft Spatial Reasoning, a post-training framework that introduces soft thinking for spatial tasks in LVLMs. At each intermediate reasoning step, the LVLM forms a continuous soft state by mixing token embeddings rather than selecting a single token, allowing multiple candidate continuations to influence the next step. The appropriate degree of softness, however, can vary across reasoning steps: retaining multiple candidates may preserve a useful spatial interpretation, but if those candidates imply conflicting spatial relations, mixing them may interfere with subsequent reasoning. At the core of Soft Spatial Reasoning is AdaptSoft, a controller that uses the current hidden state and predictive uncertainty to adapt the degree of softness at each reasoning step. To train AdaptSoft, we introduce a gradient-alignment learning objective that provides a step-specific learning signal for softness control without intermediate reasoning supervision. Across diverse spatial benchmarks, Soft Spatial Reasoning outperforms hard and fixed-soft CoT baselines using the same backbone, as well as a range of existing LVLMs. The source code is available at https://github.com/rafiibnsultan/Soft_Spatial_Reasoning</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.38717v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.38717v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.38716v1" target="_blank" rel="noopener">SpatialCORE: Confidence-Aware Grounded Spatial Reasoning in Large Vision--Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-30</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Ohio State</span>
+          <span class="arxiv-id">arXiv:2609.38716v1</span>
+        </div>
+        <p class="authors">Rafi Ibn Sultan, Xiangyu Zhou, Md. Sajid Alam Chowdhury, Chengyin Li, Prashant Khanduri, Marco Brocanelli, Dongxiao Zhu</p>
+        <p class="abstract">Large Vision-Language Models (LVLMs) have made remarkable progress across visual perception tasks, yet spatial reasoning remains a persistent weakness, especially for questions that require reasoning over visual space. Recent spatial-reasoning methods incorporate generated grounding, where models predict bounding boxes, masks, or other localization outputs for task-relevant objects as part of their reasoning trace. However, these approaches typically optimize final-answer correctness alone, allowing correct answers to be rewarded even when the model does not reason from confidently localized task-relevant objects. We introduce SpatialCORE (Spatially COnfident REasoning), a post-training framework that turns the model&#x27;s own confidence in generated grounding into a learning signal for spatial reasoning. Its central idea is to reinforce grounding that is both accurate and confident, encouraging the model to reason from confidently localized task-relevant objects. SpatialCORE realizes this through a self-regulating spatial reward that weights each predicted bounding box&#x27;s matching quality by its coordinate-token confidence. An answer gate further ties grounding optimization to final-answer correctness. SpatialCORE achieves state-of-the-art results among open-source and specialized spatial reasoning models across diverse benchmarks, and transfers effectively in zero-shot settings to unseen data distributions. The source code is available at https://github.com/rafiibnsultan/SpatialCORE.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.38716v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.38716v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.38690v1" target="_blank" rel="noopener">GATE-ST: Gene-Aware Text-image Encoder for Spatial Transcriptomics</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-30</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">Stony Brook</span>
+          <span class="arxiv-id">arXiv:2609.38690v1</span>
+        </div>
+        <p class="authors">Lucas Ni, Jian Luo, Wentao Huang, Chao Chen</p>
+        <p class="abstract">Spatial transcriptomics enables spatially resolved gene expression analysis from slide-level images while preserving morphological features, providing valuable information for studying disease mechanisms and developing treatments. However, spatial gene expression profiling typically requires expensive and time-consuming tests. While existing image-based prediction optimizations mostly revolve around including positional embeddings and further image-based changes, text-based optimizations remain relatively unexplored. We present GATE-ST, which incorporates text-based inputs into image-based spatial gene expression predictions. With this approach, generated text descriptions of genes are utilized to better spatial transcriptomics prediction results. Gene summaries are put through a text encoder, generating embeddings that integrate with image embeddings through cross-attention layers to align with morphological features. We demonstrate the effectiveness of such text inputs by benchmarking performance against random gene embeddings and multiple other image-text fusion architectures, and show that GATE-ST outperforms these alternatives. Our results demonstrate the effectiveness of GATE-ST in pathology imaging, which may greatly reduce the time and cost of accurate spatial transcriptomic predictions, proving the potential of text-guided spatial gene expression prediction.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.38690v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.38690v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.38541v1" target="_blank" rel="noopener">ThinkV2V: Unleashing the Reasoning Capability of MLLMs for Instruction-Guided Video Editing</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-29</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Ohio State</span>
+          <span class="arxiv-id">arXiv:2609.38541v1</span>
+        </div>
+        <p class="authors">Donghao Zhou, Haoyang He, Fan Zhang, Hao Yang, Guisheng Liu, Xin Gao, Zhongwei Wan, Xingyuan Bu et al.</p>
+        <p class="abstract">Instruction-guided video editing has made significant progress, yet existing methods use multimodal large language models (MLLMs) primarily as semantic encoders, so they often fall short in working with implicit edits that require causal or semantic reasoning. To bridge this fundamental gap in video editing, we propose ThinkV2V, a reasoning-driven framework for complex instruction-guided video editing, explicitly activating MLLM thinking before visual generation. At its core, ThinkV2V builds on a practical MLLM-to-DiT architecture to turn explicit thinking over the source video and instruction into refined conditioning signals for video editing. Further, we equip it with a dedicated training and inference recipe, combining Progressive Curriculum Training, which gradually cultivates the model from basic editing to reasoning-intensive cases, with Inference-Time Thinking Scaling, which iteratively refines candidate prompts and selects the most reliable one, to better elicit reasoning in challenging editing scenarios. We also curate the ThinkV2V-150K dataset and introduce ThinkV2V-Bench to support training and evaluation of video editing with implicit intent and causal reasoning. Experimental results demonstrate the state-of-the-art performance of ThinkV2V on both complex and standard editing scenarios, in which our 5B-scale DiT model substantially outperforms larger 10B-scale baselines.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.38541v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.38541v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2609.38523v1" target="_blank" rel="noopener">MM-FinEval: A Multi-Task Multimodal Benchmark for Real-World Financial Forecasting</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-29</span>
+          <span class="cat">cs.LG</span>
+          <span class="school">Georgia Tech</span><span class="school">Northwestern</span>
+          <span class="arxiv-id">arXiv:2609.38523v1</span>
+        </div>
+        <p class="authors">Dong Shu, Yanguang Liu, Huopu Zhang, Saisai Hu, Haiyan Zhao, Hekun Huang, Mengnan Du</p>
+        <p class="abstract">Financial forecasting from earnings conference calls requires models to reason over complex corporate disclosures, market expectations, and subtle communication signals. However, existing financial benchmarks are often limited to unimodal inputs or single-task settings, making it difficult to evaluate whether multimodal large language models (LLMs) can support real-world financial analysis. In this paper, we introduce MM-FinEval, a novel benchmark designed to evaluate multimodal LLMs across multiple financial tasks. MM-FinEval spans a diverse timeline from 2019 to 2022. The entire proposed dataset contains 2,045 S\&amp;P 500 conference earning calls as inputs and 12 financial task labels as outputs. Each input contains three modalities: a word-to-word text transcript of the earning call, the corresponding presentation slides used during the call, and the entire audio recording. To establish a rigorous evaluation framework, we analyze 19 baseline models across three distinct model categories: Image-Text, Audio-Text, and Any-to-Any configurations. We observe that small-size Any-to-Any models processing all three modalities achieve strong performance, even when compared against larger proprietary models restricted to two-modality inputs. This indicates that our tri-modal dataset design introduces useful, non-redundant information. These results validate that text, audio, and visual data serve as important, complementary signals that mimic the decision-making process of expert human analysts.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.38523v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2609.38523v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+    <nav class="day-nav"><a class="prev" href="2026-09-30.html">&larr; 2026-09-30</a></nav>
+  </main>
+  <footer>
+    <p>Generated 2026-10-01 07:01 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
