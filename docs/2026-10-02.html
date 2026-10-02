@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-10-02</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-10-02</h2>
+      <p class="count">7 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.01800v1" target="_blank" rel="noopener">LineupRL: Verifiable Reinforcement Learning for Time Series Captioning via Caption-to-Series Identification</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-01</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">UNC Chapel Hill</span>
+          <span class="arxiv-id">arXiv:2610.01800v1</span>
+        </div>
+        <p class="authors">Haochen Zhang, Laura Yao, Zachary Plotkin, Gengwei Zhang, Tianlong Chen</p>
+        <p class="abstract">Time series captioning is a fundamental step in time series understanding and can also serve as the bridge between signal and natural language. Supervised fine-tuning (SFT) relies on a larger model&#x27;s captions and cannot exceed their quality. Reinforcement learning (RL) can, but its rewards were designed for other modalities and other tasks, and they transfer poorly to open-ended generation in the time series domain. We address this by proposing LineupRL, a reinforcement learning with verifiable rewards (RLVR) pipeline whose reward is caption-to-series identification. The reward model is a frozen large language model (LLM) verifier that reads the generated caption and the candidate time series as raw values, never the chart, and must pick the described time series from multiple distractors. Matching is a far lighter demand on the verifier than writing questions or judging a caption, so an off-the-shelf LLM can supply the reward. Across two captioning benchmarks, and on forecasting and reconstruction where the predictor sees only the caption, LineupRL outperforms SFT and RL baselines on every metric. The 3B vision language model (VLM) trained by LineupRL also outperforms, at 1/24 of the parameters, the 72B VLM whose captions the SFT baseline is distilled from. Our case study shows that LineupRL resists reward hacking, and that the captioner it trains both traces the trend and names the values at key points.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.01800v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.01800v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.01286v1" target="_blank" rel="noopener">Dyna3: VLM-Guided Training-Free 4D Reconstruction via Depth Foundation Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-01</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UC Davis</span>
+          <span class="arxiv-id">arXiv:2610.01286v1</span>
+        </div>
+        <p class="authors">Xinhao Xiang, Weiyang Li, Zhijie Zheng, Abhijeet Rastogi, Jiawei Zhang</p>
+        <p class="abstract">Recent depth foundation models like Depth Anything 3 (DA3) achieve remarkable multi-view depth estimation but assume static 3D scenes, limiting their applicability to real-world dynamic environments. Existing training-free 4D methods like Easi3R and VGGT4D rely on correspondence-trained backbones whose attention encodes cross-frame matching, a property absent in depth-only models like DA3. We present Dyna3, a training-free framework that extends DA3 for 4D dynamic scene reconstruction without any fine-tuning. Our key insight is that DA3&#x27;s cross-view features, though trained only for depth consistency, implicitly encode motion-discriminative signals when combined with best-match feature search across frames. Its static surfaces find consistent matches globally, while dynamic objects cannot. We further adopt vision-language models (VLM) to automatically generate scene-specific semantic prompts for SAM 3, enabling precise instance-level segmentation that distinguishes which objects move from what objects exist. For reconstruction, we decouple the scene into a cross-frame aligned static background and per-frame dynamic point clouds. Experiments on four datasets demonstrate that Dyna3 surpasses correspondence-trained methods with +5.5pp J-Mean over state-of-the-art VGGT4D on dynamic object segmentation, while achieving up to 13x faster pose estimation and 3x faster 4D reconstruction with 4 to 8x lower memory. Dyna3 could therefore enable much denser temporal sampling that prior methods cannot support.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.01286v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.01286v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.01180v1" target="_blank" rel="noopener">Skeleton-and-Strategy Prompting: Training-Free Negation Understanding for Vision-Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-01</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">USC</span>
+          <span class="arxiv-id">arXiv:2610.01180v1</span>
+        </div>
+        <p class="authors">Yuliang Cai, Mohammad Rostami, Jesse Thomason</p>
+        <p class="abstract">Despite the strong performance of Vision-Language Models (VLMs) on a wide range of visual question answering (VQA) tasks, these models consistently struggle to understand negation and produce incorrect answers when questions involve negated clauses. To address this limitation, we propose Skeleton-and-Strategy Prompting (\textbf{SSP}), a training-free, in-context learning method that improves VLM negation understanding capabilities without any parameter updates. Given a negation question, our method first abstracts the underlying question structure into a skeleton, retrieves a small set of same-skeleton questions from a lightweight question pool, then prompts the VLM to analyze their shared negation pattern and synthesize a single-sentence answering strategy. The skeleton and strategy are prepended to the test sample to guide the model correctly tackle the negation problems. Experiments on multiple negation VQA benchmarks show that SSP achieves state-of-the-art performance on negation-focused VQA tasks while remaining computationally efficient.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.01180v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.01180v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.00848v1" target="_blank" rel="noopener">Geometric Similarity in VLM Low-Level Vision Representations</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-01</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UC San Diego</span><span class="school">UPenn</span><span class="school">Duke</span><span class="school">UNC Chapel Hill</span>
+          <span class="arxiv-id">arXiv:2610.00848v1</span>
+        </div>
+        <p class="authors">Shao-Jun Xia, Huixin Zhang, Zhen Lei, Anlan Sun, Yuner Zhang, Xiaoyang Chen</p>
+        <p class="abstract">Vision-language models (VLMs) have emerged as powerful candidates for universal vision backbones, with representative architectures including autoregressive (AR) models and diffusion transformers (DiTs). Yet, adapting them efficiently for all-in-one low-level image restoration remains a challenge. Crucially, the field lacks an understanding of how VLMs organize hidden-layer representations and whether these structurally distinct paradigms share a common geometric organization for pixel-level perception. Such shared organization is a prerequisite for building highly transferable, unified restoration VLMs and adapters. In this paper, we systematically investigate representational similarity across 24 low-level tasks spanning 5 categories. We propose GeoSim, a unified four-level framework that analyzes task-conditioned representations from global similarity, local geometry, sparse feature decomposition, and topological verification perspectives. Our formulation applies to the analysis of hidden states in AR models and feature maps in DiTs across same- and cross-task/model settings. Our results reveal the organizing principles of low-level visual representations while exposing their limits in cross-task and cross-model agreement. Ultimately, GeoSim provides an interpretability lens for probing latent transferability in low-level vision and diagnosing model limitations in task- or model-specific scenarios.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.00848v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.00848v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.00809v1" target="_blank" rel="noopener">Paying for Too Many Tokens? Valid and Cost-Efficient Multimodal LLM Annotation with Simple Heuristics</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-30</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Johns Hopkins</span>
+          <span class="arxiv-id">arXiv:2610.00809v1</span>
+        </div>
+        <p class="authors">Zhixi Zhu, Kristina Gligoric</p>
+        <p class="abstract">Vision-Language Models (VLMs) enable video annotation at scale, but costs accumulate quickly: processing a typical 60-second short-form video at one frame per second requires millions of tokens. To reduce costs, researchers rely on heuristics such as sampling a subset of frames, compressing videos into image grids, or using only a single modality. However, it remains unclear which heuristics save cost, and whether they preserve the downstream conclusions these annotations enable. To address this gap, we conduct a systematic evaluation of these heuristics using short-form videos, on two computational social science (CSS) tasks: sentiment and topic classification. We evaluate each configuration along three axes the literature typically treats separately: classification accuracy, validity of downstream inference, and per-video token cost. First, we find that accuracy and validity diverge: the highest-accuracy configuration can produce wrong conclusions. Second, modality value is not guaranteed: text alone can yield strong performance, indicating that adding modalities can add cost without adding signal. Finally, we find that cost can be decoupled from video length when annotating short-form videos: a single $2\times8$ image grid built via simple shot-transition detection approaches full-video understanding ($κ$ within~.05), at $\sim 15\%$ of the token cost. Based on these findings, we derive guidelines that can enable cost-aware VLM annotation in CSS.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.00809v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.00809v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.00677v1" target="_blank" rel="noopener">Harnessing Vision-Language Models for Perceptual Quality Assessment and Autonomous Content Adjustment in Augmented Reality</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-30</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Duke</span>
+          <span class="arxiv-id">arXiv:2610.00677v1</span>
+        </div>
+        <p class="authors">Elias Rotondo, Lin Duan, Yanming Xiu, Sangjun Eom, Conrad Li, Maria Gorlatova</p>
+        <p class="abstract">Advancements in augmented reality (AR) continue to foster innovative solutions, facilitating novel methodologies within educational systems, healthcare delivery, and risk-mitigation protocols. However, optimizing for end-user immersion and comfort remains challenging, as AR head-mounted displays contend with constrained scene geometry, spatial jitter, and temporal instability. User studies are the standard AR evaluation method for visual quality, but their cost, diminishing scalability, and inflexibility pose bottlenecks during iterative application design. To address this problem, we present an automated framework for AR content evaluation and refinement, built on vision-language models (VLMs), to evaluate and predict the visual fidelity of AR scenes as perceived by users. First, we introduce RateAR, a benchmark of AR images and videos collected across diverse scenes and environmental conditions, with good-to-excellent reliability (ICC(2,5) &gt;= .90) across perceptual factors, including object placement, scale, and shadow consistency. Subsequently, we evaluate eleven commercial VLMs on the crafted benchmark. Results support that VLM-based quality predictions strongly correlate with human subjective judgments, achieving Spearman&#x27;s rank-order correlations of up to 0.8695. An ablation study further suggests that, compared to other prompting strategies, our contextual prompting yields better alignment with human ratings while balancing introduced complexity cues. Building on these findings, we construct an automated AR content adjustment system and conduct a 21-participant user study. More than 90% of participants found that the system improved placement and size coherence of virtual content.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.00677v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.00677v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.00623v1" target="_blank" rel="noopener">HAWK: Rethinking Multimodal Drafting for Speculative Decoding</a></h2>
+        <div class="meta">
+          <span class="date">2026-09-30</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UCLA</span>
+          <span class="arxiv-id">arXiv:2610.00623v1</span>
+        </div>
+        <p class="authors">Wenhan Yang, Anirudh Rao, Ashwin Chandra</p>
+        <p class="abstract">Speculative decoding has achieved substantial lossless speedups for LLMs, but remains less effective for large vision-language models (LVLMs), where lightweight drafters struggle to use rich multimodal information. A second limitation is that standard distillation supervises the drafter only along the original training trajectory, without modeling how target predictions shift after the drafter&#x27;s own proposals. As drafting moves away from this trajectory, the drafter can increasingly disagree with the target, reducing acceptance in later steps. We propose HAWK to address both limitations. HAWK uses representation similarity to select informative target layers and learns how to combine their hidden states. For visual information, it directly provides the drafter with compressed visual hidden states from the target model instead of raw visual tokens, making the visual information easier for a shallow drafter to use. HAWK also trains the drafter to capture how target predictions change after its own proposals, improving its agreement with the target during multi-step drafting. On SmolVLM-256M across ten multimodal benchmarks, HAWK raises average acceptance length from 3.32 to 4.08 and speedup from 2.19x to 2.60x over EAGLE-3 under greedy decoding, and from 2.89 to 3.41 and 1.92x to 2.19x under sampling.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.00623v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.00623v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+    <nav class="day-nav"><a class="prev" href="2026-10-01.html">&larr; 2026-10-01</a></nav>
+  </main>
+  <footer>
+    <p>Generated 2026-10-02 06:50 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
