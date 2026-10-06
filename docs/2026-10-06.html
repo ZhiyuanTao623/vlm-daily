@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-10-06</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-10-06</h2>
+      <p class="count">10 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.03938" target="_blank" rel="noopener">MLLMs Fail to Refuse when Using Tools Agentically</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-06</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">MIT</span>
+          <span class="arxiv-id">arXiv:2610.03938v1</span>
+        </div>
+        <p class="authors">Rikiya Takehi, Ryo Hachiuma, Shaona Ghosh, Dan Zhao, Yu-Chiang Frank Wang, Yusuke Hirota</p>
+        <p class="abstract">Agentic multimodal large language models (MLLMs) have recently pushed the frontier of visual reasoning by calling tools such as zooming and tagging. Despite the recent strong success of agentic MLLMs, this work uncovers a critical safety failure in the tool-use paradigm: agentic tool-using MLLMs become less capable of refusing harmful requests. Our experiments confirm that, across three popular safety benchmarks, all the top open- and closed-weight MLLMs we test exhibit significantly lower safety in tool-using settings than in non-tool settings, with a relative refusal failure rate increase of up to 68.7%. Based on analysis of 100,000+ responses, including extended experiments, we also propose two possible reasons for this safety degradation.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.03938" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.03938v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.04721" target="_blank" rel="noopener">Knossos and Ariadne: Benchmarking and Learning Complete Diagram Topology Extraction with Vision-Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-06</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Rutgers</span>
+          <span class="arxiv-id">arXiv:2610.04721v1</span>
+        </div>
+        <p class="authors">Bangwei Guo, Xujiang Zhao, Shengyu Chen, Yanchi Liu, Wei Cheng, Xi Zhu, Guoning Zhang, Dimitris N. Metaxas et al.</p>
+        <p class="abstract">Structural diagrams are widely used to represent complex systems and relational information across scientific, engineering, procedural, and spatial domains. Recent vision-language models (VLMs) have become increasingly capable of recognizing diagram elements and reasoning about their content, while complete diagram topology extraction remains comparatively underexplored. In this paper, we study diagram-to-graph topology extraction: extracting all diagram entities and the complete relations among them. To enable large-scale supervised training and systematic evaluation of this task, we introduce Knossos, a benchmark of 19,200 diagrams across six diverse domains, with 245,179 nodes and 439,740 edges. Its symbolic generation process provides exact alignment between rendered diagrams and annotations of complete topology, relation types, and connector geometry. To address the modeling challenge of complete topology extraction, we also present Ariadne, a structured framework that decomposes the task into node inventory extraction and source-conditioned edge prediction. Extensive experiments show that training on Knossos substantially improves complete topology extraction in smaller open-source VLMs. Ariadne further improves over one-step extraction under matched supervision, demonstrating the additional benefit of structured decomposition. It achieves the highest average Edge F1 among the evaluated methods on Knossos, while both backbone variants also improve over their unadapted counterparts on the real-world external benchmark. Code and benchmark are available at https://github.com/bangwayne/knossos_Ariadne_Public.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.04721" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.04721v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.04792" target="_blank" rel="noopener">Do More Modalities Always Help? A Geometric Perspective on Missing-Modality Robustness</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-06</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">Rice</span><span class="school">UNC Chapel Hill</span>
+          <span class="arxiv-id">arXiv:2610.04792v1</span>
+        </div>
+        <p class="authors">Songyuan Sui, Zhen Tan, Mohan Zhang, Rana Muhammad Shahroz Khan, Xia Hu, Tianlong Chen</p>
+        <p class="abstract">Missing modality remains a longstanding challenge in multimodal learning. Existing methods typically address this issue through modality recovery or adaptive strategies. However, they overlook models&#x27; internal cross-modal dependencies formed during multimodal training, which later impair robustness. We systematically characterize a counterintuitive deployment-time failure mode: models trained on full modalities can underperform unimodal models when one modality is missing at inference time. This pattern appears across diverse architectures, such as fusion models, CLIP-style two-tower models, and vision-language models. We show that such degradation is closely associated with learned cross-modal dependencies in the principal parameter subspaces. Multimodal training induces structured rotations of these subspaces, particularly in cross-modal interaction layers. These rotations are associated with reduced task-aligned margins and larger task-aware representation harm under missing-modality inputs. We propose Geodesic Unlearning (GU), a lightweight parameter-editing method that leverages Grassmannian subspace geometry for structured subspace correction to improve missing-modality robustness. It rotates the principal input subspace toward a unimodal reference along a geodesic path. We prove that this correction minimizes the distance to the reference within a fixed subspace-distance budget. Experiments across architectures and datasets show that GU improves performance under missing-modality inference while preserving full-modality accuracy, outperforming strong missing-modality robustness baselines. These findings support a geometric view of deployment-time missing-modality degradation and suggest localized subspace editing as a practical route for robustness correction.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.04792" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.04792v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.05097" target="_blank" rel="noopener">ReMAP: Restoring the Perceptual Cycle with Reasoning-Time Latent Visual Memory</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-06</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">MIT</span><span class="school">University of Michigan</span><span class="school">Harvard</span><span class="school">NYU</span>
+          <span class="arxiv-id">arXiv:2610.05097v1</span>
+        </div>
+        <p class="authors">Hao Jiang, Zhanyu Guo, Chenwei Wu, Yichen Guo, Qizhe Zhang, Junchi Yao, Jixian Wu, Jinhao You et al.</p>
+        <p class="abstract">As multimodal large language models (MLLMs) reason for longer, attention to the initial visual input diminishes, weakening visual grounding. Visual memory reintroduces visual evidence during reasoning. We conduct a controlled analysis of visual memory along three axes: curation, organization, and access. We find that local evidence benefits from global context, compact latent representations balance accuracy and visual-context cost, and the utility of memory access depends on the reasoning state. Guided by these findings, we propose ReMAP (Reasoning-Time Memory-Augmented Perception), which couples two complementary latent memories: a static, question-conditioned Global memory that preserves scene and cross-image context, and a dynamic Local memory that uses this context as an anchor while selecting and re-encoding region-level evidence according to the current reasoning state. Both memories return compact latent tokens inserted into the reasoning sequence, and a reinforcement-learning access policy trained with branched rollouts decides when to continue reasoning or invoke Global or Local memory. On ten benchmark families, ReMAP outperforms prior visual-memory methods on all four multi-image benchmarks, exceeding the strongest prior results on MuirBench and MIMIC by 8.38 and 14.84 percentage points. Across four backbone families, enabling memory access improves over the same trained model with memory disabled, and on shared V*Bench, CV-Bench-2D, and MuirBench questions ReMAP reduces the visual tokens entering the reasoning sequence by 51.0-76.8% relative to the native-resolution backbone. Further analyses show that Global and Local memory form distinct yet complementary latent representations. Together, these components restore the perceptual cycle by letting the reasoning state trigger targeted visual retrieval, with the retrieved evidence guiding subsequent reasoning.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.05097" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.05097v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.05417" target="_blank" rel="noopener">Render to Reason: Novel-View Semantic Prediction Improves Spatial Understanding in VLMs</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-06</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UIUC</span>
+          <span class="arxiv-id">arXiv:2610.05417v1</span>
+        </div>
+        <p class="authors">Yuqun Wu, Yao Xiao, Chuhang Zou, Shenlong Wang, Derek Hoiem</p>
+        <p class="abstract">Recent works augment Vision-Language Models with geometry features from pretrained 3D models, expecting that the geometric signal will boost spatial reasoning. However, we find that simply fusing geometry features and training on standard spatial QA yields only marginal improvements on high-level multi-hop tasks. We attribute this gap to a training-signal problem: standard spatial QA can be largely answered from visual features and language priors, so the geometry pathway receives weak gradients and fails to integrate with the visual features. To provide a training signal that requires geometry, we propose \textbf{novel-view semantic rendering} as an auxiliary training task that requires the model to predict the semantic layout of an unobserved viewpoint, inspired by humans&#x27; ability to mentally simulate novel viewpoints during spatial reasoning. This task encourages joint use of both pathways: geometry provides pose-dependent visibility, while vision provides semantic content. Our auxiliary task yields consistent improvements over the geometry-augmented baseline across all three benchmarks (up to +1.6 on VSI-Bench, +2.2 on ReVSI, +2.9 on our 3D-Point-QA dataset) and our full model surpasses prior open-source methods on VSI-Bench and on ReVSI. Project page: https://yuqunw.github.io/Render2Reason/.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.05417" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.05417v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.05425" target="_blank" rel="noopener">Unmentioned Checklist Findings Change How Reinforcement Learning Appears to Improve Chest Radiograph Report Checking</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-06</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Rochester</span>
+          <span class="arxiv-id">arXiv:2610.05425v1</span>
+        </div>
+        <p class="authors">Ali Vosoughi, Akhil Kasturi, Chenliang Xu, Axel Wismueller</p>
+        <p class="abstract">Automated checks of radiology reports may rely on AI-generated checklists that leave findings unmentioned. We used reinforcement learning to train a vision-language model to fill in a 12-finding checklist from a chest radiograph without seeing the sentence under test; a separate checking model judged the sentence from the checklist. On held-out patients, a rule-based check and an independent medical checker, neither used in training, measured discrimination gains (Youden index) of 12.6% and 11.8%; only the rule-based check met the prespecified false-alarm criterion. Switching to the training format, which fixes finding order and enters unmentioned findings as absent, raised the training checker&#x27;s measured gain and lowered the independent checker&#x27;s, a prespecified comparison that yielded 6.2% (95% interval 2.0% to 10.5%) and, post hoc on held-out patients, 7.7%. Across 8 checking models, acceptance of a label-consistent negative statement about an unmentioned finding ranged from 1.0% to 97.0%. Labels were report-derived, not radiologist-adjudicated.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.05425" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.05425v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.06293" target="_blank" rel="noopener">VepAgent: Bridging Causal-Transition via Tool-Augmented Reinforcement Learning for Video Event Prediction</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-06</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Carnegie Mellon</span><span class="school">Columbia</span><span class="school">NYU</span>
+          <span class="arxiv-id">arXiv:2610.06293v1</span>
+        </div>
+        <p class="authors">Qiutong Chen, Yuchan Guo, Zhenlong Yuan, Haobo Yang, Fangfang Lin, Xinyi Long, Yin Wang, Zijian Song et al.</p>
+        <p class="abstract">Multimodal Large Language Models (MLLMs) have demonstrated remarkable potential in video understanding, yet their reliance on retrospective summarization and text-centric priors often limits their ability to bridge unobserved causal transitions when applied to Video Event Prediction (VEP). To address this, we propose VepAgent, an agentic framework that integrates causal-transition reasoning with tool-augmented reinforcement learning (RL) for robust VEP. Unlike prior methods that passively project future trajectories from historical dependencies, our approach explicitly models the logical progression from terminal observed states to future events. Specifically, we first construct futurebench-4K, a high-quality chain-of-thought dataset for supervised fine-tuning (SFT) that effectively bridges the causal-logic gap by structuring the deduction of unobserved intermediate states. Subsequently, we develop a diagnostic tool library integrating state tracking, frame retrieval, and region magnification, enabling the agent to dynamically augment reasoning with external tools to recover missing spatio-temporal evidence and resolve visual ambiguities during inference. Moreover, we propose a composite reward mechanism that jointly optimizes prediction accuracy, causal coherence, and reliable prior, compelling the agent to rely on genuine visual grounding rather than superficial textual similarities. Extensive evaluations on FutureBench and NEPBench datasets demonstrate that our method achieves state-of-the-art performance, significantly outperforming larger MLLMs and validating the empirical effectiveness of our agentic, future-oriented reasoning paradigm.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.06293" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.06293v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.06571" target="_blank" rel="noopener">BrainTRACE: Tracing Longitudinal, Multimodal, and Volumetric Evidence in Brain MRI Clinical Reasoning</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-06</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Yale</span>
+          <span class="arxiv-id">arXiv:2610.06571v1</span>
+        </div>
+        <p class="authors">Qizhen Lan, Mengchen Fan, Hang Zhang, Jingwei Duan, Moule Lin, Jialin Chen, Baocheng Geng, Xiaoqian Jiang</p>
+        <p class="abstract">Brain MRI interpretation is a longitudinal clinical reasoning problem: radiologists compare serial studies, integrate information across MRI sequences, localize findings within volumetric anatomy, and translate this evidence into report-grounded assessments. Existing medical VQA and 3D imaging benchmarks capture important parts of this workflow, but often evaluate brain MRI through isolated images, static volumes, or ungrounded report-style answers, thereby obscuring failures in the evidence chain that support clinical validity. We introduce BrainTRACE, a report-grounded benchmark for evaluating whether vision-language models can trace the evidence structure required for longitudinal brain MRI interpretation. BrainTRACE contains 7,273 scored VQA instances derived from 1,778 longitudinal patients, 7,299 MRI studies, and approximately 29k co-registered 3D MRI sequence volumes. The benchmark is organized by five levels of clinical reasoning, from acquisition recognition to case-level synthesis, and by evidence demands covering longitudinal comparison, report-grounded references, multi-sequence integration, and volumetric spatial evidence. BrainTRACE supports rendered inputs compatible with standard VLM interfaces, a 3D-evidence condition, and a decomposed case-reasoning track that audits six steps in a longitudinal evidence chain. Evaluation of 20 VLM configurations shows that current systems can identify isolated visual cues but rarely compose them into grounded longitudinal interpretations. We release the benchmark specification, evaluation lists, scoring implementation, scoring rubrics, and audit-record format to support reproducible progress in brain MRI VLM evaluation.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.06571" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.06571v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.06830" target="_blank" rel="noopener">MemPilot: Orchestrating On-Demand Multimodal Memory Curation for LLM Agents</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-06</span>
+          <span class="cat">cs.CL</span>
+          <span class="school">UIUC</span>
+          <span class="arxiv-id">arXiv:2610.06830v1</span>
+        </div>
+        <p class="authors">Haozhen Zhang, Haodong Yue, Quanyu Long, Jianzhu Bao, Qingyuan Liu, Tao Feng, Bohan Liu, Weida Liang et al.</p>
+        <p class="abstract">Memory has become integral to the LLM agent ecosystem, supporting information retention and reuse across interactions. However, most existing agent memory systems construct memory in a query-agnostic manner, which can incur unnecessary preprocessing cost and discard details that later prove essential. Recent studies have begun shifting memory processing toward runtime adaptation, but typically specialize in particular operations or fixed processing schemes, leaving flexible control over performance, cost, and latency largely underexplored. To address this challenge, we present \textbf{MemPilot}, a flexible framework that orchestrates on-demand memory curation under different performance--cost--latency preferences. Specifically, we optimize a multi-step LLM policy via reinforcement learning to iteratively choose between retrieving from query-agnostic memory and delegating query-specific curation of raw multimodal history to heterogeneous LLMs and VLMs. The policy jointly controls evidence amount, curation instructions, model selection, and visual access, enabling fine-grained allocation of runtime computation. To optimize this policy under competing objectives, we adapt objective-wise advantage decoupling by separately estimating each objective&#x27;s advantage before aggregation. Moreover, we introduce prefix-based marginal utility estimation for fine-grained credit assignment across multi-step rollouts. Experiments on five multimodal agent-memory benchmarks demonstrate favorable performance--cost--latency trade-offs across optimization preferences, with preference sweeps yielding broader frontiers than existing trade-off-aware baselines.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.06830" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.06830v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.06852" target="_blank" rel="noopener">One Figure, Every Canvas: Editable Flowchart Relayout via Agentic Pipeline</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-06</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UIUC</span>
+          <span class="arxiv-id">arXiv:2610.06852v1</span>
+        </div>
+        <p class="authors">Shih-Chen Tseng, Chih-Hsuan Chen, Ryan Yang, Hsi-An Chen, Chun-Wei Tuan Mu, Yu-Lun Liu</p>
+        <p class="abstract">Pipeline figures in ML papers must be repurposed across many canvases, including paper columns, 16:9 slides, portrait posters, 1:1 social teasers, 9:16 phone previews. Each format imposes a different aspect ratio on the same computational graph, where any silently broken connection misrepresents the method. We formulate aspect-ratio-adaptive flowchart relayout as a distinct task: given a raster flowchart and a target ratio, produce a structurally faithful, hallucination-free, editable layout. Existing methods fail characteristically: image-to-image models stretch blocks and reject extreme ratios, text-to-image agentic systems hallucinate content, and parse-then-render systems mis-route edges. We propose an agentic pipeline factored into Parse, Style, and Layout stages, each pairing a main agent with a critic that combines deterministic constraint checks with VLM visual feedback so connectivity is explicitly checked and prevented from being silently broken. Outputs are draw.io-editable mxGraph XML. On a curated benchmark of 100 flowcharts at five aspect ratios, evaluated by Gemini 3.1 Pro and validated against human judgments, our method reaches 68.6% Content Fidelity versus 11.2-41.4% for prior work. Project page: https://onefigureeverycanvas.vercel.app/</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.06852" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.06852v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+    <nav class="day-nav"><a class="prev" href="2026-10-05.html">&larr; 2026-10-05</a></nav>
+  </main>
+  <footer>
+    <p>Generated 2026-10-06 07:25 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
