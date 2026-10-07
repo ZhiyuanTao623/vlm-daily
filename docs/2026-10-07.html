@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-10-07</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-10-07</h2>
+      <p class="count">12 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.08779v1" target="_blank" rel="noopener">ALIVE: Interaction-Aligned Object Insertion for First-Frame-Guided Video Editing</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-06</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Rochester</span>
+          <span class="arxiv-id">arXiv:2610.08779v1</span>
+        </div>
+        <p class="authors">Zhenghong Zhou, Zhe Lin, Jiebo Luo, Yuqian Zhou</p>
+        <p class="abstract">Current video editors can insert objects but often struggle to make them participate in interactions such as being picked up or manipulated. We introduce ALIVE, a framework that makes inserted objects &quot;alive&quot; through coherent interactions with the source video&#x27;s contents, using an edited first frame and an instruction naming only the added object. We curate 35,800 editing pairs combining 3D-rendered, model-generated, and real-world videos with general editing pairs from ROSE. Each pair differs in the target object&#x27;s presence while preserving the surrounding action, teaching editors coordinated object behavior and source preservation. We further train a vision-language model (VLM) to predict interaction guidance from the same inputs. We introduce the ALIVE-interaction benchmark to assess interaction fidelity, source preservation, and visual coherence using a unified VLM-based protocol, and evaluate on the general video object insertion benchmark. Without VLM guidance, ALIVE improves Overall over the strongest evaluated baseline by 43.9% and 4.4% on the two benchmarks, respectively. VLM-predicted guidance further improves the ALIVE-interaction score by 0.95 points without additional user inputs.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.08779v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.08779v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.08659v1" target="_blank" rel="noopener">Selective Transfer of RL Updates for Visual Reasoning</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-06</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UPenn</span>
+          <span class="arxiv-id">arXiv:2610.08659v1</span>
+        </div>
+        <p class="authors">Suxin Ji, Hungtao Wan, Mingjun Liu, An Zhang</p>
+        <p class="abstract">Model merging provides a training-free way to transfer reasoning capabilities from language models to vision-language models (VLMs), but endpoint-based transfer can conflate pre-existing model differences with changes acquired during reasoning post-training. We instead formulate capability transfer around the training-stage update, isolating the parameter changes induced by reinforcement learning (RL). Yet transferring this update in full remains suboptimal: we find that its components differ substantially in cross-model transferability, with dominant directions transferring more effectively than the complete update. Based on this finding, we introduce Selective-RL, which isolates the RL-stage update, retains its dominant matrix-wise directions with magnitude preservation, and transfers them to the language modules of a VLM. Across three model families and five visual-reasoning benchmarks, Selective-RL improves full-update interpolation in 12 of 15 comparisons, including an 8.55 percentage-point MathVision gain on the Qwen recipient. Matched controls show that update magnitude or arbitrary low rank alone does not reproduce these gains. These results highlight a distinction between what is acquired during post-training and what remains transferable across models, providing a training-stage perspective on cross-model capability transfer. Code is available at https://anonymous.4open.science/r/selective-rl.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.08659v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.08659v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.08446v1" target="_blank" rel="noopener">AssemState: Manual and Physical-State-Guided Reasoning for Zero-shot Furniture Assembly</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-06</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">UIUC</span>
+          <span class="arxiv-id">arXiv:2610.08446v1</span>
+        </div>
+        <p class="authors">Zhiyuan Qi, Jierui Li, Yifan Shen, Cheng Qian, Jiateng Liu</p>
+        <p class="abstract">Multimodal large language models (MLLMs) have made significant progress in visual understanding, but precise 3D spatial reasoning integrated with physical environment remains difficult. Furniture assembly requires not only recovering step-level operations from diagrammatic manuals, but also translating semantic attachment relations into 6D pose updates that enable parts to physically interact with the environment and previously assembled components. To study this problem, we propose AssemState, a zero-shot framework for manual and physical-state-guided furniture assembly. It firstly employs anchor-guided boundary assembly states to decompose manual pages into single-part operations and recover an assembly-tree. Then, it uses iterative after-state feedback refinement to guide successive (SE(3)) updates and corrections, and validates their physical plausibility through simulation-based release tests. Experiments show that compared with the strongest prior baseline, AssemState improves F1 from 38.58\% to 62.80\% and Tree Exact Match from 28.24\% to 53.92\% for assembly-tree recovery. On 243 independently evaluated part-level operations, our proposed iterative refinement improves judge-accepted operations from 0 to 5.3\% and reduces mean Chamfer distance from 5.4111 to 1.7744. However, visually plausible candidate poses may still suffer from collision, floating, mirror-orientation errors, incomplete seating, and wrong-side attachment. These results show that AssemState improves operation-structure recovery and selected local pose metrics, while MLLMs remain limited for spatial relationship reasoning.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.08446v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.08446v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.08401v1" target="_blank" rel="noopener">GeoPID: Decomposing and Steering Visual Information in Vision-Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-06</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Georgia Tech</span>
+          <span class="arxiv-id">arXiv:2610.08401v1</span>
+        </div>
+        <p class="authors">Seulgi Kim, Zhixiong Zhang, Xinwei Zhang, Jie Ling, Ronn Shaw</p>
+        <p class="abstract">While recent vision-language models (VLMs) have shown outstanding performance across diverse applications, they tend to under-use visual information and over-rely on textual context. In this work, we propose \textsc{GeoPID}, a training-free framework that analyzes multimodal information within VLMs from a geometric perspective. \textsc{GeoPID} decomposes information into Redundant, Modality-Unique, and Synergistic components through the geometric relationships between visual and textual representation subspaces. Through an extensive analysis across 22 VLMs and 14 benchmarks, we confirm that correct predictions exhibit stronger vision-unique components when questions strongly require visual grounding. Building on this geometric analysis, we introduce a targeted intervention technique that selectively amplifies visual representations along the vision-unique subspace during inference. As a result, visual grounding capabilities were enhanced without any additional model parameter updates, achieving an average relative accuracy gain of 7.63\%.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.08401v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.08401v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.08102v1" target="_blank" rel="noopener">DSV-Mem: Evaluating Multimodal Memory in Professional Workflows for MLLM Agents</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-06</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">USC</span>
+          <span class="arxiv-id">arXiv:2610.08102v1</span>
+        </div>
+        <p class="authors">Jike Zhong, Ritwick Chaudhry, Xuanbai Chen, Tianchen Zhao, Linghan Xu, Yifan Xing, Nishant Sankaran</p>
+        <p class="abstract">Conversational MLLM agents are increasingly expected to assist in professional workflows, from AI research and engineering design to product management and business operations. Yet this capability remains underexplored: existing benchmarks largely focus on informal, everyday interactions and personal-life scenarios featuring photographic natural images, isolated static artifacts, and recall-oriented questions. In contrast, professional scenarios often involve structured, information-heavy artifacts that undergo frequent revisions and authority updates, and compositional queries requiring reconciliation of many artifact versions while tracking state precisely. To address these challenges, we introduce DSV-Mem, a benchmark for evaluating Dense Stateful Visual Memory. DSV-Mem comprises expert-reviewed scenarios and 1,000 questions across five user-oriented categories (Current State, Past State, Derived State, Change History, and Conflict/Refusal). A Hartley-inspired criterion favors questions with broader visual-evidence inspection demands. We also introduce a generation harness that produces evaluation suites by decoupling state-transition synthesis from conversation filling. Evaluation over 27 configurations spanning frontier and open-weight models and memory management methods reveals that the strongest baseline scores below 45% on DSV-Mem. Analysis surfaces findings: 1) multimodality and information density both contribute to difficulty, but state evolution, particularly the number of governing updates, is the dominant tested factor. Raw conversation/haystack length, OCR, and arithmetic are not the primary bottlenecks; 2) models often fail to verify user premises against prior state updates before answering; 3) increased reasoning effort and memory management methods yield limited gains, whereas state-aware designs prove more effective. The benchmark and code will be publicly released.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.08102v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.08102v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.07774v1" target="_blank" rel="noopener">Reading, Not Manipulating: Leveraging Router Logits for Multimodal Safety in MoE Vision-Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-06</span>
+          <span class="cat">cs.CL</span>
+          <span class="school">University of Washington</span><span class="school">NYU</span>
+          <span class="arxiv-id">arXiv:2610.07774v1</span>
+        </div>
+        <p class="authors">Ziyuan Yang, Wenxuan Ding, Shangbin Feng, Yulia Tsvetkov</p>
+        <p class="abstract">Vision-language models (VLMs) face compositional safety risks where harmful intent emerges from the interaction between visual and textual inputs. As mixture-of-experts (MoE) VLMs become increasingly common, recent work has explored various safety interventions, including prompting, supervised fine-tuning, and routing-based expert steering. However, these methods show inconsistent improvements across models and evaluation distributions, and the intervention into model behavior or internal states introduce safety-utility tradeoffs by over-refusal. Rather than manipulating internal states to steer model behavior, we instead ask whether routing states can serve as diagnostic signals for multimodal safety. We find that router logits indeed provide highly predictive signals of whether a multimodal input is safe or not. Motivated by this observation, we introduce a lightweight router-logit safety detector that reads out routing signals during prompt prefill and identifies unsafe requests before generation, without modifying model parameters or expert routing. Across Qwen3-VL and Kimi-VL, the proposed detector substantially reduces safety errors on the HoliSafe benchmark and resoundingly generalizes to out-of-distribution safety benchmarks featuring different safety patterns, including MISHard and MM-SafetyBench. The success of the proposed router-logit detector also suggests a broader perspective on model internals: rather than focusing only on manipulating internal components to steer behavior, simply reading naturally emerging signals and linking them to an external safety mechanism can provide a simple, effective, and non-intrusive complement to existing safety interventions.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.07774v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.07774v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.07751v1" target="_blank" rel="noopener">How Well Do LLMs Reason with Noisy Evidence? An Active Visual Reasoning Benchmark</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-06</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">Arizona State</span>
+          <span class="arxiv-id">arXiv:2610.07751v1</span>
+        </div>
+        <p class="authors">Bach Nguyen, Zhaonan Li, Mau Son Nguyen, Sanika Chavan, Nilay Kumar, Hong Anh Nguyen, Khoa Vo, Ben Zhou</p>
+        <p class="abstract">Real-world reasoning rarely reduces to static question answering: agents must actively gather information from tools and sensors that are often noisy and unreliable. Yet most existing active reasoning benchmarks assume that environmental feedback is trustworthy, or introduce noise without exposing an explicit, calibrated uncertainty signal, leaving open how LLMs should reason when the evidence itself is uncertain. We introduce VisualNoiseQA, a novel benchmark for active reasoning under noisy visual feedback. A text-only LLM must solve VQA problems by iteratively querying a fixed, off-the-shelf VLM treated as a stochastic visual sensor. For each query, we draw multiple samples and expose an empirical uncertainty signal via self-consistency, enabling the reasoner to probe from different angles and decide what to ask next and when to stop. Our construction is automatic and scalable: starting from diverse VQA sources and two noisy VLMs, we retain only questions where the sensor is inconsistent yet human-solvable. We evaluate multiple LLM reasoners on 1,000 instances spanning perception, chart understanding, and knowledge-intensive reasoning. VisualNoiseQA thus provides a controlled playground to study how different LLMs exploit uncertainty signals for robust reasoning.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.07751v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.07751v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.07514v1" target="_blank" rel="noopener">From Local Evidence to Safety Verdicts: Causal Tracing in Vision-Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-05</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">USC</span>
+          <span class="arxiv-id">arXiv:2610.07514v1</span>
+        </div>
+        <p class="authors">Faezeh Dehghan Tarzjani, Mevan Wijewardena, Alexander Romanus, Sampad Mohanty</p>
+        <p class="abstract">A vision-language model may need to combine an image with a prompt to recognize a safety risk that neither reveals alone. Where does this joint safety judgment become accessible inside the model? We introduce SSU-Bench, a dataset of matched safe and unsafe image-text combinations constructed using single-item prompt edits or image edits with annotated intended regions. Using three vision-language models, we transfer internal states between paired inputs and measure the resulting change in the safety verdict. Across models and both types of counterfactual, interventions at the changed input positions are effective in earlier decoder layers, while interventions at the final input token become effective later. Directions estimated from other examples produce similar late-layer effects. A linear readout of the final-token state also predicts the model&#x27;s own verdict, including incorrect judgments, and cross-model comparisons reveal similarities in the patterns of counterfactual change. These findings identify a recurring transition in where interventions can influence a joint safety verdict and distinguish a readable model decision from a correct safety judgment.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.07514v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.07514v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.07385v1" target="_blank" rel="noopener">Semantic Capability Acquisition and Specialization During Vision-Language Model Fine-Tuning</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-05</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Carnegie Mellon</span>
+          <span class="arxiv-id">arXiv:2610.07385v1</span>
+        </div>
+        <p class="authors">Suguru Onda, Matthew Bailey, Ryan Farrell</p>
+        <p class="abstract">Fine-tuning vision-language models (VLMs) is typically evaluated at a single downstream checkpoint, obscuring whether a semantic capability was never acquired or emerged earlier and later declined during specialization. We ask how semantic capabilities are acquired, when they peak, how well they transfer, and what remains at deployment. We study these dynamics as a semantic capability trajectory, tracking identity- and attribute-based capabilities over training. We formulate a trajectory-based framework that separates capability acquisition, capability-specific optima, and later specialization, and introduce Structured Semantic Routing (SSR) to study how the representation of supervision shapes what is acquired. Across six pretrained backbones spanning DFN, MetaCLIP, and OpenAI CLIP, we show that fine-tuning can acquire semantic capability beyond the pretrained state, including gains observed on held-out evaluations. Unstructured name-and-attribute supervision produces strong name-and-attribute retrieval with comparatively weak name-free attribute-profile retrieval, whereas SSR yields substantially stronger name-free attribute-profile retrieval and is further strengthened by stochastic name-branch dropout. Different capabilities can peak at different stages, so a checkpoint selected by target class-name retrieval need not coincide with a transferable semantic optimum. Continued optimization can therefore preserve strong target class-name retrieval while reducing previously acquired transferable semantic capability. In a representative diagnostic study, this late specialization is consistent with reduced cross-modal semantic accessibility while substantial image-only class structure remains available.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.07385v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.07385v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.07342v1" target="_blank" rel="noopener">Rationale-Guided Policy Optimization: Learning to Reason with Adaptive Rationale Scaffolding</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-05</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">NYU</span>
+          <span class="arxiv-id">arXiv:2610.07342v1</span>
+        </div>
+        <p class="authors">Hoang Phan, Minh Pham, Chau Pham, Chinmay Hegde, Trung Le, Qi Lei</p>
+        <p class="abstract">On-policy reinforcement learning has become a central paradigm for improving the reasoning abilities of large language models. However, its effectiveness is often limited by reward sparsity: when a model fails to discover correct trajectories for difficult problems, the optimization process receives little useful signal and may stagnate. Existing approaches mitigate this issue by incorporating off-policy demonstrations, expert traces, or model-generated solutions, but they typically require the auxiliary data to match the format of the reinforcement-learning task, often relying on rejection sampling from stronger models to obtain suitable training trajectories. We introduce Rationale-Guided Policy Optimization (RGPO), a framework that adaptively leverages ground-truth rationale information according to the model&#x27;s current capability while preserving its freedom to explore. Rather than treating reference solutions as fixed imitation targets, RGPO uses them as temporary scaffolds: rationales help the model generate improved responses, after which only higher-reward, model-generated solutions are transferred back to the original unguided setting. This design allows training to exploit available ground-truth information without requiring off-policy data to follow the same format as the RL task. Across both language-only and vision-language reasoning settings, RGPO consistently improves performance over RLVR baselines, and ablation studies show that adaptive rationale guidance is a key contributor to these gains. These results suggest that RGPO offers a practical and general approach for reducing reward sparsity, stabilizing reinforcement learning, and improving reasoning performance in both text-only and multimodal models.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.07342v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.07342v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.07339v1" target="_blank" rel="noopener">A doctrine-grounded visual question answering dataset for Tactical Combat Casualty Care</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-05</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Duke</span>
+          <span class="arxiv-id">arXiv:2610.07339v1</span>
+        </div>
+        <p class="authors">Junseob Kim, Jade Chng, Ayman Ali, Victor Moas, Yichun Lee, Po-Chun Chin, Sunil Hwang, Rishikesan Kamaleswaran</p>
+        <p class="abstract">Tactical Combat Casualty Care (TC3) requires responders to connect visual observations of injuries and interventions with established clinical guidance. Developing vision-language models to support this process requires supervision that links visible evidence to traceable doctrine. We present TC3-VQA, a dataset constructed from public instructional and field TC3 videos and authoritative TC3 documents. It contains 581 items spanning 11 concepts, with 1,860 questions covering intervention recognition, doctrine, clinical reasoning, procedural guidance, and refusal when visual information is insufficient. Doctrine-based answers preserve verbatim source passages and character offsets. Construction combines visual annotation, passage retrieval, entailment checks, and verification across model families. Equipment boxes, anatomical labels, temporal segments, and source metadata accompany the question-answer pairs. Automated audits and ratings by two physicians and two medical students characterize annotation quality, with human ratings available for 88 retained items. The dataset provides a resource for adapting vision-language models to TC3, studying the connection between visual evidence and clinical knowledge, and evaluating recognition, doctrine recall, and abstention.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.07339v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.07339v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.07018v1" target="_blank" rel="noopener">When to Rethink: Learning Multi-Perspective Self-Verification for Vision-Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-04</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">UIUC</span><span class="school">UNC Chapel Hill</span>
+          <span class="arxiv-id">arXiv:2610.07018v1</span>
+        </div>
+        <p class="authors">Ziquan Zhu, Hanruo Zhu, Si-Yuan Lu, Morris Yu-Chao Huang, Yicheng Lin, Wei Han, Tianlong Chen, Mingyuan Wu et al.</p>
+        <p class="abstract">Vision-language models (VLMs) have achieved strong performance in multimodal reasoning, yet they remain prone to generating plausible but incorrect answers. Self-verification offers a practical way to improve answer reliability without relying on external judges, but existing methods typically depend on a single verification criterion or fixed prompt, resulting in incomplete and unstable reliability estimates. We first systematically analyze how verifier capability and prompt design affect verification performance. Our findings show that stronger verifiers provide more reliable judgments, while verification performance is highly sensitive to prompt choice, with no single prompt consistently dominating across tasks. Guided by these findings, we propose \texttt{MOTIVE}, a \textbf{M}ulti-View Self-Verificati\textbf{O}n wi\textbf{T}h Rel\textbf{I}ability-Guided Selecti\textbf{VE} Rethinking framework for reliable multimodal reasoning. \texttt{MOTIVE} evaluates each candidate answer from complementary verification perspectives and learns a correctness-aligned reliability score through correctness-grounded multi-view verification learning. During inference, this score governs an accept-or-rethink decision, allowing reliable answers to be returned directly while uncertain ones trigger history-guided rethinking. Extensive experiments across diverse multimodal benchmarks and VLM backbones demonstrate that \texttt{MOTIVE} consistently outperforms strong self-verification and self-correction baselines. Further results show that reliable verification improves accept-or-rethink decisions and reduces unnecessary reasoning turns, enabling more reliable and efficient self-verification without an external judge.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.07018v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.07018v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+    <nav class="day-nav"><a class="prev" href="2026-10-06.html">&larr; 2026-10-06</a></nav>
+  </main>
+  <footer>
+    <p>Generated 2026-10-07 07:00 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
