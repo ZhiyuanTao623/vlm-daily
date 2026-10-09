@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-10-09</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-10-09</h2>
+      <p class="count">7 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.12391v1" target="_blank" rel="noopener">GeoReform: Reflective Formalization Evolution for Multimodal Geometry Problem Solving</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-08</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">UNC Chapel Hill</span><span class="school">Arizona State</span>
+          <span class="arxiv-id">arXiv:2610.12391v1</span>
+        </div>
+        <p class="authors">Jialu Wang, Ruichen Zhang, Xiaoou Liu, Hua Wei, Tianlong Chen</p>
+        <p class="abstract">Multimodal large language models (MLLMs) often struggle to identify and use geometric relations in diagrams. Recent methods address this challenge by converting geometric entities, relations, and constraints into explicit textual representations for the model to reason over. However, effective formalization is highly non-trivial: on Geometry3K, structure injection fixes 28 errors but introduces 13 new ones among 200 examples. Redundant relations can distract the model, while ambiguous references to diagram elements can lead it to apply constraints incorrectly. This suggests that the key challenge is not merely extracting more geometric facts, but organizing them into representations that support downstream reasoning. To fully exploit the power of formalization, we further propose GeoReform, a reflective formalization evolution framework that treats formalization as an optimizable policy rather than a fixed parser output. GeoReform executes the full reasoning pipeline, collects failed rollouts, diagnoses defects in the current representation, and mutates the policy to better select, ground, group, and present geometric entities, relations, constraints, and targets. On Geometry3K, GeoReform improves Qwen3VL-2B accuracy from 42.0\% to 56.0\%. Extensive experiments and analyses across geometry reasoning benchmarks demonstrate that effective formalization is crucial for improving multimodal geometry reasoning.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.12391v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.12391v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.12307v1" target="_blank" rel="noopener">BudgetPix: Compute-Adaptive Tokenization for Pixel-Space Image Diffusion</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-08</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UIUC</span>
+          <span class="arxiv-id">arXiv:2610.12307v1</span>
+        </div>
+        <p class="authors">Ozgur Kara, Yujia Chen, Daniel Watson, David Forsyth, James Matthew Rehg, Wen-Sheng Chu, Du Tran</p>
+        <p class="abstract">Most image generation models rely on uniform tokenization, allocating the exact same computational budget to equally-sized image patches. This static paradigm cannot adapt to different resource constraints at inference time, and yields suboptimal quality-cost tradeoff by devoting the same effort to both plain backgrounds and intricate details. We propose BudgetPix, an adaptive tokenization framework that dynamically allocates compute based on visual complexity and spatial layout, enabling flexible computational budgeting at inference time. BudgetPix comprises three key components: (1) an adaptive encoder that maps a fixed-size image to a variable-length token sequence using an entropy-guided quadtree alongside a multi-scale patch embedder; (2) a scale-aware decoder reconstructs fixed-resolution images from multi-scale token sets; and (3) a flexible training and sampling schedule that enables pixel-space denoisers to operate across variable token counts. BudgetPix seamlessly integrates with existing pixel-space diffusion architectures, enabling a single checkpoint to be operated at a wide range of compute budgets. Evaluated on text-to-image generation, BudgetPix matches the fidelity of MiniT2I-L at $512^2$ and PixelDiT at $1024^2$ using just 25% of the original compute budget. In class-conditional generation using a MeanFlow backbone, BudgetPix requires merely 60% of the full compute budget to produce images with near-zero quality degradation, observing a marginal 0.8-point increase in FID. Comprehensive assessments by human and VLM judges confirm that BudgetPix establishes a significantly improved quality-efficiency tradeoff over prior budget-adaptive baselines. More details are available at our project page: https://karaozgur.com/BudgetPix</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.12307v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.12307v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.11329v1" target="_blank" rel="noopener">PathLang: A Language-Centered Benchmark for Vision-Language Models in Computational Pathology</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-08</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Cornell</span><span class="school">Columbia</span><span class="school">UPenn</span><span class="school">NYU</span><span class="school">Johns Hopkins</span><span class="school">Vanderbilt</span>
+          <span class="arxiv-id">arXiv:2610.11329v1</span>
+        </div>
+        <p class="authors">Fanqi Cheng, Kuo Gong, Shangke Liu, Beidi Zhao, Junchao Zhu, Zheyu Zhu, Leiyue Zhao, Fengbei Liu et al.</p>
+        <p class="abstract">Pathology vision-language models (VLMs) have shown strong visual perception ability, but their robustness in the language domain remains poorly characterized. Existing pathology VLM benchmarks largely rely on canonical closed-set prompts or perturb only generic templates, treating language as a fixed evaluation component rather than a variable axis of model behavior. In clinical practice, however, diagnostic language varies across reports, institutions, and candidate diagnoses. We introduce PathLang, a language-centered and clinically grounded zero-shot benchmark. PathLang holds the underlying slides, ground-truth labels, and image-text evaluation direction fixed while systematically varying only the diagnostic language, so that performance differences reflect how a diagnosis is phrased rather than what is imaged. The language variation follows how pathologists actually rephrase diagnoses (terminology, specificity, and reporting style), and all prompts and candidate pools are validated by six board-certified pathologists. PathLang covers four task families: (1) zero-shot classification with image-text alignment analysis, (2) cross-modal retrieval, (3) paraphrase robustness, including semantic-equivalence paraphrases, length and reporting-style variation, and prompt ensembling, and (4) open-vocabulary diagnosis retrieval over four candidate pools with distinct forms of semantic competition. Across nine VLMs and five public datasets spanning four organs, we find that performance is highly sensitive to clinically equivalent paraphrases, varies substantially across forms of semantic competition, and that image-text alignment quality does not necessarily translate into inter-class separability. We release the prompt corpus, candidate pools, pre-computed text embeddings, and evaluation code at https://anonymous.4open.science/r/PathLang.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.11329v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.11329v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.11140v1" target="_blank" rel="noopener">ActiveMedAgent: Cost-Aware Trajectory Learning for Multimodal Medical Diagnosis</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-08</span>
+          <span class="cat">cs.LG</span>
+          <span class="school">Yale</span><span class="school">Arizona State</span>
+          <span class="arxiv-id">arXiv:2610.11140v1</span>
+        </div>
+        <p class="authors">Weiwei Ma, Xiaobing Yu, Peijie Qiu, Jin Yang, Zhaoqi An, Xuanzhao Dong, Xiaoqi Zhao, Xiaofeng Liu</p>
+        <p class="abstract">Clinical diagnosis is inherently sequential: clinicians escalate from cheap to costly tests only when additional evidence is expected to resolve diagnostic uncertainty. We present ActiveMedAgent, a framework that brings this cost-aware sequential logic to multimodal medical AI. Given a frozen, API-accessed vision-language model, ActiveMedAgent tracks probability distributions over candidate diagnoses and scores each acquisition by its per-step diagnostic utility minus cost. A lightweight MLP controller is then trained offline on these scored trajectories, learning when to request additional evidence and when to commit. Across three commonly used benchmarks, trajectory-based policy learning consistently outperforms both unguided acquisition and full-modality baselines. Notably, we identify an information overload effect. In 175 cases, the agent produces a correct diagnosis with fewer channels while the full-modality baseline fails, showing that learning what to omit can be as important as learning what to acquire.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.11140v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.11140v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.11019v1" target="_blank" rel="noopener">Mid-Training Language Models on Raw Video</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-08</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">MIT</span><span class="school">Duke</span>
+          <span class="arxiv-id">arXiv:2610.11019v1</span>
+        </div>
+        <p class="authors">Jaedong Hwang, Xiaoqian Shen, Ernie Chang, Changsheng Zhao, Chong Zhou, Saksham Suri, Qi Qian, Zechun Liu et al.</p>
+        <p class="abstract">Multimodal large language models learn mostly from paired image-text data or annotated video, and raw web video is rarely used to further train an existing language model. We study whether raw video, with no captions and no text loss, can serve as mid-training data for a pretrained language model. Frames are encoded into continuous visual tokens, and the language model learns to predict the next visual token. We mid-train Qwen3-1.7B on raw clips from YT-Temporal-1B and then apply the same image-text instruction tuning to it and to the model without mid-training, so that the two differ only in mid-training. The mid-trained model scores 2.9 points higher on average across four video benchmarks and 5.1 points higher across ten image benchmarks, spanning perception, document, and chart tasks. Text performance is preserved even though mid-training includes no text, with an average of 48.9 across 14 text benchmarks compared with 48.0 for the model without mid-training. Analyses across training show that the image and video gains emerge within 30% of training and plateau thereafter, varying by less than 0.5 points. Predicting captions fails to outperform next-visual-token prediction, demonstrating that video mid-training can remain purely self-supervised without the computational overhead or labeling noise of automated captioning.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.11019v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.11019v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.10984v1" target="_blank" rel="noopener">Fluid-Gen-Zero: Grounding Pretrained Video Generators in Physics without Training</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-07</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UC Berkeley</span><span class="school">Stony Brook</span>
+          <span class="arxiv-id">arXiv:2610.10984v1</span>
+        </div>
+        <p class="authors">Hong Huang, Yuqiu Liu, Chenyu You, Daniel Martin, Chuhang Zou, Wuyang Chen</p>
+        <p class="abstract">We present Fluid-Gen-Zero, a training-free framework for physics-aware fluid-object interaction video generation that decouples physical reasoning from appearance synthesis. Our key insight is to delegate motion dynamics to a physics simulator while preserving the appearance modeling capacity of pretrained video generators. We bridge these two domains through a two-level agentic workflow: generation-time planning, where a vision-language model (VLM) agent interprets intent and the simulation rollout to organize generation clips, and latent-space guidance, which injects simulation signals into denoising through region-aware latent wrapping. This plug-and-play design is compatible with current video foundation models. We further introduce a benchmark for fluid-object interaction video generation. Across Tora (CogVideoX-based), VACE and WanMove (Wan-based), Fluid-Gen-Zero consistently improves simulation alignment, reducing object trajectory error by 26.7%-81.5% and fluid fEPE (fluid flow endpoint error) by 67.9%-84.0%, while largely preserving perceptual quality. In a human preference study, raters favor Fluid-Gen-Zero in 55.1%-74.4% of same-backbone comparisons across three backbones, and in 90.4%-94.2% of comparisons against simulation-based methods. Code and data will be released upon acceptance.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.10984v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.10984v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.10782v1" target="_blank" rel="noopener">VICO: Visual Environments Co-Evolving for Vision-Language Model Reasoning</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-07</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UC Berkeley</span><span class="school">Georgia Tech</span><span class="school">Virginia Tech</span>
+          <span class="arxiv-id">arXiv:2610.10782v1</span>
+        </div>
+        <p class="authors">Meng Lu, Ligeng Zhu, Olivia Xiao, Yuchen Zhuang, Zihan Wang, Kuncheng Wu, Bangya Liu, Yu Wang et al.</p>
+        <p class="abstract">Reinforcement learning with verifiable rewards (RLVR) has become a standard recipe for post-training vision-language models (VLMs), but it typically assumes a static training environment. As the actor improves, fixed tasks drift out of its learning frontier: many become trivial, others remain unsolvable; and the learning signal collapses. We argue that VLM post-training should evolve the visual environment alongside the actor, not just the actor itself. We propose VICO, a co-evolutionary framework in which an actor and an Environment-as-Rewriter (EnvRewriter) are trained jointly: the EnvRewriter edits verifiable image-side structures, such as scene graphs, chart tables, or protected region masks, and re-renders them to produce label-valid training samples whose difficulty is calibrated to the actor&#x27;s current ability through a pass-rate-based reward. This loop continuously realigns task difficulty with actor capability without any additional human annotation. Across nine multimodal benchmarks spanning mathematical reasoning and visually grounded understanding, VICO-8B improves over its base model by up to +5.0% on out-of-domain tasks, surpasses the strongest self-evolution and text-editing co-evolution baselines by +4.3% and +8.4% respectively, and stays comparable to chart-specialized RLVR methods using 16-160 times fewer labeled samples. By shifting from human-labeled supervision to image-editing co-evolution, VICO offers a scalable path beyond static-corpus RLVR for visual reasoning.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.10782v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.10782v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+    <nav class="day-nav"><a class="prev" href="2026-10-08.html">&larr; 2026-10-08</a></nav>
+  </main>
+  <footer>
+    <p>Generated 2026-10-09 07:14 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
