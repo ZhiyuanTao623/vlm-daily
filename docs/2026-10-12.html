@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-10-12</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-10-12</h2>
+      <p class="count">6 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.12865" target="_blank" rel="noopener">Robust Langevin Sampling under State-Dependent Heavy-Tailed Noise with Applications to LLM Fine-Tuning</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-12</span>
+          <span class="cat">cs.LG</span>
+          <span class="school">Purdue</span>
+          <span class="arxiv-id">arXiv:2610.12865v1</span>
+        </div>
+        <p class="authors">M. Berk Sahin, Ege C. Kaya, Arda Fazla, Behzad Sharif, Abolfazl Hashemi</p>
+        <p class="abstract">Existing convergence guarantees for non-log-concave sampling with stochastic gradient Langevin Monte Carlo (SG-LMC) typically assume globally Lipschitz gradients and uniformly bounded noise variance. Both assumptions can fail even in elementary sampling problems, and relaxing them better reflects practical applications such as Bayesian fine-tuning of large language models (LLMs). We relax both assumptions through generalized smoothness and our proposed state-dependent heavy-tailed oracle with finite $p$-th moments, $1&lt;p\leq 2$. The oracle permits infinite variance when $p&lt;2$ and includes the Blum-Gladyshev (BG-0) condition. We study these relaxations separately and jointly, proposing three methods. Under globally Lipschitz gradients, robust LMC (R-LMC) handles the proposed oracle through geometric-median centering and residual clipping. With exact gradients, adaptive LMC (A-LMC) controls discretization error under generalized smoothness. Robust adaptive LMC (RA-LMC) addresses both relaxations through robust estimation and a noise-aware step size. For all three methods, we establish non-asymptotic convergence guarantees in Fisher information (FI) without assuming dissipativity or a functional inequality. Synthetic experiments demonstrate FI convergence and the benefit of each mechanism. Bayesian fine-tuning experiments with LLMs and vision-language models support our oracle model and show that RA-LMC matches or outperforms state-of-the-art baselines in accuracy and uncertainty quantification.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.12865" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.12865v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.12942" target="_blank" rel="noopener">In-Context Learning Can Help Vision-Language Models Overcome Training Priors</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-12</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Princeton</span>
+          <span class="arxiv-id">arXiv:2610.12942v1</span>
+        </div>
+        <p class="authors">Kun Wang, Xindi Wu, Sanghyuk Chun, Olga Russakovsky, Esin Tureci</p>
+        <p class="abstract">Vision-language models (VLMs) learn strong statistical regularities during training, which can make them fail to properly respond to visual evidence when input images violate those regularities. It is challenging to disambiguate these prior-induced errors from errors caused by the model missing the underlying visual capabilities. In this work, we use controlled visual in-context learning to encourage the model to focus on the visual evidence, and demonstrate that this alone is frequently sufficient to correct the errors -- suggesting that the models in fact do possess the relevant visual capabilities. Specifically, we show that across five vision-centric tasks, demonstrations yield large gains on prior-conflicting counterfactual examples ($+27.2\%$ for Qwen3-VL 235B and $+15.1\%$ for Qwen3-VL 32B) while leaving accuracy on prior-aligned examples nearly unchanged. These findings generalize across five VLM families with gains from $+9.7\%$ to $+30.3\%$. We analyze visual representations and find that demonstrations indeed redirect attention toward grounding cues while reducing reliance on cues that support the learned prior. Finally, we find that in-context learning is limited when the underlying visual capability is weak or absent. Together, these results show that current VLMs possess visual grounding capabilities that standard evaluations may overlook, underscoring the need for controlled evaluation design in diagnosing and improving model capability.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.12942" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.12942v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.12981" target="_blank" rel="noopener">The Evidence Anchoring Boundary: Where Visual Interventions Matter and When They Help in Multimodal LLMs</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-12</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Duke</span>
+          <span class="arxiv-id">arXiv:2610.12981v1</span>
+        </div>
+        <p class="authors">Qiji Zhou, Junyi Hu, Peiyu Wang, Yue Zhang</p>
+        <p class="abstract">Visual interventions provide a training-free way to reduce hallucinations in multimodal large language models. However, an intervention may have little leverage at some layers and may damage a correct answer even when it changes the output. We investigate where visual interventions retain leverage and when they improve predictions. First, we apply the same visual-residual edit at successive decoder layers, matching its RMS strength across depth. Across six checkpoints from three model families, we observe a persistent drop in intervention effect and define its operational onset for this edit as the \textbf{Evidence Anchoring Boundary (EAB)}. With boundaries fixed on calibration queries, held-out effects on disjoint evaluation queries before EAB are $13.78\times$--$26.10\times$ larger than those after it. Comparison with intermediate readouts shows that the edit can lose leverage before answer preferences stabilize. Second, we compare counterfactual subtraction across presence, attribute, and relation questions. Subtraction can correct a misleading preference, leave a decision unchanged, or remove a preference supporting the correct answer. Based on these observations, we develop calibrated selective routing, which preserves the original prediction unless calibration supports an intervention for the question type. It improves full-set attribute accuracy by $1.56$--$1.81$ percentage points across three checkpoints, while universal subtraction is neutral or harmful.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.12981" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.12981v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.13790" target="_blank" rel="noopener">OccludeBench: Can VLMs Find What&#x27;s Missing?</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-12</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Princeton</span>
+          <span class="arxiv-id">arXiv:2610.13790v1</span>
+        </div>
+        <p class="authors">Jasin Cekinmez, Addison J. Wu, Ryo Mitsuhashi, Linrong Cai, Xingyu Fu, Zhuang Liu</p>
+        <p class="abstract">How well can vision-language models (VLMs) reason about what is missing from an image? We study this question with OccludeBench, a manually curated benchmark for recovering fully occluded objects from the visual evidence that remains. OccludeBench distinguishes direct cases, where the hidden object must be recovered from a specific physical cue such as a shadow or reflection, from inferential cases, where it can be inferred from broader scene context. Across five VLMs, accuracy averages 42.7% on direct cases versus 62.7% on inferential cases, exhibiting a 20.0-point gap. Humans attain higher accuracies of 63.4% versus 68.5% for direct and inferential images, respectively, with no significant gap. To locate this failure, we introduce OccludeTrace, a four-stage diagnostic that isolates where the visual reasoning process breaks down. The bottleneck emerges when models must recover the relevant object from the projection within the full image: they succeed on only 50% of failed examples, compared with 91% of examples they answer correctly. Extended reasoning, tool use, and few-shot prompting yield inconsistent improvements and do not reliably eliminate the gap. In contrast, an inpaint-then-confront intervention, which prompts models to first generate a candidate hidden object and then evaluate that hypothesis against the visible physical cue, reduces the gap to a statistically non-significant difference for both models with image-generation capabilities. Together, our results establish a tractable, controlled diagnostic for isolating how VLMs reason about visual content that is missing from an image.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.13790" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.13790v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.13840" target="_blank" rel="noopener">Studying Comics at Scale with Artificial Intelligence: The PAGE Framework and Three Studies of American Comics and Japanese Manga</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-12</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">USC</span>
+          <span class="arxiv-id">arXiv:2610.13840v1</span>
+        </div>
+        <p class="authors">Emilio Ferrara</p>
+        <p class="abstract">Comics are one of the great visual records of the twentieth century: hundreds of thousands of pages in which a mass readership saw its leaders, its wars and its heroes. Most of this record has never been studied as a whole; comics scholarship proceeds one book at a time. We argue that artificial intelligence, including generative models, can change this to the benefit of the medium itself. We propose PAGE, a framework that makes artificial intelligence an instrument for comics research. It parses every scan into panels, text and a bibliographic record; annotates each page with a vision-language model that follows a written codebook, as a human coder would; grounds samples of these readings in human annotation; and explains change across an archive, with estimates controlled for publisher and genre. We demonstrate the framework on 3,929 American comic books (1938--1956) and 87 volumes of Japanese manga, in three studies, each resting on a different capability. The first pairs text search with visual reading to recover how a mass medium portrayed political power. The second measures the page&#x27;s visual form across an industry and recovers the hand of individual artists. The third follows who speaks across two comics traditions, checked against human annotation. Beyond research, the same instruments can make archives searchable by what is drawn, open comics to blind and low-vision readers, and help preserve fragile collections and credit uncredited artists. We outline a research agenda in which artificial intelligence strengthens the study, preservation and reach of the medium.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.13840" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.13840v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.13935" target="_blank" rel="noopener">Hide and Seek: HIDE Concepts to SEEK explanations for black box models</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-12</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Arizona State</span>
+          <span class="arxiv-id">arXiv:2610.13935v1</span>
+        </div>
+        <p class="authors">Bhanu Tokas, Rahul Nair, Rockwell Jackson, Hannah Kerner</p>
+        <p class="abstract">Interpreting machine learning model predictions is a central challenge, particularly for black-box vision models. Concept-based attribution methods interpret models using human-understandable concepts. Existing concept-based methods can only interpret classification and regression models. They require access to model weights or large concept-annotated datasets, and most methods cannot provide image-level attribution. We propose Hide and Seek (HnS), a new method for concept-level attribution that does not require access to model weights or labeled concept datasets. HnS can interpret a wide range of vision models. Given a concept and image set, HnS retrieves concept-aligned images using a vision-language model, localizes the concept within each image, masks the localized region, and measures attribution from the change in the black-box model&#x27;s output between the original and masked images. This enables faithful attribution by directly measuring the model&#x27;s behavior and supporting local attributions. We validated HnS on CelebA and COCO-Stuff. Compared to existing methods, HnS showed better agreement with ground-truth attributions. We demonstrated the applicability of HnS on diverse tasks, including image captioning and satellite image segmentation, where no existing concept attribution method can be used. We provided our anonymous code in the supplementary material.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.13935" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.13935v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+    <nav class="day-nav"><a class="prev" href="2026-10-11.html">&larr; 2026-10-11</a></nav>
+  </main>
+  <footer>
+    <p>Generated 2026-10-12 07:06 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
