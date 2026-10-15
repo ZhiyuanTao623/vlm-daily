@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-10-15</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-10-15</h2>
+      <p class="count">11 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.20461v1" target="_blank" rel="noopener">Equal CER, Unequal Damage: Severity-Weighted Character Error Rate for OCR</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-14</span>
+          <span class="cat">cs.CL</span>
+          <span class="school">University of Rochester</span>
+          <span class="arxiv-id">arXiv:2610.20461v1</span>
+        </div>
+        <p class="authors">Nguyen Nguyen, Yongyi Zang</p>
+        <p class="abstract">Character Error Rate (CER), the standard metric for OCR and vision-language models (VLMs), charges a typo as much as a wrong name. We introduce semCER, which keeps CER&#x27;s alignment and denominator and charges each grapheme edit a severity from an LLM judge, with no word segmentation. Normalized CER keeps the score of a whole transcription, where it tracks readers as well as semCER or better, and semCER breaks that score down into named edits. The charges track readers&#x27; ratings edit by edit in English, Vietnamese, and Chinese and put the edits readers rate most severe near the top of a sorted list. On pairs drawn where CER and semCER disagreed, readers side with semCER more often than with normalized CER in English and Chinese, and equally often in Vietnamese. Across 16 languages, the judge charges a wrong diacritic or tone mark almost nothing in Spanish but nearly a wrong letter&#x27;s severity in Telugu. Where we can count real words, a general VLM&#x27;s wrong letter forms one far above chance while a classical pipeline&#x27;s stays near it. We release the 61 million judged edits, the aggregated reader ratings, and the distilled scorer at https://github.com/nguyenx2t/semcer.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.20461v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.20461v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.19613v1" target="_blank" rel="noopener">Are We Really Measuring Forgetting? Pitfalls in Evaluating Machine Unlearning for Multimodal LLMs</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-14</span>
+          <span class="cat">cs.CL</span>
+          <span class="school">Columbia</span>
+          <span class="arxiv-id">arXiv:2610.19613v1</span>
+        </div>
+        <p class="authors">Oscar Chew, Po-Yi Lu, Yi-Jie Cheng, Kunal Jain, Hsuan-Tien Lin, Zhengzhong Tu, Kuan-Hao Huang</p>
+        <p class="abstract">As machine unlearning for multimodal large language models (MLLMs) rapidly advances, rigorous evaluation of its effectiveness becomes increasingly important. However, existing benchmarks largely inherit evaluation protocols from text-only unlearning and overlook the unique challenges of unlearning in multimodal settings. In this work, we identify three major pitfalls that may lead to misleading conclusions: the lack of heldout evaluation to distinguish genuine concept-wise forgetting from instance-wise overfitting, the reliance on synthetic, fine-tuned knowledge rather than real-world knowledge acquired during pre-training, and unfair method comparisons caused by applying the same training settings to different unlearning methods. To address these challenges, we introduce GEMMU (Generalizable Evaluation for Multimodal Machine Unlearning), a benchmark built on real-world knowledge and a principled evaluation protocol. Re-evaluating representative unlearning methods under GEMMU reveals substantial generalization gaps and challenges conclusions drawn from previous benchmarks. Our findings highlight the importance of rigorous evaluation for advancing multimodal machine unlearning and provide guidelines for future benchmark design.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.19613v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.19613v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.19611v1" target="_blank" rel="noopener">What Breaks in Multi-Image Schema Application? Factorial Oracle Interventions Reveal an Instance-Information Bottleneck</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-14</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Carnegie Mellon</span><span class="school">Columbia</span>
+          <span class="arxiv-id">arXiv:2610.19611v1</span>
+        </div>
+        <p class="authors">Yiliu Xu, Xinjin Li, Yu Ma</p>
+        <p class="abstract">Modern vision-language models can accept multi-image contexts, but aggregate accuracy rarely reveals where a multi-image reasoning pipeline fails. We study a controlled schema-application task in which a model must locate two target characters in a 16-image sequence, identify their visual attributes, consult an item-specific visual codebook, and compose two ordered nonce code names. We introduce a within-item 2-by-2 factorial Oracle design: Oracle-A supplies a verified textual schema, Oracle-B supplies a verified ordered target-appearance representation, and both interventions retain the original images and final question. Across 72 new items and 1,188 analyzed model responses, Oracle-B increased strict exact accuracy by 54.6 percentage points (95% confidence interval: 46.3 to 63.0) and outperformed Oracle-A by 60.6 points (Holm-adjusted p-value no greater than .0002). An auxiliary retrieval diagnostic reached only 49.1% ordered-appearance accuracy even after removing code-name generation. Providing both Oracle sources yielded 100% accuracy across all models. These results localize the dominant recoverable deficit to upstream ordered instance recovery rather than primarily to downstream schema use and composition.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.19611v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.19611v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.19475v1" target="_blank" rel="noopener">ActICL: Post-Training for Agentic Multimodal In-Context Learning</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-14</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UT Austin</span><span class="school">Rutgers</span>
+          <span class="arxiv-id">arXiv:2610.19475v1</span>
+        </div>
+        <p class="authors">Yanshu Li, Ruixiang Tang, Junyi Jessy Li, Elias Stengel-Eskin</p>
+        <p class="abstract">Multimodal in-context learning (ICL) is an important capability of multimodal large language models (MLLMs). Its performance is closely tied to the demonstrations it uses, making demonstration retrieval a core problem for ICL. Common methods use fixed scoring methods to retrieve all the demonstrations at once, which may introduce redundancy and noise. Context-aware retrieval methods have emerged to address this problem by allowing incremental retrieval from a growing context. However, none of them lets the MLLM learn how to judge what new demonstrations it needs and then carry out progressive retrieval on its own. To this end, we introduce ActICL, which trains an MLLM agent to acquire and use an ICL context via tool-augmented reasoning. An ActICL agent analyzes its own information gaps during iterative reasoning and tool-use actions. Based on these gaps, it performs targeted retrieval to acquire a set of initial candidates. It can then use the existing context to further filter the candidates and refine the context, or it can iteratively perform a new retrieval. When the agent judges that the context is sufficient for the task, or when the resource limit is reached with the user request met, it sends the acquired context to an answering model, either the agent itself or another MLLM. We use a two-stage post-training procedure that jointly optimizes the agent&#x27;s acquisition and answering. With an adaptive number of demonstrations, ActICL improves average performance by 11.6 percentage points over standard similarity-based retrieval across seven benchmarks and three MLLMs, and by 4.4 points compared to the strongest prior baseline. The contexts acquired by ActICL agents can also be used effectively by frontier models. When GPT-5.6-Sol performs 4-shot ICL, ActICL&#x27;s contexts improve its performance by 3.5 points over standard retrieval, averaged over three benchmarks.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.19475v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.19475v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.19441v1" target="_blank" rel="noopener">Integrating Simulation and Chain-of-thought Reasoning in Multimodal-Language Models For Physical Reasoning</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-14</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">Harvard</span>
+          <span class="arxiv-id">arXiv:2610.19441v1</span>
+        </div>
+        <p class="authors">YingQiao Wang, Eric Bigelow, Tomer Ullman, Yujin Tang, Sebastian Risi</p>
+        <p class="abstract">Multimodal language models often need to reason about the physical dynamics of the world in order to answer questions appropriately. Various methods have emerged for solving physical reasoning tasks, and in particular, two leading approaches are Chain-of-Thought reasoning and physics-grounded simulation. However, relatively little is known about which particular problems can be solved by each approach. Some tasks may benefit from computationally expensive generative video simulations, whereas others may be solved equally well (or even better) with language-based reasoning. Our work addresses this by systematically comparing simulation and language reasoning across a variety of multimodal tasks involving physical reasoning, such as answering questions about fluid dynamics and elasticity. We draw a parallel with this to resource-rational theories of human cognition, which propose that people optimally trade off simulation and reasoning depending on task demands. We present a novel cognitively-inspired hybrid model which optimally trades off simulation and reasoning to improve model performance and computational efficiency. Our model is able to decide the appropriate method to solve a physical reasoning problem at test time, and finds an optimal balance between accuracy and cost. Further, our model can be trained on a smaller vision-language model that is only 4B parameters and deployed to improve performance on much bigger base models with $&gt;$3T parameters like Gemini 3 Pro.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.19441v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.19441v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.19424v1" target="_blank" rel="noopener">VideoHarness-SRSI: Structured Recursive Self-Improvement for Video Understanding Harness</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-14</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UIUC</span><span class="school">Cornell</span><span class="school">Purdue</span><span class="school">Duke</span><span class="school">UC Davis</span>
+          <span class="arxiv-id">arXiv:2610.19424v1</span>
+        </div>
+        <p class="authors">Zihao Lin, Haoyu Dong, Haobo Xu, Chi-Chih Chang, Xuying Ning, Yinglong Xia, Shuang Yang, Zhuokai Zhao et al.</p>
+        <p class="abstract">LLM system capabilities depend not only on model parameters but also on the executable harnesses that organize information acquisition, tool use, reasoning, and memory. Recursive harness evolution can automate their design, but how it can reliably discover generalizable systems from limited, noisy, and repeatedly reused feedback remains unclear. We study this question in agentic video understanding, where rich multimodal evidence and coupled mechanisms make harness optimization challenging. We first introduce VideoHarness-BRSI, a recursive self-improvement framework that evolves video harnesses around a frozen vision-language model. Analyzing over 4,000 evolved candidates, we find it competitive with hand-engineered systems but identify three interconnected failure modes: validation overfitting, search-budget dilution, and the early-experience trap. We trace all three to a common root: the same imperfect validation evidence drives both harness revisions and the proposer&#x27;s search strategy. We therefore propose VideoHarness-SRSI, an evidence-governed framework in which every search decision rests on evidence that is transferable, sufficient, and gathered before the search commits. It restricts the proposer to content-free feedback, informs exploration with instrumented warm-up experiments, and develops mechanisms in isolated probe-race branches before factorial composition and joint refinement. Across four video understanding benchmarks, VideoHarness-SRSI improves the equally weighted mean held-out score by 6.2% relative to VideoHarness-BRSI and reduces the mean validation-test gap by 37.9%. Reliable harness evolution thus depends on how search is organized and informed, not only on how well it optimizes validation performance.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.19424v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.19424v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.19407v1" target="_blank" rel="noopener">Vision-Language Models Integrate Conflicting Evidence Like Biased Bayesian Observers</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-14</span>
+          <span class="cat">cs.CL</span>
+          <span class="school">UT Austin</span>
+          <span class="arxiv-id">arXiv:2610.19407v1</span>
+        </div>
+        <p class="authors">Josh Barua, Kyle Mahowald, William Rudman</p>
+        <p class="abstract">Vision-language models must reconcile conflicting text and images. Prior work has characterized the resulting behavior in terms of modality biases--e.g., a &quot;blind faith in text&quot;--but why preferences vary across models, domains, and input conditions remains unclear. We develop a predictive account from a Bayesian perspective, positing that VLMs combine conditionally independent evidence from each modality with prior beliefs, subject to modality-specific biases. The resulting two-parameter cue combination model accurately predicts VLM preferences under unseen combinations of input degradation and transfers to new forms of unreliability without refitting. Separating evidence strength from integration bias explains how VLMs can follow text even while weighting visual evidence more heavily, reconciling reports of text and vision dominance under a single combination rule.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.19407v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.19407v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.19341v1" target="_blank" rel="noopener">MMKG-R1: Constructing Multimodal Knowledge Graphs via Reinforcement Learning</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-14</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Penn State</span>
+          <span class="arxiv-id">arXiv:2610.19341v1</span>
+        </div>
+        <p class="authors">Zongyu Wu, Yilong Wang, Xiaochen Wang, Minhua Lin, Yuan Zhong, Fenglong Ma, Xiang Zhang, Suhang Wang</p>
+        <p class="abstract">Multimodal knowledge graphs (MMKGs) organize information across different modalities to support multimodal Graph Retrieval-Augmented Generation (RAG), which aims to improve the performance of multimodal large language models (MLLMs). The effectiveness of these multimodal Graph RAG methods largely depends on the quality of the constructed MMKGs. However, most existing methods construct MMKGs without explicit guidance on graph quality, while reinforcement learning (RL)-based methods that rely on final-answer correctness may provide only indirect feedback on MMKG quality. To address these limitations, we propose MMKG-R1, a novel MMKG-quality-driven RL framework for training an MLLM as a multimodal knowledge constructor. To be specific, MMKG-R1 introduces multiple quality-aware rewards to directly evaluate both the quality of information extracted from individual knowledge sources and the quality of the assembled MMKG. These rewards are then used to guide the RL training. Experiments across multiple datasets show that MMKG-R1 constructs MMKGs that improve downstream question-answering accuracy.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.19341v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.19341v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.19234v1" target="_blank" rel="noopener">Write Once, Plan Many: Building Reusable Visual Planning Systems from One Scene</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-13</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">MIT</span>
+          <span class="arxiv-id">arXiv:2610.19234v1</span>
+        </div>
+        <p class="authors">Ruixiao Yang, Yilun Hao, Mingxin Yu, Yang Zhang, Chuchu Fan</p>
+        <p class="abstract">Vision-language models (VLMs) can reason about visual planning tasks, but querying them for every instance incurs repeated inference cost and latency. Generating reusable planning programs offers an alternative, but constructing reliable planning systems for new problem domains without extensive supervision remains challenging. We present a training-free framework that constructs reusable perception and planning programs from a domain specification and a single practice scene without a paired solution. The central challenge is obtaining useful feedback from the limited input. Our framework addresses it by leveraging VLM&#x27;s ability to provide a renderer and a dynamic model based on its scene understanding. Rendering detected states enables comparison with the practice scene, while checking simulated action outcomes against the domain specification helps expose errors in rule implementation. Together, these checks guide refinement of the grounding program and planner without requiring solution labels. After refinement and component selection, the programs are frozen and solve new instances without further VLM calls. The same framework constructs systems across domains without manual pipeline redesign. Across fifteen domain variants spanning 2D and 3D scenes with discrete and continuous state, our systems achieve 99.3% average planning success, compared with 80.9% for the strongest domain-level program-generation baseline and 90.7% for the strongest instance-level baseline. Cost analyses show a favorable success-cost trade-off, and ablations confirm the contributions of the executable domain model, execution feedback, and component selection.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.19234v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.19234v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.19127v1" target="_blank" rel="noopener">AdaFrame: Hierarchical Multimodal Deduplication with Adaptive Information Budgeting for Cost-Efficient Video Advertisement Analysis</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-13</span>
+          <span class="cat">cs.MM</span>
+          <span class="school">Purdue</span>
+          <span class="arxiv-id">arXiv:2610.19127v1</span>
+        </div>
+        <p class="authors">Abdul Basit Tonmoy, Arman Luthra, Guang Lin, Qixin Deng</p>
+        <p class="abstract">Uniform frame sampling for vision-language model (VLM)-based video analysis often floods multimodal backbones with redundant content, while existing keyframe selection methods are typically optimized for human viewing rather than downstream extraction accuracy. We propose AdaFrame, a content-adaptive preprocessing cascade that reduces visual redundancy without sacrificing extraction fidelity. Three progressively finer filters, perceptual hashing, learned perceptual image patch similarity (LPIPS), and CLIP-based semantic clustering, efficiently eliminate redundant frames before costly cross-modal inference. Per-video frame budgets are determined using Intrinsic Semantic Dimensionality (ISD), which estimates each video&#x27;s semantic complexity through singular value decomposition of its frame embeddings. Experiments on 500 video advertisements from the Pitt Ads Dataset show that AdaFrame reduces the frame count by 48 percent and VLM inference cost by 75 percent compared with uniform sampling, while achieving 86.0 percent topic accuracy, an improvement of 1.6 percentage points, and 79.4 percent sentiment accuracy, an improvement of 7.5 percentage points.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.19127v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.19127v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.19025v1" target="_blank" rel="noopener">How Far Can Coding Agents Go in Visual Generation?</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-13</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UCLA</span>
+          <span class="arxiv-id">arXiv:2610.19025v1</span>
+        </div>
+        <p class="authors">Hengguang Zhou, Yuanhao Ban, Jiaqi Feng, Xiaohuan Pei, Justin Cui, Cho-Jui Hsieh</p>
+        <p class="abstract">Modern image generation largely relies on specialized generative models that leave the process of image construction implicit in learned parameters. We explore an alternative: general-purpose coding agents that construct images through executable programs. Our study of zero-shot drawing on AgentDrawBench, a 200-prompt benchmark, reveals a distinctive capability profile. Agents excel at preserving structure and satisfying precise visual constraints, achieving competitive results in domains where compositional accuracy matters more than photorealistic appearance, while remaining limited in perceptual richness. Their visual expressiveness varies with the drawing interface, and a qualitative study on reconstruction shows how procedural skills extracted from human demonstrations support different artistic media. We then examine code as an external visual language of thought: a structured, executable representation that agents can construct and inspect. We test it in visual question answering task and find reconstructed visual code retains substantial information for question answering and, in some domains, supports higher accuracy than the original image. These abilities raise a further question: do agents draw on a shared internal representation of scene content beyond a particular drawing program? We explore an internal visual language-of-thought hypothesis, in which a shared, compositionally structured representation supports visual operations across drawing languages. Cross-harness drawings and images assembled from independent single-pixel queries exhibit related layouts and tones. Agents also maintain self-generated room arrangements across viewpoints after visible drawings are removed. These results demonstrate that the coding agent would maintain a consistent and coherent world inside its imagine even before the harness gets involved and the generation starts.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.19025v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.19025v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+    <nav class="day-nav"><a class="prev" href="2026-10-14.html">&larr; 2026-10-14</a></nav>
+  </main>
+  <footer>
+    <p>Generated 2026-10-15 05:41 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
