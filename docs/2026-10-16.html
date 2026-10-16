@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-10-16</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-10-16</h2>
+      <p class="count">7 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.22295v1" target="_blank" rel="noopener">Grounded Human-Attributed Description and Activity Recognition in Videos</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-15</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Johns Hopkins</span>
+          <span class="arxiv-id">arXiv:2610.22295v1</span>
+        </div>
+        <p class="authors">Jay N. Paranjape, Jurijs Nazarovs, Rohan Sarkar, Yue Guo, Lipeng Ke, Sankar Venkataraman, Vishal M. Patel, Nataraj Jammalamadaka</p>
+        <p class="abstract">Understanding characteristics and activities of individuals in complex multi-person environments is crucial for real-world applications. However, existing datasets often simplify this problem to grounded group activity recognition, single-person activity recognition, or close-set activity recognition, thus limiting the generalizability of models trained on these datasets. In this work, we introduce the task of Grounded Human-Attributed Description and Activity Recognition (GHADAR), which involves describing the characteristics and activity descriptions of \textbf{every} person in a video, provided the location of the person in the video, which is more practical for real-world applications. To facilitate this, we introduce a new dataset derived from AVA-Actions by generating open-set captions for the person description and activity. In addition, we propose a novel method to effectively utilize the information contained in grounding during training by constraining the cross-attention masks during training in VLMs to improve performance for this task. Our experiments show that our method outperforms SOTA VLMs on this task. Finally, we demonstrate the limitations of existing evaluation metrics, which are overly reliant on human-annotations and exact text-text matching. As an added video-based evaluation, we propose a holistic VLM-based evaluation schema that compares concepts {\em directly} between the video and the generated predictions. Thus, in this work, we develop a complete framework for GHADAR, including a dataset, a novel method and an evaluation schema, thereby establishing a strong foundation for future research in this domain.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.22295v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.22295v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.21895v1" target="_blank" rel="noopener">SurgStreamer: proactive, request-driven monitoring of surgical video streams with structured state and a reusable reasoning layer</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-15</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Vanderbilt</span>
+          <span class="arxiv-id">arXiv:2610.21895v1</span>
+        </div>
+        <p class="authors">Bowen Xiang, Jon S. Heiselman, Michael I. Miga</p>
+        <p class="abstract">Surgical teams could benefit from assistants that watch the video for requested events, such as &quot;tell me when the clip applier appears during Calot triangle dissection&quot;, and answer questions about what has already happened. We formalise this task as request-driven event detection with exact semantics and causal alert decisions, and present SurgStreamer. It separates procedure-specific perception, which maps the 1-FPS stream to a structured state over tools, actions and phases, from procedure-agnostic reasoning, which evaluates a formal monitoring condition over this state and an event memory, either with exact rules or with a small controller that addresses entities through pointers rather than names. We evaluate this monitoring core with gold conditions. On a pre-registered, sealed test set of 12 laparoscopic cholecystectomies, SurgStreamer reached a macro event-F1 of 0.598 over full procedures. On identical 75-s windows with only the window available to every method, it scored 0.677. The tested configurations of the streaming vision-language model OneStreamer-4B, including ones fine-tuned on SurgStreamer&#x27;s state or on video with an adapted vision encoder, scored at most 0.540 (Holm-adjusted p &lt;= 0.012). At three external centres, re-training only perception raised performance on held-out procedures from 0.239 to 0.470. On a new procedure, pituitary surgery, controller weights trained on cholecystectomy matched an in-domain controller on oracle state (0.947 vs 0.938). On predicted state they missed the pre-registered non-inferiority margin (-0.024 [-0.040, -0.008]) unless the alert thresholds were re-calibrated. The results support separating perception from reasoning and point to perception under distribution shift as the main limitation.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.21895v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.21895v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.21783v1" target="_blank" rel="noopener">Learning to Think and Explore in 3D World</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-15</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Georgia Tech</span>
+          <span class="arxiv-id">arXiv:2610.21783v1</span>
+        </div>
+        <p class="authors">Yijiang Li, Bingyang Wang, Nuno Vasconcelos</p>
+        <p class="abstract">We study how vision-language models (VLMs) can learn to think and actively explore in 3D space. Instead of providing multi-view images, videos, or 3D representations to the model, we preserve the native visual encoding of VLMs, i.e., a single image, one at a time, just like humans, and treat the 3D representation only as an environment with which the model can interact through actions (e.g., move left) and observations (rendered images). Each rollout begins from an initial first-person view and a visual question. The model can then iteratively reason, navigate, and reorient its viewpoint before committing to a final answer. Following an initial trajectory-supervised finetuning, we apply reinforcement learning (RL) with rewards driven primarily by final-answer correctness. Crucially, RL provides no direct supervision over which viewpoints the model should visit or which exploration actions it should take. Instead, the model must learn an effective exploration policy solely from the extent to which its interactions improve performance. Across six 3D benchmarks, our model ACT3D achieves an average accuracy of 53.2% that improves its base Qwen model by 22.0% and surpasses proprietary Gemini 3.6 Flash. ACT3D also outperforms existing open-source 3D methods while using 50-70% fewer input frames, and generalizes to unseen domains with an average improvement of 5.9% over its supervised initialization. Further analysis reveals adaptive, question-conditioned exploration. Performance gains over the base model increase from 0.6% on questions answerable from the initial view to 16.3% on those requiring extensive exploration. ACT3D searches for occluded targets, avoids unnecessary exploration, and acquires complementary viewpoints for spatial comparisons. These findings demonstrate that outcome-based RL enables VLMs not only to reason over visual evidence, but also to learn when and how to acquire it.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.21783v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.21783v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.21380v1" target="_blank" rel="noopener">Perception or Reasoning? Diagnosing and Tackling Reinforcement Learning Bottlenecks in VLMs</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-15</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">MIT</span><span class="school">UIUC</span><span class="school">UMass Amherst</span>
+          <span class="arxiv-id">arXiv:2610.21380v1</span>
+        </div>
+        <p class="authors">Zeyuan Yang, Zhuohao Chen, Jiaben Chen, Yao Zhang, Maohao Shen, Chuang Gan</p>
+        <p class="abstract">Reinforcement learning has brought strong gains to language model reasoning, but its improvements on visual tasks remain less consistent. One difficulty is that visual task failures can arise from different sources: the same benchmark may be limited by perception for one model and by reasoning for another. We introduce Perception and Reasoning Attribution (PARA), which measures the remaining perceptual and reasoning headroom of each model--benchmark pair by comparing how many current errors are recovered with more accurate visual information versus a stronger reasoner. Across 4 vision-language models and 17 multimodal benchmarks, PARA broadly agrees with the expected characteristics of existing benchmarks while revealing substantial model-specific variation. More importantly, it shows that RL gains become smaller as perceptual headroom increases, but larger when reasoning explains more of the recoverable errors, suggesting that current RL exploits reasoning headroom more effectively than perceptual headroom. Motivated by this gap, we analyze how existing RL objectives affect visual perception and find that reward- and token-level signals influence visual attention only indirectly. We therefore propose GRAD, a group-relative attention distillation objective that uses the best rollout in each group to directly guide the visual attention of weaker rollouts. GRAD consistently improves performance across two model scales and seven benchmarks, and further complements existing RL methods.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.21380v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.21380v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.21323v1" target="_blank" rel="noopener">AdaLoop: Thinking with the Vision Encoder</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-15</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">MIT</span><span class="school">Harvard</span>
+          <span class="arxiv-id">arXiv:2610.21323v1</span>
+        </div>
+        <p class="authors">Xinran Nicole Han, Yiyang Lu, Katelyn Gan, Todd Zickler</p>
+        <p class="abstract">Most vision-language models (VLMs) treat the vision encoder as a static feature extractor: it encodes an image once, independently of the question, and leaves subsequent reasoning to the language model. Yet different questions may require different visual operations and processing depths. We present AdaLoop, a framework for question-conditioned visual recurrence in VLMs. AdaLoop adapts visual computation to the question and reuses the encoder&#x27;s transformations across multiple iterations, with the pretrained vision weights frozen. We also introduce VisRO, a procedural dataset and generation pipeline for training and evaluating vision-centric reasoning. On six VisRO tasks, AdaLoop outperforms standard fine-tuning and question-conditioned single-pass baselines with matched training data and optimizer updates. These gains hold across three VLM families on both in-distribution and out-of-distribution examples. Our findings suggest that pretrained vision encoders can contribute to reasoning through task-directed, iterative visual computation.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.21323v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.21323v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.20989v1" target="_blank" rel="noopener">Do As I Do, Not As I Say: On-Policy Distillation Inherits the Teacher in Vision-Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-14</span>
+          <span class="cat">cs.LG</span>
+          <span class="school">Georgia Tech</span>
+          <span class="arxiv-id">arXiv:2610.20989v1</span>
+        </div>
+        <p class="authors">Frank F. Yang, Kefei Yan, Yiren Wang, Yiyang Wang</p>
+        <p class="abstract">Improving the reasoning capabilities of vision-language models (VLMs) often relies on post-training with supervision from stronger models. Two common strategies are supervised fine-tuning (SFT), which trains on teacher-generated demonstrations, and on-policy distillation (OPD), which provides teacher feedback on trajectories generated by the student itself. While OPD can be more data-efficient by supervising student-generated trajectories, it is unclear how the teacher&#x27;s supervision at each state affects the student&#x27;s learned behavior. To study this question, we conduct a controlled comparison of OPD and filtered SFT across data budgets and tasks where the teacher exhibits different levels of reliability, and analyze how these differences shape student accuracy and completion behavior. Across the two tasks, we find that OPD is effective only when the teacher remains reliable on student-generated trajectories. On ChartQA, where the teacher completes 99% of its solutions, OPD trained on only 10% of the data comes within 1.4 accuracy points of full-data SFT. In contrast, on Geometry3K, where the teacher fails to complete 22% of its solutions, OPD underperforms SFT by 7.9 points, with most of the gap explained by incomplete responses. More strikingly, starting OPD from an SFT student reduces its completion rate from 76% to 62%, effectively erasing the completion behavior learned through SFT. Filtering teacher demonstrations for completeness alone recovers much of SFT&#x27;s advantage. These results show that on-policy supervision can transfer not only teacher knowledge but also persistent failure modes on student-visited states. Code is available at https://github.com/ffy208/opd-inherits-teacher-vlm.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.20989v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.20989v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.20964v1" target="_blank" rel="noopener">VELD-QA: A Large-Scale Dataset for Visual Evidence Grounding and Question Answering in Long Documents</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-14</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UPenn</span><span class="school">USC</span>
+          <span class="arxiv-id">arXiv:2610.20964v1</span>
+        </div>
+        <p class="authors">Zhivar Sourati, Marianne Menglin Liu, Rongguang Wang, Zheng Wang, Yazhe Hu, Lan Guo, Yuying Wang, Mengqing Guo et al.</p>
+        <p class="abstract">Existing long-document QA benchmarks rarely combine large-scale human-authored questions with detailed visual evidence annotations, limiting diagnosis of evidence localization and interpretation failures. We present VELD-QA, a large-scale benchmark for Visual Evidence grounding and question answering in Long Documents. It contains 15,000 fully human-authored question-answer pairs across 5,859 real-world PDFs totaling 372,445 pages, balancing chart, table, and complex-layout tasks. Human annotations identify supporting pages and evidence elements and describe cited visual content, enabling separate retrieval and interpretation evaluation. We evaluate nine vision-language models under four evidence settings and seven retrieval-augmented and agentic systems. Our analysis identifies bottlenecks in evidence localization and interpretation. Retrieval-based methods substantially underperform the oracle setting with ground-truth supporting pages; full-document access does not close the gap. Localization alone is insufficient: oracle accuracy peaks at 81.7%, highlighting persistent visual interpretation and reasoning challenges. Enriching inputs with our visual-element annotations narrows the performance gap by 17-24%, demonstrating value beyond evaluation and motivating data enrichment for multimodal document QA. Our code is available at https://github.com/oracle-samples/veld-qa.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.20964v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.20964v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+    <nav class="day-nav"><a class="prev" href="2026-10-15.html">&larr; 2026-10-15</a></nav>
+  </main>
+  <footer>
+    <p>Generated 2026-10-16 05:37 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
