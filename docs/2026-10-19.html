@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-10-19</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-10-19</h2>
+      <p class="count">10 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.23653v1" target="_blank" rel="noopener">A Language-Informed Loss for Visual Generation</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-16</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Stanford</span>
+          <span class="arxiv-id">arXiv:2610.23653v1</span>
+        </div>
+        <p class="authors">Suchir Agarwal, Keshigeyan Chandrasegaran, Ziyu Chen, Kyle Sargent, Juan Carlos Niebles, Li Fei-Fei, Jiajun Wu</p>
+        <p class="abstract">End-to-end visual generation with pixel-space loss has recently achieved competitive performance without the need for learned image tokenizers. In this work, we study whether language-informed supervision can provide a richer training signal than pixel loss for visual generation. We introduce LILIE (pronounced &quot;lily&quot;), a Language-Informed and Lossless Image Encoder. LILIE is an invertible image transform trained such that a vision-language model can recover captions from noised features. The encoder uses a normalizing flow transformer trained jointly with a vision-language model via next token prediction. We then use the encoder to extract a simple language-informed loss for text-to-image generation. We train JiT models with LILIE loss, reducing gFD by 14 points (66.84 $\to$ 53.01) against a pixel-only baseline on the GPIC dataset. Our code, encoders, and generative models are available at https://suchiragarwal.com/lilie.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.23653v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.23653v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.23469v1" target="_blank" rel="noopener">When Evidence Vanishes: Distilling Visual-Evidence Dependency in Medical Vision-Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-16</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Michigan</span><span class="school">Yale</span>
+          <span class="arxiv-id">arXiv:2610.23469v1</span>
+        </div>
+        <p class="authors">Qizhen Lan, Yiling Ma, Ruiqi Chen, Mengchen Fan, Xi Xiao, Lin Zhao, Liang He, Baocheng Geng et al.</p>
+        <p class="abstract">Compact medical vision-language models (VLMs) can answer clinical questions correctly without reliably using the image, relying instead on question wording or learned priors. Standard knowledge distillation copies a teacher&#x27;s answer preference on the original image, but it leaves unchecked whether that preference is conditional on the visual evidence required by the question. We study this missing target as medical visual evidence dependency: support for the correct answer should decrease when the matched evidence is absent. We introduce Evidence-Conditioned Dependency Distillation (ECDD), which pairs each training image with a control matched to the evidence level and distills the teacher&#x27;s drop in answer margin across the pair. A lower bound objective transfers positive dependency by penalizing only shortfalls, while original-image supervision preserves task accuracy. The same formulation applies when the evidence is a queried clinical region, a surgical instrument, or whole-image visual content. Across three medical VQA settings, ECDD keeps original-image accuracy competitive with distillation and alignment baselines while making answer support more sensitive to evidence removal. Under the DME headline objective, for example, the positive-case margin response to target rather than random masking rises from 0.786 with KD to 2.023 with ECDD, while original-image accuracy differs by 0.11 points. These results suggest that medical VLM distillation should transfer both the teacher&#x27;s answer preference and its dependence on visual evidence.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.23469v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.23469v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.23230v1" target="_blank" rel="noopener">RAP: A Dataset for Paper-to-Poster Generation via Declarative Markup from Human-Crafted Exemplars</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-16</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Washington</span>
+          <span class="arxiv-id">arXiv:2610.23230v1</span>
+        </div>
+        <p class="authors">Haonan Han, Yukang Lin, Minliang Lin, Haoxian Tan, Jun-Yan He, Rui Yang, Zhi-Qi Cheng, Jie Hu et al.</p>
+        <p class="abstract">Making a conference poster is visual coding in miniature: an entire paper must be compressed onto a single page, which exercises summarization, visual design, and code implementation at once, using nothing beyond the paper itself. Yet benchmarks for this task in the context of visual coding remain scarce: existing resources are small and annotated only with layout boxes, so evaluation must fall back on VLM-as-judge or human checklists rather than objective render-and-compare, and the generation methods they support design layouts from scratch, leaving human-crafted posters unusable as either a retrievable design library or as verified supervision. We introduce RAP (Reconstruct A Poster), a dataset and benchmark for paper-to-poster generation as a visual coding task. RAP contains 25K+ verified paper-poster pairs from various machine learning conferences held between 2022 and 2026, annotated with a three-level content taxonomy, plus a held-out benchmark of 150 test papers each paired with its human poster. A fully automated derendering pipeline turns each poster into styled HTML/CSS of typed, refillable slots, so every sample is a paper-poster-markup triplet verifiable by rendering against the source poster. The corpus serves both inference and training: PosterRAG, a training-free multi-agent pipeline, retrieves an exemplar and refills its slots without touching layout or styling, while an SFT+RL recipe trains a dedicated model from the same triplets. An online demo is available at https://reconstruct-a-poster.github.io/.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.23230v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.23230v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.22964v1" target="_blank" rel="noopener">ANCHOR: Audio-Visually Grounded Chain-of-Thought Reasoning Benchmark</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-16</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Carnegie Mellon</span>
+          <span class="arxiv-id">arXiv:2610.22964v1</span>
+        </div>
+        <p class="authors">Joel Julin, Souraja Kundu, Liza Dahiya, George Z. Wei, Liuyue Xie, Jingru Yi, Xu Zhang, Hao Yang et al.</p>
+        <p class="abstract">Multimodal large language models (MLLMs) perform well on audio-visual question answering, but correct answers do not necessarily imply that their stated reasoning is grounded in relevant perceptual evidence. Existing benchmarks mainly evaluate final-answer accuracy, offering limited insight into whether model-generated rationales correctly identify visual regions, temporal intervals, and audio events supporting predictions. We introduce ANCHOR, a benchmark and evaluation framework for measuring grounded-rationale alignment in multimodal reasoning, comprising 2,319 videos and 8,272 question-answer pairs with structured reasoning traces, temporal evidence, spatial bounding boxes, and salient audio cues, including a human-refined test set of 224 videos and 975 question-answer pairs. We separately measure answer correctness, hallucination, logical divergence, and conciseness, with direct spatial and temporal grounding measurements on a focused subset. Across the full benchmark, twelve contemporary MLLMs show a substantial alignment gap: models with comparable answer performance can differ markedly in whether their explanations are supported by annotated evidence. On a matched subset of 100 videos and 446 question-answer pairs, rankings remain highly stable across human-refined, Gemini-generated, and GPT-generated references (mean Pearson r=0.99), providing evidence against model-reference circularity within this subset. Grounding-cue ablations of three MLLMs on the full human-refined test set reveal a consistent modality hierarchy: removing video reduces accuracy by 38.4-41.8 points, while removing bounding boxes (3.2-7.7 points) and audio (4.2-5.6 points) causes smaller, complementary, model-dependent drops. These findings show answer-only evaluation obscures important grounding failures and position ANCHOR as a testbed for evaluating accurate and evidence-aligned audio-visual reasoning.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.22964v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.22964v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.22822v1" target="_blank" rel="noopener">VISTA: A Multimodal Egocentric Benchmark for Goal-Oriented Perception and Assistance to Blind and Low-Vision Users</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-16</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Harvard</span>
+          <span class="arxiv-id">arXiv:2610.22822v1</span>
+        </div>
+        <p class="authors">Noé Mosca, Mohamed Rayan Barhdadi, Muhammad Hamza, Joshua Yeh, Suryodaya Bikram Shahi, Zhiyan Li, Selim-Antoine Lali, Weiyue Li et al.</p>
+        <p class="abstract">Blindness and low vision limit many people&#x27;s ability to complete daily tasks, motivating AI assistants that provide useful guidance. Yet, existing benchmarks do not adequately test whether vision models can provide effective everyday assistance. In particular, i) existing benchmarks primarily rely on visual and textual inputs, with limited support for other modalities that are increasingly available in egocentric wearable devices such as gaze, inertial measurements, spatial trajectories, and others; and ii) existing evaluations emphasize scene understanding and question answering, with limited coverage of goal-conditioned guidance for blind and low-vision users across everyday tasks. To bridge this gap, we introduce VISTA (Visually Impaired Scene and Task Annotations), a multimodal egocentric benchmark for goal-oriented assistance for blind and low-vision users. VISTA contains $\sim$1,000 egocentric recordings captured with Project Aria glasses; each recording provides synchronized sensor streams, six of which serve as model inputs, and three different types of annotation, covering ten task categories (TC), from object localization to hazard detection. We evaluate 14 representative vision-language models zero-shot on VISTA and design a lightweight multimodal model baseline that integrates all six modalities. Experimental results show that, although existing models can often describe egocentric scenes, they remain limited in generating goal-directed assistive guidance. VISTA thus provides a benchmark for evaluating multimodal models that could improve everyday accessibility.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.22822v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.22822v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.22744v1" target="_blank" rel="noopener">OmniXRef: A Unified Framework for Multimodal Multi-Reference Video Editing</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-15</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Brown</span>
+          <span class="arxiv-id">arXiv:2610.22744v1</span>
+        </div>
+        <p class="authors">Xiaoyan Cong, Tianyu Wang, Hyeonho Jeong, Zhifei Zhang, Yuqian Zhou, Yijun Li, Shaoteng Liu, Zhe Lin et al.</p>
+        <p class="abstract">Creative intent in video editing can be expressed through text instructions (e.g., &quot;remove the people&quot;), image references (e.g., subject appearance), video references (e.g., camera movement), or a combination of the above. We introduce OmniXRef, a unified framework for multimodal multi-reference video editing that allows users to combine variable numbers of text, image, and video references to control diverse attributes of a source video. We first devise a unified input design with a reference-bank interface and introduce $R^2$-RoPE to support generalization to more references. Then our model, OmniXRef-Model, uses a single-stream diffusion transformer to jointly process the source video and multimodal context from an MLLM in an interleaved sequence. To address the scarcity of training data for video-reference editing, we construct OmniXRef-Data using synthesis pipelines for different editing tasks and combinations of references. We use curriculum learning to progressively increase task complexity and resolution. To support systematic evaluation of video as a control modality, we introduce OmniXRef-Bench, a benchmark for video-reference attribute transfer across Camera, Motion, Content, Style, and Visual Effects (VFX). Comprehensive evaluations show that our OmniXRef-Model outperforms task-specific baselines and commercial models.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.22744v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.22744v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.22681v1" target="_blank" rel="noopener">EgoP$^{2}$C: Internalizing Plan-Perceive-Compose for Spatial Reasoning in Egocentric Video</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-15</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Arizona State</span>
+          <span class="arxiv-id">arXiv:2610.22681v1</span>
+        </div>
+        <p class="authors">Chaoyu Li, Arka Sadhu, Yuliang Li, Hyo Jin Kim, Yuning Chai, Pooyan Fazli</p>
+        <p class="abstract">Answering complex spatial reasoning questions from egocentric video requires determining what evidence is needed, acquiring targeted observations, and combining them through multiple reasoning steps. Existing vision-language models (VLMs) struggle to perform this process reliably. Agentic systems address this challenge by querying external vision and geometry tools, but training their reasoning leaves these tools unchanged, so inaccurate observations can still lead to incorrect answers. We introduce EgoP$^{2}$C, a framework that internalizes a plan-perceive-compose process within a single VLM. To this end, we first train specialized Planner and Perception teachers using separate adapters (Dual-LoRA), then fine-tune the corresponding experts in a mixture-of-experts (MoE) student under their supervision. We subsequently train the student on trajectories generated by its current policy using a segment-level extension of multi-teacher on-policy distillation (MOPD), assigning different trajectory segments to different supervisors. The Planner teacher supervises which evidence-seeking questions to ask, when to stop gathering evidence, and how to compose the final answer. The Perception teacher supervises the video-grounded answers to those questions. At inference, the student executes this adaptive workflow end-to-end, without external spatial tools. Across three spatial reasoning benchmarks, EgoP$^{2}$C students built from Qwen3-VL-8B and SenseNova-SI-1.3-8B outperform their base models by an average of 9.2 and 7.5 percentage points, respectively. Across both backbones, EgoP$^{2}$C reduces inference FLOPs by 65.8-66.3% and achieves $1.29$-$1.49\times$ speedups over their shared Dual-LoRA teacher.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.22681v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.22681v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.22631v1" target="_blank" rel="noopener">A Plausible Explanation Is Enough to Mislead Multimodal Judges</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-15</span>
+          <span class="cat">cs.CL</span>
+          <span class="school">University of Washington</span><span class="school">UPenn</span><span class="school">Penn State</span><span class="school">Northwestern</span>
+          <span class="arxiv-id">arXiv:2610.22631v1</span>
+        </div>
+        <p class="authors">Anglin Cai, Zhiqi Wang, Xiaozhi Yang, Yurun Lin, Dongwon Lee, Yuchen Yang</p>
+        <p class="abstract">Multimodal large language models (MLLMs) increasingly serve as judges in training and evaluation pipelines, often assessing answers together with explanations. Although AI judges are sensitive to textual factors, it remains unclear whether ordinary plausible explanations can sway judgments requiring visual verification. We introduce JUPE, a visual-question-answering (VQA)-style benchmark that fixes answers while varying explanations. Across 14 MLLM judges, ordinary explanations that sound plausible mislead judges, with effects comparable on average to deliberately persuasive arguments. Plain justifications and chain-of-thought rationales reduce rejection of incorrect answers by 12.7 and 13.8 percentage points, respectively. We call this failure plausibility capture. Using signal detection theory, we find a significant mean shift in decision criterion toward acceptance, without a clear change in mean discriminability. Explanations sway judgments across domains, explanation generators, and judging protocols, while tested mitigations offer limited, model-dependent protection. Such shifts can inflate performance estimates when judges evaluate answers with explanations.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.22631v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.22631v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.22610v1" target="_blank" rel="noopener">Shift-Reliance Alignment: Ranking Vision-Language Models by the Cues They Trust</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-15</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Maryland</span><span class="school">Johns Hopkins</span>
+          <span class="arxiv-id">arXiv:2610.22610v1</span>
+        </div>
+        <p class="authors">Faisal Mohammad, Mohamed Younis</p>
+        <p class="abstract">Vision-language models (VLMs) are usually chosen from leaderboards, which give one ranking for every application. On questions about objects that a scene suggests but does not contain, however, the model with the lowest error on the POPE hallucination benchmark is not the one with the lowest error on such questions. For yes/no questions about object presence, we show that the best model for a target domain can be predicted without running any candidate on that domain, given 650 to 1,200 labeled target items that calibrate a detector. We measure each model&#x27;s reliance on a cue, a feature such as scene context or text in the image, by editing 100 labeled source images so that the cue suggests the wrong answer, and comparing with a matched control edit. Reliance predicts which VLMs are misled by physical sticker attacks (Spearman .93 on nine models not used to design the score) and which hallucinate on unedited COCO photographs, beyond what their tendency to answer yes explains. Shift-Reliance Alignment (SRA) scores a model by its source error on the labeled source questions plus its reliance multiplied by the shift. The shift is the proportion of target questions on which the cue misleads, and a detector estimates it on the unlabeled target images. SRA selects the model with the lowest score. In pre-registered tests on new images where most questions mislead, it lowered the error of the selected model from 30.4% under selection by source error to 18.8% on Objects365 and OpenImages but, against its prediction, not on COCO. On CueDial, a benchmark we release that varies how often a cue misleads, selection by model confidence falls more than 40 percentage points behind the best model when overlaid text denies a visible object, and SRA stays within 3 points.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.22610v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.22610v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.22474v1" target="_blank" rel="noopener">Star Light, Star Bright: Can Multimodal Models Parse an Astronomy Visual Question Answering Dataset Right?</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-15</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UIUC</span>
+          <span class="arxiv-id">arXiv:2610.22474v1</span>
+        </div>
+        <p class="authors">J. P. Naiman</p>
+        <p class="abstract">Figures are essential for scientific communication, and the field of Visual Question Answering (VQA) aims to test the figure understanding capabilities of large multimodal models (LMMs). Here, we investigate the accuracy of several low-cost LMMs on domain-specific VQA tasks for astronomical images of the sky. As instrument for this task we build a domain-specific VQA dataset comprising 2001 partially-synthetic figures divided evenly between contour plots, real telescope images drawn from NASA&#x27;s SkyView, and &quot;fake&quot; sky images which share the axes and angular scales of the real images but draw their colors from a gaussian mixture model, alongside 47357 questions. Each figure is released as pristine and with realistic page-aging degradations mimicking the historical astronomical corpus. Testing three low-cost proprietary LMMs, we find models frequently fail to answer domain-specific questions at high accuracy. An initial comparison with 104 human-verified, astrometrically tagged figures from historical journal publications shows similar median errors in angular extent. All code is available on GitHub: https://github.com/jnaiman/SkyImagesWASP2026 and dataset is available on HuggingFace: https://huggingface.co/datasets/ReadingTimeMachine/astro_sky_image_vqa.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.22474v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.22474v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+    <nav class="day-nav"><a class="prev" href="2026-10-18.html">&larr; 2026-10-18</a></nav>
+  </main>
+  <footer>
+    <p>Generated 2026-10-19 05:53 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
