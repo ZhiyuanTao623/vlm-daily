@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-10-20</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-10-20</h2>
+      <p class="count">8 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.26863v1" target="_blank" rel="noopener">Text-to-Image Generative Modeling Without Language Pretraining</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-19</span>
+          <span class="cat">cs.LG</span>
+          <span class="school">Stanford</span>
+          <span class="arxiv-id">arXiv:2610.26863v1</span>
+        </div>
+        <p class="authors">Keshigeyan Chandrasegaran, Yue Zhao, Armin W. Thomas, Ehsan Adeli, Jiajun Wu, Juan Carlos Niebles, Li Fei-Fei, Michael Poli</p>
+        <p class="abstract">Modern text-to-image (T2I) systems use internet-scale language pretraining for text-conditioned image generation. We ask whether language pretraining is necessary for strong T2I generation. We introduce Halcyon, a family of early-fusion multimodal autoregressive models pretrained entirely from scratch on GPIC, a dataset of 100M image-text pairs. Halcyon-0.52B outperforms LlamaGen-XL/8 (48.0 vs. 63.3 gFD) with 18.2$\times$ less pretraining compute. Further, Halcyon-1.6B outperforms JiT-T2I-XXL/8++ (35.3 vs. 41.0 gFD) with 275$\times$ less pretraining compute. Controlled experiments show that text-only pretraining does not improve T2I generation. Halcyon also learns image captioning by replacing caption dropout with I2T supervision, maintaining competitive T2I generation quality under the same pretraining budget. We show that strong T2I systems can be trained from scratch without internet-scale language pretraining. Code and models are available at https://cs.stanford.edu/~keshik/halcyon</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.26863v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.26863v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.26860v1" target="_blank" rel="noopener">OpenVLHarness: Real World Visual Agentic Tool-Use with Multimodal Memory</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-19</span>
+          <span class="cat">cs.CL</span>
+          <span class="school">UCLA</span>
+          <span class="arxiv-id">arXiv:2610.26860v1</span>
+        </div>
+        <p class="authors">Yu Zhou, Cheng-Fu Yang, Rui Sun, Di Wu, Sibo Peng, Mingyang Zhang, Zhen Yang, Ruiyi Zhang et al.</p>
+        <p class="abstract">Multimodal large language models (MLLMs) have made rapid progress on visual reasoning, yet many tasks require evidence that is difficult to obtain through internal reasoning alone: our controlled study on 22 benchmarks shows that simply increasing the inference budget of the base model yields only modest gains. Such tasks demand grounded perception, external knowledge, and numerical measurements obtained through heterogeneous tools, whose outputs must be made interpretable to the model and retained across reasoning steps. We introduce OpenVLHarness, a multimodal reasoning harness organized around a capability layer and persistent multimodal memory. The capability layer combines task-level tool interfaces with evidence rendering, providing consistent access to heterogeneous backends and converting their outputs into model-readable observations. Persistent multimodal memory retains the corresponding images, structured data, and web references as addressable artifacts throughout each query. A coding interface executes generated programs over stored data, enabling computations that combine results from multiple tools. Together, these mechanisms support an iterative process of acquiring, inspecting, and composing multimodal evidence. Evaluated on 22 benchmarks with eight open and proprietary backbones, OpenVLHarness improves average scores by 9.7-12.6 points over matched no-tool baselines, including +11.2 with Qwen3-VL-8B, +9.7 with Kimi K3, and +9.9 with GPT-6 Astra. With GPT-6 Luna at medium reasoning effort, OpenVLHarness outperforms the base model, Codex, and Visual Sketchpad at maximum effort by 7.7-8.5 points while incurring at most 37% of their model-token cost.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.26860v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.26860v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.25570v1" target="_blank" rel="noopener">DiffGround: Semantic Difference-Guided Zero-Shot Video Question Grounding</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-18</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UT Austin</span>
+          <span class="arxiv-id">arXiv:2610.25570v1</span>
+        </div>
+        <p class="authors">Cheng-Han Lee, Amir Salimi, Hsiang-Wei Huang, Che-Chun Su, Min Sun, Cheng-Hao Kuo</p>
+        <p class="abstract">Video Question Grounding (VideoQG) requires both accurate question answering and precise temporal localization. Existing supervised methods rely on costly temporal annotations, while existing zero-shot approaches are primarily designed for Video Question Answering (VQA) and are not optimized for temporal grounding. We propose DiffGround, an action-driven zero-shot framework built upon frozen Multimodal Large Language Models (MLLMs). Our framework first predicts an answer-relevant action cue that transforms the input question into an explicit semantic target for grounding. Action Cue converts a reasoningoriented question into an action-centric retrieval query. Guided by the action cue, a Vision-Language Model (VLM) efficiently selects informative keyframes for reasoning. Finally, we introduce Semantic Diff Refinement, a training-free temporal refinement method that exploits semantic differences between neighboring SigLIP2 embeddings to recover complete action segments from sparse predictions. Extensive experiments on NExT-GQA and STAR show that DiffGround consistently outperforms existing zero-shot and supervised methods, establishing a new state of the art for Video Question Grounding.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.25570v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.25570v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.25503v1" target="_blank" rel="noopener">From Seeing to Reporting: A Theory of Reliable Visual Set Generation in Vision-Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-18</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UC Berkeley</span>
+          <span class="arxiv-id">arXiv:2610.25503v1</span>
+        </div>
+        <p class="authors">Junzhe Shi, Yuan Gan, Shida Jiang</p>
+        <p class="abstract">Vision-language models (VLMs) are asked to report what they see: to count objects, box them, parse a screen or pick a click target (GUI grounding). We argue that reporting is part of the visual task, not merely its formatting. In a dense scene with 173 shapes, GPT-6.1 lists 173 records that match every shape, yet the counts it states in the same response sum to 188. From Seeing to Reporting (FSR) is a theory of visual reporting and a set of inference-time procedures that improve the reports of frozen VLMs. It models reporting as a chain from responses to decoded records, constructed sets and task answers, linked by task-compatible matching. The chain gives exact relations for deleting records, averaging their coordinates and switching readouts, and it splits the error of one answer chosen among several calls into missing candidates, lost representatives and wrong choices. These relations guide procedures for counting, detection, document layout, screen parsing and GUI grounding that use the task specification and a shipped configuration, without requiring labels from the target task. On 50 dense synthetic scenes, a one-call reporting-and-decoding protocol cuts per-type count error by 85.2% for GPT-6.1 and 98.8% for Claude Sonnet 5.5. On 600 ScreenSpot-Pro items, a GUI-grounding tier that combines three models lowers the miss rate from 13.67% for GPT-6.1&#x27;s two-stage zoom to 9.33%, against 12.67% for three such zooms combined by a cluster vote at about the same cost. A plain vote over the same three models misses 12.33%: the other models supply the candidates, and selecting among them turns those candidates into fewer misses. We release the protocols, the stored responses and the analysis code.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.25503v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.25503v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.25470v1" target="_blank" rel="noopener">A failure of Imagination: VLMs fail to use visual representations for text, but self-distillation can help</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-18</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">NYU</span>
+          <span class="arxiv-id">arXiv:2610.25470v1</span>
+        </div>
+        <p class="authors">Shashwat Singh, He He, Tal Linzen</p>
+        <p class="abstract">Vision-language (VL) models are typically built by fine-tuning a language model to attend to visual features in service of a Visual Question-Answering objective. We ask whether this alignment changes how language models represent text---especially on tasks where visualization would help, like geometry questions posed in words. We distinguish weak multimodality (the model can answer questions about an input image) from strong multimodality (the model&#x27;s text representations themselves become vision-aligned, improving performance on text-only tasks with latent visual structure). To test for strong multimodality, we construct a task of shape-counting problems with paired equivalent text and image specifications. This task is trivial when the image is provided, but requires visualization when specified in text as line coordinates. We compare instruction-tuned Qwen-2.5 and Mistral models against their vision-aligned counterparts on the text variant of the task. We find that the multimodal models do no better in this setting, despite strong performance on the image version of the task. Probing experiments corroborate this: vision-aligned decoder embeddings carry no more visual structure than their text-only counterparts. Finally, we provide an optimization objective that distills in-context visual embeddings into text embeddings. This alignment induces gains on the text variant of the task without explicit task supervision, even on samples more complex than seen during alignment. This suggests that VQA-style alignment leaves available cross-modal transfer untapped.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.25470v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.25470v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.25440v1" target="_blank" rel="noopener">Design Considerations in Low-Resource Archival OCR: A Case Study in Lakota</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-18</span>
+          <span class="cat">cs.CL</span>
+          <span class="school">UC Berkeley</span><span class="school">CU Boulder</span>
+          <span class="arxiv-id">arXiv:2610.25440v1</span>
+        </div>
+        <p class="authors">Téa Wright, Laura X. Ma, Claudia Iron Hawk, Hannah J. Haynie, Alexis Palmer, Alane Suhr, Abteen Ebrahimi, Katharina von der Wense</p>
+        <p class="abstract">Building and expanding access to digital archives supports language reclamation and creates lasting resources for community revitalization. Designing effective tools to support these efforts requires taking into account the community-, language-, and document-specific context. We investigate how small ($\leq$3B) vision-language models (VLMs) can be adapted as optical character recognition (OCR) tools for Lakota, a North American Indigenous language. In addition to benchmarking modeling approaches, we inspect four practical facets of low-resource archival OCR that arise in previous work and conversations with community members: constrained training budgets, segmentation noise, scan degradation, and orthographic variance. We demonstrate that fine-tuning VLMs for OCR post-correction on 35 pages of transcribed data decreases character error rate (CER) from 17.1 to 3.9\% on a bilingual corpus, and find that training only with nine pages increases CER by only 1.1\% over this. However, evaluating under realistic automatic segmentation nearly doubles the CER of the best-performing models, stressing the importance of taking realistic use cases into account. We hope this work encourages future research on developing language technologies grounded in the workflows and constraints of ongoing revitalization efforts.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.25440v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.25440v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.24500v1" target="_blank" rel="noopener">Investigating Length Bias and Robustness in LVLMs for Multiple-Choice Question Answering</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-17</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Virginia Tech</span>
+          <span class="arxiv-id">arXiv:2610.24500v1</span>
+        </div>
+        <p class="authors">Md. Atabuzzaman, Hani Alomari, Chris Thomas</p>
+        <p class="abstract">Large Vision-Language Models (LVLMs) demonstrate strong performance on multiple-choice question answering (MCQA), yet their reliability under biased conditions remains underexplored. We investigate length bias, the systematic preference for longer answer options, through controlled benchmarks spanning fine-grained visual domains. LVLMs consistently favor longer options even when visually inconsistent, with accuracy dropping 2--38\% when correct answers are shorter and increasing 1--70\% when longer. This bias persists across model scales. Through layer-wise mechanistic analysis, we reveal that length bias emerges from late-layer suppression of visual evidence in favor of language-side length priors. Blurry-image experiments show that bias intensifies when visual evidence weakens, while abstention tests reveal that LVLMs struggle to refuse incorrect predictions. We propose and evaluate multiple inference-time mitigation strategies; while these provide partial improvements, none achieves deployable bias mitigation without relying on oracle information unavailable at inference time. These results underscore that inference-time interventions are insufficient, pointing to the need for architectural solutions and bias-aware training.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.24500v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.24500v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.24239v1" target="_blank" rel="noopener">Encoder-Free Multimodal LLMs Learn Implicit Encoders</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-16</span>
+          <span class="cat">cs.CL</span>
+          <span class="school">UT Austin</span><span class="school">Johns Hopkins</span>
+          <span class="arxiv-id">arXiv:2610.24239v1</span>
+        </div>
+        <p class="authors">David Harwath, Desh Raj, Xavier Velez, Sandra Arcos-Holzinger, Willie Jeng, Karen Livescu, Leibny Paola Garcia-Perera, Sanjeev Khudanpur</p>
+        <p class="abstract">We empirically analyze two recently proposed encoder-free multimodal LLMs, Gemma-4 12B and Inkling-Small. Unlike previous multimodal LLMs, these models do not use modality-specific encoders to extract tokenized embeddings representing audio and image input; instead, they directly feed windows of samples, pixels, or spectral features to the Transformer language model. We analyze whether the early layers of these models learn to function similarly to dedicated audio and visual encoders. We find that these early layers do in fact act as ``implicit encoders,&#x27;&#x27; encoding audio and visual inputs in a way that is largely invariant to their cross-modal context. Furthermore, when performing multimodal reasoning tasks, we show that independently encoding the modalities throughout these early model layers achieves the same accuracy as jointly encoding them from the first layer onwards. Finally, we use layer-wise probing to analyze the salient information captured by the implicit encoders and find their behavior to be similar to several popular encoder models.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.24239v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.24239v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+    <nav class="day-nav"><a class="prev" href="2026-10-19.html">&larr; 2026-10-19</a></nav>
+  </main>
+  <footer>
+    <p>Generated 2026-10-20 05:45 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
