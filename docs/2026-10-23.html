@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-10-23</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-10-23</h2>
+      <p class="count">3 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.30980v1" target="_blank" rel="noopener">Diagnostic Loss: Asymmetric Supervision for Radiology Report Generation</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-22</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Harvard</span><span class="school">Johns Hopkins</span>
+          <span class="arxiv-id">arXiv:2610.30980v1</span>
+        </div>
+        <p class="authors">Ignacy Kolton, Wenxuan Li, Zongwei Zhou, Jarosław B. Ćwikła, Arkadiusz Sitek, Pedro R. A. S. Bassi, Szymon Płotka</p>
+        <p class="abstract">Automated radiology report generation requires models to do more than produce fluent clinical narratives: they must explicitly state supported diagnoses while avoiding unsupported ones. However, existing medical vision-language models (MedVLMs) are typically trained with token-level maximum likelihood objectives, which prioritize text agreement over diagnostically critical terms. As a result, models can miss key diagnoses and introduce wrong ones. We identify this as an objective misalignment between conventional language modeling and the asymmetric diagnostic requirements of radiology reporting. To encode these requirements, we introduce Diagnostic Loss (DLoss), a differentiable, architecture-agnostic objective that operates directly on decoder token probabilities. DLoss separately aggregates probability mass over vocabularies associated with diagnoses supported by the reference report and with unsupported alternatives. Using asymmetric pooling across token positions in the report, it encourages supported diagnoses to receive sufficient probability in at least one position while suppressing spurious probability spikes for unsupported diagnoses across all positions during training. The loss can be applied to existing 3D MedVLMs without modifying their vision backbones, language decoders, or inference procedures, and introduces no additional inference-time computation. We train and evaluate DLoss on 50,000 abdominal CT scans across several 3D MedVLM architectures on both in-distribution and out-of-distribution report-generation benchmarks. Across these settings, DLoss improves diagnostic faithfulness while maintaining competitive performance on conventional language-generation metrics, showing the value of asymmetric sequence-level supervision for radiology report generation. The code for DLoss is available at https://github.com/gmum/DLoss.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.30980v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.30980v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.30592v1" target="_blank" rel="noopener">Visual Grounding First, Multimodal In-context Learning Follows</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-22</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">MIT</span><span class="school">UC Berkeley</span>
+          <span class="arxiv-id">arXiv:2610.30592v1</span>
+        </div>
+        <p class="authors">Minhyuk Seo, Minjae Lee, Chaeeun Lee, Wei Lin, Muhammad Jehanzeb Mirza, Tinne Tuytelaars, Jonghyun Choi</p>
+        <p class="abstract">LLMs have shown strong in-context learning (ICL) capability, but extending it to Multimodal LLMs (MLLMs) remains challenging. Prior multimodal ICL methods often rely on ICL-specific datasets for additional training or task vector extraction, which can improve performance on the same ICL benchmark used for adaptation. However, they do not generalize well to other benchmarks and often induce forgetting in previously well-solved tasks. For this reason, we identify &#x27;visual grounding&#x27; as the key bottleneck in multimodal ICL; MLLMs often fail to attend to task-relevant visual evidence in demonstrations, instead over-relying on textual cues and producing hallucinated outputs. To address this, we propose ProCoRe to enhance visual grounding through contrastive reinforcement learning on multimodal contrastive data for improving multimodal ICL. ProCoRe generates captions for contrastive image pairs, decomposes them into propositions, and optimizes contrastive rewards that encourage alignment with corresponding images while discouraging mismatched ones. Despite never seeing ICL-formatted training examples, ProCoRe improves average multimodal ICL classification accuracy by 5.6% and captioning ROUGE-L by 13.8% over the off-the-shelf Qwen-VL-3-8B model, outperforming ICL-data-dependent state of the arts across benchmarks. Finally, we introduce PICL, a personalized multimodal ICL captioning benchmark that tests whether MLLMs genuinely understand visual demonstrations rather than relying on pre-trained semantic priors.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.30592v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.30592v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.30231v1" target="_blank" rel="noopener">Edit, Don&#x27;t Imitate: Minimal-Edit On-Policy Distillation for Multimodal Reasoning</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-21</span>
+          <span class="cat">cs.LG</span>
+          <span class="school">UC Berkeley</span><span class="school">Cornell</span><span class="school">UCLA</span><span class="school">USC</span>
+          <span class="arxiv-id">arXiv:2610.30231v1</span>
+        </div>
+        <p class="authors">Wen Ye, Ailin Deng, Zirui Wang, Shixing Yu, Han Zhang, Tian Yun, Nikhil Mehta, Tarun Kalluri et al.</p>
+        <p class="abstract">Visual mathematical reasoning can fail before reasoning begins: when a vision-language model (VLM) misreads a diagram, subsequent reasoning proceeds from false premises. This perceptual bottleneck is especially pronounced in smaller models, while accurate textual descriptions can substantially narrow the gap to larger models. Because obtaining such descriptions at inference requires additional annotation or model calls, we propose minimal-edit corrective on-policy distillation. Using reference figure descriptions and verified reference solutions as training-only information, a teacher scores incorrect student rollouts under a minimal-edit objective, and only teacher-disfavored tokens contribute to the corrective loss. Correct rollouts receive task-reward reinforcement learning. This preserves on-policy supervision while avoiding full-response imitation. Across model scales, the method requires no descriptions at test time and meets or exceeds the corresponding base model supplied with a reference figure description at inference. It also improves perception-oriented performance, particularly low-level geometric perception, and transfers to external mathematics and perception benchmarks. Because the minimal-edit teacher evaluates corrections rather than generating its own solution, the method remains effective with a frozen same-size teacher, although its gains are smaller than with a larger teacher on most metrics.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.30231v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.30231v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+    <nav class="day-nav"><a class="prev" href="2026-10-22.html">&larr; 2026-10-22</a></nav>
+  </main>
+  <footer>
+    <p>Generated 2026-10-23 05:50 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
