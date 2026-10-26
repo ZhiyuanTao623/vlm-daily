@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-10-26</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-10-26</h2>
+      <p class="count">3 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.32182v1" target="_blank" rel="noopener">Depth-Dependent Safety Geometry in Vision-Language Models: Layer-Wise Localization and Bidirectional Refusal Control</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-23</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Virginia Tech</span>
+          <span class="arxiv-id">arXiv:2610.32182v1</span>
+        </div>
+        <p class="authors">Muhammad Zeeshan Karamat, Syed Talal Hassan, Christiana Chamon Garcia</p>
+        <p class="abstract">Vision-Language Models (VLMs) are widely deployed, yet the internal mechanisms behind their safety behavior remain poorly understood. We present a lightweight inference-time framework for localizing and manipulating safety-sensitive representations in frozen VLMs, without retraining or modifying parameters. On Qwen3-VL-4B, layer-wise activation divergence analysis reveals non-uniform safety geometry across depth. Causal interventions show that early vision layers support strong bidirectional refusal control through activation steering along a learned safety direction, with unsafe rejection spanning 6%-96%, whereas later layers respond more to activation magnitude scaling and exhibit a substantial safety-selectivity trade-off. Deeper layers remain well separated along the safety direction yet are largely insensitive to steering, distinguishing representational separability from causal controllability. InternVL2.5-4B shows qualitatively similar depth-dependent activation geometry despite differences in layer location and magnitude. Our results expose a white-box, representation-level refusal-bypass attack surface in VLM vision encoders and motivate inference-time stabilization of safety-sensitive representations.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.32182v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.32182v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.32013v1" target="_blank" rel="noopener">MAGIC: Margin-gated Contrastive Debiasing with Evidence Restoration for VLM Test-time Robustness Scaling</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-23</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UW-Madison</span><span class="school">UNC Chapel Hill</span>
+          <span class="arxiv-id">arXiv:2610.32013v1</span>
+        </div>
+        <p class="authors">Shunshun Gu, Enze Zhang, Ming Pei, Hang Zhou, Xiao Luo</p>
+        <p class="abstract">This paper studies the problem of test-time robustness scaling for large vision-language models (LVLMs), which aims to mitigate language bias during inference. Existing approaches typically adopt test-time scaling techniques such as contrastive decoding to improve inference performance. Despite the progress, the performance of these approaches is far from satisfactory due to intentional evidence removal during perturbations and redundant inference cost. Towards this end, we propose a novel approach named Margin-gated Contrastive Debiasing with Evidence Restoration (MAGIC). The core of our MAGIC is to evaluate the decision margins of LVLMs to selectively activate textual and visual perturbation branches for efficient debiased inference. In particular, our MAGIC first measures the prediction margins of crucial tokens, and applies a gating function to identify low-confidence responses that are susceptible to language biases. For selected samples, we integrate the token logits from multiple textual and image perturbation branches with the original ones for debiased decision. More importantly, we selectively restore the most informative corrupted views with sharp prediction distributions for ambiguous samples after debiasing, enabling evidence recovery for discriminative decision-making. We further utilize a calibration dataset to actively identify and prune ineffective branches during contrastive debiasing for cost reduction. Extensive experiments on benchmark datasets validate the effectiveness of the proposed MAGIC in comparison with extensive baselines.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.32013v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.32013v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.31835v1" target="_blank" rel="noopener">SAGE: A hybrid vision-language and geometry framework for work-zone pathway prediction under temporary traffic control</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-22</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UW-Madison</span>
+          <span class="arxiv-id">arXiv:2610.31835v1</span>
+        </div>
+        <p class="authors">Jiaxi Liu, Keshu Wu, Weizhe Tang, Bofeng Cao, Sikai Chen, Xiaopeng Li, Steven T. Parker, Bin Ran</p>
+        <p class="abstract">Temporary traffic control redirects vehicles through work zones, requiring automated vehicles to connect an interpretation of the visible devices to a continuous passing path. Geometric predictors can provide several plausible paths, yet selecting the one consistent with the temporary control remains difficult. We propose SAGE (Semantic-to-Action Grounded Execution), a read-decide-execute-check framework that separates path construction, path preference, and control compliance within a shared candidate space. The central idea is to use a vision-language model&#x27;s (VLM&#x27;s) trajectory as a preference over intact geometric candidates. A role-decoupled generator constructs the candidates, and rank fusion combines each candidate&#x27;s geometric score with its agreement with the VLM trajectory. Supervision structured around the Manual on Uniform Traffic Control Devices (MUTCD) trains SAGE-VLM to state the lane status and hazard side before its passage decision and trajectory. The predicted hazard side enters image-space predicates derived from MUTCD provisions, which support a final intervention bounded in score and displacement. On 2,306 real-world ROADWork validation episodes, the candidates include a path within 10 px of the human demonstration in 87% of episodes, yet selection regret accounts for 53% of the geometric ranker&#x27;s error. SAGE reduces average and final displacement errors by 8.3% and 12.0% relative to the ranker, mostly in the far field, and hard-constraint violations by 37%. The trajectory opinion improves all four tested generator-selector combinations. SAGE is comparable to state-of-the-art VLM modules in accuracy, with a faster-responding VLM, and outperforms four other adapted driving VLMs in displacement error and safety measures. Project page: https://hhjj233.github.io/SAGE-page/.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.31835v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.31835v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+    <nav class="day-nav"><a class="prev" href="2026-10-25.html">&larr; 2026-10-25</a></nav>
+  </main>
+  <footer>
+    <p>Generated 2026-10-26 05:52 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
