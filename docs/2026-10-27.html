@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-10-27</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-10-27</h2>
+      <p class="count">4 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.35309v1" target="_blank" rel="noopener">Shared Context, Separate Engines: Streaming Vision--Language Inference on Edge SoCs</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-26</span>
+          <span class="cat">cs.LG</span>
+          <span class="school">Carnegie Mellon</span><span class="school">UW-Madison</span>
+          <span class="arxiv-id">arXiv:2610.35309v1</span>
+        </div>
+        <p class="authors">Yilong Li, Chengpo Yan, Yijing Zeng, Hanlei Wu, Mingjun Song, Suman Banerjee</p>
+        <p class="abstract">Edge SoCs pack CPUs, GPUs, and NPUs, yet vision--language model (VLM) runtimes keep generation on one engine and leave the others idle. Streaming VLMs expose further parallelism: new frames arrive while earlier queries are still being answered. Engines differ in compute and memory access and contend when they co-run, so no single placement of stages wins across SoCs and workloads. Backend-local KV state keeps other engines from continuing the work. \name coordinates heterogeneous accelerators to execute stateful VLM inference concurrently. It separates a stream&#x27;s versioned context from each engine&#x27;s KV state, so any engine can continue the stream by reusing, importing, or reconstructing that state. Stateful Streaming Generation ingests new frames on one engine while another answers, and Concurrent Sequence Generation serves different ready requests in parallel. State-aware dispatch sends each request to the engine expected to finish it first. Each answer reads a fixed, published version of its history and matches its serial reference. \name beats the strongest single-engine baselines on Apple M4 Max, Rockchip RK3588, and Qualcomm QCS6490, even when they reuse context. On two RK3588 video streams, it delivers $19.6\%$ more throughput than the best single engine with context reuse and $27.2\%$ more than parallel engines without shared state. Cross-engine KV import cuts first-token latency by a factor of $4.6$ over prefix recomputation. Stateful Streaming Generation delivers up to $2.48\times$ the throughput of serial execution, and state-aware dispatch cuts query completion time by up to $72.7\%$.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.35309v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.35309v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.34662v1" target="_blank" rel="noopener">StreamVibe: Proactive Video Agents for Evolving User Intent</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-26</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Stanford</span><span class="school">Columbia</span><span class="school">UC Santa Barbara</span>
+          <span class="arxiv-id">arXiv:2610.34662v1</span>
+        </div>
+        <p class="authors">Chengzhi Liu, Yuxiang Lai, Yuzhe Yang, Yanqing Liu, Jiheng Hou, Yue Cao, Haonan Wang, Ruixi Fan et al.</p>
+        <p class="abstract">Vision-language models are shifting from offline passive understanding toward online proactive interaction. However, prevailing methods largely rely on explicit requests while miss the implicit user intent (e.g., &quot;where should I click next?&quot; while a user navigate a website), meanwhile fail to update the state simultaneously as user requests might update continuously. These limitations make them less suited to intent-aware interaction in practical. To address these challenges, we introduce StreamVibe-Bench, a new benchmark serving as testbed for user intent interaction, with 4.1K evaluation samples and 85K training samples spanning explicit, implicit, and dynamic intents. Building on this benchmark, we develop StreamVibe-VL, a streaming proactive model that infers implicit user intents from continuous observations and dynamically tailors its interactions as these intents evolve. We further introduce StreamVibe-Harness, which maintains user intents as persistent states with a fleixble lifecycles via a hierarchical memory to track the latest user intent and environmental state. Our experiments reveal three key findings: (i) StreamVibe-VL preserves strong general video understanding while improving response timing and answer quality by 10.7% over other baselines; (ii) existing proactive models remain limited in understanding user intent and deciding when to respond, especially under implicit and dynamic intents; and (iii) StreamVibe-Harness further improves response consistency and adaptation over sustained interaction, resulting in a 12.3% gain in proactive interaction.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.34662v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.34662v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.33292v1" target="_blank" rel="noopener">KINESYS: Test-Time Adaptation for Reference-Based Effect Editing in Images</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-23</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UNC Chapel Hill</span>
+          <span class="arxiv-id">arXiv:2610.33292v1</span>
+        </div>
+        <p class="authors">Noah Frahm, Luchao Qi, Haoze Li, Dan B Goldman, Sambit Bhattacharya, Roni Sengupta</p>
+        <p class="abstract">Visual effects are often easier to demonstrate via reference than to describe in words. We study effect-reference editing, where a reference image shows a desired visual effect and language identifies which properties should guide the edit. Existing single-pass editing techniques often fail to make fine-grained edits, resulting in unintended changes to source content or deviations from the reference effect. We introduce KINESYS, a test-time adaptation framework for effect-reference editing that combines reference-aware and source-aware feedback to transfer the desired effect while preserving the composition and content of the original shot. To ensure KINESYS can produce a diverse set of edits that preserve the source, we develop a robust optimization strategy in which the generative model is fine-tuned across multiple noise samples and optimization runs. Evaluation with VLM judges, source preservation metrics (LPIPS, TPIPS), and a user study shows that KINESYS outperforms state-of-the-art image editors in source preservation; on effect transfer, it remains competitive with Nano Banana 2 and outperforms open-weight editors.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.33292v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.33292v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.33215v1" target="_blank" rel="noopener">Vision Token Pruning via Query-Vision Interaction Decomposition</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-23</span>
+          <span class="cat">cs.LG</span>
+          <span class="school">UT Austin</span>
+          <span class="arxiv-id">arXiv:2610.33215v1</span>
+        </div>
+        <p class="authors">Harshithanjani Athi, Sravan Kumar Ankireddy, Jianzhong Charlie Zhang, Hyeji Kim</p>
+        <p class="abstract">Large vision-language models (VLMs), which process both visual inputs and text queries, incur high inference costs due to the large number of visual tokens, making visual token pruning a natural approach for improving efficiency. Recent work has leveraged query information to guide token selection, often through heuristics derived from attention patterns or token dynamics. However, these approaches do not explicitly exploit the underlying structure of query-vision interactions. We address this gap by observing that the query-vision interaction matrix, naturally induced by the query and key projections already present in transformer attention, is effectively low-rank, with a small number of dominant latent interaction modes capturing query-relevant semantics. Motivated by this observation, we propose Query-Vision Decomposition (QViD), a novel training-free query-aware visual token pruning method that exploits this structure. Extensive experiments on both image and video understanding benchmarks show that QViD consistently improves performance under matched token budgets, with the largest gains appearing under aggressive compression regimes.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.33215v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.33215v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+    <nav class="day-nav"><a class="prev" href="2026-10-26.html">&larr; 2026-10-26</a></nav>
+  </main>
+  <footer>
+    <p>Generated 2026-10-27 06:04 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
