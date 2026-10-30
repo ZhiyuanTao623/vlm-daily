@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-10-30</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-10-30</h2>
+      <p class="count">6 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.39955v1" target="_blank" rel="noopener">Mind The Gap (MTG-AD): Dataset and Fine-grained Evaluation for End-to-End Inline Audio Descriptions</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-29</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UC Berkeley</span>
+          <span class="arxiv-id">arXiv:2610.39955v1</span>
+        </div>
+        <p class="authors">Subhashini Venugopalan, Jenny Tan, Taylor Roper, Jimmy Tobin, Anton Kast, Alicia Martin, Sam Sepah, Amy Pavel</p>
+        <p class="abstract">Audio descriptions (AD) are essential for making visual media accessible to blind and low-vision (BLV) users. While Multimodal Large Language Models (MLLMs) offer a scalable solution for generating audio descriptions on-demand, their performance on ``inline&#x27;&#x27; audio descriptions -- which must fit within existing silences in a video -- remains under-explored, particularly for diverse user-generated content (UGC). We present a comprehensive investigation into MLLM-generated inline audio descriptions. First, we introduce MTG-AD, a professionally annotated dataset of 36 hours of videos, each averaging $\sim$5 mins. and 8k+ descriptions in total, co-created by paired blind and sighted AD professionals to provide a high-quality benchmark for this task. Second, we propose MTG-AD-Eval, an evaluation framework based on audio description expert guidelines that provides fine-grained, reference-free actionable metrics for model improvement. Crucially, our framework evaluates the end-to-end task: it renders the generated scripts into audio tracks to assess their fit within the original video&#x27;s natural silences, minimizing disruptive overlaps. Our analysis across frontier MLLMs reveals that while models accurately describe visual events and substantially reduce speech overlaps, gaps persist in narrative pacing and flow. Finally, we empirically validate that our automated and reference-free metrics correlate significantly with human quality ratings from sighted raters and 7 BLV participants, finding that while users narrowly prefer human-authored audio descriptions, they find MLLM-generated audio descriptions highly beneficial for comprehension. We provide actionable system design guidance and release MTG-AD at https://hf.co/datasets/google/mind-the-gap-inline-ad and MTG-AD-Eval at https://github.com/google/mtg-ad.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.39955v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.39955v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.39664v1" target="_blank" rel="noopener">EditAgent: Rethinking Agentic Image Editing</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-29</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UC San Diego</span>
+          <span class="arxiv-id">arXiv:2610.39664v1</span>
+        </div>
+        <p class="authors">Haiyang Xu, Tianyu Wang, Jialu Li, Jiteng Mu, Yuanjun Xiong, Jianming Zhang, Zhuowen Tu, Mingze Xu</p>
+        <p class="abstract">Agentic image editors decompose complex requests into steps, but when a step fails, they mostly retry with the same narrow set of tools and a judge that scores each output by eye directly. We argue that such agents are bounded by two spaces: the action space of what the agent can do, and the observation space of what its judge can see. On our expert-annotated benchmark, a general-purpose editor yields no usable result in over 40% of the cases, and no judge is reliable across edit types. We present EditAgent, which expands both spaces. It routes each step to general editors and specialized methods, and attaches to each candidate a verification record. With these records, off-the-shelf VLM judges outperform finetuned reward models. Candidates are generated in parallel and judged in one listwise call: experts prefer this to sequential refinement in 78.5% of decided comparisons, at no more than half the judge calls. EditAgent improves two open-weight editors on three benchmarks and serves as a data engine for training stronger editors.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.39664v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.39664v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.39562v1" target="_blank" rel="noopener">Raincheck: Deferred Multimodal Prefill for Efficient Multi-Turn MLLM Inference</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-29</span>
+          <span class="cat">cs.CL</span>
+          <span class="school">Carnegie Mellon</span>
+          <span class="arxiv-id">arXiv:2610.39562v1</span>
+        </div>
+        <p class="authors">Wenjie Huang, Jun Zhang, Hongyaoxing Gu, Haoyang Huang, Tianqi Xu, Xinyue Hao, Xinyi Hu, Xinle Du et al.</p>
+        <p class="abstract">Multi-turn conversations with multimodal large language models (MLLMs) reuse input context, but long multimodal inputs increase time to first token (TTFT). Query-aware hard pruning reduces prefill tokens but permanently excludes information that later questions may require. We propose Raincheck, a framework for deferred multimodal prefill that decouples initial token selection from later information availability. An existing pruning method selects tokens for initial prefill; Raincheck preserves and progressively prefills unselected tokens in source order using unused compute capacity during decode. Unfinished prefill continues after answer return during available scheduling gaps. Attention visibility control and affine state mapping enable context updates after generation begins in full-attention and hybrid recurrent models. Prefill-decode fusion reduces repeated weight reads. We evaluate Qwen3-VL-8B and Qwen3.5-9B with 30% initial multimodal-token retention. Across both models and four pruning methods, Raincheck recovers on average 77.7% and 60.4% of the quality lost to matched hard pruning on MultiVerse and ConvBench, respectively. On MultiVerse, the SGLang implementation reduces mean first-turn TTFT by up to 24.1% relative to full prefill, with less than 0.5% increase in mean time per output token (TPOT).</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.39562v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.39562v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.39282v1" target="_blank" rel="noopener">What Does &quot;Now&quot; Mean to Your Computer-Use Agent? Stale Screenshots, Page Loads, and Which Check to Run Before a Click</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-29</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">Stanford</span>
+          <span class="arxiv-id">arXiv:2610.39282v1</span>
+        </div>
+        <p class="authors">Vasundra Srinivasan</p>
+        <p class="abstract">Computer-use agents plan on a screenshot for several seconds and then click at a position on the screen; if the page has changed in the meantime, the click lands on an unintended element. Prior work treats the planning interval as the source of this risk. Measuring planned clicks on 31 public web pages, we find that the risk lies in page loading: 0.4% of clicks planned on fully loaded pages became stale within 30 seconds, against 17% of clicks planned in the first second after a page opened. On these pages, waiting about one second for network activity to stop removes most of this risk, yet the wait rules of eight of ten widely used open-source agents leave more than 1% of clicks stale. Commercial pages keep loading for longer: in the HTTP Archive&#x27;s public crawl, 15% of 65 desktop booking and buying home pages went 500 ms without network requests within 3 seconds of their HTML being parsed, against 63% of 3,028 .gov pages, and 52% shifted their layout within 6.5 seconds of a network-idle wait capped at 3 seconds, against 8% (61% against 26% among pages recorded in full). Where a check before the click is needed, as before irreversible actions and on pages that are still loading, a pixel comparison verifies the target&#x27;s position as accurately as a frontier vision-language model at one eighth of the latency, and a 4B model matches the frontier model in verifying whether the previous action succeeded. We release a benchmark generator, a break-even formula for when a check pays, and three rules for agent developers: https://github.com/multimodal-ai-engineering/preflight-bench</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.39282v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.39282v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.38103v1" target="_blank" rel="noopener">The Prestige: Benchmarking Cognitive Visual Reasoning using Magic Tricks</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-28</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Cornell</span>
+          <span class="arxiv-id">arXiv:2610.38103v1</span>
+        </div>
+        <p class="authors">Shuo Wen, Beixi Du, Edwin Meriaux, Junming Shi, Chloe Si, David Meger, Doina Precup, Gregory Dudek</p>
+        <p class="abstract">We introduce The Prestige, a video understanding benchmark that probes cognitive visual reasoning through professional magic performances, where deliberate misdirection challenges models to track events and explain unexpected outcomes. The benchmark comprises open-ended questions ranging from temporal and causal understanding to robustness against adversarial questions. Evaluation of leading open-source and proprietary VLMs reveals a substantial gap between even the strongest model and human performance. We also find systematic discrepancies between human and automated grading and identify recurring model failure modes. Ablations further show that models can select correct multiple-choice answers even when they fail to generate correct explanations independently, motivating further investigations into question formats. Together, these findings highlight limitations in both VLM reasoning and its evaluation, underscoring the need for more reliable video understanding models and more rigorous benchmarks.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.38103v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.38103v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2610.37867v1" target="_blank" rel="noopener">What Constitutes Food Similarity? Visual Representations and Retrieval in Indian Cuisine</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-27</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">UC Irvine</span>
+          <span class="arxiv-id">arXiv:2610.37867v1</span>
+        </div>
+        <p class="authors">Saransh Kumar Gupta, Akshadha Sharma, Lipika Dey, Partha Pratim Das, Ramesh Jain</p>
+        <p class="abstract">Food similarity underlies retrieval, recommendation, substitution, and other food computing tasks, yet food representations are typically evaluated by identity preservation. We ask what happens to food similarity beyond identity: how different visual representations organize foods into relational neighborhoods, what culinary relationships these neighborhoods reveal or obscure, and how consistently these structures emerge across representations. Indian cuisine provides a challenging setting in which visually similar foods may have different culinary identities, while foods within a culinary family can vary substantially in appearance. Using an expanded Khana dataset and seven pretrained visual representations spanning convolutional, transformer-based, self-supervised, and image-text aligned models, we evaluate image-to-image retrieval and image-to-dish neighborhoods, examining culinary-family structure, contrast cases, and cross-representation agreement. We also aggregate image representations to compare dish-level visual similarity across models and against recipe-derived similarity for the same dishes. Image-level neighborhoods vary substantially across representations, including similarities across culinary-family boundaries. At the dish level, aggregation reveals common visual structure despite local variation, but this structure corresponds less strongly with recipe-derived similarity. These findings show that recognition performance alone cannot characterize relational structure: food similarity depends on representation, modality, and abstraction level rather than being a fixed property of the food collection. Understanding these structures is therefore a prerequisite to combining multiple food information modalities into a coherent notion of similarity.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2610.37867v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2610.37867v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+    <nav class="day-nav"><a class="prev" href="2026-10-29.html">&larr; 2026-10-29</a></nav>
+  </main>
+  <footer>
+    <p>Generated 2026-10-30 06:55 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
