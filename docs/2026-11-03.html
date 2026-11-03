@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-11-03</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-11-03</h2>
+      <p class="count">8 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.03371v1" target="_blank" rel="noopener">EO-Jev: Decision Model for Earth Observation</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-02</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">MIT</span>
+          <span class="arxiv-id">arXiv:2611.03371v1</span>
+        </div>
+        <p class="authors">Mohamed Atef Abouelhadid, Diaa Addeen Abuhani, Muhammad Akhtar Munir, Fahad Shahbaz Khan, Salman Khan</p>
+        <p class="abstract">Earth observation (EO) workflows require selecting among known outcomes, estimating confidence, and processing large volumes of imagery. Generative vision-language models can address these tasks, but autoregressive decoding is computationally costly and their confidence estimates are unreliable. Decision models offer an alternative, returning probabilities over candidate answers in a single forward pass. However, their accuracy, calibration, and transfer across EO tasks remain insufficiently understood. We investigate these properties through a diagnostic study of d3-flash (8.4B parameters) across 30 settings from 23 public EO benchmarks. We find that compositional reasoning transfers well and calibration improves over its Qwen3.5-9B backbone on 24 settings, while counting, change quantification, damage grading, and absent-object recognition remain challenging. To address these limitations, we adapt d3-flash through low-rank fine-tuning on public EO training splits, producing EO-Jev. EO-Jev improves significantly over d3-flash on 26 of 30 settings and matches or exceeds specialist references on 20 of 28. It also achieves an average gain of 8.0 points across 12 held-out settings and lower expected calibration error than specialists on 21 of 28 settings. These improvements come at a modest cost of 1.8 points in general decision performance. Our results demonstrate the potential of adapting general decision models into competitive EO generalists while highlighting persistent challenges in quantitative perception, option-order consistency, and calibration under distribution shift.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.03371v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.03371v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.03097v1" target="_blank" rel="noopener">DR Pixel: Page-Native Deep Research with Vision-Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-02</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UC Berkeley</span><span class="school">NYU</span>
+          <span class="arxiv-id">arXiv:2611.03097v1</span>
+        </div>
+        <p class="authors">Tiansheng Hu, Yichuan Wang, James V. Talwar, Nicholas Tomlin, Chen Zhao, Sewon Min</p>
+        <p class="abstract">Complex documents such as scientific papers contain rich information in tables, figures, and equations; however, existing deep research (DR) agents typically reduce papers to OCR-extracted text. We instead ask whether vision-language models (VLMs) can enable page-native deep research: directly retrieving and reasoning over rendered document page images. We introduce DR Pixel, the first open-source end-to-end multimodal DR agent that uses rendered page images as its sole retrieval and reasoning unit, operating over a corpus of 1.06M pages. To evaluate this setting, we construct DRPixelBench, a benchmark on scientific papers requiring reasoning over text, figures, tables, and equations. Surprisingly, page-native DR already works well without training, outperforming OCR-based baselines across state-of-the-art models like GPT-5.4, Gemini-3.5-Flash, and Qwen3.6-27B, while requiring fewer tool calls. We next turn to DR training. A key challenge is that teacher trajectories for agentic supervised finetuning are noisy, mixing critical reasoning and action steps with redundant or failed attempts. To address this, we introduce counterfactual credit reweighting, a fine-grained credit assignment method that weights individual reasoning and action steps by their counterfactual contribution to the final answer. Our training improves retrieval recall by about 15 points and final accuracy by over 10 points on DRPixelBench, and likewise outperforms the untrained baseline on four existing benchmarks. On out-of-distribution ViDoRe-V3, DR Pixel comes within 1.8 points of an oracle that is given the gold pages directly. Our results suggest that the conventional OCR-then-retrieve pipeline is not only unnecessary but suboptimal: directly retrieving and reasoning over visual document pages makes complex DR both more effective and more efficient.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.03097v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.03097v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.01383v1" target="_blank" rel="noopener">Toward Executable Multi-framework Front-end Code Generation with Self-Correction</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-01</span>
+          <span class="cat">cs.LG</span>
+          <span class="school">Stanford</span><span class="school">University of Michigan</span><span class="school">Harvard</span>
+          <span class="arxiv-id">arXiv:2611.01383v1</span>
+        </div>
+        <p class="authors">Linxiao Li, Haoran Ma, Chenyue Wang, Jiaye Lin, Haochen Sui, Jiechao Gao</p>
+        <p class="abstract">Generating codes from UI screenshots has recently benefited from MLLMs, yet existing methods centered on HTML targets and transfer poorly to multi-frameworks such as React, Vue, and Angular. However, unlike HTML, which does not entail compilation issues, generating executable code in multi-framework settings is more challenging due to framework-specific differences in syntax and failure modes, as well as the need to maintain global consistency across files. To address this problem, we study executable multi-framework front-end code generation and propose MESCoder, a tree-structured self-corrective generation framework. Our method first extracts a structural scaffold from the screenshot and then constructs sub-trees and assembly relations step by step, transforming large project generation into a sequence of localized decisions. On top of this scaffold, we introduce a unified Project Agent that continuously revises its own partial project under runtime sandbox feedback and dynamically chooses between local repair and cluster level repair. For training, we adopt a two-stage strategy that first initializes the policy offline to learn basic multi-framework generation and repair priors, and then refines it with online reinforcement learning to optimize long horizon executability and final page quality. The resulting framework models multi-framework executability as a conditioned project state transition process and improves the stability and quality of complex front end generation through self correction. Experiments show that our method improves executability, while narrowing the visual-fidelity gap to HTML-based generation. Code is available at https://github.com/leo-lilinxiao/MESCoder.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.01383v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.01383v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.01263v1" target="_blank" rel="noopener">StreamClarify: Proactive Clarification for Grounded Streaming Video Question Answering</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-31</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UIUC</span>
+          <span class="arxiv-id">arXiv:2611.01263v1</span>
+        </div>
+        <p class="authors">Zhuchen Shao, Bo Chen, Klara Nahrstedt</p>
+        <p class="abstract">Streaming video question answering (QA) requires real-time reasoning over continuous video streams under strict latency and active-context budgets. Current streaming vision-language models (VLMs) often give confident yet ungrounded answers when queries are ambiguous or have false premises, or when relevant visual evidence is no longer in the active context. Proactive clarification can help, but must satisfy the same latency and memory constraints. We present StreamClarify, a training-free framework for grounded streaming QA that combines a pre-answer uncertainty check with hierarchical memory. The check uses the entropy of a binary pre-answer judgment as a lightweight uncertainty score to decide whether to answer directly or request clarification. To support re-answering, a temporal-pyramid KV cache maintains a bounded active visual context, while a CPU-side semantic retrieval archive provides access to historical frames. We further construct StreamClarify-QA, a diagnostic benchmark of 1,837 QA pairs from StreamBench and OVO-Bench, spanning standard, referential ambiguity, and unanswerable scenarios. Across three VLM backbones, StreamClarify improves Macro accuracy by up to 8.2 points over backbone-matched baselines. At comparable trigger rates, entropy-based selection achieves more than 18 points higher precision than random selection in identifying initially incorrect answers. Under oracle user guidance, clarification improves Macro accuracy by up to 3.5 points. We also report a controlled, oracle-assisted Qwen3-VL simulation on Ambiguous QA with generated questions and referent-only user replies, where the entropy-gated condition improves accuracy by 8.3 points.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.01263v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.01263v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.00608v1" target="_blank" rel="noopener">Words Before Pixels: Selective Modality Routing for Vision-Language Model Unlearning</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-31</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UNC Chapel Hill</span>
+          <span class="arxiv-id">arXiv:2611.00608v1</span>
+        </div>
+        <p class="authors">Laura Yao, Haochen Zhang, Jinhao Duan, Sijia Liu, Tianlong Chen</p>
+        <p class="abstract">Vision-language model (VLM) unlearning is often treated as an objective-design problem: given multimodal forget data, the goal is to optimize a loss that removes undesirable behavior while preserving retained capabilities. We argue that this view overlooks an equally important data-centric question: how should each forget example be represented before optimization? Existing methods typically keep image-conditioned failures in their original image-text form, implicitly assuming that pixels are the right route for unlearning whenever pixels appear in the input. We challenge this assumption by constructing modality-decomposed versions of VLM benchmarks, enabling controlled comparisons among image-only, text-only, and multimodal representations of the same examples. Our modality-mixing experiments show that unsafe instruction-following behavior is more effectively suppressed through textual representations than through images alone, while purely text-only unlearning can still weaken visual grounding when the target behavior depends on visual evidence. Motivated by this trade-off, we introduce ModRoute, a gradient-guided per-sample modality routing strategy that selectively converts high visual-pressure examples to text-only form while keeping the remaining examples multimodal. Notably, on VLGuard with LLaVA-1.5-7B, ModRoute has the strongest composite unlearning-utility score of 0.847 at $γ=0.5$, a 2.5% improvement over the best random-switching score and $\geq$46% better than pure multimodal or text unlearning. Overall, our results show that effective VLM unlearning depends not only on the objective, but also on the composition and per-sample modality routing of the unlearning data.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.00608v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.00608v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.00507v1" target="_blank" rel="noopener">Selecting or Solving? What Best-of-N Verification Delivers in Video Reasoning</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-31</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Carnegie Mellon</span>
+          <span class="arxiv-id">arXiv:2611.00507v1</span>
+        </div>
+        <p class="authors">Martin Q. Ma, Yuxiao Qu, Ruslan Salakhutdinov, Louis-Philippe Morency, Paden Tomasello, Juan Pino</p>
+        <p class="abstract">Answering a complex question about a long video is a grounding problem: the answer turns on a few seconds of evidence, and vision-language models remain well below human accuracy at finding them. The standard way to spend extra test-time compute on this kind of video reasoning is best-of-N selection: sample several chain-of-thought answers from a fixed model, then let a second model re-watch the video and pick one. Such pipelines are reported by a single headline number, their margin over a majority vote. That number conflates two effects with opposite deployment consequences: the benefit the second model adds by selecting among candidates, and the benefit it would have supplied by solving the question itself. We separate them, measuring the Selection Increment (SI) -- selection accuracy minus the same verifier&#x27;s accuracy with the candidates withheld -- alongside the margin over self-consistency, across five long-video benchmarks. The Selection Increment is largest for the weakest verifiers: a verifier that solves poorly on its own leaves the candidates the most room to help. Beating the majority vote follows the opposite profile: where the vote already sits near its ceiling no verifier we test improves on it; below that ceiling only the strongest do. On Video-Holmes, the two come apart on a single pool of candidates -- a weak verifier gains +19.3 points from the candidates yet lands 7.1 points below the vote, while the frontier verifier gains the least and beats the vote. The weakest verifier also shows a failure mode: on EgoSchema it picks by where an option sits in the list rather than by what the video shows. Read as a merit score, SI puts a verifier that fails to beat a majority vote at the top of its ranking; read as an audit, it says which of the two effects a headline number delivers. Code is available at https://github.com/facebookresearch/best-n-selection-video-reasoning.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.00507v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.00507v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.00383v1" target="_blank" rel="noopener">LF-VideoQA: Evaluating Long-Video Understanding with Long-Form Theory-of-Mind Questions</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-30</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Cornell</span>
+          <span class="arxiv-id">arXiv:2611.00383v1</span>
+        </div>
+        <p class="authors">Shaden Shaar, Bradon Thymes, Majd Aldaye, Claire Cardie, Bharath Hariharan</p>
+        <p class="abstract">The hardest part of understanding a long video is not pinpointing any one moment but synthesizing many, e.g., answering a question that requires tracking what develops across hours of content and articulating how the pieces fit together. To date, most long-video QA datasets require only a short answer or a multiple-choice selection, oversimplifying the long-video understanding task to retrieval. We introduce LF-VideoQA, a dataset for long-form, open-ended question answering over long narrative videos built on theory-of-mind questions: a character&#x27;s belief depends on everything they have seen or been told, so each question demands assembling and reasoning from evidence distributed across the video. The dataset contains more than 6,300 questions on 94 recent films; each requires reasoning over scenes spanning an average of 23 minutes and comes with a question-specific rubric for recall and precision scoring. The dataset is created entirely automatically by annotating screenplays with scene events and each character&#x27;s first-order beliefs and meta-beliefs, then generating (question, answer, rubric) triples through LLM-based question generation and verification; human studies validate their quality. We evaluate four families of state-of-the-art open-source VLMs across three settings and find the task highly challenging: (i) even an oracle with access to the screenplay falls well short of complete answers; (ii) the best non-oracle model attains barely half of the recall level of the oracle; (iii) unlike on prior long-video benchmarks, captions and subtitles underperform the video itself, indicating that the questions need visual evidence; and (iv) recall is the predominant bottleneck, with answers omitting many required rubric claims.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.00383v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.00383v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.00351v1" target="_blank" rel="noopener">SIEVE: Preserving Cross-Image Evidence via Depth-Aware Token Compression</a></h2>
+        <div class="meta">
+          <span class="date">2026-10-30</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Carnegie Mellon</span>
+          <span class="arxiv-id">arXiv:2611.00351v1</span>
+        </div>
+        <p class="authors">Nitish Shukla, Surgan Jandial, Nhat-Tan Bui, Arun Ross</p>
+        <p class="abstract">Multi-image vision-language models (VLMs) incur substantial computation when processing long visual sequences. Compressing these sequences must preserve complementary evidence across images and keep tokens from different images separate. Global selection can underrepresent question-relevant images, and pruning in early decoder layers risks removing relevant content before sufficient multimodal processing, yet existing methods spend most of the budget on these early layers. We propose SIEVE, a training-free, single-pass framework that jointly allocates visual tokens across images and decoder depth. SIEVE first pools each image into a compact spatial grid to reduce early processing cost. It then progressively selects representatives using prompt attention under equal per-image quotas and aggregates unselected tokens into similar representatives from the same image. These operations keep every image represented and its tokens separate from other images, while refining the retained representations. A closed-form schedule sets retention counts to target a prescribed average token budget across decoder layers. Across four VLM backbones, SIEVE achieves the highest average at a 6.25% budget on five multi-image benchmarks and four single-image benchmarks, and the highest mean on two video benchmarks. On LLaVA-OneVision-7B, it outperforms the strongest baseline by 9.96 and 9.03 points at 6.25% and 12.5% budgets, and at 12.5% it exceeds the uncompressed model by 2.01 points with 6.6x fewer prefill FLOPs.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.00351v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.00351v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+    <nav class="day-nav"><a class="prev" href="2026-11-02.html">&larr; 2026-11-02</a></nav>
+  </main>
+  <footer>
+    <p>Generated 2026-11-03 07:44 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
