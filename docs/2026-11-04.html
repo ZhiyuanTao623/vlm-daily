@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-11-04</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-11-04</h2>
+      <p class="count">1 paper</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.05066v1" target="_blank" rel="noopener">VIGOR: Visual Gain Ordering for Hallucination Mitigation in Multimodal Discrete Diffusion Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-03</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Stanford</span>
+          <span class="arxiv-id">arXiv:2611.05066v1</span>
+        </div>
+        <p class="authors">Junzhe Chen, Tian Qin, Eugenie Shi, Tianshu Zhang, Qiang Ju, Lijie Wen</p>
+        <p class="abstract">Multimodal discrete diffusion language models (dLLMs) generate responses through iterative mask prediction and offer a promising alternative to autoregressive large vision-language models. However, they still suffer from hallucination, producing outputs that are plausible under language priors but insufficiently grounded in the image. We argue that hallucination in multimodal dLLMs is not only a token prediction problem, but also a premature commitment problem: during iterative denoising, some masked positions are unmasked too early because their confidence is driven more by language priors than by visual evidence, and these early commitments can bias later generation. To address this issue, we propose Visual Gain Ordering (VIGOR), a training-free and plug-and-play inference strategy that reorders masked positions according to counterfactual visual evidence. At each denoising step, VIGOR compares the confidence of each candidate token under the original image-conditioned pass and an additional visual-ablation pass, and prioritizes positions whose predictions are more strongly supported by the image. Experiments on LLaDA-V and Lumina-DiMOO show that VIGOR consistently reduces hallucination and improves multimodal reasoning performance across benchmarks. Code is available at https://github.com/THU-BPM/Vigor.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.05066v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.05066v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+    <nav class="day-nav"><a class="prev" href="2026-11-03.html">&larr; 2026-11-03</a></nav>
+  </main>
+  <footer>
+    <p>Generated 2026-11-04 07:21 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
