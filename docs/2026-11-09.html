@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-11-09</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-11-09</h2>
+      <p class="count">3 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.09092v1" target="_blank" rel="noopener">AdaAlloc: Adaptive Visual Token Allocation for Long-Video Question Answering</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-06</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UT Austin</span>
+          <span class="arxiv-id">arXiv:2611.09092v1</span>
+        </div>
+        <p class="authors">Joungbin An, Kristen Grauman</p>
+        <p class="abstract">Long-video question answering forces multimodal large language models to reason under strict visual-token budgets, creating a tradeoff between broad temporal coverage and fine-grained spatial detail. Uniform sampling preserves coverage but often obscures decisive local cues, while caption-based or frame-similarity retrieval operates over lossy proxies that can miss motion, state changes, and before-after relations. We recast long-video reasoning as a visual-token allocation problem: given a fixed budget, decide how much to spend on global context versus high-resolution local evidence, and where in the video to draw that local evidence from. We introduce AdaAlloc, a training-free inference framework that adaptively allocates visual tokens between a global video overview and localized visual detail. AdaAlloc first plans a global/local allocation policy, then uses temporal grounding to locate candidate evidence segments and refines them into a compact temporal memory. The selected policy controls both frame sampling density and resolution, combining sparse, lower-resolution global frames with denser, higher-resolution local frames drawn from the refined memory. The final answerer reasons over the allocated global context and refined local evidence. Across LVBench, MLVU, VideoMME, and LongVideoBench, AdaAlloc improves over budget-matched uniform sampling by up to 10.5 percentage points and outperforms the compared frame-selection and agentic methods on their reported benchmarks.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.09092v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.09092v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.09014v1" target="_blank" rel="noopener">Did I See It or Think It? Probing Reality Monitoring in Vision-Language Models with Concept Injection</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-06</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">USC</span>
+          <span class="arxiv-id">arXiv:2611.09014v1</span>
+        </div>
+        <p class="authors">Tina Khezresmaeilzadeh, Seyedarmin Azizi, Mehdi Kamal, Massoud Pedram</p>
+        <p class="abstract">Recent work tests whether language models can introspect by injecting a concept direction into their activations and asking whether they notice it and can name it. These studies are text-only. Vision-language models (VLMs) face an additional problem, known in cognitive psychology as reality monitoring: they must keep internally generated content separate from what they actually see. We therefore ask: can VLMs distinguish injected concepts from image content? We introduce a paradigm that varies the image and the injected concept independently. On each trial, the model reports what it sees, whether a thought was injected, and what that thought is. This design scores both whether the model identifies the concept and which source it assigns to it. Across six VLMs, only Gemma-3-27B reliably identifies injected concepts (35% vs. 3% for steering alone), with almost no false alarms. Even then, the source it reports is fragile. Strong or visual-pathway injections are reported as seen, and a visible object nearly eliminates correct thought reports. The same failure appears in ordinary captioning, where injected objects appear in up to 87% of captions of real photographs. Evaluating multimodal self-reports therefore requires checking both their content and their reported source.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.09014v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.09014v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.08755v1" target="_blank" rel="noopener">AtariBench: Evaluating Spatiotemporal Reasoning of Vision-Language Models in Atari Gameplay</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-05</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UIUC</span>
+          <span class="arxiv-id">arXiv:2611.08755v1</span>
+        </div>
+        <p class="authors">Mingjia Huo, Yao Fu, Bo Chang, Yaqing Wang, Dawei Zhu, Dylan Zhang, Xinyang Yi, Lichan Hong et al.</p>
+        <p class="abstract">Vision-Language Models (VLMs) have achieved strong performance on static visual understanding benchmarks, yet their ability to act in dynamic environments remains less well understood. We introduce AtariBench, a controlled benchmark that evaluates VLMs across 20 Atari 2600 games, requiring models to make sequential decisions from high-temporal-resolution gameplay streams. By decoupling fast in-game dynamics from wall-clock inference speed, AtariBench focuses on whether models can perceive rapid visual state changes, reason over spatiotemporal dynamics, and ground actions in the current observation. Our experiments reveal substantial limitations in state-of-the-art VLMs: models often fail to infer object motion and direction, exhibit brittle sequential decision-making, and over-rely on textual interaction history despite newly appended visual feedback. We further introduce a separability analysis to identify which in-game scores provide reliable signals of model competence, and use the benchmark to study how memory design and prompting strategies affect performance. Overall, AtariBench exposes a persistent gap between passive visual perception and active decision-making, providing a lightweight and rigorous testbed for developing VLMs that can reason and act in dynamic environments.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.08755v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.08755v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+    <nav class="day-nav"><a class="prev" href="2026-11-08.html">&larr; 2026-11-08</a></nav>
+  </main>
+  <footer>
+    <p>Generated 2026-11-09 07:44 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
