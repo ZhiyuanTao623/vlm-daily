@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-11-10</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-11-10</h2>
+      <p class="count">9 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.12883v1" target="_blank" rel="noopener">Beyond Modality Preference: Controlling Multimodal Arbitration under Modality Conflict in MLLMs</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-09</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Purdue</span>
+          <span class="arxiv-id">arXiv:2611.12883v1</span>
+        </div>
+        <p class="authors">Zhaoying Pan, Shenyu Lu, Jun Hui Wong, Junyi Chai, Xiaoqian Wang</p>
+        <p class="abstract">Multimodal large language models (MLLMs) integrate information across modalities, but become unreliable when those modalities disagree. Under conflicting inputs, MLLMs may favor modalities that are not the most reliable for the task, thus motivating inference-time control of modality arbitration. We identify a small set of attention heads, termed arbitration heads, that causally influence whether predictions follow visual or textual evidence. Building on this, we introduce a lightweight, training-free intervention that biases these heads toward a designated trusted modality at inference time. The identified heads are stable across calibration set sizes and generalize across settings, and steering them enables effective bidirectional control of modality reliance across diverse benchmarks. Our findings identify an effective control mechanism to align MLLM predictions with task-specified modality priorities. The code is available at https://github.com/zhaoyingpan/modality-arbitration.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.12883v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.12883v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.11833v1" target="_blank" rel="noopener">Answer or Defer? Testing VLMs&#x27; Stated Confidence on Brain MRI</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-09</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Georgia Tech</span>
+          <span class="arxiv-id">arXiv:2611.11833v1</span>
+        </div>
+        <p class="authors">Amir Sabbaghziarani, Parsa Ghazvinian, Sepehr Salem, Sergey Plis</p>
+        <p class="abstract">Vision-language models (VLMs) could support medical-image interpretation, but their use requires deciding which interpretations to accept and which images to refer to a clinician. We test whether thresholding stated confidence can retain useful coverage while limiting errors among accepted answers, and how this depends on the population. Eight open-weight VLMs, including two reasoning models, assess 3,888 brain MRI slices from post-treatment glioma patients (BraTS 2024) and healthy volunteers (IXI) for tumor or gross abnormality. BraTS labels are mask-derived; IXI slices are treated as negatives. On BraTS, no threshold selects a nonempty set with at most 5% empirical error for any model, even when chosen retrospectively. This also holds for four models evaluated on a large-lesion, distant-negative subset. At a 10% error budget, Gemma-4-12B retains 24.4% of slices and every other model at most 2.5%. To investigate this limited selection ability, we separate confidence differences between predicted answers from differences within each answer. For four models with available outcome-level summaries, pooled mean confidence differs more between answers than between correct and incorrect responses within each answer. A covariance decomposition explains how this pattern can produce opposite confidence-correctness associations across populations. At a 20% error budget, accepting every &quot;tumor&quot; answer covers more slices than any confidence threshold for two models. These findings caution against using unvalidated stated confidence as a standalone deferral signal and support population-specific validation before deployment. Code is available at https://github.com/amir-sbg/VLM-Answer-or-Defer.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.11833v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.11833v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.11145v1" target="_blank" rel="noopener">DISCOVER: Online Variance-Guided Data Discovery for Budgeted Multimodal GRPO</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-08</span>
+          <span class="cat">cs.LG</span>
+          <span class="school">Stanford</span>
+          <span class="arxiv-id">arXiv:2611.11145v1</span>
+        </div>
+        <p class="authors">Peyman Gholami, Shivam Chandhok, Saber Malekmohammadi, Shayan Shams, Robert Xiao, Leonid Sigal</p>
+        <p class="abstract">Recent advances in reinforcement learning have made verifiable rewards a central post-training paradigm for improving multimodal reasoning. However, methods such as GRPO remain data- and compute-inefficient, spending rollout and annotation budget on prompts that provide little learning signal. We propose DISCOVER, an online data-discovery framework for budgeted multimodal GRPO that enables vision-language models to dynamically identify prompts that are most useful for the current policy. DISCOVER first organizes the multimodal sample pool into semantic clusters and queries a small set of density-diverse representative samples to obtain initial reward observations. During training, it estimates the utility of unannotated samples by transferring sparse reward feedback from queried samples. Since sample utility changes as the policy evolves, DISCOVER dynamically updates these estimates with recency-weighted rollout observations. It then selects only high-utility prompts for annotation using a policy-conditioned score that accounts for reward variance and difficulty. Once the discovery budget is exhausted, DISCOVER continues with utility-based replay. Experiments on ViRL39K and VLAA-Thinking with Qwen3-VL-2B show that DISCOVER substantially improves multimodal mathematical reasoning under a strict 10% unique-sample budget, outperforming budget-matched random selection, hard-example sampling, full-pool GRPO under the same training-step budget, and online selection baselines. Ablations further validate the importance of semantic coverage, online reward transfer, and stable discovery cadence, establishing DISCOVER as a practical framework for data-efficient multimodal RL post-training.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.11145v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.11145v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.10960v1" target="_blank" rel="noopener">Anatomy-Activated Mixture-of-Experts for 3D Medical Vision-Language Pre-training</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-07</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Harvard</span><span class="school">Johns Hopkins</span>
+          <span class="arxiv-id">arXiv:2611.10960v1</span>
+        </div>
+        <p class="authors">Szymon Płotka, Gizem Mert, Pedro R. A. S. Bassi, Wenxuan Li, Zongwei Zhou, Anna Marcinkiewicz, Wiktoria Romańczyk, Jarosław B. Ćwikła et al.</p>
+        <p class="abstract">Medical Vision-Language Pre-training (VLP) leverages the semantic richness of radiology reports to learn 3D representations, yet current architectures remain fundamentally anatomy-agnostic. While clinical diagnostics rely on organ-specific context, standard encoders apply a uniform, dense parameterization to all volumetric patches, and existing Mixture-of-Experts (MoE) routers gate on isolated local features without explicit access to the organ composition of the scan or crop. We propose Anatomy-Activated Mixture-of-Experts (A$^{2}$MoE), a framework that incorporates anatomical inductive biases within the model&#x27;s computational path. A$^{2}$MoE introduces two key components: (1) a Histogram Representation Router (HRR) that conditions expert selection on global visual context and a predicted anatomical composition histogram, encouraging anatomy-dependent expert weighting; and (2) an Organ-Query Multi-Scale Projector (OQMSP) that utilizes learnable queries to extract organ-level embeddings for fine-grained alignment without requiring manual annotations at inference. By routing at the patch level rather than the token level, A$^{2}$MoE reduces routing complexity by orders of magnitude while satisfying load balancing by construction. Pre-trained on over 60,000 multi-phase CT scans, A$^{2}$MoE achieves state-of-the-art performance across segmentation, classification, and detection benchmarks. Furthermore, we demonstrate that our anatomically grounded inductive biases support robust generalization to MRI and ultrasound, establishing a scalable foundation for medical representation learning. The code is available at https://github.com/gmum/A2MoE.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.10960v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.10960v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.10592v1" target="_blank" rel="noopener">MotionGraphicsBench: Evaluating Motion Graphics Generation with Programmatic Verification</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-07</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Stanford</span>
+          <span class="arxiv-id">arXiv:2611.10592v1</span>
+        </div>
+        <p class="authors">Jiaju Ma, Ashvini Kumar Jindal, Chuhua Wang, Sumithra Bhakthavatsalam</p>
+        <p class="abstract">Large language models can generate motion graphics from static images and natural language requests, but it remains difficult to evaluate how well models can follow requests that combine spatial, appearance, and temporal requirements. We introduce MotionGraphicsBench, an expert-curated benchmark of 100 instances for animating an input static SVG with a motion edit prompt. By supplying all required visual elements, our editing task reflects a designer-like workflow and isolates motion generation from graphic generation. Derived from real-world Lottie motion designs, our benchmark contains diverse combinations of spatio-temporal animation behaviors. Each benchmark instance pairs its model input with a deterministic, human-readable verification program that accepts different valid implementations and reports which prompt requirements pass or fail, rather than comparing against a reference animation or using a VLM judge. We construct these programs with a multi-agent pipeline using human-labeled animations and synthesized test cases. On a balanced test set of 180 animations, our programs achieve 93.3% raw agreement with human judgments, compared with 83.3% for a GPT-6 Astra VLM baseline, and outperform the baseline in both approval and rejection recall. Across 47 configurations from 32 LLMs and 12 providers, pass@1 ranges from 6.0% to 67.7%. Across 15 models evaluated at their highest available reasoning effort with 32 attempts per instance, additional attempts improve every model, but pass@32 still ranges from 38.0% to 95.0%. Our analysis of verification programs reveals that generated animations often fail to match reference poses, follow requested motion trajectories, or coordinate related events. We release our benchmark at https://huggingface.co/datasets/figma-ai/motion-graphics-bench.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.10592v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.10592v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.10528v1" target="_blank" rel="noopener">PrivMark: Pixel-Space Steering against Privacy Leakage in Vision-Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-07</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Rochester</span>
+          <span class="arxiv-id">arXiv:2611.10528v1</span>
+        </div>
+        <p class="authors">Ruofan Xing, Arman Akbari, Weikai Lin, Yuhao Zhu, Xuan Zhang</p>
+        <p class="abstract">Vision-language models (VLMs) routinely disclose soft-biometric attributes such as age, gender, and race in their text outputs, exposing demographic information from uploaded images to any downstream API user. Existing privacy defenses do not fit this setting: face de-identification leaves distributed soft-biometric cues intact, classifier-targeted adversarial perturbations do not transfer to open-ended generation, and stronger VLM-specific methods require retraining or runtime activation access unavailable to downstream APIs. We propose PrivMark, a framework that suppresses biometric leakage at the image level. By analyzing VLM activations, we identify two weakly aligned steering vector directions in hidden-state space, each tied to a distinct leakage behavior --- one corresponding to incidental attribute disclosure under open-ended descriptions, the other to compliance with direct biometric probes instead of refusal --- and encode both directions into a single bounded pixel perturbation, so the protected image alone enforces privacy with no invasive access to model internals at deployment. To support evaluation, we assemble BioleakBench, $1{,}600$ VQA pairs covering biometric privacy attributes under both free-form description and direct-probe protocols. Across three white-box source models, PrivMark achieves up to $85.9\%$ biometric suppression while retaining $75\%$ of clean OK-VQA utility, up to $1.4\times$ the privacy-utility tradeoff of the strongest pixel-only baseline. The same one-shot perturbations transfer consistently to seven unseen VLMs including closed-source APIs.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.10528v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.10528v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.10423v1" target="_blank" rel="noopener">Mental Imagery That Matters: Curing Latent Collapse in Multimodal Reasoning</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-07</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UC Berkeley</span><span class="school">UT Austin</span>
+          <span class="arxiv-id">arXiv:2611.10423v1</span>
+        </div>
+        <p class="authors">Mi Luo, Rohan Dugad, Zihui Xue, Alex Dimakis, Kristen Grauman</p>
+        <p class="abstract">Mental simulation, the ability to reason by constructing and updating internal visual states, is central to flexible human cognition, but remains elusive in current multimodal large language models. Latent multimodal reasoning offers a promising route toward this capability by interleaving text with continuous visual latent blocks, allowing models to maintain internal visual workspaces without decoding them into pixels. In this paper, we ask whether these latent visual states actually matter. Through a direct perturbation analysis across representative latent-reasoning MLLMs, we find that they often do not: dropping, replacing, or shuffling generated visual latents has only minor effects on the model&#x27;s own final-answer probability, while equivalent perturbations to the linguistic reasoning trace are substantially more damaging. We call this failure mode Mental Simulation Collapse (MSC): the model appears to perform interleaved visual reasoning, but routes most answer-relevant computation through text. We further diagnose that MSC follows naturally from existing training objectives: visual alignment can make generated latents resemble helper-image embeddings, but it does not require the decoder to rely on them; subsequent text-only supervision further leaves the semantic role of the latent pathway unidentifiable. To address this, we introduce AnchorSim (Anchored Mental Simulation), a contrastive distillation framework that trains models to make their generated visual latents consequential. Across multiple visual reasoning benchmarks, AnchorSim improves performance, while diagnostic re-evaluation shows that visual perturbations now meaningfully affect predictions. Our results expose a fundamental failure mode of latent multimodal reasoning and demonstrate that mental simulation must be anchored to model behavior in order to matter.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.10423v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.10423v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.10348v1" target="_blank" rel="noopener">Guided Co-Attention with Adaptive Gating for Multimodal Medical Data Fusion</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-07</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UMass Amherst</span>
+          <span class="arxiv-id">arXiv:2611.10348v1</span>
+        </div>
+        <p class="authors">Muntaqim Ahmed Raju, Priyanka Siddappa, Md Shifat Haider Al Amin, Ruizhe Ma, Md Ripon Ahammed</p>
+        <p class="abstract">Multimodal fusion requires not only exchanging information across modalities but also determining which representations should participate in the interaction and how complementary cross-modal views should be combined. We introduce Guided Co-Attention with Adaptive Gating, a fusion framework that integrates token-wise guidance, bidirectional cross-attention, and sample-specific fusion. The proposed method constructs two directional representations: an image-conditioned text representation, obtained by allowing textual tokens to query visual features, and a text-conditioned image representation formed in the reverse direction. Token-wise guidance modulates the representations before cross-attention, while an adaptive gate learns the relative contribution of the two resulting directional representations for each sample. We evaluate the approach using paired chest radiographs and radiology reports as an image-text test bed for binary (normal vs. abnormal) classification. The two cross-attention directions exhibit distinct performance characteristics, demonstrating that reversing the query and source modalities does not produce interchangeable representations. Ablation experiments further show that bidirectional interaction, adaptive gating, and token guidance provide complementary benefits. The proposed model achieves 96.05% accuracy, 96.10% F1-score, 98.37% AUC, 95.60% Sens@95Spec, and 96.51% Spec@95Sens, yielding the highest mean performance across all evaluated metrics. These findings support explicitly modeling interaction direction, token relevance, and sample-dependent integration when constructing multimodal representations.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.10348v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.10348v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.10066v1" target="_blank" rel="noopener">VLM as an Editing Pilot: VLM-Steered Velocity Control for Flow-Based Image Editing</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-06</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UC Davis</span>
+          <span class="arxiv-id">arXiv:2611.10066v1</span>
+        </div>
+        <p class="authors">Kuan-Shen Chiu, Jia-Wei Liao, Yu-Chieh Chao, Li-Xuan Peng, Wei-Yun Ma, Cheng-Fu Chou</p>
+        <p class="abstract">Text-guided image editing requires realizing the requested semantic change while preserving content unrelated to the instruction. FlowEdit provides an efficient inversion-free solution, but its source-anchored coupling can become overly restrictive, causing zero-edit, where the output remains close to the source and the requested change fails to emerge. We find that source coupling directly governs the preservation--editing trade-off, while a fixed coupling schedule cannot adapt to timestep-specific editing needs. Motivated by this observation, we propose V2C-Edit, a training-free VLM-steered velocity control framework. V2C-Edit constructs complementary coupling-controlled velocities and dynamically selects among them using Instruction-Level Similarity (ILS), which evaluates whether the predicted transformation follows the editing instruction. Adaptive spatial masking further preserves regions unrelated to the edit. Experiments on MagicBrush and PIE-Bench with FLUX and Stable Diffusion 3 show that V2C-Edit consistently improves instruction alignment over FlowEdit while maintaining competitive structural preservation, and that ILS better reflects editing effectiveness than target-caption CLIP similarity. Our code is available at https://github.com/Kuanshen77/V2C-Edit.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.10066v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.10066v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+    <nav class="day-nav"><a class="prev" href="2026-11-09.html">&larr; 2026-11-09</a></nav>
+  </main>
+  <footer>
+    <p>Generated 2026-11-10 08:06 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
