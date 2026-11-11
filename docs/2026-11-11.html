@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-11-11</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-11-11</h2>
+      <p class="count">5 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.13425v1" target="_blank" rel="noopener">Prompt2Echo (P2Echo): Text-Prompted Multi-View Echocardiography Segmentation with One Model</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-10</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Rutgers</span>
+          <span class="arxiv-id">arXiv:2611.13425v1</span>
+        </div>
+        <p class="authors">Moein Heidari, Alvin Kimbowa, Mahdi Tabatabaei, Afshin Bozorgpour, Sina Ghorbani Kolahi, River Jiang, Wenjin Chen, David J. Foran et al.</p>
+        <p class="abstract">Automated segmentation in multi-view echocardiography is essential for comprehensive cardiac assessment, yet remains challenging due to substantial anatomical and appearance variability across standard acoustic windows. In this paper, we present P2Echo, a unified framework capable of segmenting diverse cardiac structures across multiple standard echocardiographic views using a single model controlled by structured view-aware text prompts. Unlike recent foundation model adaptations that rely on implicit latent priors, P2Echo explicitly conditions the segmentation process via a novel Dynamic Image-Text Alignment (DyITA) module. DyITA integrates a differentiable routing mechanism and token differential operators to dynamically modulate decoder features according to the requested view and target structure. This allows the network to adaptively switch its processing pathways for different views without architectural changes. Extensive experiments on a large-scale internal dataset (seen during training) and held-out evaluation on three external datasets demonstrate that P2Echo matches or exceeds both view-specific specialists and state-of-the-art universal models at a fraction of their computational cost, offering an efficient, controllable solution for multi-plane cardiac analysis. Code is available at: https://github.com/moeinheidari7829/P2Echo.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.13425v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.13425v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.13334v1" target="_blank" rel="noopener">Disentangling Multimodal Rotary Positional Embedding in Vision-Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-09</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">University of Maryland</span><span class="school">University of Utah</span>
+          <span class="arxiv-id">arXiv:2611.13334v1</span>
+        </div>
+        <p class="authors">Zhaoyi Liu, Haichuan Zhang, Xiaochuan Gong, Yancheng Zhu, Bowei Tian, Wanghao Ye, Yufan Zhang, Ang Li</p>
+        <p class="abstract">Vision-language models widely adopt Multimodal Rotary Position Embedding (MRoPE), an extension of Rotary Position Embedding (RoPE) that incorporates temporal, height, and width axes to encode the spatial structure of visual tokens. However, MRoPE also assigns height and width coordinates to text tokens that lack inherent spatial structure, introducing spatial positional effects into text-vision attention. Existing MRoPE variants explore different frequency allocations and coordinate layouts, with their designs suggesting different intuitions about these cross-modal effects: they may provide useful spatial references for associating language with visual regions, or introduce unnecessary positional preferences that hinder text-vision interactions. In this work, we disentangle intra-visual spatial structure from cross-modal spatial effects to investigate this question. We identify a constraint of shared coordinate layouts that prevents eliminating cross-modal spatial effects while preserving intra-visual spatial encoding, and develop controlled experiments to isolate their respective contributions. Our results across multiple model scales, MRoPE variants, and benchmarks show that cross-modal spatial effects provide little additional benefit as spatial references and can even impair model performance, while intra-visual spatial encoding remains useful for fine-grained grounding.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.13334v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.13334v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.13213v1" target="_blank" rel="noopener">Before Words, Beyond Speech: Evaluating Nonverbal Social Reasoning in Early Childhood</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-09</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Stanford</span>
+          <span class="arxiv-id">arXiv:2611.13213v1</span>
+        </div>
+        <p class="authors">Marie Amale Huynh, Laura Bravo-Sánchez, Lauren Klein, Nick Haber, Philip Fisher, Serena Yeung-Levy</p>
+        <p class="abstract">Children&#x27;s earliest years are a period of intense social learning, during which meaning is built through gaze, gesture, and physical contact. Yet, this critical aspect of social interaction remains under-evaluated in multimodal video understanding, as existing benchmarks prioritize the conversation-driven interactions of adults. We address this gap with \bench ($\textbf{N}$aturalistic $\textbf{E}$arly-childhood $\textbf{S}$ocial in$\textbf{T}$eractions), the first child-centric benchmark for nonverbal social reasoning. \bench comprises \totalvids manually annotated clips ($\sim$12s) curated for diversity across naturalistic settings, cultural contexts, and developmental stages. Beyond a lack of data, targeted model improvement in this domain is hindered by coarse evaluation schemas that conflate basic perception with higher-order reasoning. To resolve this, \bench introduces a compositional schema that builds atomic interaction cues into progressive levels of social reasoning: contextual, behavioral, interpersonal, and open-ended descriptions. Extensive analysis of state-of-the-art Vision-Language Models (VLMs) reveals a stark performance collapse: despite strong contextual recognition, models exhibit substantial gaps in decoding precise behavioral and interpersonal cues. We trace these failures to specific biases, including poor consequence grounding and temporal sensitivity. Finally, we ground \bench in real-world applications by evaluating VLMs using domain adaptation strategies. Ultimately, \bench provides a rigorous testbed for advancing socially grounded artificial intelligence in early childhood. Project page: https://laubravo.github.io/nest_website/.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.13213v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.13213v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.13150v1" target="_blank" rel="noopener">VIGOR: Benchmarking Visual Rationale Correctness in Multimodal Large Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-09</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Virginia</span>
+          <span class="arxiv-id">arXiv:2611.13150v1</span>
+        </div>
+        <p class="authors">Yanlin Chen, Tang Li, Xi Peng</p>
+        <p class="abstract">Multimodal large language models (MLLMs) are typically evaluated by whether they produce correct answers, but correctness alone does not reveal whether their outputs are supported by the right visual evidence. We introduce VIGOR, a benchmark for evaluating VIsually GrOunded Rationales in MLLMs. VIGOR represents visual rationales as explicit concepts paired with pixel-level groundings, covering multiple abstraction levels including low-level visual properties, intermediate structures, objects, parts and high-level motion, relations. To construct VIGOR at scale, we develop an automatic annotation framework that reuses existing dense supervision when available and generates missing concept groundings through proposal-based annotation followed by conservative multimodal verification. Using VIGOR, we evaluate whether MLLMs &quot;look at what they say&quot; by comparing model-derived visual evidence for each expressed concept against annotated ground-truth rationales. Our results show that current MLLMs exhibit limited visual rationale correctness and reveal distinct grounding failures across concept levels. VIGOR provides a benchmark and scalable data construction pipeline for studying whether MLLM outputs are supported by appropriate visual evidence. Code is available at https://github.com/deep-real/VIGOR</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.13150v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.13150v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.12990v1" target="_blank" rel="noopener">Multimodal Graph Learning: A Survey of Models, Benchmarks, and Frontiers</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-08</span>
+          <span class="cat">cs.LG</span>
+          <span class="school">NC State</span>
+          <span class="arxiv-id">arXiv:2611.12990v1</span>
+        </div>
+        <p class="authors">Rui Xue, Tianfu Wu</p>
+        <p class="abstract">Multimodal attributed graphs (MAGs), in which nodes carry text, images, and other modalities while edges encode relations among entities, underlie e-commerce, social media, content platforms, and creative applications. Learning on MAGs has developed along two complementary lines: graph-centric methods redesign how modalities are fused, propagated, and connected within message passing, while foundation-model-centric methods pretrain transferable multimodal graph encoders or bring graph context into multimodal large language models for prediction and generation. In parallel, several benchmarks have appeared with different datasets and evaluation protocols. This survey takes an algorithm-centric and evaluation-grounded view of the field and makes three contributions. Modeling: we introduce a unified message-passing formulation and organize methods into five integration levels (feature, propagation, topology, learning, and foundation model), covering discriminative and graph-conditioned generative models; within this formulation we derive representative methods as special cases, compare their assumptions, expressiveness, and cost, and identify cross-modal sensitivity as a property that separates otherwise similar architectures. Datasets and evaluation: we review recent benchmarks, summarize their datasets and metrics, define model-independent descriptors (label homophily, average degree, clustering, and edge provenance), and map each evaluation protocol to the baselines it uses. Frontiers: we connect multimodal graph learning to AI agents, covering the multimodal graphs that agents perceive and remember and graph engineering, the practice of organizing agent workflows as explicit graphs; we then discuss open problems, concrete efforts for the community, and research directions, including when graph structure helps in the presence of strong multimodal foundation models.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.12990v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.12990v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+    <nav class="day-nav"><a class="prev" href="2026-11-10.html">&larr; 2026-11-10</a></nav>
+  </main>
+  <footer>
+    <p>Generated 2026-11-11 07:35 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
