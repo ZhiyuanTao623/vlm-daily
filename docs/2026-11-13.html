@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-11-13</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-11-13</h2>
+      <p class="count">9 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.17334v1" target="_blank" rel="noopener">Unbundling Multimodal Vision Encoding</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-12</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">NYU</span>
+          <span class="arxiv-id">arXiv:2611.17334v1</span>
+        </div>
+        <p class="authors">Ellis Brown, Chris Hoang, Shengyi Qian, Shang-Wen Li, Mike Lewis, Marjan Ghazvininejad, Luke Zettlemoyer, Lucas Beyer et al.</p>
+        <p class="abstract">How multimodal language models should encode visual input remains up for debate. Most models use a pretrained vision encoder, while some recent recipes train the encoder from scratch with the language model or remove it entirely. Vision encoders bundle together three design choices: a visual prior from upstream pretraining, dedicated vision capacity, and pre-fusion placement of that capacity (i.e., before the multimodal backbone). Because published models also differ in data, architecture, and compute, comparing them cannot isolate the effect of each choice. We disentangle these choices via a controlled framework where we pretrain all models from scratch on common data and compare them on visual question answering and language benchmarks at matched lifetime compute. We find that the visual prior is not necessary; an encoder trained jointly from scratch is on par with a pretrained one, without a separate training stage. What matters instead is dedicated vision capacity: an encoder-free model trails on visual understanding even when its backbone is enlarged by the encoder&#x27;s parameter count. Yet that capacity need not precede multimodal fusion, as vision-only modules added in-fusion to early backbone layers perform comparably to a pre-fusion encoder and can lower time to first token. These results also hold across backbone sizes, when encoder pretraining is treated as free, and when starting from a pretrained language model. Overall, our findings favor dedicated vision capacity trained jointly with the backbone and placed early within it.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.17334v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.17334v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.16402v1" target="_blank" rel="noopener">Teach with Blinks: Breaking Linguistic Momentum in On-Policy Distillation for Fine-Grained Multimodal Perception</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-12</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Cornell</span>
+          <span class="arxiv-id">arXiv:2611.16402v1</span>
+        </div>
+        <p class="authors">Tangzheng Lian, Hang Zhang, Guanyu Hu, Renjiu Hu, Zhensong Zhang, Jiankang Deng, Jifei Song</p>
+        <p class="abstract">On-policy distillation (OPD) has emerged as an effective post-training approach to improving fine-grained perception in multimodal large language models by amortizing costly inference-time zooming operations into a single-pass recipe. However, vanilla OPD is inherently susceptible to linguistic momentum: the teacher can follow the student&#x27;s erroneous prefixes, thus weakening corrective supervision. To address this, we propose Blink On-Policy Distillation (BlinkOPD), in which the teacher &quot;blinks&quot; at every token: it reads the same prefix once with its eyes open and once with its eyes closed. A first-glance gain further strengthens the correction on rollouts that conflict with the teacher. By extracting more effective supervision from each on-policy trajectory, BlinkOPD achieves state-of-the-art average performance across six fine-grained benchmarks using only 500 training images (12x less data) than existing OPD methods. Beyond fine-grained perception, BlinkOPD also demonstrates strong zero-shot improvements across ten held-out benchmarks spanning general visual perception, visual hallucination, and multimodal reasoning abilities. Code: https://github.com/Supltz/BlinkOPD</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.16402v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.16402v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.16061v1" target="_blank" rel="noopener">Pothole Risk Assessment with Geometrically Grounded Vision Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-11</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Michigan</span>
+          <span class="arxiv-id">arXiv:2611.16061v1</span>
+        </div>
+        <p class="authors">Abdalmalek Aburaddaha, Zaid A. El Shair, Ali Al-Bustami, Samir A. Rawashdeh</p>
+        <p class="abstract">Potholes impose billions of dollars in annual vehicle damage, yet detectors report only where potholes are, not how severe they are or what to do. Judging severity from a single RGB image is ill-posed, and ungrounded vision-language model (VLM) assessments tend to be over-conservative. We present a five-stage modular framework for the offline assessment of already-detected potholes that combines geometric measurements with VLM reasoning: perspective transformation, zero-shot SAM segmentation, geometric feature extraction, Gemini 2.5 Pro severity classification with composite risk scoring, and natural-language warning generation. We evaluate it on 3,092 potholes in 1,119 dashcam scenes against independent references. Severity agreement with a prediction-free three-annotator panel is weak (Cohen&#x27;s $κ= 0.139$, 95% CI [0.00, 0.28]; $n = 101$) and far below the annotators&#x27; agreement with one another ($κ= 0.605$); against physically measured depth on an independent RGB-D dataset, it is also weak ($κ= 0.098$), although the predicted classes preserve the order of measured depths. The severity classes are therefore perceived visual categories, not depth measurements. Geometric grounding does change the warnings: relative to an image-only baseline, it moves 26.7% of scenes out of the high-urgency tier and raises critical-tier assignments by 109% (Stuart-Maxwell $p &lt; 10^{-15}$), and in a blind study, three raters preferred the grounded warnings 3.5:1. A six-arm prompt ablation attributes the hybrid prompt&#x27;s rule adherence to the per-pothole measurements rather than to the rubric or worked examples. At USD 0.105 per scene, it suits large-scale offline infrastructure assessment; its maneuver suggestions are advisory research outputs, not validated vehicle guidance.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.16061v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.16061v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.16000v1" target="_blank" rel="noopener">Predicting the Needle in a Petabyte Scale Haystack: Open-Vocabulary Event Anticipation in Satellite Imagery</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-11</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Cornell</span>
+          <span class="arxiv-id">arXiv:2611.16000v1</span>
+        </div>
+        <p class="authors">Shreelekha Revankar, Mikhail Klassen, Creon Levit, Ash Hoover, Kavita Bala, Bharath Hariharan</p>
+        <p class="abstract">Satellite constellations now image the Earth daily, capturing the lifecycle of events from deforestation to urban construction. Anticipating these events before completion enables timely intervention, yet existing systems cannot jointly identify where a change occurs, what it will become, and when it will finish across an open vocabulary. Building such a model requires diverse event data, but events are like needles in a haystack, making manual annotation at global scale infeasible. We address this problem by representing change as the vector difference between vision-language model embeddings at distinct time points. This arithmetic approach allows us to search for semantic transformations directly in the latent space, enabling (1) an automated data engine for global event discovery without manual annotation and (2) the largest global satellite event dataset to our knowledge, comprising 21,000+ locations across 64+ event types with ~2M images from PlanetScope and Sentinel-2 spanning six continents, to train (3) a novel global-scale event anticipation model. Our model detects change with a 93.5% max F1 score, outperforms baselines 3.6x on predicted event retrieval, and forecasts completion dates with a 3-day median error, even nine months before completion. Code: https://github.com/ShreelekhaR/predicting-the-needle</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.16000v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.16000v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.15766v1" target="_blank" rel="noopener">Prior-as-Skill: Remember Outside and Read Inside with On-Policy Self-Distillation for Self-Evolving VLM Agents</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-11</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">USC</span>
+          <span class="arxiv-id">arXiv:2611.15766v1</span>
+        </div>
+        <p class="authors">Yan Lin, Jingyu Sun, Yifei Qian, Zhengtao Yao, Yuxia Wang, Daizong Liu, Chun Pong Lau, Zhongliang Guo et al.</p>
+        <p class="abstract">Self-evolving visual agents keep what they learn as skills: key frames with step notes on a task&#x27;s steps and their order. On-policy self-distillation (OPSD) is now a popular way to train such skills into a vision-language model that matches, on its own answers, a teacher that also reads the written order. At deployment, frames often go missing or show an unusual order, as when a person or a website reorders the steps. Existing internalization methods keep any order they store in the frame-reading weights: trained on full frames, the model guesses when they are missing, and trained with frames withheld, it stores the order, so memory can override what it sees. We propose PriorSplit, which fills in missing frames from an order kept outside the model, with no training beyond OPSD. It counts which of two neighboring steps comes first in training episodes, and the model checks if both asked steps are in view: if so, it answers from the frames, and otherwise the counts answer. Extensive experiments on synthetic skills with five models and on step-tagged order questions in new episodes of seen web, cooking and egocentric tasks demonstrate that, with frames missing, PriorSplit outperforms every compared method at OPSD&#x27;s training cost. With Qwen3-VL-4B on synthetic skills, it also stays close to OPSD on unusual orders, where methods that gain most by storing the order fall behind.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.15766v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.15766v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.15569v1" target="_blank" rel="noopener">TraceKV: Policy-Preserving Low-Rank KV Cache Compression for Reasoning Vision-Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-11</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Duke</span>
+          <span class="arxiv-id">arXiv:2611.15569v1</span>
+        </div>
+        <p class="authors">Ke Li, Zishan Shao, Yiran Chen</p>
+        <p class="abstract">Reasoning vision-language models (VLMs) impose substantial KV cache demands from both large multimodal contexts and growing reasoning traces. Low-rank KV compression has emerged as a promising paradigm that stores low-dimensional latents of KV states and can be combined with quantization. However, existing low-rank methods often induce growing predictive policy drift from the dense model when compressing reasoning KV states, resulting in reasoning failures. We identify two key causes of this degradation: calibration-state mismatch between static contexts and on-policy reasoning states, and unequal error sensitivity across KV states. To address these challenges, we propose TraceKV, a training-free low-rank KV compression framework that unifies on-policy calibration, sensitivity-aware SVD, and global rank allocation under a single policy-preserving principle, substantially reducing policy-KL divergence during reasoning. Experiments across multiple VLMs and visual reasoning benchmarks demonstrate superior accuracy--memory trade-offs, achieving near-lossless reasoning accuracy with 5.64$\times$ KV cache compression when combined with quantization. Optimized low-rank attention kernels further deliver up to 1.83$\times$ end-to-end decoding speedup. Code will be available at https://github.com/AK-DREAM/TraceKV.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.15569v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.15569v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.15433v1" target="_blank" rel="noopener">Verifier Choice is a Benchmark Design Variable: Auditing Structural Counting Evaluation in Text-to-Image Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-11</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Virginia Tech</span>
+          <span class="arxiv-id">arXiv:2611.15433v1</span>
+        </div>
+        <p class="authors">Shurun Li, Michael Hua Wang, Haibo Zeng, Long Wang</p>
+        <p class="abstract">Automatic evaluation is now central to text-to-image benchmarking, but the verifier that converts generated images into scores is often treated as an implementation detail. We argue that this is unsafe: an automatic benchmark score is a property of the image generator, prompt distribution, verifier, verifier-use protocol, and scoring rule, not of the generator alone. We study this issue in structural counting, a controlled setting where human-visible counts can be audited. We construct a verifier-centric audit suite over seven counting objects: cell phones, chairs, and traffic lights for object counting, and clover leaflets, dresser drawer fronts, power-strip sockets, and turbine blades for substructure counting. Across 6,240 generated images from Qwen-Image-2512 and FLUX.2-dev, we compare open MLLM verifiers under count-only, reject-aware, zero-shot and few-shot protocols, plus TIFA-like target queries, a detector baseline, and frontier closed-model checks on two hard objects. On a balanced 2,280-image evaluation split, aggregate score matching can coexist with image-level disagreement, and verifier-use protocols and generator distributions change the measured reliability. Every verifier-protocol configuration also shrinks the human score difference between the two generators, by 7.5-25.0 pp, and with a third generator, Z-Image, all four tested protocols reverse the human ordering of Z-Image and FLUX.2-dev on our fixed prompt suite. GPT-5.5 and Claude Opus 4.7 checks do not remove the failure modes: GPT-5.5 still has only 59.92% clover valid-count fidelity, while Claude Opus 4.7 has lower same-slice agreement ($κ=0.432$). We propose reporting automatic benchmark scores with a factorized verifier reliability profile: aggregate score gap, image-level agreement, generator-comparison distortion, valid-image count fidelity, rejection behavior, output compliance, and directional bias.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.15433v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.15433v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.15094v1" target="_blank" rel="noopener">A frontier machine intelligence for human neuroimaging</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-11</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">University of Michigan</span>
+          <span class="arxiv-id">arXiv:2611.15094v1</span>
+        </div>
+        <p class="authors">Chenhui Zhao, Akshay Rao, Akhil Kondepudi, Yiwei Lyu, Xinhai Hou, Rikhil Seshadri, Cheng Jiang, Soumyanil Banerjee et al.</p>
+        <p class="abstract">Medical imaging is essential for diagnosing disease, guiding treatment and monitoring patients over time. Although artificial intelligence has advanced image interpretation, existing medical models often address restricted tasks, while general-purpose proprietary models lack access to private clinical imaging required to achieve medical expertise. Developing models that can interpret complex examinations and communicate their findings in the context of clinical decisions remains a major challenge. Here, we show that Neuro-VL, a vision-language model trained on nearly one million neuroimaging studies from routine clinical care, can interpret complete imaging examinations and engage in natural language conversations about their findings. Across internal and international datasets, Neuro-VL outperformed frontier general-purpose and specialized medical models in diagnosing, localizing, and describing abnormalities, as well as generating comprehensive radiology reports. The model also compared serial examinations to assess disease progression and more reliably resisted misleading clinical assumptions than leading frontier models from OpenAI and Google. These results extend health system learning beyond individual predictions to interactive image interpretation and longitudinal disease monitoring. They demonstrate how the collective clinical experience of health systems can be used to develop medical AI with specialized expertise and broad clinical capabilities.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.15094v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.15094v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.15039v1" target="_blank" rel="noopener">Back to the Question: Tracing Visual Distraction Through Text Tokens</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-11</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Stanford</span>
+          <span class="arxiv-id">arXiv:2611.15039v1</span>
+        </div>
+        <p class="authors">Marie Amale Huynh, Regev Cohen, Serena Yeung-Levy, Sivan Doveh</p>
+        <p class="abstract">The visual world is cluttered: robust vision-language reasoning requires ignoring irrelevant information. Yet vision-language models (VLMs) can suffer substantial accuracy losses when answering questions about a target image with distractors present. Existing mitigations focus on selecting relevant images or limiting information exchange between images. Through a systematic analysis of three open 7-8B VLMs on five perception benchmarks adapted to include distractor images, we show that distractors reduce accuracy even when models correctly identify the relevant image, suggesting that selection alone is not enough. To understand the mechanism behind this interference, we combine attention analysis with targeted knockouts in Qwen2.5-VL and identify middle-layer distractor-to-text connections as a pathway through which irrelevant visual information affects reasoning. We introduce answer consistency regularization, which encourages consistent answer distributions with and without distractors. Without directly constraining attention, this objective reduces middle-layer attention from question tokens to distractor images, consistent with the pathway our analysis implicates. With five distractors, our approach improves circular accuracy by an average of 16 percentage points over the Qwen2.5-VL baseline across the five benchmarks while preserving single-image performance.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.15039v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.15039v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+    <nav class="day-nav"><a class="prev" href="2026-11-12.html">&larr; 2026-11-12</a></nav>
+  </main>
+  <footer>
+    <p>Generated 2026-11-13 07:42 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
