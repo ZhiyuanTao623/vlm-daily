@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-11-19</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-11-19</h2>
+      <p class="count">12 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.24795v1" target="_blank" rel="noopener">Ultimate3D: Teaching Multimodal LLMs 3D Camera-Object Relations by Large-Scale Visual Instruction Data</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-18</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Purdue</span>
+          <span class="arxiv-id">arXiv:2611.24795v1</span>
+        </div>
+        <p class="authors">Liu He, Yizhi Song, Ruiqi Xu, Baris Sarper Tezcan, Xiao Zeng, Albert Y. C. Chen, Lu Xia, Shashwat Verma et al.</p>
+        <p class="abstract">Multimodal Large Language Models (MLLMs) struggle with accurately capturing camera-object relations, especially for object orientation, camera viewpoint, and camera shots. This stems from the fact that existing MLLMs are trained on images with limited diverse camera-object relations and corresponding textual descriptions. To address this, we propose a synthetic generation pipeline to create large-scale 3D visual instruction datasets. Our framework takes 3D assets as input and uses rendering and diffusion-based image generation models to create photorealistic images preserving precise camera-object relations. Additionally, large language models (LLMs) are used to generate text prompts for guiding visual instruction tuning and controlling image generation. We create Ultimate3D, a large-scale 3D-grounded 2D visual instruction dataset. Ultimate3D consists of 240K VQAs with precise camera-object annotations, and corresponding benchmark. MLLMs fine-tuned on our proposed dataset outperform commercial models by a large margin, achieving an average accuracy improvement of 29.7% on camera-object relation recognition tasks. Our code, dataset, and benchmark will contribute to broad MLLM applications.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.24795v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.24795v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.24616v1" target="_blank" rel="noopener">EgoJev: Finding Evidence in Egocentric Video by Reading VLM Decisions</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-18</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Harvard</span>
+          <span class="arxiv-id">arXiv:2611.24616v1</span>
+        </div>
+        <p class="authors">Chunggi Lee, Hanspeter Pfister</p>
+        <p class="abstract">Questions about long egocentric video often depend on one brief moment, such as the second a hand puts an object down. A vision-language model (VLM) that sees a few evenly spaced frames usually misses it. Training-free methods rank frames with a separate image-text model or ask the VLM to write a time. In a controlled test, the VLM itself locates the moment better when it chooses among labeled frames, and we read this choice from its output distribution. With the same candidates, this choice lands on the evidence more often than image-text scores or a written time span, and it compares all candidates in one decision. Based on this finding, we propose EgoJev, a training-free frame selector for wearable assistants. EgoJev reads where the evidence is from labeled thumbnails and looks again at the windows it points to. It places its few answer frames at the quantiles of the resulting distribution. One frozen VLM selects, answers and returns the evidence time, with no second model. A wearable device can encode its coarse thumbnails while it records. With Qwen3.5-4B and 8 answer frames, EgoJev raises QAEgo4D accuracy from 51.2% with uniform sampling to 62.0%, and it outperforms recent training-free frame selectors on QAEgo4D and MyEgo. A single-level version runs on a Mac and an iPhone.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.24616v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.24616v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.24578v1" target="_blank" rel="noopener">BaseRSI: Recursive Self-Improvement of a Base Vision-Language Model via Training-Free Harness Internalization</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-18</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UIUC</span>
+          <span class="arxiv-id">arXiv:2611.24578v1</span>
+        </div>
+        <p class="authors">Mingda Zhang, Yuanhao Dong, Qiang Huang, Rui Qian, Yanjin Li, Zhenyu Liu, Xiao Huang, Zihao Yang et al.</p>
+        <p class="abstract">Recursive self-improvement (RSI) is moving from the harness of prompts and tools around a base model toward the model itself. However, existing RSI still faces key challenges, including harness-bound gains that stay outside the base model, black-box supervision that reads only the model&#x27;s outputs, and imprecise edits whose site and strength are fixed in advance. To address these challenges, we propose BaseRSI, a new paradigm of Recursive Harness Internalization: the base model improves its harness, then writes what the harness adds into its own weights through training-free edits, round after round on its own responses. To support this paradigm, we introduce ReGap, a mechanism that supervises every transformer block with the high-dimensional activation difference that the harness makes at that block alone, and updates the block&#x27;s weights along this signal in a low-dimensional subspace. Building on this mechanism, we further propose ReKey, an algorithm that writes this signal by regression into a few key-value neurons of every block, and measures the site and strength of each edit on the model&#x27;s own responses. Moreover, the base model fills every role of this recursion with forward passes alone, and its edits, written at different sites, compose in one checkpoint without refitting. Experimental results on ten visual reasoning benchmarks show that BaseRSI consistently improves a base vision-language model both in distribution and on held-out benchmarks. Our code is available at https://github.com/beita6969/BaseRSI.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.24578v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.24578v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.24161v1" target="_blank" rel="noopener">AVTR: Adaptive Multimodal Reasoning with Visual Imagination</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-18</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Princeton</span>
+          <span class="arxiv-id">arXiv:2611.24161v1</span>
+        </div>
+        <p class="authors">Xiaoqian Shen, Yunyang Xiong, Changsheng Zhao, Saksham Suri, Chong Zhou, Zechun Liu, Zhipeng Cai, Zhuang Liu et al.</p>
+        <p class="abstract">Vision-Language Models increasingly rely on textual reasoning to solve advanced multimodal tasks. Despite its effectiveness, this paradigm faces two fundamental limitations. First, relying on textual reasoning alone can limit perceptual ability in vision-centric questions, where accurate answers depend on interpreting task-relevant visual evidence. Second, applying textual reasoning uniformly across inputs overlooks question-dependent variation in both reasoning modality and depth, often producing verbose and unnecessary traces when little logical inference is required. To this end, we propose Adaptive Visual-Textual Reasoning (AVTR), which introduces visual imagination as a complementary reasoning modality to textual thinking, enabling the model to revisit its visual observations and distill the salient evidence through generative visual reflection. Furthermore, we formulate reasoning-modality selection as a learned routing problem, allowing a single policy to adaptively harness the complementary strengths of visual reflection and textual reasoning in response to the perceptual and inferential demands of the input. Across 16 benchmarks, AVTR improves the average score by 4.5 points over Qwen3.5 baseline, while reducing inference latency by 33\%. It also scales effectively into a smaller size backbone, outperforming the evaluated 2B-scale baselines.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.24161v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.24161v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.24016v1" target="_blank" rel="noopener">Rethinking Contrastive Targets in Radiology Language-Image Pretraining</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-18</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Stanford</span>
+          <span class="arxiv-id">arXiv:2611.24016v1</span>
+        </div>
+        <p class="authors">Yunhe Gao, Ashwin Kumar, Jiaming Liu, Chong Wang, Maya Varma, Fuying Wang, Stefania L. Moroianu, Louisa Fay et al.</p>
+        <p class="abstract">CLIP-style contrastive image-text pretraining is widely used in radiology data, where each image is paired with one report and every other report in the batch is treated as a negative. Under this recipe, two failures appear, neither of which is systematically addressed by existing contrastive learning theory: zero-shot evaluation peaks then degrades while training loss keeps decreasing, and training fails to learn from large batches. We hypothesize the cause is structural rather than radiology-specific: many unpaired reports share clinical findings with a given image, so CLIP&#x27;s paired-identity target is systematically biased, not merely noisy. To test this, we construct CLEVR-Radiology, a synthetic testbed that preserves only this overlapping-fact structure and reproduces both failures. With evidence that the structure is sufficient to reproduce the failures, we develop a target-misspecification theory that explains both failures from a single deterministic gradient bias amplified by batch size, and use it to motivate a minimal compatibility-based correction, CorLIP: text is treated as positive whenever its clinical assertions agree with the image, with no architecture changes. Beyond benchmark improvements, CorLIP largely removes the post-peak degradation, makes large-batch training succeed where it previously collapsed, substantially amplifies the gains from more data, and is the only configuration that remains stable up to B=2048. The correction transfers from chest X-ray to 3D CT modalities.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.24016v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.24016v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.23891v1" target="_blank" rel="noopener">SixthView: A Benchmark for Hidden-View Reconstruction and 3D Assembly Reasoning</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-18</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UC Irvine</span>
+          <span class="arxiv-id">arXiv:2611.23891v1</span>
+        </div>
+        <p class="authors">Pooya Khosravi, Jen-Feng Chang, Fnu Pramono</p>
+        <p class="abstract">Inferring the unseen side of a 3D assembly requires reasoning about part placement and occlusion. Different assemblies can match the observed views while producing different hidden views, leaving the target ambiguous. We introduce SixthView, a benchmark in which models predict a sixth orthographic view from five observed views and information about the component shapes. The benchmark contains 602 synthetic polycube assemblies with 2--10 parts and requires a dense grid of part labels for the missing view, allowing both exact-view and cell-level evaluation. For each item, we exhaustively verify that all legal assemblies consistent with the exact component geometry and observed label grids yield the same target view. With these inputs, the task tests symbolic assembly and coordinate reasoning. The image-only variants additionally require shape recovery from rendered views, where occlusion can make different 3D shapes look identical. We evaluate three vision-language models under four input conditions. Across 552 items with complete evaluations, exact-grid accuracy with images plus exact text ranges from 33.2% to 85.4%. Adding exact text to separate images improves accuracy by 19.7--63.0 percentage points, whereas adding images to exact text changes it by only $-0.5$ to $+2.1$ points. Separate image panels outperform a merged sheet by 6.7--11.1 points. The results show that performance depends strongly on access to exact symbolic information, with little further improvement from images once the geometry is specified. GitHub: https://github.com/facebookresearch/sixthview_benchmark</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.23891v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.23891v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.23674v1" target="_blank" rel="noopener">Learning What to Degrade: A Recoverability-Aware Curriculum for Reliable Smart-Glasses Super-Resolution</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-18</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Michigan</span>
+          <span class="arxiv-id">arXiv:2611.23674v1</span>
+        </div>
+        <p class="authors">Yaopeng Wang, Qingliang Wang, Yilun Jin, Xiujin Liu, Han Yue, Chen Xia, Renjie Zhu, Chuang Sheng</p>
+        <p class="abstract">Degradations in smart-glasses images obscure small text and fine-grained structures needed by vision-language models (VLMs) for visual assistance. We introduce an high-resolution (HR)-referenced semantic evaluation protocol that compares VLM outputs on restored images with those on corresponding HR references. Our evaluation reveals two failure modes: generative SR can synthesize misleading details, whereas restoration-oriented SR can leave critical evidence blurred or ambiguous. These findings motivate improving faithful detail recovery in restoration-oriented SR, where a key training challenge is to provide sufficiently difficult inputs while retaining recoverable visual information. We propose ReDiC (Recoverability-Difficulty Curriculum), which combines a model-independent recoverability proxy with model-relative restoration difficulty to adapt training degradation severity. ReDiC increases severity when inputs are recoverable and restoration is easy, maintains challenging but recoverable conditions, and reduces severity when estimated recoverability is low. It modifies only training degradation generation, leaving the SR architecture and reconstruction objective unchanged. Across NAFNet, SwinIR, and MambaIR, ReDiC improves average PSNR by approximately 2.5 dB and HR-referenced semantic scores by about 3 points over the corresponding baselines on synthetic benchmarks, with further gains confirmed by LLM-based and human evaluations on 200 real smart-glasses captures.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.23674v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.23674v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.23646v1" target="_blank" rel="noopener">PRISM: Profiling and Representation of Individual Stereotypical Motion</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-18</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Yale</span>
+          <span class="arxiv-id">arXiv:2611.23646v1</span>
+        </div>
+        <p class="authors">Austin A. MBaye, Savik Kinger, Matthew S. Goodwin</p>
+        <p class="abstract">An anatomical pose provides interpretable joint structure, but no fixed set of physical landmarks can fully specify a person&#x27;s movement. We introduce PRISM, a complementary representation that characterizes repetitive movement using tracked masks and dense optical flow. Torso-relative flow measures intensity, frame-wise mask variation measures spatial extent, signed-flow recurrence estimates frequency, and persistent sliding-window geometry describes the rhythmicity of the movement. Across 1,890 synthetic conditions, the measurements recover controlled speed, amplitude, and frequency while exposing observation limits. An idealized hand-motion experiment demonstrates variation omitted by identical exact COCO-17 trajectories; controlled corruption experiments separately examine measurement sensitivity. Audits of two pose methods on the same data cohort and 36,930 external skeleton clips document incomplete observation and dependence on processing choices. In 1,404 annotated complex stereotypical motor movement bouts from six autistic participants, total flow converges with pose motion, while matched-coordinate examples and repeated-session profiles show differences in intensity, extent, frequency, and rhythmicity within behavior labels. A separate VLM comparison evaluates quantitative frequency estimation, and a profile-conditioned decoder links the measurements to illustrative skeletal movements. PRISM connects numerical profiles to visible examples, providing an interpretable way to compare how the same behavior is expressed beyond its label or event count.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.23646v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.23646v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.23615v1" target="_blank" rel="noopener">Weight Space Programming for Vision Language Model Repair</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-17</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UT Austin</span>
+          <span class="arxiv-id">arXiv:2611.23615v1</span>
+        </div>
+        <p class="authors">Avinash Goutham Aluguvelly</p>
+        <p class="abstract">In weight-space programming, a language model edits a network&#x27;s weights directly, without gradients. We ask what a successful repair of this kind relies on. We plant faults in the weights of two vision-language models, SmolVLM-256M and LFM2-VL-450M, and check each edit made by a coding agent against the original weights. Without being told where to look, the agent finds rescaled rows in the projector and noise in the vision encoder of both models, infers the unknown scale factors, restores most or all of the rescaled weights to their exact original values, and returns accuracy to near its original level; programs that it writes from such weights repair unseen checkpoints of the same model without feedback. These repairs depend on a trace of how the faults were computed. The original weights have 16-bit precision, and faults computed in 32-bit arithmetic leave low bits that only the damaged weights carry. Rounding those bits away leaves each model&#x27;s answers to our test questions unchanged, and the agent, unaided, then restores no weight exactly: on SmolVLM it no longer finds the damage, and in a single session on LFM2-VL its only gain comes from rescaling answer-token embeddings, which changes how often the model answers yes. Marking the damaged weights again in their low bits brings the edits back to them. Rounded weights still hold statistical evidence of the rescaling, in the distribution of stored values and in row norms, and one sentence in the prompt that names such a statistic directs the agent&#x27;s edits to the damaged rows on both models. Swapped rows or columns, which leave the set of stored values unchanged, are not found unaided on either model within our session budgets. We recommend that studies of weight repair report the number format of the weights and include a rounded control.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.23615v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.23615v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.23484v1" target="_blank" rel="noopener">Reference-Guided Data Curation for 3D Medical Vision-Language Pretraining</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-17</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Stanford</span>
+          <span class="arxiv-id">arXiv:2611.23484v1</span>
+        </div>
+        <p class="authors">Faidra Patsatzi, Ashwin Kumar, Chong Wang, Curtis P. Langlotz, Reinhard Heckel, Akshay S. Chaudhari</p>
+        <p class="abstract">Training 3D vision-language models (VLMs) on large medical imaging datasets collected across institutions is constrained by data quality. Vast, uncurated pools of image-report pairs are characterized by redundancy, class imbalance, and cross-institutional heterogeneity. We address this challenge of data curation for improving 3D VLM pretraining by proposing an offline, training-free, reference-guided data curation recipe. Our approach leverages a small, high-quality reference set to independently extract quality signals for each modality of a large, uncurated pool and merges them through a rank-aggregation step into a single ranking that guides sample selection. We validate this method on datasets comprising 35k 3D abdominal CT volume-report pairs from two institutions and 58k 2D chest X-ray image-report pairs. On 3D CT, using our reference-guided data curation strategy, our curated model matches the zero-shot disease classification performance of a state-of-the-art baseline (Merlin) while using $3.3\times$ less training data and a reference set of 5k samples. On 2D chest X-rays, our method yields a curated model that matches or exceeds the zero-shot disease classification performance of a model trained on the full pool while using up to $10\times$ less training data and a reference set of only 74 samples. Ablations show that the selection is stable under resampling of the reference, that smaller reference sets still outperform random sampling, and that label rebalancing does not improve performance. To support reproducibility, we release our code.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.23484v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.23484v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.23483v1" target="_blank" rel="noopener">SpecLook: Speculating Where to Look for Fast and Reliable Agentic MLLMs</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-17</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">UW-Madison</span>
+          <span class="arxiv-id">arXiv:2611.23483v1</span>
+        </div>
+        <p class="authors">Xi Ding, Jiawei Zhang</p>
+        <p class="abstract">Agentic multimodal large language models (MLLMs) that think with images interleave reasoning with zoom-in tool calls. However, this sequential loop is slow, and its answers carry no reliability score. Prior speculation of tokens, reasoning steps, or answers keeps the loop, and answer speculation also accepts confident errors. We find that the loop mostly adds one zoom-in step, with which a small model is ahead of the agent on most splits. Our key insight is to speculate the agent&#x27;s next observation, which, unlike a drafted answer, can be verified, corrected, and used to test the answer. We propose SpecLook, a training-free speculate-and-verify framework with three levels. A small model drafts a glimpse and re-answers from it, and the question ends if the answer is unchanged and confident. Otherwise, the agent&#x27;s large model verifies and corrects the glimpse without tools, and their answers are fused. Only questions that still lack evidence reach the agent, in one forward pass that SpecLook-Fast skips, so no question runs the loop. The trace scores every answer&#x27;s reliability without labels. Extensive experiments on V*, HR-Bench, and POPE show that both are more accurate than every baseline on every split. SpecLook reaches 87.2% and 86.2% mean accuracy with 7.7x and 4.7x speedups over the DeepEyes-7B and Thyme-RL agents, and SpecLook-Fast reaches 9.9x and 6.3x.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.23483v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.23483v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.23432v1" target="_blank" rel="noopener">Bits, Not Boxes: Label-Free Layer Selection for Visual Localization in VLMs</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-17</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Minnesota</span>
+          <span class="arxiv-id">arXiv:2611.23432v1</span>
+        </div>
+        <p class="authors">Haisheng Fu, Gexin Huang, Haikai Zhao, Jie Liang, Zhenman Fang, Jingning Han, Xiaoxiao Li</p>
+        <p class="abstract">Attention maps cheaply show where a vision-language model (VLM) looks, but attention sinks make them unreliable for localization. Contrasting the question with a generic prompt suppresses sinks, yet only some layers localize the queried object. Existing methods find these layers with box annotations or fixed rules. We show that attention itself can identify them. A question changes how much a head attends to the image and where this attention goes. The two effects separate exactly, and the second, measured in bits on unlabeled questions, indicates which layers localize. WhereBits turns these where-to-look bits into a layer prior and combines it with per-head contrastive scores. Its three design constants were fixed once on labeled COCO data, and a new model or resolution needs only unlabeled questions. Across eight VLMs, WhereBits matches the pointing accuracy of box-tuned layers on COCO and RefCOCO and ranks target tokens better. This advantage holds on a held-out model family and at higher resolutions. Its COCO pointing accuracy is 0.72, against 0.22 for mean attention. In training-free zoom-in, its crops raise V* accuracy by 6.0 points under forced-choice evaluation.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.23432v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.23432v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+    <nav class="day-nav"><a class="prev" href="2026-11-18.html">&larr; 2026-11-18</a></nav>
+  </main>
+  <footer>
+    <p>Generated 2026-11-19 08:31 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
