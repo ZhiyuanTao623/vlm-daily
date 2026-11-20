@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-11-20</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-11-20</h2>
+      <p class="count">5 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.25713v1" target="_blank" rel="noopener">Interpreting DeepStack-Style Vision-Language Models: Do Input or Deeper-Layer Visual Tokens Drive Answers?</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-19</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UW-Madison</span><span class="school">USC</span><span class="school">Arizona State</span>
+          <span class="arxiv-id">arXiv:2611.25713v1</span>
+        </div>
+        <p class="authors">Yucheng Du, Yi Nian, Ruixue Lian, Yue Zhao, Xiyang Hu</p>
+        <p class="abstract">DeepStack-style vision-language models feed visual tokens to the language model at its input, and again at deeper layers. We call these the main entry and the later entries. What do the later entries add when the model already has the image? We give the entries versions that differ in one object&#x27;s color and see which one the answer follows. On photographs, the original DeepStack follows the later entries, while Qwen3-VL-8B/32B follow the main entry. Does weakening the main entry give the later features more influence? On synthetic images, we keep this conflict and reduce color saturation at the main entry only. The unchanged later features gain a stronger effect on the relative scores of the two colors, in all four models, including Granite Vision. This holds even under mild desaturation, when accuracy without the conflict stays at 100%. To test whether later features can also correct errors, we degrade both entries and restore only the later ones. The same blur costs both Qwen models 50 percentage points of accuracy on stripe orientation. The 32B model recovers 48 points and the 8B model only 8. Accuracy with one clean entry predicted which entry each model can lose, and five of six tested predictions held on new GQA attribute questions. With the other entry zeroed, Qwen3-VL-8B loses only 0.3 points on its main entry alone, and DeepStack at most 3.45 points on either entry alone. In split inference on these questions, DeepStack can then send only its main-entry features at higher precision. This takes 49% fewer bytes than all entries at a shared precision, at similar accuracy.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.25713v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.25713v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.25593v1" target="_blank" rel="noopener">Characterizing Age-Conditioned Affective Reasoning in Vision-Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-19</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Vanderbilt</span>
+          <span class="arxiv-id">arXiv:2611.25593v1</span>
+        </div>
+        <p class="authors">Shahriyar Zaman Ridoy, Azmine Toushik Wasi, Lin Gu, Ruogu Fang</p>
+        <p class="abstract">An age prompt can change how a vision-language model (VLM) rates the emotion evoked by an image. Does the change predict how people of different ages rate that same image? We evaluate 17 VLMs on 900 OASIS images using young-, middle-, and older-adult prompts and estimate image-specific age differences from ratings by 822 participants. Without an age cue, models closely track average human valence (median Pearson $r=0.891$). Under an older-adult prompt, 16 of 17 models assign lower valence on average than under a young-adult prompt. Yet after adjusting for image pleasantness, correlations between model and human age effects range from $-0.030$ to $0.093$, against an estimated ceiling of $0.595$. The discrepancy is clearest on 54 sensitive images rated as pleasant. Across models, the older prompt reduces valence by $0.845$ points on average, while older participants rate these images $0.443$ points higher than younger participants. Providing human ratings from other images improves agreement on the direction of age differences, although image-specific fidelity remains modest on 600 held-out images ($r_{\mathrm{part}}=0.105$). These results show why evaluations of demographic personalization in foundation models need human comparisons at the level of individual stimuli. Project page available at https://shahriyar-zaman.github.io/age-conditioned-emotion-reasoning/</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.25593v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.25593v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.25387v1" target="_blank" rel="noopener">TuringSpace: Grounding Spatial Intelligence in Action with Interactive CAPTCHAs</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-19</span>
+          <span class="cat">cs.LG</span>
+          <span class="school">UW-Madison</span><span class="school">UPenn</span><span class="school">USC</span><span class="school">University of Minnesota</span>
+          <span class="arxiv-id">arXiv:2611.25387v1</span>
+        </div>
+        <p class="authors">Xuwei Ding, Skylar Zhai, Linxin Song, Jiarui Feng, Dongqi Fu, Huajun Xi, Junnan Li, Jingcheng Liang et al.</p>
+        <p class="abstract">Humans act in the visual world by inferring the 3D layout behind a 2D view, predicting how an action changes it, and correcting themselves after seeing the result. Can multimodal large language models (MLLMs) do the same? CAPTCHAs offer a natural test, since humans solve them through this very loop, clicking and dragging on the screen and adjusting after each result. Yet existing CAPTCHA benchmarks are largely solved and rarely spatial, while spatial benchmarks rarely require action. We therefore present TuringSpace, a synthetic web environment of 125 interactive CAPTCHAs that span five spatial abilities and must be solved through clicks and drags on the screen. Every task is a program that generates new instances with a checker and an oracle, so the tasks also form a scalable training gym. Humans solve 94.1% of the tasks, whereas the best model, GPT-6 Astra, still fails 25.9% of them, and the best open-weight model, Kimi K3, fails 68.0%. Our further analysis shows that most failures come from misreading the screenshot, and that model reasoning rarely corrects a wrong belief but hallucinates evidence to defend it. To test whether such spatial abilities can be learned, we fine-tune Qwen3.5-9B on this gym. Its success rate rises from 1.6% to 33.1%, above Kimi K3, and it improves on all seven out-of-distribution benchmarks, including a 9.9-point gain on the real-world indoor videos of VSI-Bench. These results show that grounding spatial intelligence in screen actions exposes what MLLMs lack and offers a scalable way to teach it, with gains that transfer to real-world scenes. We will release TuringSpace to support further study.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.25387v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.25387v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.25257v1" target="_blank" rel="noopener">Keel: A Frontier Model Teaches a Vision-Language Model by Rewriting Its Weights</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-18</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Carnegie Mellon</span><span class="school">UIUC</span><span class="school">NYU</span>
+          <span class="arxiv-id">arXiv:2611.25257v1</span>
+        </div>
+        <p class="authors">Jiajun Fan, Neil He, Bangji Yang, Qinglong Zheng, Ziwen Wang, Chaoran Cheng, Changyi Yang, Hanqi Mao et al.</p>
+        <p class="abstract">Can a frontier model repair a vision-language model (VLM) by rewriting its weights? Small reasoning VLMs such as Qwen3.5 need such a repair: in thinking mode they fall into loops on many image questions, repeating themselves until the token limit, spending the whole budget and losing the answer. The usual remedies act on the decoding, leaving the looping model as it was, or must be told what to change. Yet the cause is written in the weights. Keel, the first agentic weight-editing method for VLMs on image tasks, finds and removes it there. Told only the symptom, an editor, a frontier multimodal LLM acting as an agent, locates the cause, edits the weights and tests them, with a failure census and instruments showing it the failing images and where the VLM attends; among several editors, the harness keeps only edits that clearly reduce the failure without lowering accuracy on questions no editor saw. The repair needs no training, keeps the model&#x27;s size and per-token cost, and applies to already-edited weights. The editors expose where the loops live: from the original weights, independent editors on both models trace them to the attention outputs of the middle layers, and the smaller VLM stops consulting the image inside a loop. On Qwen3.5-0.8B and Qwen3.5-2B, across six image benchmarks from visual mathematics to GUI grounding, the edit removes most loops on every benchmark and shortens answers, and the edited models are significantly more accurate than the thinking models on average; the larger one gains most on GUI grounding, a task absent from the practice questions. Because the repair lives in the weights, it combines with budget forcing where held-out questions favor it: on the best available weights, Keel has the best average accuracy on both models, significantly above every training-free baseline we compare on the larger one.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.25257v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.25257v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.25210v1" target="_blank" rel="noopener">Recurrent Vision Language Models Solve the Shell Game</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-18</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Johns Hopkins</span>
+          <span class="arxiv-id">arXiv:2611.25210v1</span>
+        </div>
+        <p class="authors">Dingqiang Ye, Jiacong Xu, Wen Zhang, Yiqun Mei, Vishal M. Patel</p>
+        <p class="abstract">Tracking a hidden object through a video is effortless for humans, yet it remains a bottleneck for vision language models (VLMs). In the shell game, where a ball is hidden under one of several identical cups that are then swapped, VLMs that answer directly stay near chance, thinking models fail on long games, and fine-tuning learns only the lengths it has seen. We argue that the limit is serial computation: each swap must be composed with the last result, and a VLM of fixed depth has only a fixed number of state transitions for it. To address this, we propose RecurrentVLM, which makes every attention layer of a pretrained VLM recur over time by computing the keys and values of finished frame groups from the layer&#x27;s own output. With a single answer token, RecurrentVLM reaches 100% on VET-Bench and 99.6% on MET-Bench, and 99% on 50-swap games after training on at most 30 swaps. We also observe several interesting phenomena: length generalization emerges suddenly at an aha moment; without recurrence, each swap costs an attention layer; the ball&#x27;s state forms in the first four attention layers; and recurrence keeps the latest state at the cost of details of earlier moments. These results suggest that recurrent VLMs are a potential solution for tracking the states of unobserved objects in video. Code will be released.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.25210v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.25210v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+    <nav class="day-nav"><a class="prev" href="2026-11-19.html">&larr; 2026-11-19</a></nav>
+  </main>
+  <footer>
+    <p>Generated 2026-11-20 08:14 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
