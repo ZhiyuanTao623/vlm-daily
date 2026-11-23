@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-11-23</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-11-23</h2>
+      <p class="count">9 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.27469v1" target="_blank" rel="noopener">PathOPEN: A pathologist-curated histopathology dataset for visual question answering</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-20</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UT Austin</span>
+          <span class="arxiv-id">arXiv:2611.27469v1</span>
+        </div>
+        <p class="authors">Awais Naeem, Zhongling Xu, George Huang, Amy Coffey, Nkechi Okonkwo, Mario Saab-Chalhoub, John Lee Sang, Dina Kokh et al.</p>
+        <p class="abstract">PathOPEN is a histopathology dataset for visual question answering. Two clinical pathologists selected 157 cases with 229 available original images and wrote open-ended, five-option multiple-choice and close-ended (yes/no) questions. They supplied both a correct and a wrong answer for 201 of the 309 open-ended questions. Each case records the organ, pathology category and regional anatomy, and each image records its magnification. The dataset includes 6,870 augmented images and four manifests that select subsets to improve balance by individual metadata field. Five additional pathologists and two vision-language model judges rated items with scoring rubrics, and six models answered questions zero-shot across the three formats. The metadata support subgroup evaluation, and the paired answers can be used to construct preference examples.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.27469v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.27469v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.27064v1" target="_blank" rel="noopener">Dynamic Token Merging for Efficient Vision-Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-20</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">Stanford</span>
+          <span class="arxiv-id">arXiv:2611.27064v1</span>
+        </div>
+        <p class="authors">Chris Gu, Marco Andono Sie, Nathan Zhou, Christopher Potts, Julie Kallini</p>
+        <p class="abstract">Vision-language models (VLMs) represent each image with hundreds of visual tokens, which can make inference costly even when a prompt depends on only part of the image. Dynamic Token Merging (DTM), introduced in MrT5 for byte-level text encoders, learns which tokens to remove: a lightweight delete gate scores contextualized hidden states, acts as a differentiable attention bias during training, and physically removes tokens at inference. We argue that DTM is a general token deletion framework rather than a byte-level technique, and extend it to the vision modality and to decoder-only models. Applying DTM to T5Gemma 2 and Gemma 3 yields V-MrT5Gemma2, which deletes visual tokens inside a bidirectional multimodal encoder, and V-MrGemma3, which compacts the prompt and its key-value caches during decoder-only prefill. Across ten benchmarks, DTM&#x27;s advantage over attention-based and random deletion grows with the deletion rate and is largest on document, chart, and scene-text reading. At 80% visual token deletion (approximately 60% fewer FLOPs), DTM raises accuracy over FastV from 51.8 to 63.0 on ChartQA and from 63.3 to 67.8 on TextVQA with V-MrT5Gemma2, as well as from 62.2 to 68.8 and from 71.2 to 75.1 with V-MrGemma3, retaining 90-96% of unpruned performance on both tasks with significant efficiency gains. These results support DTM as a general framework for efficient transformers.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.27064v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.27064v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.26994v1" target="_blank" rel="noopener">SceneRuler: Measuring Physical Quantities in Video via Minimal Sufficient Reconstruction</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-20</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UCLA</span><span class="school">University of Utah</span>
+          <span class="arxiv-id">arXiv:2611.26994v1</span>
+        </div>
+        <p class="authors">Yumeng He, Gezheng Kang, Fanlian Zeng, Yin Yang, Chenfanfu Jiang</p>
+        <p class="abstract">Many questions about videos ask for a number, such as how tall a person is, how far a cart travels, or how fast a ball leaves a ramp. We study this task, quantitative physical reasoning from video, where the inputs are a video, a question, and a prior of known facts such as object sizes, speeds, and distances from the camera to named objects. End-to-end video-language models lack an explicit metric scale and physical consistency, and their errors cannot be inspected. We present SceneRuler, which instead recovers a measurable physical scene and answers with that scene as evidence. Its central principle, Minimal Sufficient Reconstruction, builds, for each question, only the smallest scene that suffices to measure the asked quantity, and tests sufficiency on measurements rather than assuming it. The scene is written as a program whose structure a vision-language model writes and whose magnitudes are left to measurement. Physics-guided Fitting measures them through physical motion laws, so that gravity itself can anchor the metric scale, and marks every parameter, and the read-out of the asked quantity, as determined or undetermined. Each question receives a read-out and an answer. The read-out is the asked quantity evaluated on the scene, and it is empty when the scene does not fix that quantity. The answer is always given by a model that takes the scene as evidence. We evaluate on QuantiPhy and also apply the method to 27 in-the-wild videos that we collected, which have no ground-truth answers. On its validation split, the final answer reaches a mean relative accuracy of 0.709 against 0.624 for the strongest baseline, and the reconstruction determines the asked quantity on 47 of 158 questions, where the final answer reaches 0.781. Because every intermediate quantity is explicit, each answer can be traced to the objects, scale, and motion behind it.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.26994v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.26994v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.26954v1" target="_blank" rel="noopener">Learning Video Foresight Reasoning from Unlabeled Videos via On-Policy Self-Distillation</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-20</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Maryland</span><span class="school">Duke</span><span class="school">Johns Hopkins</span><span class="school">Stony Brook</span>
+          <span class="arxiv-id">arXiv:2611.26954v1</span>
+        </div>
+        <p class="authors">Jingchen Sun, Jiaxing Zhang, Qingqiao Hu, Dingqiang Ye, Yuqi Jia, Yijun Liang, Di Fu, Yunjie Tian et al.</p>
+        <p class="abstract">Video foresight reasoning requires vision-language models to anticipate future events or next actions from currently observed videos. Existing methods fit future captions, rationales, or full visual states, but face two limitations. First, they rely on annotations or external large models for supervision, limiting scalability. We address this with an on-policy self-distillation framework that turns past-future video pairs into a natural self-supervised signal without extra annotations or LLM supervision. Second, they treat the whole future clip as equally valuable, although most of it is irrelevant context information. We address this by defining a foresight score, from which we obtain a contrastive privilege advantage that drives the model to learn the most valuable future information. Since the score is intractable, we optimize a tractable lower-bound surrogate that interpolates this advantage, computed between the true and a random reference future, with a teacher-student distillation advantage; together, they amplify decision-relevant content information and suppress irrelevant context information. We call the resulting framework Future-OPSD. On open-ended prediction and closed-ended planning, Future-OPSD improves base models by up to 14.2 and 15.9 points without compromising general video understanding. Code will be available at https://jingchensun.github.io/future-opsd/</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.26954v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.26954v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.26936v1" target="_blank" rel="noopener">SecretAgent: A Multi-Agent Framework for Privacy Protection against Vision Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-20</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Harvard</span>
+          <span class="arxiv-id">arXiv:2611.26936v1</span>
+        </div>
+        <p class="authors">Minda Zhao, Yue Zhang, Mengyu Wang</p>
+        <p class="abstract">Vision-language models (VLMs) can infer private information from shared images, including locations, personally identifiable information (PII), and personal attributes such as age and sex, even from medical images. Adversarial perturbations can protect such information against black-box VLMs, but existing methods overlook image quality and introduce visible artifacts into the images they protect. We present SecretAgent, the first general multi-agent framework that protects image privacy against VLMs while preserving visual fidelity. LLM agents iteratively locate the visual evidence that reveals private information and adapt an invisible perturbation to the target VLM&#x27;s answers and to an appearance reviewer agent, which rejects any candidate with visible artifacts. We instantiate SecretAgent with two complementary variants: SecretAgent-Gradient optimizes the perturbation through six surrogate encoders for cross-model transferability, and the gradient-free SecretAgent-Tool composes procedural noise and achieves the best perceptual fidelity on three of the five datasets. Experiments on four privacy applications (geolocation, PII, facial, and medical) across five datasets and six VLMs show that SecretAgent preserves image quality substantially better than existing methods while achieving state-of-the-art privacy protection in every application, and that its protection transfers to other VLMs.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.26936v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.26936v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.26917v1" target="_blank" rel="noopener">What Does the Visual Encoder Buy? Visual Information Gain in Encoder-Free Multimodal Pretraining</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-20</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Rice</span>
+          <span class="arxiv-id">arXiv:2611.26917v1</span>
+        </div>
+        <p class="authors">Zhixuan Ge, Anqi Li, Wei Qiu</p>
+        <p class="abstract">Recent scaling studies ask whether vision-language models still need a visual encoder by comparing encoder-free and encoder-based models on the next-token loss of the text in image-text data. This loss can fall without any use of the image, and two runs with the same loss can differ in what they take from it. Visual information gain (VIG) is the loss increase when the image is replaced by a uniform one. It splits exactly into global information, carried by image statistics, and layout information, which shuffling the patches within the image destroys. We apply it to decoders with 158M to 1.04B parameters that read pixel patches through a linear embedding, evaluated every billion tokens up to 40B, and to 19 public checkpoints. In our decoders the image lowers the loss by 3% to 46%, depending on the image type. Global information is present after the first billion tokens. Layout information starts near zero, grows slowly with training and does not grow with model size on five of six image types, and a larger batch reaches the same loss with less of it. With a frozen SigLIP 2 encoder in front of the same decoder the loss is lower only when the arrangement of the image is intact. On shuffled images the losses with and without the encoder agree to within 0.04 nats on five of six image types, so the net advantage of the encoder in the loss is layout information, above all the ability to read text in images. Public encoder-free models at production scale (Gemma 4 12B, NEO, Mono-InternVL) do acquire layout information. On the same documents they have 0.53 to 0.76 nats of it, against 0.65 to 0.82 for recent encoder-based models and 0.04 to 0.07 for our decoders, and their released training stages show it rising. These results agree with the reported parity of the two families when both are trained from scratch and place the reported advantage of a pretrained encoder in layout information.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.26917v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.26917v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.26904v1" target="_blank" rel="noopener">What Does a Zoom Actually Add? Decomposing Fine-Grained Perception Failures in Vision-Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-19</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Rice</span>
+          <span class="arxiv-id">arXiv:2611.26904v1</span>
+        </div>
+        <p class="authors">Zhixuan Ge, Anqi Li, Kexin Geng, Wei Qiu</p>
+        <p class="abstract">Zooming into a region often turns a wrong answer from a vision-language model (VLM) into a right one, and a growing literature takes this as evidence that the model lacked the pixels. But a zoom changes several things at once. It removes the surrounding context, re-tokenizes, at a higher density, pixels the model has already seen, and, if the first pass was downsampled, exposes detail the model never received. We separate these factors for each failure. Holding the first pass fixed, we vary only the second look and assign every failure to the cheapest one that fixes it: reusing cached tokens, isolating the region, re-tokenizing the seen pixels, or acquiring new ones. The study covers 2,753 zoom-rescued failures of Qwen2.5-VL, Qwen3-VL and InternVL3 on V*, ZoomBench and TextVQA, at first-pass budgets from 17x fewer pixels than the source to native resolution. First, most rescued failures did not lack the pixels: upsampling the pixels the model had already seen fixes 47-73% of them even at 17x downsampling, against 1-3% for a random region. Second, the first-pass budget decides how often new pixels are needed: depending on the benchmark, new pixels are required for 23-50% of the rescues at 17x and for 12-23% at 4x. The missing-pixel reading and the accounts that dispute it thus hold at different budgets. Third, the useful magnification is large and differs between objects and text: seen pixels fix more failures up to 6-12x their first-pass size per side on objects and saturate by 4x on text, and even native pixels gain from being rendered beyond native resolution. Allowing any magnification, 68-94% of the failures at 17x need no new pixels. These models more often need a better rendering of evidence they already have than new pixels, which motivates re-tokenizing a region before acquiring it.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.26904v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.26904v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.26794v1" target="_blank" rel="noopener">Beyond Final Answers: Interpretable Tumor Immune Microenvironment Reasoning from H&amp;E and mIF</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-19</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">UPenn</span><span class="school">Rice</span>
+          <span class="arxiv-id">arXiv:2611.26794v1</span>
+        </div>
+        <p class="authors">Yixuan Duan, Kexin Geng, Hanwen Xu, Wei Qiu</p>
+        <p class="abstract">Readouts of the tumor immune microenvironment (TIME), such as CD8+ T-cell density, intra-epithelial infiltration and the Ki67 index, combine tissue architecture from H&amp;E with cell phenotypes from multiplex immunofluorescence (mIF). Multimodal large language models (MLLMs) could automate these readouts with an explanation, but two gaps remain. Pathology MLLMs read H&amp;E alone, while these readouts need the cell phenotypes that mIF measures. And their reasoning has no step-level truth to be checked against, so R1-style reinforcement learning rewards only the final answer and leaves the reasoning unverified. Same-section H&amp;E and mIF provide what both gaps lack: mIF measures every cell without manual annotation, which gives cell-level ground truth for each step that clinical guidelines prescribe, from delineating a tissue compartment to counting and normalizing the marker-positive cells within it. We therefore present HERMES (H&amp;E-mIF Reasoning with Multimodal Evidence Supervision), an R1-style MLLM that reasons jointly over paired H&amp;E and mIF in guideline steps and is trained with a process reward that checks every stated quantity against this truth. Across four field-level TIME tasks in colorectal cancer, HERMES (4B) reaches an average accuracy of 84.5%, compared with 74.7% for the strongest of twelve proprietary, general, medical and pathology MLLMs, and a higher share of its intermediate quantities is correct than for the strongest open-weight baseline. Without the process reward, reinforcement learning barely improves on supervised fine-tuning (80.0% vs. 78.8%) and fewer stated quantities are correct; editing a decisive stated quantity changes the answer as implied in all 885 test questions. Without retraining, it keeps the highest average accuracy on an external cohort imaged with CODEX (76.4% vs. 67.3%) and on head and neck cancer, a cancer type absent from training (76.7% vs. 72.5%).</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.26794v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.26794v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.26787v1" target="_blank" rel="noopener">Spatial Query Execution as Verifiable Rewards for Multi-step Spatial Reasoning</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-19</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Minnesota</span><span class="school">UC Davis</span>
+          <span class="arxiv-id">arXiv:2611.26787v1</span>
+        </div>
+        <p class="authors">Jiyoon Pyo, Dongwon Jung, Zekun Li, Nayeon Kim, Muhao Chen, Yao-Yi Chiang</p>
+        <p class="abstract">Large vision-language models (LVLMs) remain unreliable on spatial reasoning problems that require composing grounded relations across multiple objects. Yet, scaling reasoning supervision is challenging since human-annotated visual datasets often rely on fixed relational annotations and coarse object localization, making it difficult to obtain precise intermediate reasoning states across diverse spatial configurations and complexities. We introduce FARON (Fully Automated Reasoning Over spatial relatioNs), a framework that executes spatial queries to provide both execution-grounded reasoning supervision and verifiable outcome rewards. Rather than relying on existing annotated data, FARON constructs synthetic 2D and 3D scenes with explicit geometries, enabling configurable object arrangements, spatial relations, and multi-step compositions. Deterministic query execution yields intermediate sets and final answers, providing precise supervision without manual relation annotation. Our pipeline converts intermediate states into natural-language reasoning traces for supervised fine-tuning (SFT), while the execution-derived answers provide verifiable rewards for reinforcement learning with verifiable rewards (RLVR). Controlled experiments show that trace-based SFT improves multi-step spatial reasoning over final-answer supervision and that subsequent group relative policy optimization (GRPO) provides further gains. The resulting models also demonstrate transfer across external spatial reasoning benchmarks and multiple LVLM backbones without benchmark-specific fine-tuning. These results show the potential of using spatial query execution as a unified, flexible source of reasoning supervision and verifiable outcome rewards for multimodal spatial reasoning.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.26787v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.26787v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+    <nav class="day-nav"><a class="prev" href="2026-11-22.html">&larr; 2026-11-22</a></nav>
+  </main>
+  <footer>
+    <p>Generated 2026-11-23 08:44 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
