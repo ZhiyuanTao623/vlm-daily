@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-11-24</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-11-24</h2>
+      <p class="count">18 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.31239v1" target="_blank" rel="noopener">Lyris: Layout-Guided Long Video Generation with Persistent 3D Memory</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-23</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UPenn</span>
+          <span class="arxiv-id">arXiv:2611.31239v1</span>
+        </div>
+        <p class="authors">Chen Wang, Jiahui Huang, Riccardo de Lutio, Alex Trevithick, Bryan Chu, Jiawei Ren, Laura Leal-Taixé, Shengyu Huang et al.</p>
+        <p class="abstract">Exploring a scene from as little as a single photo requires generating a long, camera-controlled walkthrough that extends far beyond what was captured, yet remains consistent upon return. Memory-based video generation methods preserve what they have already seen, but have no anchor beyond it, where the camera drifts from its path and a text prompt can name objects but not place them. Layout-conditioned methods provide such an anchor and precise control over what appears where, but rely on layouts that are typically authored by hand. Both limitations arise because, beyond what was captured, nothing anchors the video model unless a human authors one. To overcome both, we propose Lyris, a long video generation framework that never leaves the video model without an anchor: a persistent point-cloud memory where the scene has been observed or generated, and a 3D layout that a vision-language model authors where it has not. Our key insight is that the interface between the two models can be surprisingly coarse. A layout of one labeled 3D box per object is simple enough for a vision-language model to author (and for a user to edit), yet expressive enough for a video model to follow once rendered along the camera path. We demonstrate walkthroughs of over three minutes and 50 meters from a single photo, passing through doorways into rooms it never shows. When evaluated on minute-long round trips across four datasets, Lyris outperforms state-of-the-art methods by a wide margin, reducing camera error by 3.8x and improving consistency upon return by 22% on average.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.31239v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.31239v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.31198v1" target="_blank" rel="noopener">ToolSmith: An Automatic Tool-Generation Framework for Multimodal Search Agents</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-23</span>
+          <span class="cat">cs.CL</span>
+          <span class="school">UCLA</span>
+          <span class="arxiv-id">arXiv:2611.31198v1</span>
+        </div>
+        <p class="authors">Rui Sun, Junhua Huang, Luca Zancato, Md Mofijul Islam, Kai-Wei Chang</p>
+        <p class="abstract">Recent multimodal search agents use reasoning, vision, and live web search across many turns to answer questions beyond parametric knowledge by orchestrating a small library of hand-crafted search and visual tools. However, the library is laborious to create and maintain, and frozen when new query types, evidence formats, and failure modes are encountered in the wild. Human practitioners, by contrast, cope with insufficient tools by fashioning new ones from familiar parts and reusing them across tasks. Inspired by this, we propose ToolSmith, an automatic tool-generation framework that grows and reuses modules on top of a lean base tool library. We evaluate ToolSmith on three in-domain multimodal search benchmarks and ten out-of-domain benchmarks under a VLM-as-a-Judge protocol. ToolSmith consistently improves over the base library across deployed agents of varying scales, with larger backbones reaping greater gains, demonstrating the scalability of the approach. Our code and data are available at https://threesr.github.io/toolsmith/.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.31198v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.31198v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.30240v1" target="_blank" rel="noopener">TriSegAgent: Context-Efficient 3D Annotation with MLLMs via Tri-Planes</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-23</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UCLA</span><span class="school">Harvard</span><span class="school">Stony Brook</span>
+          <span class="arxiv-id">arXiv:2611.30240v1</span>
+        </div>
+        <p class="authors">Qingqiao Hu, Jialin Li, Meilong Xu, Kehan Qi, Yipeng Zhang, Lin Tian, Hongwei Bran Li, Klaus Mueller et al.</p>
+        <p class="abstract">Interactive segmentation models turn a few clicks into a segmentation prediction across domains, so annotators only decide where the prediction still needs correction. Annotation thus becomes a loop of inspecting the prediction and clicking again. Each step of this loop is a visual judgment, which suits general-purpose multimodal large language model (MLLM) agents. In this work, we focus on letting these agents run this loop on 3D volumes. However, the MLLM in such an agent takes only 2D images as input, so the agent must observe the 3D volume in 2D. Since the loop calls the MLLM many times, this observation must be token-compact enough to keep every call cheap, yet informative enough to show error regions in the 3D prediction. We meet both needs with tri-planes, the three orthogonal planes that cross at one point in the volume. We show, both theoretically and empirically, that tri-planes are context-efficient yet keep sufficient detail to show error regions in the 3D prediction. Building on tri-planes, we introduce TriSegAgent, an MLLM agent that refines the 3D prediction iteratively. Within the agent, the MLLM only judges the prediction on tri-planes, while a visual harness turns each judgment into a 3D action in code. To make the loop reliable, the harness places each click at an exact voxel in the volume and checks whether to accept the 3D prediction. To evaluate the agent, we build a diverse benchmark of 690 regions of interest (ROIs) from 35 public medical datasets across three imaging modalities. With frontier MLLMs, TriSegAgent reaches an overall Dice about 10 points above the strongest baseline, and its lead is even larger on targets below 3 cm. With flash-level MLLMs, it outperforms a recent 3D segmentation agent built on a frontier MLLM.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.30240v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.30240v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.30176v1" target="_blank" rel="noopener">OmniSenMo: A Unified Multisensory Language Model for Generalizable Human Motion Estimation, Understanding, and Prediction</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-23</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Purdue</span><span class="school">UNC Chapel Hill</span>
+          <span class="arxiv-id">arXiv:2611.30176v1</span>
+        </div>
+        <p class="authors">Cheng Guo, Qiming Cao, Pu Perry Wang, Pu Wang, Hongfei Xue</p>
+        <p class="abstract">Multimodal large language models (MLLMs) estimate, understand, and predict human motion, but mainly from RGB cameras. Depth, LiDAR, mmWave, and WiFi complement RGB under poor lighting, through occlusions, and in privacy-sensitive applications, but existing multisensory models cover only some of these sensing tasks. Covering all of them from any sensor subset is challenging, since the tokens of heterogeneous sensors are semantically inconsistent and spatially misaligned, paired multisensory data are scarce, and the tasks need different temporal granularities. We present OmniSenMo, a multisensory language model that takes the human skeleton as a common reference for all sensors. Its skeleton-grounded motion representation turns each sensor into joint tokens, one per body joint, so that any sensor subset is fused joint by joint and expressed in the motion vocabulary that the language model learned from motion capture and text. We pretrain it on all five sensors generated by our multisensory simulator, and Multi-Granularity Observation gives each task the frames it needs. On a cross-action split of MM-Fi, the same model with all five sensors outperforms the models compared on each task, including LEO-Fuse in pose estimation (84.1 vs. 89.0 mm MPJPE) and HoloLLM in unseen-action recognition (69.2% vs. 42.8%). Even without RGB, it outperforms both methods that use RGB, and in a cross-dataset validation on XRF55, it recognizes unseen actions far better than HoloLLM.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.30176v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.30176v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.30059v1" target="_blank" rel="noopener">Beyond Binary Correctness: A Surrogate for Confidence Learning in Large Language and Vision-Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-23</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Harvard</span><span class="school">Stony Brook</span>
+          <span class="arxiv-id">arXiv:2611.30059v1</span>
+        </div>
+        <p class="authors">Chen Li, Xiaoling Hu, Chao Chen</p>
+        <p class="abstract">Confidence estimation for large language models (LLMs) and vision-language models (VLMs) aims to assess how likely a particular generated response is to be correct. We investigate how learning this assessment can benefit from the model&#x27;s predictive reliability on the underlying query. Binary correctness supervision, however, assigns identical labels to occasional errors and frequent failures, as well as isolated successes and consistent success. These outcomes can arise from substantially different predictive behavior under stochastic decoding. We propose a confidence-learning framework that supplements realized response correctness with query-level predictive reliability. We estimate reliability through repeated generations under a fixed model and decoding configuration, then combine the empirical success rate with individual correctness to construct a graded confidence surrogate. The surrogate differentiates responses sharing the same correctness label while preserving the average predictive reliability of the sampled response pool. To learn this target, we condition an independent confidence estimator on the query and its full generated response, and optimize backbone LoRA adapters together with a projection and scalar confidence head using mean squared error. Repeated sampling is required only for supervision construction; inference scores an individual response without additional generations. We establish ordering and mean preservation properties of the surrogate and derive a selective-risk bound connecting population surrogate prediction error to the error rate among accepted responses. We evaluate the framework across language and vision-language models, examining confidence calibration and selective prediction.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.30059v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.30059v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.29934v1" target="_blank" rel="noopener">Benchmarking VLM Medical Hallucination across 5 Modalities</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-23</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Ohio State</span>
+          <span class="arxiv-id">arXiv:2611.29934v1</span>
+        </div>
+        <p class="authors">Zhixing Cao, Yusen Peng</p>
+        <p class="abstract">Hallucinations in Vision-Language Models (VLMs) within the medical domain remain a difficult and not well-understood problem, and it is still unclear where these models break down. Although several benchmarks targeting medical hallucination have been introduced, they often lack broad coverage across different medical imaging modalities. We introduce Multi-Med, a medical hallucination benchmark containing 1,000 image-question pairs spanning five distinct modalities. Using this benchmark, we perform an in-depth experimental study of 10 widely used VLMs across five modalities and four question categories. Our findings indicate that model performance differs substantially depending on the imaging modality and question type, and that the differences among the best-performing models are not statistically significant.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.29934v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.29934v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.29877v1" target="_blank" rel="noopener">Towards Agentic Video Corpus Moment Retrieval</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-23</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Northwestern</span>
+          <span class="arxiv-id">arXiv:2611.29877v1</span>
+        </div>
+        <p class="authors">Chenwei Xu, Shang Wu, Zhenyu Pan, Jianshu Zhang, Pranav Maneriker, Lie Lu, Fan Du, Manling Li et al.</p>
+        <p class="abstract">Video corpus moment retrieval (VCMR) requires finding the video and time interval that match a text query in a corpus of videos. We present RELAY, a training-free framework for VCMR that shares memory across queries. RELAY processes a batch of queries in three stages: search with a query bank, ranking with video notes, and localization with video prompt caching. In the search stage, an embedding model scores each video by its best-matching frame. The query bank penalizes videos that score highly for many other queries in the batch. In the ranking stage, a vision-language model (VLM) writes notes on each candidate video&#x27;s scenes, people, objects, and actions once. Then, a large language model (LLM) reranks the candidates from these notes. In the localization stage, a VLM predicts the time interval of the moment in the top-ranked video. When multiple queries select the same video, prompt caching lets the VLM reuse its frames. On the three VERIFIED benchmarks, RELAY outperforms the trained baselines in video retrieval R@1 without training. Without any labeled moment, its predicted intervals are shorter than the annotated ones. In VCMR, it achieves similar performance to VideoSearch-R1 on one benchmark and trails it at IoU 0.5 on the other two. Human annotators also mark shorter moments than the original annotations of the benchmarks. A single margin, calibrated on a few labeled queries, widens the predicted interval to the annotation convention of the benchmarks. With it, RELAY outperforms the trained baselines in VCMR at IoU 0.5.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.29877v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.29877v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.29773v1" target="_blank" rel="noopener">S1Arena-MM: Which Multimodal Decisions Can Be Left to System 1?</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-22</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UT Austin</span>
+          <span class="arxiv-id">arXiv:2611.29773v1</span>
+        </div>
+        <p class="authors">Lang Lin, Tianyu Chen, Yi Gu, Yang Zhao, Xinran Song, Xinyang Liu, Jianpeng Cheng, Mingyuan Zhou</p>
+        <p class="abstract">Perception systems often make discrete decisions: flag a hateful meme, predict whether a pedestrian will cross, detect a spoofed voice, or select the next move in a game. System-1 models, such as OneJev and Jev-Omni, read the media and return probabilities over the options in a single forward pass, while multimodal large language models (MLLMs) generate text. Which multimodal decisions can System-1 models handle, and where do MLLMs perform better? We introduce S1Arena-MM, a benchmark that gives every model the same decision requests and scores the probabilities it returns. It contains 51,060 questions across 94 tasks with image, video, and audio input, drawn from 94 public datasets and three program-generated ones. It also includes 102 closed-loop game environments that a model plays from screenshots; in real-time mode, the game continues while the model decides. We evaluate 33 open models: 12 System-1 models and 21 MLLMs read at the answer token. On static decisions, the best System-1 model leads the best MLLM by 4.9 percentage points on images and is within one point of it on video and audio. Post-training for decisions mainly improves the probabilities: on video, a System-1 model has a lower Brier score than the MLLM that it is post-trained from in 10 of 12 pairs. With up to 2,048 thought tokens per question, the most accurate MLLMs pass the best System-1 models only slightly, and thinking raises the Brier score of most MLLMs. Closed loops separate the models: three System-1 models built on a 27B MLLM reach 22.0-33.3% progression in BALROG, and no other model exceeds 9.7% with thinking off. In real-time GameWorld, latencies of up to 1.1 s per decision cause no measurable loss of progress for System-1 models. Code and data: https://github.com/zhaoyang02/S1Arena-MM.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.29773v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.29773v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.29592v1" target="_blank" rel="noopener">Rethinking Closed-Ended Medical VLM Evaluation: From Stable Wrongness to Counterfactual Answer Sensitivity</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-22</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">Stanford</span>
+          <span class="arxiv-id">arXiv:2611.29592v1</span>
+        </div>
+        <p class="authors">Qi Wu, Xiaoyu Liu, Ao Wang, Rongsheng Wang, Wenting Chen, Wenxuan Wang, Qingsong Yao</p>
+        <p class="abstract">As medical VLMs are increasingly evaluated for clinical decision-support scenarios, knowing when to trust their predictions is critical. Closed-ended medical VQA has become a common benchmark format because it enables automated scoring. Yet, systematic investigation into whether this format changes the reliability problem remains scarce. We identify a failure mode that we call stable wrongness: models can produce incorrect yes/no answers that remain confident and repeatable even when patient-specific visual evidence is removed or mismatched. This failure violates the premise behind sampling-stability uncertainty methods, including recent hallucination-aware calibration (HAC) variants: disagreement is informative only when errors are unstable. When shortcut-driven errors are themselves stable, sampling agreement can remain deceptively high. Motivated by this limitation, we introduce Counterfactual Answer Sensitivity (CAS), which shifts reliability estimation from answer stability to evidence sensitivity. CAS uses cross-modal counterfactual interventions, such as text-only, black, and corrupted images, to audit whether a committed yes/no answer remains supported when visual evidence is invalidated. Across 7 VLMs and 3 benchmarks, CAS outperforms the best HAC-family scores across all evaluated settings, achieving a macro-averaged AUROC gain of +0.150 for error detection. Mechanistic analysis further shows that CAS recovers hidden errors in the HAC-confident region and that its strongest standalone signal is counterfactual decision-boundary shift rather than hard prediction stability. Our findings suggest that closed-ended evaluation should test visual dependence, not only answer stability, in safety-critical medical contexts.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.29592v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.29592v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.29361v1" target="_blank" rel="noopener">Beyond Attention Maps: Understanding and Improving Medical MLLMs via Visual Values</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-22</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UT Austin</span>
+          <span class="arxiv-id">arXiv:2611.29361v1</span>
+        </div>
+        <p class="authors">Yichen Zhao, Fenghe Tang, Wenxin Ma, Rongsheng Wang, Zihao Wan, Shaohua Kevin Zhou</p>
+        <p class="abstract">Current MLLM methods largely focus on whether models attend to the right visual regions, implicitly treating spatial attention map as the primary key of effective visual perception. To examine this assumption, we introduce a medical VQA dataset with paired non-contrast (NC) and contrast-enhanced (CE) images that share corresponding anatomy while providing different cues. We show that this view is incomplete: across paired NC and CE medical images, MLLMs often exhibit similar attention patterns despite producing contrasting answers, while controlled bidirectional interventions induce substantially larger prediction changes on visual values than attention weights. These results identify the visual content retrieved through values as a critical factor in improving perception beyond spatial attention alone. Guided by this finding, we propose VIVID (VIsual Value Intervention Distillation), which uses enhanced visual values to identify and refine teacher corrections aligned with useful visual evidence to improve on-policy distillation from CE to NC images. Across six internal and external test sets, VIVID consistently outperforms existing on-policy distillation methods across different model scales and architectures, requires only NC images at inference, and maintains strong zero-shot performance on general-domain VQA benchmarks. The project page is available at https://qiuzyc.github.io/VIVID.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.29361v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.29361v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.29327v1" target="_blank" rel="noopener">FP-Prune: Rethinking Visual Token Pruning from an Information Gain Perspective</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-22</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Michigan</span>
+          <span class="arxiv-id">arXiv:2611.29327v1</span>
+        </div>
+        <p class="authors">Haozhe Zhao, Junxiang Zhang, Junxin Wang, Yuan Ge, Xiangchen Song, Dingyang Zhang, JingBo Zhu, Tong Xiao</p>
+        <p class="abstract">Visual token pruning can reduce the inference cost of vision language models, but its effectiveness depends on preserving complementary visual information under a limited token budget. A central challenge is to quantify the additional information a candidate token contributes beyond the retained set, a contribution that conventional scores based on attention or similarity struggle to capture directly. In this work, we revisit visual token pruning from the perspective of information gain and use mutual information to characterize the incremental value of candidate tokens. We further establish theoretically that frame potential serves as an effective surrogate for mutual information. Building on this observation, we propose FP-Prune, a training-free visual token pruning method that iteratively removes tokens with low information gain to preserve as much complementary visual information as possible. Experiments on three widely used VLMs and eight datasets demonstrate that FP-Prune outperforms baseline methods in both accuracy and inference efficiency. Further analysis shows that the surrogate objective closely aligns with model performance. Our work provides theoretical grounding and an effective method for visual token pruning.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.29327v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.29327v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.29305v1" target="_blank" rel="noopener">CT-Navigator: Towards Interpretable and Generalizable CT Understanding through Agentic Perception and Tool-Invocation</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-22</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Yale</span>
+          <span class="arxiv-id">arXiv:2611.29305v1</span>
+        </div>
+        <p class="authors">Yibing Fu, Huidong Xie, Yihao Niu, Wei Ji, Heming Dong, Ziyue Wang, Jingyu Chen, Jun Zhao et al.</p>
+        <p class="abstract">Clinical computed tomography (CT) interpretation inherently requires progressive visual exploration, where radiologists navigate from whole scans to individual slices and regions of interest and interact with external tools when necessary. However, existing 3D medical multimodal large language models (MLLMs) typically connect a specialized 3D visual encoder to a language model, without fully leveraging the native 2D visual and agentic capabilities of generalist MLLMs. Trained on large-scale one-hop CT instruction-following data, these models also have limited ability to perform iterative reasoning and explicitly ground their conclusions in visual evidence, limiting their support for traceable CT interpretation. To solve these problems, we propose \textbf{agentic perception} as an alternative paradigm inspired by radiologists&#x27; interpretation workflows. We introduce \textbf{CT-Navigator}, a framework that harnesses generalist MLLMs&#x27; 2D visual and agentic capabilities to progressively ground CT interpretation in explicit, traceable visual evidence through hierarchical visual exploration and radiology tool invocation. To build these capabilities, we curate 8,904 visual chain-of-thought (V-CoT) trajectories for cold-start agentic supervised fine-tuning. We then optimize the policy through reinforcement learning on 33,219 questions, with data selection and dynamic rollout sampling prioritizing informative learning signals. Finally, we introduce CTNavi-Bench, a 3D CT visual question answering benchmark comprising 7,000 questions spanning anatomical regions throughout the human body. CT-Navigator achieves 79.50\% accuracy on CTNavi-Bench, surpassing the strongest baseline by 17.59\%, and demonstrates strong generalization across three external CT benchmarks. The code, model, and benchmark will be released on \href{https://github.com/fyb99/ct_navigator}{GitHub}.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.29305v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.29305v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.29167v1" target="_blank" rel="noopener">Decoupling Perception from Generation for Agentic 3D CT Report Generation</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-22</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Boston University</span>
+          <span class="arxiv-id">arXiv:2611.29167v1</span>
+        </div>
+        <p class="authors">Chenyu Wang, Mingyu Chen, Wenchao Li, Kayhan Batmanghelich</p>
+        <p class="abstract">Chest CT reports repeatedly assess the same anatomical regions for findings and their attributes, such as whether a lung nodule is present and where it is located. These assessments suggest learning to answer visual questions directly, rather than coupling perception to open-ended text generation. Yet current CT report generation models largely follow generic vision-language modeling, which may miss subtle abnormalities when training data are limited. We therefore formulate report generation as a set of visual question-answering decisions coordinated by a large language model (LLM) agent. This decouples visual perception from reasoning and report writing: perception can be learned as a discriminative, non-generative task, while the LLM focuses on reasoning over patient context and posing relevant visual queries. We introduce Rad-VL-JEPA, which unifies report retrieval, finding recognition, and fine-grained attribute characterization through vision-language joint-embedding prediction. Building on this perception module, an agent trained with reinforcement learning (RL) acquires patient-specific visual evidence, while a separate editor incorporates the evidence into the final report, further separating evidence acquisition from report realization. Experiments show that Rad-VL-JEPA achieves strong performance on fine-grained CT understanding tasks with lower amortized per-query inference time than a generative VLM baseline trained with the same CT encoder and VQA data. The resulting reporting system outperforms strong VLM-based and agentic baselines.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.29167v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.29167v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.29150v1" target="_blank" rel="noopener">Can an Agent Trust Its Own Zoom? Cross-Magnification Provenance Verification for Whole-Slide Images</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-22</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Yale</span><span class="school">University of Minnesota</span>
+          <span class="arxiv-id">arXiv:2611.29150v1</span>
+        </div>
+        <p class="authors">Yan Wang, Yiran Song, Zizhuo Gong, Jianxiang Qi, Zhongxing Xu, Lingfei Qian, Minquan Lin</p>
+        <p class="abstract">Visual agents navigate whole-slide images through magnified observations associated with claimed locations. However, a visually plausible observation does not necessarily originate from its claimed location, particularly across magnifications and in regions with similar tissue structures. We formulate cross-magnification provenance verification (CMPV) to evaluate whether visual evidence supports a claimed spatial association, recover the source when possible, and abstain when evidence is insufficient. We introduce PyraFault, a benchmark of 3.06 million coordinate-supervised examples from 2,200 cases across five TCGA cohorts, covering within-context substitutions, absent-source faults, and geometric perturbations. We further propose ZoomTrace, a claim-independent verifier that estimates the observation&#x27;s source before evaluating its agreement with the claimed location. It combines physical-scale alignment, visual retrieval, geometric refinement, and reliability estimation using spatially disjoint competing matches. On 503,320 test examples, ZoomTrace achieves 0.969 AUPRC and 0.987 AUROC, compared with 0.789 and 0.903 for Efficient LoFTR. Further evaluations reveal trade-offs in reliability estimation and limitations in vision-language models, cross-dataset retrieval, and calibration. Integrating ZoomTrace into visual agent tool paths reduces exposure to corrupted observations and silent failures, while downstream accuracy improvements depend on the agent and verification threshold.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.29150v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.29150v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.29146v1" target="_blank" rel="noopener">RVLM: Fewer Tokens, Better Resolution Scaling, Fine-Grained Spatial Grounding</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-22</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UIUC</span>
+          <span class="arxiv-id">arXiv:2611.29146v1</span>
+        </div>
+        <p class="authors">Savya Khosla, Chris Dongjoo Kim, Alex Schwing, Derek Hoiem, Christopher Clark, Sangho Lee</p>
+        <p class="abstract">Vision-Language Models (VLMs) tokenize images using fixed spatial grids, so visual token count grows with pixel area rather than scene content. We propose to group neighboring patches based on their visual appearance, allowing tokens to represent coherent image regions rather than fixed spatial windows. We introduce RVLM, a VLM trained to use regions rather than patches as its visual units. Analyzing region construction for general-purpose VLMs, we find that regions must cover the full image, stay spatially connected during end-to-end training, and preserve fine structure such as small text, while semantic grouping adds little. RVLM therefore partitions images using training-free Felzenszwalb-Huttenlocher segmentation, assigns each ViT patch to a region, and pools patches within each region into a variable-length sequence of visual tokens. The patch-to-region assignment is retained to support spatially precise prediction through coarse-to-fine decoding. Across tasks spanning VQA, pointing, counting, segmentation, and depth estimation, RVLM matches or improves example-weighted task performance while using 21.5% fewer visual tokens than an identically trained patch baseline. The advantage grows with image resolution, reaching a 5.3-point gain while using 51.8% fewer visual tokens at the highest-resolution setting. The gains are largest on spatially demanding tasks, where prior token-reduction methods degrade most sharply. RVLM adds no model parameters and improves inference throughput by up to 35.9%. On unseen pathology and satellite images and on video benchmarks without any video training, RVLM performs on par with the patch baseline while using 2-3$\times$ fewer visual tokens. These results establish regions as a scalable alternative to patch-based visual representations while preserving the spatial precision required for grounded prediction.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.29146v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.29146v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.28548v1" target="_blank" rel="noopener">X-AQA: Unifying Action Quality Assessment with Multimodal Large Language Models and Multi-Domain Learning</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-21</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">Carnegie Mellon</span>
+          <span class="arxiv-id">arXiv:2611.28548v1</span>
+        </div>
+        <p class="authors">Kaili Zheng, Wei Ding, Yuchen Ding, Kaiwen Wang, Xun Zhu, Chenyi Guo, Yudong Zhang, Ji Wu</p>
+        <p class="abstract">Action Quality Assessment (AQA) aims to evaluate the quality of human actions, yet existing methods are predominantly developed and evaluated on individual datasets with different task formulations and assessment criteria. We introduce X-AQA, the first unified training and evaluation framework for general-purpose AQA with multimodal large language models (MLLMs). We construct X-AQA-40K, a training corpus comprising 40,163 samples from 22 data sources across four domains: competitive sports, fitness exercises, rehabilitation, and general skills. We convert heterogeneous annotations into a unified question-answering format, incorporating dataset-specific annotation guidelines and official scoring rules when available. Using this corpus, we fine-tune Qwen3.5-9B to develop a single MLLM capable of handling diverse AQA tasks. We further establish X-AQA-Bench, which evaluates both in-distribution (ID) performance on datasets represented during training and out-of-distribution (OOD) generalization on four held-out datasets. The resulting model outperforms all evaluated open-source MLLMs on X-AQA-Bench and achieves competitive performance relative to proprietary MLLMs. Ablation studies further demonstrate that multi-domain joint training and explicitly providing assessment criteria in prompts both improve OOD generalization. X-AQA establishes a unified foundation for advancing general-purpose AQA across diverse real-world domains. Data and models are released at \hyperlink{https://huggingface.co/collections/Kelly0510/x-aqa}{here}.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.28548v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.28548v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.28336v1" target="_blank" rel="noopener">Alignment under Hard Negative Re-Pairing: Cross-Modal Similarity, Scale and Retrieval</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-20</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Johns Hopkins</span>
+          <span class="arxiv-id">arXiv:2611.28336v1</span>
+        </div>
+        <p class="authors">Charles Weng, Alexander Martin, Sandra Arcos-Holzinger, Andrew Yates, Dixin Zheng, Yue Zhang, Landi Zhou</p>
+        <p class="abstract">Do vision and language models represent the world alike? That question hides three: what structure each modality has, whether the two modalities organize images and their captions alike, and whether a model ranks an image&#x27;s own caption highly. Centered kernel alignment (CKA) and neighborhood agreement answer the second, yet matching and model selection use them as if they identified individual pairs and answered the third. To test this reading, we introduce hard negative re-pairing: every image receives the caption of a similar image, and nothing else changes. Although no image keeps its own caption and annotators judge a majority of the substituted captions wrong, CKA stays higher than under a random re-pairing that keeps 80% of the original pairs. In all 22 image-text models we test, neighborhood agreement loses far less than top-one retrieval, which collapses. The reason is scale: these diagnostics pool over many neighbors, matching and retrieval are decided among the nearest ones, and an exact decomposition shows that near-neighbor pairs contribute almost nothing to CKA. In the matching problems we test, an exact maximizer of CKA would not return the original pairing. On COCO and Flickr30k, the model with the highest diagnostic value retrieves worse on held-out data than the model chosen by validation recall, even where the two correlate positively. What re-pairing removes is the informative part: that share tracks retrieval on both datasets and ranks encoder pairs before alignment training. A diagnostic should be reported with its question and its scale, and tested against hard negative re-pairing.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.28336v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.28336v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.28332v1" target="_blank" rel="noopener">GlaucomaMarker - Biomarker-Grounded Glaucoma Vision-Language Model</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-20</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Stanford</span><span class="school">UNC Chapel Hill</span>
+          <span class="arxiv-id">arXiv:2611.28332v1</span>
+        </div>
+        <p class="authors">Ahammed Sakir Nabil, Sadia Siraz, Nikita Chincholkar, Atalie C. Thompson, Jason Xiao, Theodore Leng, Jennifer I. Lim, Minhaj Nur Alam</p>
+        <p class="abstract">Glaucoma is a leading cause of irreversible blindness. In the current clinical setting, glaucoma diagnosis is generally conducted by assessing optic disc cupping and asymmetry. Vision-language models (VLMs) have been utilized in recent years for glaucoma, mostly trained on fixed templates or AI-generated captions, as no public text describes the biomarkers. Our proposed framework, GlaucomaMarker, hypothesizes that retinal structural biomarkers can ground glaucoma-based VLMs. It converts public segmentation masks into sentences describing eleven biomarkers, to teach retinal foundation models to read them. We applied this framework to RETFound (GlaucomaMarker-R) and FLAIR (GlaucomaMarker-F), training on 9,778 images that yielded 45,190 image-text pairs. On a real-world clinical cohort, GlaucomaMarker-F detects glaucoma with an AUROC of 0.905, against 0.848 for FLAIR, and both read the biomarkers where baselines stay near random guessing. Since the biomarker text is computed from existing masks, it comes at no extra cost.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.28332v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.28332v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+    <nav class="day-nav"><a class="prev" href="2026-11-23.html">&larr; 2026-11-23</a></nav>
+  </main>
+  <footer>
+    <p>Generated 2026-11-24 10:45 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
