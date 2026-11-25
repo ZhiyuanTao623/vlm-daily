@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-11-25</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-11-25</h2>
+      <p class="count">12 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.33151v1" target="_blank" rel="noopener">BioLoom: Scaling Biomedical Vision-Language Models by Learning from the Structure of Scientific Articles</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-24</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Stanford</span><span class="school">Ohio State</span>
+          <span class="arxiv-id">arXiv:2611.33151v1</span>
+        </div>
+        <p class="authors">Yuwei Yang, Xiaoxiao Sun, Alejandro Lozano, Yuan-Sen Ting, Yuhui Yuan, Liang Zheng, Serena Yeung-Levy</p>
+        <p class="abstract">The development of biomedical vision-language models (VLMs) with contrastive image-text pretraining has been driven by scaling to increasingly large and diverse image-text datasets. Beyond scaling, further progress can come from learning richer representations from existing data. We hypothesize that the structure of scientific literature itself provides an additional source of supervision: figures, panels, captions, and accompanying article text encode rich relationships across modalities. Yet, treating these as independent image-text pairs overlooks their relationships. To address this limitation, we incorporate these structural relationships into contrastive image-text supervision. We preserve exact image-text matches while introducing weaker positive supervision for related pairs, such as a panel and the caption of a sibling panel. We upweight cross-article negatives of the same content type to encourage finer discrimination. We also enrich panel descriptions using visual content, original figure captions, and mentioning paragraphs. Pairing panels with these descriptions and whole figures with their original captions yields Loom52M, a dataset of 52.4 million image-text pairs spanning scientific charts and biomedical images. Using Loom52M, BioLoom (DFN-2B) achieves 56.82% domain-balanced mean accuracy across 67 zero-shot classification tasks from 43 datasets in 10 domains, compared with 48.77% for MedPMC-CLIP. On BioLoomBench with concise captions and BioMedFlickr, it achieves bidirectional mean Recall@1 of 63.20% and 10.59%, versus 46.37% and 7.55% for the respective strongest evaluated baselines, BiomedCLIP and MedPMC-CLIP. Code, datasets, benchmarks, and models are available at https://bioloom-clip.github.io/.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.33151v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.33151v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.32982v1" target="_blank" rel="noopener">When Repair Accuracy Misleads: Training a VLM on Its Own Failures</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-24</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">USC</span>
+          <span class="arxiv-id">arXiv:2611.32982v1</span>
+        </div>
+        <p class="authors">Ang Qi, Yue Wang</p>
+        <p class="abstract">Fine-tuning a vision-language model on its own failures is a direct way to repair it, but accuracy on held-out failures, the obvious measure of success, misleads. Many mined failures are not model errors: a human audit of 100 failures of Qwen3-VL-8B-Instruct on questions generated from COCO and GQA found label errors in 37. And mined failures share wording regularities: question-only classifiers get both answers right on 73.2% of held-out failure pairs. We study both traps with verified failure-driven repair (VFR): typed minimal-pair failure mining, verification by three LLM judges that answer without seeing the stored labels, answer-first corrective targets, and LoRA fine-tuning with replay. VFR repairs 82.8% of held-out failures (base model: 10.0%), and on independently labeled, unconditioned pairs it raises overall accuracy from 87.4% to 92.4% through spatial relations, whose accuracy rises from 66.7% to 96.8% even where the wording points to the wrong answer. Yet on negation, of which it repairs 88.9% of held-out failures, its accuracy on unconditioned pairs falls from 88.7% to 79.7%: it breaks negations about absent objects, rare in its training set. Without verification, accuracy on unconditioned pairs falls to 80.8%, below the base model&#x27;s 87.4%, through a negation shortcut our development benchmarks miss; without failure selection, it stays at 92.0% (one seed) while repair falls to 73.4%. Training also lowers two-image relation accuracy (74.3% to 49.6%; replay data alone: 48.4%); multi-image replay partly and unevenly reverses this. Paraphrasing the spatial questions keeps most of the gain (87.3% vs. the base model&#x27;s 62.0%), though rewording lowers spatial repair on held-out failures from 92.9% to 76.8%. On What&#x27;sUp&#x27;s independent photos of objects under others, caption choice stays perfect while accuracy on our yes/no pairs falls from 84.5% to 26.4%.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.32982v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.32982v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.32938v1" target="_blank" rel="noopener">Efficient Video Retrieval Augmented Generation via Token Allocation</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-24</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UIUC</span>
+          <span class="arxiv-id">arXiv:2611.32938v1</span>
+        </div>
+        <p class="authors">Ayush Barik, Fan Lai, Francis Y. Yan</p>
+        <p class="abstract">Efficient long-video understanding requires identifying relevant evidence while minimizing the tokens processed by vision-language models (VLMs). Existing video retrieval-augmented generation (RAG) methods rely on frame selection and token compression, but overlook how much each additional token is worth. We introduce Lembas, a plug-and-play framework that formulates video RAG as a token allocation problem over frames and subtitles under a shared budget. Our key insight is that the value of a token diminishes within each item and decreases further as similar evidence receives more tokens. Lembas captures both effects in a single objective and solves it with an efficient iterative water-filling algorithm that has a provable convergence guarantee. For multi-turn conversations, Lembas reuses the tokens processed in earlier turns and refines relevance with the VLM&#x27;s attention at no extra cost. Our evaluations show that Lembas improves accuracy by up to 7.2 percentage points over state-of-the-art baselines at comparable compute. On multi-turn video understanding, Lembas achieves up to 1.5 percentage points higher accuracy with 1.7-17.3x fewer TFLOPs.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.32938v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.32938v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.32821v1" target="_blank" rel="noopener">PhysMend: Verification-Guided Program Refinement for Physics-Aware Video Generation</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-24</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Stony Brook</span>
+          <span class="arxiv-id">arXiv:2611.32821v1</span>
+        </div>
+        <p class="authors">Meilong Xu, Ziyi Zhao, Bhagyashree Puranik, Shayda Moezzi, Yixiao Zhang, Kushan Thakkar</p>
+        <p class="abstract">Video generative models synthesize realistic scenes, yet their interactions often violate physics. A ball dropped onto sand should displace grains and settle into a crater, whereas a generated video may show it passing through the surface or leaving the sand flat. Post-hoc methods typically score generated videos with a vision-language model (VLM), but such scores offer limited guidance on which object or parameter to modify, and each correction costs another synthesis. Simulation-based pipelines instead run fixed stages before synthesis, so simulation errors reach the video. To address these limitations, we present PhysMend, a training-free framework for verification-guided program refinement. PhysMend describes the target event as an editable physical program of grounded objects, events, and required relations, paired with tunable execution parameters. Our key insight is to verify and repair the event on its simulated rollout and on the depth video that conditions the generator (depth control) rather than on generated videos, enabling quantitative violation measurement, targeted editing, and fast re-verification before synthesis. A hybrid verifier evaluates semantic event consistency, physical plausibility, solver stability, and visibility in the depth control. VLM judgments are confined to event semantics and cannot override failed physical measurements, which limits the impact of VLM hallucinations. Each failed check localizes the program fields eligible for repair, and its measured violation scales a bounded update of their parameters. Only accepted depth control reaches the generator, which runs once per input. Experiments on the commonly used benchmarks Physics-IQ, PhyGenBench, and VBench-2.0 demonstrate substantial gains across different generator backbones; for example, PhysMend raises the overall Physics-IQ score of Wan-VACE from 27.33 to 39.40.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.32821v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.32821v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.31973v1" target="_blank" rel="noopener">Visual Thinking: Training-Free Active Perception for Counting and Localizing Hard-to-Find Objects</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-24</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UPenn</span>
+          <span class="arxiv-id">arXiv:2611.31973v1</span>
+        </div>
+        <p class="authors">Emil Kielar, Pratik Chaudhari</p>
+        <p class="abstract">Vision foundation models can precisely segment objects based solely on a text prompt. However, they struggle to recover objects that are small, occluded or whose appearance is poorly captured by the original textual description. Vision language models can examine the image and its context, they can propose richer descriptions of the objects to be detected. But these models struggle with precise segmentation and localization. We introduce Visual Thinking, a training-free framework that combines a vision-language model with Segment Anything Model 3 (SAM 3) through an iterative active perception loop. At each iteration, the VLM proposes short noun phrases using the image, candidate crops and history from past iterations. A controller ranks these phrases using embedding similarity between the original prompt and the proposal, an entropy-based verification priority and the novelty of the prompt. Next, SAM 3 uses prompts to detect objects in the image. We associate detections across iterations and update each object&#x27;s confidence score using a weighted mean of scores obtained from SAM 3 with a larger weight for detections using narrower prompts. We supply confident detections as positive visual exemplars for SAM 3, and incorporate image tiling to recover small objects in cluttered images. We evaluate counting and localization on CARPK, FSCD-147, PixMo-Count, and OmniCount (Fruits). Compared with SAM 3, Visual Thinking reduces the counting mean absolute error (MAE) by about 18 on FSC-147 and about 8 on CARPK. It improves box average precision (AP) by more than 12 on FSCD-147 and CARPK. Visual Thinking, with fixed or no tiling, performs on par with Claude Opus 5.5 at extra-high reasoning effort, while running on single desktop GPU in about 5.91 seconds per image, compared to about 46.53 seconds per image for Claude through its API.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.31973v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.31973v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.31924v1" target="_blank" rel="noopener">Decompose, Verify, Evolve: Physically Grounded Shape Decomposition</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-24</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Penn State</span>
+          <span class="arxiv-id">arXiv:2611.31924v1</span>
+        </div>
+        <p class="authors">Wenchao Ma, Rui Yu, Fan Zhu, Jiachen Liu, Sharon X. Huang</p>
+        <p class="abstract">Shape decomposition represents 3D objects as a compact set of geometric primitives for interpretable modeling and simulation. However, existing decomposition methods are trained primarily for geometric fidelity, without explicit constraints on physical plausibility, and can therefore produce disconnected parts or physically unstable reconstructions. We present PhysDec, an agentic framework that draws on a pretrained vision-language model&#x27;s semantic understanding and commonsense reasoning to predict material-aware primitive decompositions from a few images. Within this framework, PhysDec-Loop is an agentic pipeline that reasons about part structure and materials, using a reference 3D point cloud for geometric feedback and physical verifiers to guide iterative refinement. Through self-evolution, we further develop another agentic pipeline, PhysDec-Evolved, which learns from prior corrections to predict primitive decompositions from images without point-cloud feedback or a correction loop at inference. Experiments show that PhysDec-Loop improves geometric fidelity, physical plausibility and visual quality over geometry-focused baselines, while PhysDec-Evolved approaches its performance at substantially lower inference cost.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.31924v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.31924v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.31870v1" target="_blank" rel="noopener">Subliminal Learning Crosses Modalities</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-24</span>
+          <span class="cat">cs.LG</span>
+          <span class="school">MIT</span>
+          <span class="arxiv-id">arXiv:2611.31870v1</span>
+        </div>
+        <p class="authors">Saraswathy Amjith, Kimia Hamidieh, Antonio Torralba, Yoon Kim</p>
+        <p class="abstract">Subliminal learning refers to a surprising phenomenon in language models wherein a prompt given to one model (e.g., preference for cats) can be subliminally distilled to another model via training on data that is ostensibly meaningless (e.g., number sequences). This paper shows that text-based subliminal learning transfers cross-modally, in particular, a topic/preference (e.g., animals) transferred through number sequences across vision-language models also changes how images are generated and represented. First, we show that a diffusion model using the student as its text encoder generates the student&#x27;s animal more often than with the original model as its text encoder, but not its color or style. We then investigate the mechanism behind this phenomenon and which concepts transfer across modalities. A constant component of the student&#x27;s change accounts for much of the shift of image representations toward the trait. Adding this component uniformly can change the generated animal, which depends on the whole prompt, but not concepts such as color or style, which are encoded in a single token. Finally, we introduce weight lens as an approach to identify a subliminal trait from the weights of a single trained model, and show that it identifies the trait of nearly every student, including traits that do not surface in generated images.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.31870v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.31870v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.31755v1" target="_blank" rel="noopener">RVLM-X: Towards a Universal VLM Harness</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-24</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">University of Maryland</span>
+          <span class="arxiv-id">arXiv:2611.31755v1</span>
+        </div>
+        <p class="authors">Aadi Palnitkar, Dmytro Kurdydyk, Xiaomin Lin</p>
+        <p class="abstract">Harnesses for vision-language models (VLMs) have grown with the models&#x27; capabilities, notably for images far larger than those seen in training, where downscaling loses small details. Most of them wrap the VLM in a fixed procedure, such as a zoom tree, that decides in advance where it looks and how the evidence is combined. These procedures make up for the weaknesses of older models by keeping them on a task-specific path, but with frontier models that reliably plan and use tools, they can lower accuracy. We propose RVLM-X, a task-generalizable recursive VLM harness that runs unchanged across photographs, charts and maps. Following the recursive inference of Recursive Language Models, the VLM programmatically controls its own visual context in a code REPL that holds the full-resolution image and calls itself recursively on regions that it chooses. With a cost-efficient frontier model as the base of every method, RVLM-X is more accurate than a single call on all 7 public benchmarks and has the highest pooled accuracy. Because existing benchmarks mostly test whether a model finds one small detail, we also introduce MapGenBench, procedurally generated maps whose questions combine fine-detail perception with multi-step reasoning. There, RVLM-X answers 71.4% of held-out questions against 55.5% for the strongest baseline. Overall, our findings suggest that as VLMs plan and use tools more reliably, letting the model write its own visual search works better than fixing one in advance.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.31755v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.31755v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.31714v1" target="_blank" rel="noopener">NOBODY Was There: Bridging the Human-VLM Gap in Unwarranted Person Attribution Bias</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-24</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UC Santa Barbara</span>
+          <span class="arxiv-id">arXiv:2611.31714v1</span>
+        </div>
+        <p class="authors">Parsa Madinei, Ziqi Wen, Miguel Eckstein</p>
+        <p class="abstract">Describing an image requires not only recognizing what is visible but deciding what should be inferred. We investigate a systematic gap between humans and VLMs in their tendency to attribute visible actions or events to people who are not present in an image. We term this behavior unwarranted person attribution bias and find that, across 25 SOTA VLMs, captions of person-absent scenes mention a person four times as often as human-written captions of the same images. Through a preference study, we further show that both humans and VLMs prefer captions that avoid such attributions. Motivated by this, we introduce NOBODY, a preference dataset designed to bridge the gap between humans and VLMs in unwarranted person attribution. Through direct preference optimization (DPO), we align open VLMs on NOBODY and show that their agreement with human captions on person attribution reaches or exceeds inter-human agreement, whereas nine existing public preference datasets leave this behavior largely unchanged. Furthermore, we show that human judges preferred the aligned VLM captions significantly more than those of the baseline model. Alongside NOBODY, we release NOBODY-Bench, which evaluates VLMs for unwarranted person attribution bias and their alignment against human captions and preference. Project page: https://pmadinei.github.io/NOBODY/</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.31714v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.31714v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.31590v1" target="_blank" rel="noopener">GoldiBench: Right Tools, Wrong Amount -- Benchmarking Agents on Effect Judgement in Professional Editing</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-23</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Columbia</span>
+          <span class="arxiv-id">arXiv:2611.31590v1</span>
+        </div>
+        <p class="authors">Wang Yang, Xinpeng Li, Yanyan Zhang, Chaoda Song, Shouren Wang, Debargha Ganguly, Vikash Singh, Chuang Ma et al.</p>
+        <p class="abstract">Real editing requests describe a look, not the steps to reach it, so an agent that serves them must judge how much of each tool the look takes. Existing benchmarks do not measure this: their tasks either state the tools and values, or leave the amount open and are scored by VLM judges that pass more than half of half- and triple-strength results. We introduce GoldiBench, a benchmark of 500 editing tasks in five professional applications (darktable, RawTherapee, GIMP, Inkscape, Blender), solvable by writing a program or by operating the GUI. Each task pairs a START image with a TARGET rendered from a hidden program, so the amount is fixed by a known target; the agent&#x27;s edit is re-rendered and compared with TARGET, and the same task is posed with the tools and values, the tools only, or the goal only, separating operation from effect judgement. Across 25 open, GUI and closed models, agents operate well (99-100% with programs from 4B up when told the values) but fall off a cliff when they must judge the amount: given only the tools, the best model passes 19% of the tasks with programs and 33% through the GUI, and scale does not close the gap. Manuals barely help; the measured TARGET-START difference more than doubles the pass rate, but the same difference shown as an image does not for open models. Allowed four renders, agents almost always stop after the first; forced to compare, the strong models double their pass rate. Agents know the tools, but neither read nor check the amount.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.31590v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.31590v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.31576v1" target="_blank" rel="noopener">Lit Up but Not Needed: Scoped Lesions Show Where Multimodal Mixture-of-Experts Depend on Their Experts</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-23</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Rice</span>
+          <span class="arxiv-id">arXiv:2611.31576v1</span>
+        </div>
+        <p class="authors">Zhixuan Ge, Anqi Li, Kexin Geng, Wei Qiu</p>
+        <p class="abstract">Cognitive neuroscience learned that an activation map is not a map of necessity. Regions that light up during a task are not always needed for it, and only lesions reveal which ones are. Mixture-of-experts (MoE) vision-language models come with an activation map for free, since the router records which experts respond to image and text tokens, and recent work reads modality-specialized experts off this map. We bring the lesion. In Qwen3-VL-30B-A3B, Kimi-VL-A3B and Gemma-4-26B-A4B, 3 to 12% of the experts are vision-exclusive: image tokens route to them at up to five times the uniform rate and text tokens almost never. In Qwen3-VL they receive a quarter of all image-token routing, and lesioning all of them costs less than one percentage point on average over eight perception benchmarks and free-form OCR, no more than lesioning a random set of the same size. In Kimi-VL and Gemma-4 the lesion also costs no more than a random set. Scoped lesions, which remove an expert set only at image positions or only at text positions, then show where the models do depend on their experts. In Qwen3-VL, silencing every expert at every image position costs 3 points, against 45 at text positions, where the dependence sits in dual-use experts that text-only tasks need as well. Across models the image-side dependence is 2 to 3 points in Qwen3-VL and Kimi-VL and 26 in Gemma-4. Reading text in images is the one ability that needs image-position experts in every model. The exclusive experts receive informative patches, produce outputs of ordinary size, and stay inert under sensory deprivation: text-only training recruits them only when load balancing forces it. In Kimi-VL the balancing bias itself manufactures most of them. Load balancing draws the modality map in the part of the computation the models depend on least. Expert selection, pruning and skipping should follow the lesion, not the map.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.31576v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.31576v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.31475v1" target="_blank" rel="noopener">SpatialCraft: Evolving Procedural Intelligence from Experience and Skills for Spatial Reasoning Agents</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-23</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">USC</span>
+          <span class="arxiv-id">arXiv:2611.31475v1</span>
+        </div>
+        <p class="authors">Xiwei Liu, Yulong Li, Xuhui Li, Zhixiang Lu, Haolin Yang, Jianxu Chen, Yifan Lu, Di Fan et al.</p>
+        <p class="abstract">Spatial reasoning agents increasingly rely on external tools, such as 3D reconstruction, segmentation, and geometric computation, to answer questions that a multimodal large language model (MLLM) cannot resolve from pixels alone. Tool access, however, shifts the bottleneck to orchestration: the agent must decide which tools to call, in what order, and how to interpret their outputs, yet a stateless agent repeats the same mistakes across tasks. We ask whether a frozen tool-using agent can improve its orchestration from its own interaction history, without parameter updates. We present SpatialCraft, a self-evolving framework that maintains two forms of external knowledge: Experiences, condition-action tactics distilled by contrasting rollouts of the same task, and Skills, multi-step procedures with explicit activation and termination conditions. Three designs couple the two streams. Experiences can be anchored to a Skill, appearing only while it is active rather than once per task. A Contrastive Utility Score estimates each Experience&#x27;s effect by randomly withholding it across rollouts of the same task, separating its contribution from task difficulty, and Experiences with consistently positive utility are consolidated into the Skills they support. Across five spatial benchmarks and four backbones, SpatialCraft achieves the best accuracy in all 20 settings, showing that a frozen agent can learn to orchestrate spatial tools from its own experience.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.31475v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.31475v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+    <nav class="day-nav"><a class="prev" href="2026-11-24.html">&larr; 2026-11-24</a></nav>
+  </main>
+  <footer>
+    <p>Generated 2026-11-25 09:41 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
