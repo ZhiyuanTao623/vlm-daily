@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VLM Daily — 2026-11-26</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">VLM Daily</a></h1>
+    <p class="subtitle">Daily Vision-Language Model papers from arXiv</p>
+  </header>
+  <main>
+    <div class="day-head">
+      <h2 class="day-title">2026-11-26</h2>
+      <p class="count">13 papers</p>
+      <p><a href="index.html">&larr; All days</a></p>
+    </div>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.34943v1" target="_blank" rel="noopener">Tracking Any Point with Agentic Visual Reasoning</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-25</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Princeton</span><span class="school">University of Michigan</span><span class="school">University of Virginia</span>
+          <span class="arxiv-id">arXiv:2611.34943v1</span>
+        </div>
+        <p class="authors">Xuweiyi Chen, Jin Yao, Linzhan Mou, Lei Gong, Di Liu, Cheng Zhang, Ziqiao Ma, Sihan Xu et al.</p>
+        <p class="abstract">A general-purpose Vision-Language Model (VLM) has surpassed expert vision models in many domains such as object detection and video recognition. However, point correspondence is known to be challenging for VLMs since it goes beyond object-level recognition: it requires pixel-level localization of the same physical surface point across observations, even when appearance changes or the point disappears and later reappears. In this paper, we introduce AgenTAP, a VLM-based agent that directly predicts point coordinates and visibility and actively reasons over videos. Starting from its own estimate, the agent autonomously chooses what to inspect and uses the resulting evidence to verify point identity and refine its predictions. With GPT-6 Astra, it surpasses expert vision models in both point localization and visibility prediction, without correspondence-specific fine-tuning. We further use AgenTAP to re-identify physical points after disappearance and reconnect fragmented tracks, constructing EgoTAP-4D, a dataset of 3D point trajectories in long real-world egocentric videos. On sampled reappearing points, its predictions approach human agreement, and adding EgoTAP-4D to D4RT training improves average 3D tracking performance.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.34943v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.34943v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.34935v1" target="_blank" rel="noopener">Can image generation help visual reasoning? An empirical study</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-25</span>
+          <span class="cat">cs.LG</span>
+          <span class="school">Princeton</span>
+          <span class="arxiv-id">arXiv:2611.34935v1</span>
+        </div>
+        <p class="authors">Xueyang Yu, Yifan Jing, Taiming Lu, Linrong Cai, Zhipeng Cai, Yunyang Xiong, Gabriel Sarch, Zhuang Liu</p>
+        <p class="abstract">Language models think in words; then multimodal models might think in images. We test whether a generated helper improves the answer to a visual question. A model describes the helper it needs and then answers using the original and generated images together. Across 13 vision-language model and generator pairs, generation lowers mean accuracy by 3.7 percentage points, with declines on nine of ten tasks. Two unified models, BAGEL and Janus-Pro-7B, each lose accuracy on eight tasks. On VSTAR, adding a generated image to the same planning hint lowers accuracy by 10.47 points. Repeated image edits yield different outcomes across tasks. ChartQAPro and MathVista stay below their no-generation baselines, while ERQA gains three points after ten edits.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.34935v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.34935v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.34862v1" target="_blank" rel="noopener">BOP-Refer: Benchmark for Monocular 3D and 2D Object Grounding</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-25</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">NYU</span>
+          <span class="arxiv-id">arXiv:2611.34862v1</span>
+        </div>
+        <p class="authors">Tomas Hodan, Vineet Bhat, Martin Sundermeyer, Jonathan Tremblay, Yash Patel, Médéric Fourmy, Stephen Tyree, Junwen Huang et al.</p>
+        <p class="abstract">We introduce BOP-Refer, the first benchmark for monocular 3D and 2D grounding of everyday and industrial objects sourced from 9 diverse BOP datasets. We pair images from these datasets with VLM-generated and human-verified referring expressions, and derive accurate ground-truth 3D and 2D bounding boxes of the referred objects from their 3D models and 6DoF pose annotations. Our systematic evaluation of 17 frontier VLMs across the major proprietary and open-weight families (Gemini, GPT, Claude, Qwen, Gemma) shows that the best model, Gemini 4 Carbon, reaches 72.6% AP_IoU2D in 2D but only 12.4% AP_IoU3D in 3D, despite the more lenient IoU thresholds in 3D. The predicted 3D boxes are usually centered on the target objects in the image but often off in depth by more than the object&#x27;s size, suggesting that metric scale estimation, which needs reliable object size priors, is currently by far the main source of error.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.34862v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.34862v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.34298v1" target="_blank" rel="noopener">RAP: Radial-Angular Random Projection for Hyperbolic Representations</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-25</span>
+          <span class="cat">cs.LG</span>
+          <span class="school">Yale</span>
+          <span class="arxiv-id">arXiv:2611.34298v1</span>
+        </div>
+        <p class="authors">Jiahong Liu, Wenhao Yu, Yifan Li, Yanyu Chen, Rex Ying, Menglin Yang, Irwin King</p>
+        <p class="abstract">Random projection is a basic compression primitive for Euclidean representation learning, with the Johnson--Lindenstrauss lemma giving a target dimension $k=O(\varepsilon^{-2}\log n)$ independent of the ambient dimension. As hyperbolic representations gain increasing attention in modern Transformers, vision-language models, and large language models, the same need for oblivious dimensionality reduction arises, but no analogous primitive yet exists for hyperbolic representations. We study this gap. Two natural attempts fail in dual ways: a tangent-space scheme gives a clean local guarantee but is chart-bound and pays a curvature penalty, while a fully hyperbolic projection in the hyperboloid model is geometrically native but mixes radial and angular error before feeding them into the conditioning of $\operatorname{arcosh}$. We propose radial-angular random projection (RAP), which preserves the radial coordinate exactly and applies a Euclidean random projection only to the angular direction, lifting the result back to the target hyperboloid. RAP is hyperbolic-to-hyperbolic by construction, costs one Gaussian matrix-vector product, and reduces hyperbolic compression to a normalized angular JL question on $\mathbb{S}^{d-1}$. We prove a finite-set RAP guarantee with explicit $\sinh(\sqrt{c}\,r_x)\sinh(\sqrt{c}\,r_y)$ conditioning, complemented by a local tangent-space JL theorem and an arcosh-conditioning lemma for the fully hyperbolic comparator. Across an origin-centered broad-radius point cloud, a balanced tree, a clustered Gaussian, and the WordNet noun hierarchy, RAP attains the lowest mean relative distortion in every $(n,k)$ cell, reducing distortion over the strongest hyperbolic baseline by approximately $48\%$--$49\%$ on broad-radius data. RAP also scales to million-point datasets and improves retrieval on vision--language representations over hyperbolic projection baselines.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.34298v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.34298v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.34036v1" target="_blank" rel="noopener">Few-Shot Adaptation of Vision-Language Models via Agentic Model Editing</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-25</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">University of Washington</span><span class="school">UW-Madison</span>
+          <span class="arxiv-id">arXiv:2611.34036v1</span>
+        </div>
+        <p class="authors">Yusheng Zhao, Xiao Luo, Zhiping Xiao, Ming Zhang</p>
+        <p class="abstract">Few-shot adaptation transfers pretrained Vision-Language Models (VLMs) to new domains using a small set of labeled images. Most methods fit prompts, representations, or classifiers within an adaptation procedure specified in advance. Yet the visual distinctions needed for recognition can differ substantially across domains, motivating the question: Can an LLM agent use few-shot examples and model observations to design the adaptation procedure itself? We propose Agentic Model Editing (AME), an agentic framework that jointly designs input transformations, encoder edits, feature computation, and classifier fitting as an executable, domain-customized adaptation program. The agent inspects images, class semantics, model parameters, intermediate representations, and activations to formulate hypotheses about the target task. It implements and tests candidate programs on the support set, with aggregate validation accuracy guiding refinement and selection. Each program fits a complete domain model that is fixed before testing. The agent and its tools are shared across domains, while each domain receives its own adaptation program. Across eleven datasets with CLIP ViT-B/16, AME achieves the highest average accuracies of 81.2% without back-propagation and 81.9% with back-propagation among the compared methods. Further experiments demonstrate applicability across VLM backbones and LLM agents.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.34036v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.34036v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.33836v1" target="_blank" rel="noopener">Can Its Own Misses Teach an MLLM to Find Small Brain Metastases?</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-25</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">UPenn</span><span class="school">Rice</span>
+          <span class="arxiv-id">arXiv:2611.33836v1</span>
+        </div>
+        <p class="authors">Yixuan Duan, Kexin Geng, Hanwen Xu, Wei Qiu</p>
+        <p class="abstract">Multimodal large language models (MLLMs) are becoming general readers of medical images, yet they remain weak at locating small abnormalities. Brain metastases expose this gap: at 384 px a 0.1 mL lesion covers less than a quarter of one visual token, and at one false positive per scan frontier MLLMs find fewer than 30% of lesions of 0.1-1 mL. Fine-tuning on one dataset helps but transfers poorly, and improving it further is slow trial and error steered by a single score. We introduce LANTERN (Lesion-finding AgeNt Through Error-driven Recursive learNing), a framework in which an MLLM improves recursively from its own misses. LANTERN recasts model development as an error-driven loop: a failure census attributes every missed lesion to one of four causes, an LLM mentor revises one of four levels (evidence acquisition, visual representation, learning policy, decision aggregation) per round, and a rule frozen before the first round decides what is kept, without test data and with every tool call audited. Over 15 unattended rounds, LANTERN raises a fine-tuned 4B MLLM from finding 75% to 94% of lesions at one false positive per scan on BraTS-MET, and 91% of those of 0.1-1 mL, compared with at most 51% and 29% for five frontier MLLMs read under the starting protocol; the gains hold on an external cohort (89%) and on unseen meningiomas (77%). These results show that an MLLM&#x27;s own misses, attributed to their causes, can drive its reliable recursive self-improvement.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.33836v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.33836v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.33777v1" target="_blank" rel="noopener">Agentic Reinforcement Learning with Immediate and Prospective Credit Assignment for Medical Visual Reasoning</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-25</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Georgia Tech</span>
+          <span class="arxiv-id">arXiv:2611.33777v1</span>
+        </div>
+        <p class="authors">Yuqi Cheng, Rui Meng, Yijin Li, Chandra Sekhar Reddy Edula, Xiuwei Zhang</p>
+        <p class="abstract">Medical visual question answering (VQA) requires acquiring useful evidence and deciding where to look next. Yet final-answer rewards do not reveal which observations support answering or guide subsequent inspection. We introduce MedPACT, an agentic reinforcement learning framework that learns selective observation policies through immediate answer support and prospective guidance. Our content-controlled estimator compares next actions induced by real and matched alternative observations under a shared real-observation history, isolating how observed content improves subsequent decisions. We combine both forms of credit within GRPO, assigning observation credit to the corresponding tool-call tokens alongside trajectory-level outcome supervision. MedPACT uses a single vision-language model and image-question-answer supervision, with credit estimation confined to training. Experiments with 4B and 8B backbones on six medical VQA benchmarks demonstrate improved accuracy, strong out-of-distribution generalization, and substantially lower inference costs. Case studies further illustrate how MedPACT avoids repeated observations and uses acquired evidence to guide subsequent inspection, demonstrating real-world practice potential.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.33777v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.33777v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.33594v1" target="_blank" rel="noopener">Aligned Machine: A Benchmark for Evaluating Multimodal Embedding Similarity via Human Comparative Judgements</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-25</span>
+          <span class="cat">cs.AI</span>
+          <span class="school">Duke</span>
+          <span class="arxiv-id">arXiv:2611.33594v1</span>
+        </div>
+        <p class="authors">Jiechen Li, Hannah Groos, Brinnae Bent</p>
+        <p class="abstract">Embedding models increasingly inform how people search, recommend, and retrieve information, yet we lack credible ways to test whether these similarity judgments reflect how humans understand meaning. Existing benchmarks typically rely on static, expert-labeled pairs with coarse Likert-style annotations, limiting scalability and making it difficult to obtain consistent, high-confidence annotations. We introduce Aligned Machine, an interactive, public-facing platform that transforms broad participation into a continuously growing Human-Aligned Similarity Benchmark (HASB) for evaluating semantic alignment in embedding-based systems. Participants complete a cognitively-natural, forced-choice task, comparing two pairs of items (text or images) and selecting which pair is more similar. This comparative design is accessible to non-experts, yields clean preference data, and supports robust aggregation. We report results from an initial deployment with 115 participants contributing 2,875 total labeled pairs and 872 unique pairs. Using HASB, we evaluated 12 widely used embedding models and found only partial alignment between embedding similarity and human judgments. Text-only models consistently achieve higher overall agreement than multimodal models, while multimodal performance varies systematically by task type: alignment is strongest for image-image comparisons, weaker for image-text comparisons, and lowest for text-text comparisons. Aligned Machine is designed to evolve over time as participation grows, supporting longitudinal analysis, domain-specific studies, bias detection, and measurement of concept drift across model versions. By combining accessible public participation with rigorous comparative evaluation, HASB provides a scalable and accountable framework for auditing semantic alignment in embedding models.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.33594v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.33594v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.33532v1" target="_blank" rel="noopener">AVERT: Anomalous Value Erasure with Response Testing against Visual Prompt Injection</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-24</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">NYU</span>
+          <span class="arxiv-id">arXiv:2611.33532v1</span>
+        </div>
+        <p class="authors">Newt Hue-Nam K. Nguyen, Jui-Yu Ho, Wei-Han Chen, Pin-Yen Ting, Yangqiu Song, Shang-Tse Chen, Jun-Cheng Chen</p>
+        <p class="abstract">Vision Language Models (VLMs) are vulnerable to visual prompt injection, in which an adversarially perturbed image forces the model to respond with the attacker&#x27;s chosen content, such as malicious tool calls, website links, or advertisements, sometimes regardless of the user&#x27;s question. Existing defenses, such as diffusion-based purification and image-token masking, mitigate these attacks at a substantial cost to the model&#x27;s utility on benign inputs. To address this challenge, we propose AVERT, which removes adversarial feature directions only when the model&#x27;s answer depends on them. Our key procedures involve identifying anomalous value subspaces and detecting answer dependence. To identify the anomalous value subspace, we compare the statistics of each input&#x27;s attention-head outputs with those of clean images and extract the directions along which the input deviates the most. We then project out these directions to remove the injected content. Because the same directions also carry benign visual information, we apply the removal only to answers that depend on them, namely answers whose likelihood collapses once the directions are removed or that are as likely under unrelated questions as under the user&#x27;s question. Against white-box attacks on four VLMs (Qwen2-VL, Qwen2.5-VL, LLaVA, InternVL2.5) and four injection benchmarks, AVERT lowers average attack success from 86-90% to at most 0.6% while retaining at least 96% of undefended utility averaged over thirteen benchmarks. Its defense-utility F-score ($F_{DU}$), the harmonic mean of attacks stopped and utility retained, is 98.0-99.1 and the highest among all compared defenses on every model.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.33532v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.33532v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.33492v1" target="_blank" rel="noopener">EvOrderBench: When do sampled frames establish event order?</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-24</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">USC</span>
+          <span class="arxiv-id">arXiv:2611.33492v1</span>
+        </div>
+        <p class="authors">Xiaoqin Feng, Yuqi Li, Xinyuan Li, Neil Rodrigues, Xianglong Wang, Kuiye Ding, Yingli Tian</p>
+        <p class="abstract">Vision-language models (VLMs) are often asked which of two actions in a video happened first, given only a few sampled frames. Such frames can show that both actions occurred without showing which came first, so a reliable model should state an order only when the frames establish it. Forced-choice temporal benchmarks treat every input as answerable and reward lucky guesses, while answerability benchmarks do not separate frames that miss an action from frames that show both actions but not their order. We introduce EvOrderBench, a real-video benchmark of 579 event families. Each family fixes an episode and a question and varies only the frames: of two four-frame inputs, only one establishes the order, and two six-frame inputs extend the other one with either the frames that resolve the order or frames that do not. Every input is labeled for whether its frames establish each action and their order. Across sixteen open-weight configurations and three closed-source references, the best open models order nearly as accurately as the references when the frames establish the order, but withhold correctly on at most 83% of the inputs where they do not, against at least 90% for every reference; forced-choice accuracy cannot reveal this gap. Open models withhold mainly when the frames show neither action; once the frames show one or both, most of them commit to an order. Thinking narrows the gap, even when it is switched on within a single checkpoint, mainly by separating sufficient from insufficient evidence rather than by making models more cautious overall. Accurate ordering thus does not imply knowing when the frames fall short, and benchmarks should reward withholding alongside ordering.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.33492v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.33492v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.33452v1" target="_blank" rel="noopener">HumblePRM: Improving VLM Abstention in Ambiguous Situations through Process Reward Modeling</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-24</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UIUC</span>
+          <span class="arxiv-id">arXiv:2611.33452v1</span>
+        </div>
+        <p class="authors">Saket Reddy, Ke Yang, ChengXiang Zhai</p>
+        <p class="abstract">Reliable deployment of Vision Language Models (VLMs) requires that a model&#x27;s expressed confidence remain grounded in what it can actually see, and that it recognize when the visual evidence is too ambiguous to commit to a confident response. Standard post-training uses outcome reward models (ORMs) that supervise only the final decision, rewarding a confident answer regardless of whether the image supports one, while existing methods either tend to detect uncertainty post-hoc or assume an objective verdict always exists. We instead split multimodal reasoning into two stages: perception, where the model must factually describe the scene, and calibration, where it must judge whether that evidence is sufficient to commit to a conclusion. We introduce HumblePRM, a lightweight process reward model (PRM) that scores each stage independently, rewarding agreement between evidence and expressed confidence rather than outcome correctness alone. Training with HumblePRM increases abstention due to uncertainty on ambiguous inputs considerably while leaving accuracy on clear images roughly unchanged. We also find that the improvement transfers to Gemma 4 E4B, a larger, popular edge model. Our findings show that process reward supervision is a promising route to VLMs with better calibrated abstention, ensuring more reliability rather than unpredictable behavior.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.33452v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.33452v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.33414v1" target="_blank" rel="noopener">Beyond Random Starts: Amortized Initialization for Adversarial Attacks on Vision-Language Models</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-24</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">UC Berkeley</span>
+          <span class="arxiv-id">arXiv:2611.33414v1</span>
+        </div>
+        <p class="authors">Haz Sameen Shahgir, Ali Asif Khan, K. M. Mehemud Azad, Dongwei Lyu, Zhipeng Wei, Rifat Shahriyar, Yufei Li, Xian Chen et al.</p>
+        <p class="abstract">Gradient-based transferable adversarial attacks achieve state-of-the-art attack success rates against black-box vision-language models (VLMs). However, they require hundreds of costly optimization steps for each image pair. One possible reason is that these attacks typically start from random perturbations that contain no information about the source or target image. In this work, we study whether amortized adversarial generation can provide better initializations for gradient-based attacks. By learning across many image pairs, amortization allows a generator to produce adversarial perturbations for new inputs without optimizing each perturbation from scratch. We introduce SPARK, a lightweight looped perturbation generator conditioned on both the source and target images. SPARK repeatedly applies the same network to refine a perturbation, producing effective adversarial attacks in a few forward passes without requiring gradients through surrogate vision encoders at inference time. We show that these perturbations provide effective warm starts for existing gradient-based attacks, substantially improving attack success rates while reducing the number of optimization steps required. These improvements generalize across different attack methods, VLMs, and unseen image categories. SPARK also produces effective standalone attacks at a fraction of the computational cost of gradient-based optimization. Code and model weights are available at https://github.com/Patchwork53/SPARK.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.33414v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.33414v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><a href="https://arxiv.org/abs/2611.33409v1" target="_blank" rel="noopener">A Semantics-First Approach to Multimodal Video Captioning with Frozen Encoders and Stabilized Reinforcement Learning</a></h2>
+        <div class="meta">
+          <span class="date">2026-11-24</span>
+          <span class="cat">cs.CV</span>
+          <span class="school">Johns Hopkins</span>
+          <span class="arxiv-id">arXiv:2611.33409v1</span>
+        </div>
+        <p class="authors">Albert Chiwara, Erhan Guven</p>
+        <p class="abstract">We propose the Audio-Visual Query Transformer (AVQFormer), a highly efficient architecture built upon a 2.7B parameter LLM featuring a fixed-length $K=16$ semantic alignment module, stabilized via Adaptive Self-Critical Sequence Training (ASCST) with Entropy Regularization. Multimodal Large Language Models (LLMs) often rely on global audio representations to compensate for inefficient, frame-based visual encoders. While our Phase 1 prompted evaluations demonstrate that the Multimodal Base Model achieves strong deep semantic alignment (scoring 0.889 on BERTScore F1), optimizing this architecture for legacy metrics reveals a performance gap. We explore this gap as a hypothesis we term temporal alignment friction: a conflict where global audio representations disrupt the chronological sequence of visual frames, leading to penalties under visually-focused evaluation metrics. Consequently, by stripping away the audio, our Video-Only ablation conforms more closely to this rigid syntax, achieving 63.0 CIDEr. While trailing larger models such as Qwen2.5-VL (67.4 CIDEr), this establishes a strong baseline for sub-3B parameter LLM-based models. This indicates that CIDEr, as applied to datasets such as MSR-VTT, may exhibit a bias toward visually grounded syntax, limiting its ability to fully capture multimodal semantic richness.</p>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2611.33409v1" target="_blank" rel="noopener">[abs]</a>
+          <a href="https://arxiv.org/pdf/2611.33409v1" target="_blank" rel="noopener">[pdf]</a>
+        </div>
+      </article>
+    <nav class="day-nav"><a class="prev" href="2026-11-25.html">&larr; 2026-11-25</a></nav>
+  </main>
+  <footer>
+    <p>Generated 2026-11-26 09:16 UTC ·
+       Source: <a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></p>
+  </footer>
+</body>
+</html>
